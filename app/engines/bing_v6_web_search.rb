@@ -6,7 +6,7 @@ class BingV6WebSearch < BingV6Search
 
   def params
     super.merge({
-      responseFilter: 'WebPages,SpellSuggestions',
+      responseFilter: 'WebPages',
       textDecorations: options[:enable_highlighting],
     })
   end

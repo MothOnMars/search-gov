@@ -430,4 +430,476 @@ http_interactions:
         {"answerType": "WebPages", "resultIndex": 19, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19"}}]}}}'
     http_version: 
   recorded_at: Thu, 22 Feb 2018 07:18:22 GMT
+- request:
+    method: get
+    uri: https://www.bingapis.com/api/v6/search?AppId=<BING_V6_APP_ID>&count=20&mkt=en-US&offset=0&q=collection%20(site:noaa.gov)&responseFilter=WebPages&safeSearch=moderate&textDecorations=true&traffictype=test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - USASearch
+      Ocp-Apim-Subscription-Key:
+      - "<BING_V6_APP_ID>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '4201'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - Wed, 26 Sep 2018 23:10:23 GMT
+      Vary:
+      - Accept-Encoding
+      P3p:
+      - CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
+      Set-Cookie:
+      - MUID=1BEF97508C53648630BD9B268D1F6581; path=/; expires=Mon, 21-Oct-2019 23:11:23
+        GMT; domain=bingapis.com
+      - MUIDB=1BEF97508C53648630BD9B268D1F6581; path=/; httponly; expires=Mon, 21-Oct-2019
+        23:11:23 GMT
+      - SRCHD=AF=NOFORM; domain=.bingapis.com; expires=Sat, 26-Sep-2020 23:11:23 GMT;
+        path=/
+      - SRCHUID=V=2&GUID=FDE79AA278914DCF9A8712A8EA14B4A6&dmnchg=1; domain=.bingapis.com;
+        expires=Sat, 26-Sep-2020 23:11:23 GMT; path=/
+      - SRCHUSR=DOB=20180926; domain=.bingapis.com; expires=Sat, 26-Sep-2020 23:11:23
+        GMT; path=/
+      - _EDGE_S=mkt=en-us&F=1&SID=2BD83C19AF7161A2202F306FAE3D60EF; path=/; httponly;
+        domain=bingapis.com
+      - _EDGE_V=1; path=/; httponly; expires=Mon, 21-Oct-2019 23:11:23 GMT; domain=bingapis.com
+      - _SS=SID=2BD83C19AF7161A2202F306FAE3D60EF; domain=.bingapis.com; path=/
+      Bingapis-Traceid:
+      - 5BE7EC7DFC3748BB91C2124DD6ECAC58
+      X-Msedge-Clientid:
+      - 1BEF97508C53648630BD9B268D1F6581
+      X-Msapi-Userstate:
+      - ccb1
+      Bingapis-Market:
+      - en-US
+      X-Msedge-Ref:
+      - 'Ref A: 5BE7EC7DFC3748BB91C2124DD6ECAC58 Ref B: BY3EDGE0113 Ref C: 2018-09-26T23:11:23Z'
+      Date:
+      - Wed, 26 Sep 2018 23:11:23 GMT
+    body:
+      encoding: UTF-8
+      string: '{"_type": "SearchResponse", "instrumentation": {"pingUrlBase": "https:\/\/www.bingapis.com\/api\/ping?IG=523964F7CDC74D1CB03A2CE7733ACE73&CID=1BEF97508C53648630BD9B268D1F6581&ID=",
+        "pageLoadPingUrl": "https:\/\/www.bingapis.com\/api\/ping\/pageload?IG=523964F7CDC74D1CB03A2CE7733ACE73&CID=1BEF97508C53648630BD9B268D1F6581&Type=Event.CPT&DATA=0"},
+        "webPages": {"webSearchUrl": "https:\/\/www.bing.com\/search?q=collection+(site%3anoaa.gov)",
+        "webSearchUrlPingSuffix": "DevEx,5416.1", "totalEstimatedMatches": 345000,
+        "value": [{"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0", "name":
+        "Collections | NOAA Central Library", "url": "https:\/\/library.noaa.gov\/Collections",
+        "urlPingSuffix": "DevEx,5064.1", "displayUrl": "https:\/\/library.noaa.gov\/Collections",
+        "snippet": "TIROS & Satellite Meteorology Digital Collection This collection
+        features resources on meteorological satellites and satellite meteorology
+        and was initiall created to mark and the celebration of the 50th Anniversary
+        of the launch of TIROS I, the first meteorological satellite, in April 1,
+        1960.", "dateLastCrawled": "2018-09-04T11:14:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1",
+        "name": "A Collection of Sounds from the Sea - oceanexplorer.noaa.gov",
+        "url": "https:\/\/oceanexplorer.noaa.gov\/explorations\/sound01\/background\/seasounds\/seasounds.html",
+        "urlPingSuffix": "DevEx,5076.1", "displayUrl": "https:\/\/oceanexplorer.noaa.gov\/explorations\/sound01\/background\/sea...",
+        "snippet": "A Collection of Sounds from the Sea. Andra M. Bobbitt, GIS\/Research
+        Assistant NOAA VENTS Program NOAA Pacific Marine Environmental Laboratory
+        Sharon Nieukirk, Research Assistant", "dateLastCrawled": "2018-09-25T11:28:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2", "name": "Digital
+        Collections | NOAA Central Library", "url": "https:\/\/library.noaa.gov\/Collections\/Digital-Docs",
+        "urlPingSuffix": "DevEx,5089.1", "about": [{"name": "NOAA Central Library"}],
+        "displayUrl": "https:\/\/library.noaa.gov\/Collections\/Digital-Docs",
+        "snippet": "This collection provides access to historical daily synoptic
+        weather maps for the northern hemisphere from 1899 to 1971. Monthly Weather
+        Review Free access from 1871 to 1973 in cooperation with the American Meteorological
+        Society.", "dateLastCrawled": "2018-09-19T05:42:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3",
+        "name": "NOAA 200th Collections", "url": "https:\/\/celebrating200years.noaa.gov\/collections.html",
+        "urlPingSuffix": "DevEx,5103.1", "displayUrl": "https:\/\/celebrating200years.noaa.gov\/collections.html",
+        "snippet": "The NOAA 200th anniversary Collections featured here are simple
+        presentations of five to 20 objects that have significance in marine history,
+        research, human\/sea interactions, or human understanding of the sea. Each
+        collection illustrates an underlying theme or principle, such as the evolution
+        of technology, which ties all the objects in the collection together.",
+        "dateLastCrawled": "2018-09-06T07:33:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4",
+        "name": "NOAA 200th: Collections: Theodolites", "url": "https:\/\/celebrating200years.noaa.gov\/theodolites\/welcome.html",
+        "urlPingSuffix": "DevEx,5115.1", "displayUrl": "https:\/\/celebrating200years.noaa.gov\/theodolites\/welcome.html",
+        "snippet": "This collection of theodolites tells the story of the development
+        and usage of the instrument, including some of the challenges faced by field
+        parties, from the first fieldwork of Survey of the Coast Superintendent Ferdinand
+        Hassler until today.", "dateLastCrawled": "2018-09-22T08:10:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5", "name": "Coast
+        Survey''s Historical Map & Chart Collection", "url": "https:\/\/historicalcharts.noaa.gov\/collections.html",
+        "urlPingSuffix": "DevEx,5129.1", "displayUrl": "https:\/\/historicalcharts.noaa.gov\/collections.html",
+        "snippet": "This page of the Historical Map and Chart Collection is dedicated
+        to highlighting a series of maps and\/or charts on a rotational basis. This
+        collection of US Lake Survey Maps were digitized as part of a cooperative
+        project between the Wisconsin Water Library at UW-Madison and the following
+        partners: UW Digital Collections, the Map Division at the Library of Congress,
+        the Division of Library ...", "dateLastCrawled": "2018-09-09T04:06:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6", "name": "About
+        the education resource collections | National ...", "url": "http:\/\/www.noaa.gov\/about-education-resource-collections",
+        "urlPingSuffix": "DevEx,5143.1", "displayUrl": "www.noaa.gov\/about-education-resource-collections",
+        "snippet": "About the education resource collections RESOURCE COLLECTIONS
+        . ... Each Collection contains 15-25 finely grained resources vetted by
+        the NOAA education team to support teaching in formal and informal settings.
+        The key characteristics of the resources in the Collections are:", "dateLastCrawled":
+        "2018-09-23T04:35:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7",
+        "name": "NOAA 200th: Collections - USS Monitor", "url": "https:\/\/celebrating200years.noaa.gov\/monitor\/welcome.html",
+        "urlPingSuffix": "DevEx,5157.1", "about": [{"name": "Monitor National Marine
+        Sanctuary"}, {"name": "USS Monitor"}], "displayUrl": "https:\/\/celebrating200years.noaa.gov\/monitor\/welcome.html",
+        "snippet": "Artifacts from the USS Monitor Collection: Monitor National
+        Marine Sanctuary. This collection showcases artifacts collected from the
+        Civil War ironclad USS Monitor. These artifacts illustrate the technological
+        advancements of the Monitor and what life was like for the crew on board this
+        historic vessel.", "dateLastCrawled": "2018-09-03T00:56:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8", "name": "NOAA Photo Library
+        - Navigating the Collection", "url": "http:\/\/www.photolib.noaa.gov\/collections.html",
+        "urlPingSuffix": "DevEx,5172.1", "displayUrl": "www.photolib.noaa.gov\/collections.html",
+        "snippet": "Art of the NOAA Photo Library Collection - Images of art residing
+        in the Photo Library including etchings, paintings, embossed book covers,
+        sculpture, as well as the patterns, reflections, and textures found in nature
+        and the daily work of NOAA.", "dateLastCrawled": "2018-09-20T20:56:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9", "name": "Classroom-ready
+        data resources | National Oceanic and ...", "url": "http:\/\/www.noaa.gov\/resource-collections\/classroom-ready-data-resources",
+        "urlPingSuffix": "DevEx,5186.1", "about": [{"name": "Ready"}], "displayUrl":
+        "www.noaa.gov\/resource-collections\/classroom-ready-data-resources",
+        "snippet": "This collection uses real-time environmental data in self-directed
+        student activities exploring the natural world. Students learn about carbon
+        cycling, ocean acidification, and other phenomena related to climate change.",
+        "dateLastCrawled": "2018-09-21T03:37:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10",
+        "name": "Voucher Collection - Northwest Fisheries Science Center", "url":
+        "https:\/\/www.nwfsc.noaa.gov\/research\/divisions\/cb\/genetics\/forensics-voucher.cfm",
+        "urlPingSuffix": "DevEx,5200.1", "displayUrl": "https:\/\/www.nwfsc.noaa.gov\/research\/divisions\/cb\/genetics\/...",
+        "snippet": "Voucher Collection . To identify the species of an unknown sample
+        using its DNA sequence, we must have a database of reference sequences from
+        known species for comparison.", "dateLastCrawled": "2018-09-08T06:17:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11", "name": "NOAA
+        Photo Library - About the Collection", "url": "http:\/\/www.photolib.noaa.gov\/about.html",
+        "urlPingSuffix": "DevEx,5215.1", "displayUrl": "www.photolib.noaa.gov\/about.html",
+        "snippet": "The NOAA collection spans centuries of time and much of the
+        natural world from the center of the Earth to the surface of the Sun. Because
+        of this broad base of scientific expertise and the geographic range under
+        which NOAA science and observations are conducted, the NOAA collection includes
+        thousands of weather and space images ...", "dateLastCrawled": "2018-09-22T07:57:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12", "name": "Ocean
+        acidification | National Oceanic and Atmospheric ...", "url": "http:\/\/www.noaa.gov\/resource-collections\/ocean-acidification",
+        "urlPingSuffix": "DevEx,5229.1", "about": [{"name": "Ocean acidification"}],
+        "displayUrl": "www.noaa.gov\/resource-collections\/ocean-acidification",
+        "snippet": "The resources included in this collection will provide support
+        to teachers who are educating students about the cause and effects of ocean
+        acidification. Some of the websites help teachers to provide background information
+        in the form of videos and other multimedia activities.", "dateLastCrawled":
+        "2018-09-21T20:58:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13",
+        "name": "Resource collections | National Oceanic and Atmospheric ...", "url":
+        "https:\/\/www.noaa.gov\/education\/education-resource-collections", "urlPingSuffix":
+        "DevEx,5240.1", "displayUrl": "https:\/\/www.noaa.gov\/education\/education-resource-collections",
+        "snippet": "Resources to help integrate NOAA science into formal and informal
+        education.", "dateLastCrawled": "2018-09-20T14:24:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14",
+        "name": "Ocean pollution | National Oceanic and Atmospheric ...", "url": "https:\/\/www.noaa.gov\/resource-collections\/ocean-pollution",
+        "urlPingSuffix": "DevEx,5252.1", "displayUrl": "https:\/\/www.noaa.gov\/resource-collections\/ocean-pollution",
+        "snippet": "This collection contains resources and and information to help
+        students better understand ocean pollution and what they can do to prevent
+        it. Adapted from the National Ocean Service''s Ocean Facts and NOAA Marine
+        Debris Program''s Marine Debris FAQ’s .", "dateLastCrawled": "2018-09-22T02:11:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15", "name": "NOAA
+        200th: Collections: Rare Books: The Physical ...", "url": "https:\/\/celebrating200years.noaa.gov\/rarebooks\/sea\/welcome.html",
+        "urlPingSuffix": "DevEx,5266.1", "about": [{"name": "The Physical Geography
+        of the Sea"}], "displayUrl": "https:\/\/celebrating200years.noaa.gov\/rarebooks\/sea\/welcome.html",
+        "snippet": "The Physical Geography of the Sea, 1st edition This is a classic
+        work in oceanography by Matthew Fontaine Maury, often called the \"father
+        of naval oceanography.\"", "dateLastCrawled": "2018-09-17T05:15:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16", "name": "Hurricanes
+        | National Oceanic and Atmospheric Administration", "url": "https:\/\/www.noaa.gov\/resource-collections\/hurricanes",
+        "urlPingSuffix": "DevEx,5278.1", "displayUrl": "https:\/\/www.noaa.gov\/resource-collections\/hurricanes",
+        "snippet": "This collection provides educators and students with resources
+        to explore how hurricanes form, their potential effects to humans and ecosystems,
+        ways to prepare for hurricanes, and even a citizen science project to classify
+        hurricanes from satellite imagery.", "dateLastCrawled": "2018-09-23T08:14:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17", "name": "Coral
+        ecosystems | National Oceanic and Atmospheric ...", "url": "https:\/\/www.noaa.gov\/resource-collections\/coral-ecosystems",
+        "urlPingSuffix": "DevEx,5290.1", "about": [{"name": "Coral reef"}], "displayUrl":
+        "https:\/\/www.noaa.gov\/resource-collections\/coral-ecosystems", "snippet":
+        "Educators can use the resources in this Collection to teach their students
+        about the science and beauty of corals. They can use these organisms and ecosystems
+        to teach many scientific concepts including symbiotic relationships, reproduction
+        strategies, food webs, chemistry, biotic and abiotic interactions, human impacts,
+        etc. Additionally ...", "dateLastCrawled": "2018-09-20T20:04:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18", "name": "Coast
+        Survey''s Historical Map & Chart Collection", "url": "https:\/\/historicalcharts.noaa.gov\/",
+        "urlPingSuffix": "DevEx,5304.1", "about": [{"name": "U.S. National Geodetic
+        Survey"}], "displayUrl": "https:\/\/historicalcharts.noaa.gov", "snippet":
+        "The collection also covers many areas that most people may not realize
+        were once a part of early Coast Survey history. As the first federal scientific
+        agency, the U.S. Coast and Geodetic Survey (as the agency was known from 1878
+        to 1970) produced land sketches, Civil War battle maps, and aeronautical charting
+        from the 1930s to the 1950s.", "dateLastCrawled": "2018-09-23T07:36:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19", "name": "QUESTIONS
+        AND ANSWERS FOR INFORMATION COLLECTIONS - NOAA CIO", "url": "http:\/\/www.cio.noaa.gov\/itmanagement\/pdfs\/OMBSurveyGuidance_0106.pdf",
+        "urlPingSuffix": "DevEx,5316.1", "displayUrl": "www.cio.noaa.gov\/itmanagement\/pdfs\/OMBSurveyGuidance_0106.pdf",
+        "snippet": "FOR INFORMATION COLLECTIONS Office of Information and Regulatory
+        Affairs Office of Management and Budget January 2006 . ii Table of Contents
+        ... WHAT DOES IT MEAN FOR AN AGENCY TO CONDUCT OR SPONSOR AN INFORMATION COLLECTION?
+        ...", "dateLastCrawled": "2018-09-22T14:27:00.0000000Z"}]}, "rankingResponse":
+        {"mainline": {"items": [{"answerType": "WebPages", "resultIndex": 0, "value":
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0"}}, {"answerType":
+        "WebPages", "resultIndex": 1, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1"}},
+        {"answerType": "WebPages", "resultIndex": 2, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2"}},
+        {"answerType": "WebPages", "resultIndex": 3, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3"}},
+        {"answerType": "WebPages", "resultIndex": 4, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4"}},
+        {"answerType": "WebPages", "resultIndex": 5, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5"}},
+        {"answerType": "WebPages", "resultIndex": 6, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6"}},
+        {"answerType": "WebPages", "resultIndex": 7, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7"}},
+        {"answerType": "WebPages", "resultIndex": 8, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8"}},
+        {"answerType": "WebPages", "resultIndex": 9, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9"}},
+        {"answerType": "WebPages", "resultIndex": 10, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10"}},
+        {"answerType": "WebPages", "resultIndex": 11, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11"}},
+        {"answerType": "WebPages", "resultIndex": 12, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12"}},
+        {"answerType": "WebPages", "resultIndex": 13, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13"}},
+        {"answerType": "WebPages", "resultIndex": 14, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14"}},
+        {"answerType": "WebPages", "resultIndex": 15, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15"}},
+        {"answerType": "WebPages", "resultIndex": 16, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16"}},
+        {"answerType": "WebPages", "resultIndex": 17, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17"}},
+        {"answerType": "WebPages", "resultIndex": 18, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18"}},
+        {"answerType": "WebPages", "resultIndex": 19, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19"}}]}}}'
+    http_version: 
+  recorded_at: Wed, 26 Sep 2018 23:11:23 GMT
+- request:
+    method: get
+    uri: https://www.bingapis.com/api/v6/search?AppId=<BING_V6_APP_ID>&count=20&mkt=en-US&offset=0&q=tuna%20(site:noaa.gov)&responseFilter=WebPages&safeSearch=moderate&textDecorations=true&traffictype=test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - USASearch
+      Ocp-Apim-Subscription-Key:
+      - "<BING_V6_APP_ID>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '3604'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - Wed, 26 Sep 2018 23:10:24 GMT
+      Vary:
+      - Accept-Encoding
+      P3p:
+      - CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
+      Set-Cookie:
+      - MUID=2C1BF63E0BA46EDD3489FA480AE86F32; path=/; expires=Mon, 21-Oct-2019 23:11:24
+        GMT; domain=bingapis.com
+      - MUIDB=2C1BF63E0BA46EDD3489FA480AE86F32; path=/; httponly; expires=Mon, 21-Oct-2019
+        23:11:24 GMT
+      - SRCHD=AF=NOFORM; domain=.bingapis.com; expires=Sat, 26-Sep-2020 23:11:24 GMT;
+        path=/
+      - SRCHUID=V=2&GUID=D920E96572E046639230248E5022B3BC&dmnchg=1; domain=.bingapis.com;
+        expires=Sat, 26-Sep-2020 23:11:24 GMT; path=/
+      - SRCHUSR=DOB=20180926; domain=.bingapis.com; expires=Sat, 26-Sep-2020 23:11:24
+        GMT; path=/
+      - _EDGE_S=mkt=en-us&F=1&SID=1E06CEBC62C468AB1EBCC2CA638869DA; path=/; httponly;
+        domain=bingapis.com
+      - _EDGE_V=1; path=/; httponly; expires=Mon, 21-Oct-2019 23:11:24 GMT; domain=bingapis.com
+      - _SS=SID=1E06CEBC62C468AB1EBCC2CA638869DA; domain=.bingapis.com; path=/
+      Bingapis-Traceid:
+      - 12EF7ADDC5594C16B1B779CC195330E4
+      X-Msedge-Clientid:
+      - 2C1BF63E0BA46EDD3489FA480AE86F32
+      X-Msapi-Userstate:
+      - 9e0a
+      Bingapis-Market:
+      - en-US
+      X-Msedge-Ref:
+      - 'Ref A: 12EF7ADDC5594C16B1B779CC195330E4 Ref B: BY3EDGE0111 Ref C: 2018-09-26T23:11:24Z'
+      Date:
+      - Wed, 26 Sep 2018 23:11:24 GMT
+    body:
+      encoding: UTF-8
+      string: '{"_type": "SearchResponse", "instrumentation": {"pingUrlBase": "https:\/\/www.bingapis.com\/api\/ping?IG=A864B8FF170549C593078B5DCE93CBB8&CID=2C1BF63E0BA46EDD3489FA480AE86F32&ID=",
+        "pageLoadPingUrl": "https:\/\/www.bingapis.com\/api\/ping\/pageload?IG=A864B8FF170549C593078B5DCE93CBB8&CID=2C1BF63E0BA46EDD3489FA480AE86F32&Type=Event.CPT&DATA=0"},
+        "webPages": {"webSearchUrl": "https:\/\/www.bing.com\/search?q=tuna+(site%3anoaa.gov)",
+        "webSearchUrlPingSuffix": "DevEx,5411.1", "totalEstimatedMatches": 92000,
+        "value": [{"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0", "name":
+        "NMFS Permit Shop", "url": "https:\/\/hmspermits.noaa.gov\/default.asp", "urlPingSuffix":
+        "DevEx,5065.1", "about": [{"name": "National Marine Fisheries Service"}],
+        "displayUrl": "https:\/\/hmspermits.noaa.gov\/default.asp", "snippet": "Welcome
+        to the National Marine Fisheries Service Permit Shop where you can currently
+        buy initial and renewal permits for Atlantic tunas and Atlantic Highly Migratory
+        Species (HMS), update permit information, and report recreational landings
+        of bluefin tuna, blue marlin, white marlin, sailfish, and swordfish.", "dateLastCrawled":
+        "2018-09-21T21:00:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1",
+        "name": "Atlantic Yellowfin Tuna | NOAA Fisheries", "url": "https:\/\/www.fisheries.noaa.gov\/species\/atlantic-yellowfin-tuna",
+        "urlPingSuffix": "DevEx,5078.1", "displayUrl": "https:\/\/www.fisheries.noaa.gov\/species\/atlantic-yellowfin-tuna",
+        "snippet": "U.S. wild-caught Atlantic yellowfin tuna is a smart seafood
+        choice because it is sustainably managed and responsibly harvested under U.S.
+        regulations.", "dateLastCrawled": "2018-09-12T01:20:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2", "name": "Pacific Albacore
+        Tuna | NOAA Fisheries", "url": "https:\/\/www.fisheries.noaa.gov\/species\/pacific-albacore-tuna",
+        "urlPingSuffix": "DevEx,5090.1", "about": [{"name": "Albacore"}], "displayUrl":
+        "https:\/\/www.fisheries.noaa.gov\/species\/pacific-albacore-tuna", "snippet":
+        "U.S. wild-caught Pacific albacore tuna is a smart seafood choice because
+        it is sustainably managed and responsibly harvested under U.S. regulations.",
+        "dateLastCrawled": "2018-09-20T05:37:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3",
+        "name": "Atlantic Skipjack Tuna | NOAA Fisheries", "url": "https:\/\/www.fisheries.noaa.gov\/species\/atlantic-skipjack-tuna",
+        "urlPingSuffix": "DevEx,5103.1", "displayUrl": "https:\/\/www.fisheries.noaa.gov\/species\/atlantic-skipjack-tuna",
+        "snippet": "U.S. wild-caught Atlantic skipjack tuna is a smart seafood choice
+        because it is sustainably managed and responsibly harvested under U.S. regulations.",
+        "dateLastCrawled": "2018-09-17T10:40:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4",
+        "name": "North Atlantic Albacore Tuna | NOAA Fisheries", "url": "https:\/\/www.fisheries.noaa.gov\/species\/north-atlantic-albacore-tuna",
+        "urlPingSuffix": "DevEx,5116.1", "displayUrl": "https:\/\/www.fisheries.noaa.gov\/species\/north-atlantic-albacore-tuna",
+        "snippet": "U.S. wild-caught North Atlantic albacore tuna is a smart seafood
+        choice because it is sustainably managed and responsibly harvested under U.S.
+        regulations.", "dateLastCrawled": "2018-09-12T14:58:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5", "name": "Tuna - National
+        Oceanic and Atmospheric Administration", "url": "https:\/\/www.st.nmfs.noaa.gov\/observer-home\/regions\/pacificislands\/tuna",
+        "urlPingSuffix": "DevEx,5129.1", "displayUrl": "https:\/\/www.st.nmfs.noaa.gov\/observer-home\/regions\/pacificislands\/tuna",
+        "snippet": "To observe and document all species caught, including sea turtles,
+        seabirds, marine mammals, swordfish, tunas, sharks, and other non-target fishes.",
+        "dateLastCrawled": "2018-08-18T03:48:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6",
+        "name": "Atlantic Bluefin Tuna Angling Category Fishery: Southern ...",
+        "url": "https:\/\/www.fisheries.noaa.gov\/bulletin\/atlantic-bluefin-tuna-angling-category-fishery-southern-area-trophy-fishery-closing",
+        "urlPingSuffix": "DevEx,5141.1", "displayUrl": "https:\/\/www.fisheries.noaa.gov\/bulletin\/atlantic-bluefin-tuna...",
+        "snippet": "Based on reported landings of 2.1 mt from the NOAA Fisheries Automated
+        Catch Reporting System and the North Carolina Tagging Program as of March
+        9, 2018, NOAA Fisheries has determined that the codified Angling category
+        southern area trophy bluefin tuna subquota has been reached and exceeded
+        and that the trophy fishery should be closed in that area.", "dateLastCrawled":
+        "2018-09-16T13:46:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7",
+        "name": "Western Atlantic Bluefin Tuna | NOAA Fisheries", "url": "https:\/\/www.fisheries.noaa.gov\/species\/western-atlantic-bluefin-tuna",
+        "urlPingSuffix": "DevEx,5154.1", "about": [{"name": "Atlantic bluefin tuna"},
+        {"name": "Tuna"}], "displayUrl": "https:\/\/www.fisheries.noaa.gov\/species\/western-atlantic-bluefin-tuna",
+        "snippet": "U.S. wild-caught western Atlantic bluefin tuna is a smart seafood
+        choice because it is sustainably managed under a rebuilding plan that allows
+        limited harvest by U.S. fishermen.", "dateLastCrawled": "2018-09-21T16:14:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8", "name": "Pacific
+        Bluefin Tuna | NOAA Fisheries", "url": "https:\/\/www.fisheries.noaa.gov\/species\/pacific-bluefin-tuna",
+        "urlPingSuffix": "DevEx,5167.1", "about": [{"name": "Pacific bluefin tuna"}],
+        "displayUrl": "https:\/\/www.fisheries.noaa.gov\/species\/pacific-bluefin-tuna",
+        "snippet": "Although Pacific-wide populations are well below target levels,
+        U.S. wild-caught Pacific bluefin tuna is a smart seafood choice because
+        it is sustainably managed under rebuilding measures that limit harvest by
+        U.S. fishermen.", "dateLastCrawled": "2018-09-22T03:34:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9", "name": "Bluefin Tuna
+        Angling Category Daily Retention Limit ...", "url": "https:\/\/www.fisheries.noaa.gov\/bulletin\/bluefin-tuna-angling-category-daily-retention-limit-adjustment",
+        "urlPingSuffix": "DevEx,5180.1", "about": [{"name": "Tuna"}], "displayUrl":
+        "https:\/\/www.fisheries.noaa.gov\/bulletin\/bluefin-tuna-angling...",
+        "snippet": "NOAA Fisheries is adjusting the Atlantic bluefin tuna daily
+        retention limits that apply to vessels permitted in the Highly Migratory Species
+        Angling category and the HMS Charter\/Headboat category (when fishing recreationally
+        for bluefin tuna) effective April 26, 2018, through December 31, 2018. See
+        below for detailed information regarding bag limits.", "dateLastCrawled":
+        "2018-09-22T15:30:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10",
+        "name": "Burnt Tuna: Conditions Leading to Rapid Deterioration in ...",
+        "url": "http:\/\/spo.nmfs.noaa.gov\/mfr436\/mfr4362.pdf", "urlPingSuffix":
+        "DevEx,5192.1", "displayUrl": "spo.nmfs.noaa.gov\/mfr436\/mfr4362.pdf",
+        "snippet": "Burnt Tuna: Conditions Leading to Rapid Deterioration in the
+        Quality of Raw Tuna J. L. CRAMER, R. M. NAKAMURA, A. E. DIZON, AND W. N.
+        IKEHARA Introduction In Hawaii, raw tuna flesh which seems paler and softer
+        than normal", "dateLastCrawled": "2018-09-23T05:36:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11",
+        "name": "Atlantic Bluefin Tuna Angling Category Closure | NOAA ...", "url":
+        "https:\/\/www.fisheries.noaa.gov\/bulletin\/atlantic-bluefin-tuna-angling-category-closure",
+        "urlPingSuffix": "DevEx,5204.1", "displayUrl": "https:\/\/www.fisheries.noaa.gov\/bulletin\/atlantic-bluefin-tuna...",
+        "snippet": "NOAA Fisheries closes the Atlantic bluefin tuna Angling category
+        fishery for large, medium, and giant “trophy” bluefin tuna (measuring 73”
+        or greater) in the Gulf of Mexico effective 11:30 p.m. local time, Sunday,
+        May 13, 2018, through December 31, 2018.", "dateLastCrawled": "2018-09-17T08:31:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12", "name": "Pacific
+        bluefin Tuna - SWFSC", "url": "https:\/\/swfsc.noaa.gov\/uploadedFiles\/Divisions\/FRD\/Large_Pelagics\/Tuna\/Bluefin%20tuna%20fact%20sheet%2027Aug15.pdf",
+        "urlPingSuffix": "DevEx,5216.1", "displayUrl": "https:\/\/swfsc.noaa.gov\/uploadedFiles\/Divisions\/FRD\/Large_Pelagics...",
+        "snippet": "west. coast region. Pacific bluefin Tuna. With their streamlined
+        bodies and powerful tails, Pacific bluefin tuna are some of fastest fish
+        in the ocean.", "dateLastCrawled": "2018-09-20T18:44:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13", "name": "NMFS Permit
+        Shop News", "url": "https:\/\/hmspermits.noaa.gov\/news", "urlPingSuffix":
+        "DevEx,5230.1", "displayUrl": "https:\/\/hmspermits.noaa.gov\/news", "snippet":
+        "Welcome to the National Marine Fisheries Service Permit Shop where you can
+        currently buy initial and renewal permits for Atlantic tunas and Atlantic
+        Highly Migratory Species (HMS), update permit information, and report recreational
+        landings of bluefin tuna, blue marlin, white marlin, sailfish, and swordfish.",
+        "dateLastCrawled": "2018-09-23T03:01:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14",
+        "name": "Pacific Skipjack Tuna | NOAA Fisheries", "url": "https:\/\/www.fisheries.noaa.gov\/species\/pacific-skipjack-tuna",
+        "urlPingSuffix": "DevEx,5243.1", "displayUrl": "https:\/\/www.fisheries.noaa.gov\/species\/pacific-skipjack-tuna",
+        "snippet": "U.S. wild-caught Pacific skipjack tuna is a smart seafood choice
+        because it is sustainably managed and responsibly harvested under U.S. regulations.",
+        "dateLastCrawled": "2018-09-21T15:35:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15",
+        "name": "Dolphin-Safe | NOAA Fisheries", "url": "https:\/\/www.fisheries.noaa.gov\/national\/marine-mammal-protection\/dolphin-safe",
+        "urlPingSuffix": "DevEx,5256.1", "displayUrl": "https:\/\/www.fisheries.noaa.gov\/...\/dolphin-safe",
+        "snippet": "A dolphin-safe label is intended to show compliance with U.S.
+        laws and regulations of tuna fishing operations. The Dolphin Protection
+        Consumer Information Act (16 U.S.C. §1385) describes the conditions in which
+        tuna product may be labeled dolphin-safe in the United States. NOAA has
+        implemented ...", "dateLastCrawled": "2018-09-23T01:44:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16", "name": "The Tuna-Dolphin
+        Issue - SWFSC", "url": "https:\/\/swfsc.noaa.gov\/textblock.aspx?Division=PRD&ParentMenuId=228&id=1408",
+        "urlPingSuffix": "DevEx,5269.1", "displayUrl": "https:\/\/swfsc.noaa.gov\/textblock.aspx?Division=PRD&ParentMenuId=...",
+        "snippet": "The concept of Dolphin-Safe tuna—tuna caught without setting
+        on dolphins (i.e., in log and school sets)—became popular. The trade actions
+        were important because the United States is a large market for the canned
+        tuna product of the fishery.", "dateLastCrawled": "2018-09-16T00:52:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17", "name": "Atlantic
+        Bigeye Tuna | NOAA Fisheries", "url": "https:\/\/www.fisheries.noaa.gov\/species\/atlantic-bigeye-tuna",
+        "urlPingSuffix": "DevEx,5282.1", "displayUrl": "https:\/\/www.fisheries.noaa.gov\/species\/atlantic-bigeye-tuna",
+        "snippet": "U.S. wild-caught Atlantic bigeye tuna is a smart seafood choice
+        because it is sustainably managed and responsibly harvested under U.S. regulations.",
+        "dateLastCrawled": "2018-09-21T23:49:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18",
+        "name": "Bluefin Tuna | Ocean Today", "url": "https:\/\/oceantoday.noaa.gov\/bluefintuna\/",
+        "urlPingSuffix": "DevEx,5296.1", "displayUrl": "https:\/\/oceantoday.noaa.gov\/bluefintuna",
+        "snippet": "If fish were cars the bluefin tuna would be the Ferraris. That’s
+        how sleek their lines are…and how quickly they accelerate. And how expensive
+        they can be… especially at fish markets like this one in Japan….where sushi
+        lovers have long coveted the rich red meat of the bluefin. Here, a ...", "dateLastCrawled":
+        "2018-09-16T18:45:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19",
+        "name": "Rules\/Regulations :: Greater Atlantic Regional Fisheries ...", "url":
+        "https:\/\/www.greateratlantic.fisheries.noaa.gov\/sustainable\/recfishing\/regs\/",
+        "urlPingSuffix": "DevEx,5311.1", "displayUrl": "https:\/\/www.greateratlantic.fisheries.noaa.gov\/sustainable\/rec...",
+        "snippet": "Federal Recreational Fisheries Regulations for the Greater Atlantic
+        Region Updated May 1, 2018. Federal regulations are for fwaters only (Generally
+        3-200 miles off shore from Maine to North Carolina) except for bluefin tuna
+        and shortnose sturgeon which have federal regulations that apply in both state
+        and Federal waters. Also, party\/charter boat vessels holding federal permits
+        need to abide by ...", "dateLastCrawled": "2018-09-15T03:28:00.0000000Z"}],
+        "someResultsRemoved": true}, "rankingResponse": {"mainline": {"items": [{"answerType":
+        "WebPages", "resultIndex": 0, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0"}},
+        {"answerType": "WebPages", "resultIndex": 1, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1"}},
+        {"answerType": "WebPages", "resultIndex": 2, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2"}},
+        {"answerType": "WebPages", "resultIndex": 3, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3"}},
+        {"answerType": "WebPages", "resultIndex": 4, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4"}},
+        {"answerType": "WebPages", "resultIndex": 5, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5"}},
+        {"answerType": "WebPages", "resultIndex": 6, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6"}},
+        {"answerType": "WebPages", "resultIndex": 7, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7"}},
+        {"answerType": "WebPages", "resultIndex": 8, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8"}},
+        {"answerType": "WebPages", "resultIndex": 9, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9"}},
+        {"answerType": "WebPages", "resultIndex": 10, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10"}},
+        {"answerType": "WebPages", "resultIndex": 11, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11"}},
+        {"answerType": "WebPages", "resultIndex": 12, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12"}},
+        {"answerType": "WebPages", "resultIndex": 13, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13"}},
+        {"answerType": "WebPages", "resultIndex": 14, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14"}},
+        {"answerType": "WebPages", "resultIndex": 15, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15"}},
+        {"answerType": "WebPages", "resultIndex": 16, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16"}},
+        {"answerType": "WebPages", "resultIndex": 17, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17"}},
+        {"answerType": "WebPages", "resultIndex": 18, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18"}},
+        {"answerType": "WebPages", "resultIndex": 19, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19"}}]}}}'
+    http_version: 
+  recorded_at: Wed, 26 Sep 2018 23:11:24 GMT
 recorded_with: VCR 4.0.0

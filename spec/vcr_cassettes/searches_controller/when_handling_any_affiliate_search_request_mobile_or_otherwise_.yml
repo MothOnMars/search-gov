@@ -229,4 +229,217 @@ http_interactions:
         "sidebar": {"items": [{"answerType": "Entities"}]}}}'
     http_version: 
   recorded_at: Thu, 26 Apr 2018 23:29:19 GMT
+- request:
+    method: get
+    uri: https://www.bingapis.com/api/v6/search?AppId=<BING_V6_APP_ID>&count=20&mkt=en-US&offset=0&q=weather%20(site:gov%20OR%20site:mil)&responseFilter=WebPages&safeSearch=moderate&textDecorations=true&traffictype=test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - USASearch
+      Ocp-Apim-Subscription-Key:
+      - "<BING_V6_APP_ID>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '2341'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - Wed, 26 Sep 2018 22:57:40 GMT
+      Vary:
+      - Accept-Encoding
+      P3p:
+      - CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
+      Set-Cookie:
+      - MUID=3B2E53840BBB616C1F865FF20AF76003; path=/; expires=Mon, 21-Oct-2019 22:58:40
+        GMT; domain=bingapis.com
+      - MUIDB=3B2E53840BBB616C1F865FF20AF76003; path=/; httponly; expires=Mon, 21-Oct-2019
+        22:58:40 GMT
+      - SRCHD=AF=NOFORM; domain=.bingapis.com; expires=Sat, 26-Sep-2020 22:58:40 GMT;
+        path=/
+      - SRCHUID=V=2&GUID=E398324D1A8E4195B3D41329209D01A4&dmnchg=1; domain=.bingapis.com;
+        expires=Sat, 26-Sep-2020 22:58:40 GMT; path=/
+      - SRCHUSR=DOB=20180926; domain=.bingapis.com; expires=Sat, 26-Sep-2020 22:58:40
+        GMT; path=/
+      - _EDGE_S=mkt=en-us&F=1&SID=0D3BBF28AE2966333DA3B35EAF656704; path=/; httponly;
+        domain=bingapis.com
+      - _EDGE_V=1; path=/; httponly; expires=Mon, 21-Oct-2019 22:58:40 GMT; domain=bingapis.com
+      - _SS=SID=0D3BBF28AE2966333DA3B35EAF656704; domain=.bingapis.com; path=/
+      Bingapis-Traceid:
+      - 9C30882C4EE34B8DB23C31DF8B680DD8
+      X-Msedge-Clientid:
+      - 3B2E53840BBB616C1F865FF20AF76003
+      X-Msapi-Userstate:
+      - a443
+      Bingapis-Market:
+      - en-US
+      X-Msedge-Ref:
+      - 'Ref A: 9C30882C4EE34B8DB23C31DF8B680DD8 Ref B: BY3EDGE0110 Ref C: 2018-09-26T22:58:40Z'
+      Date:
+      - Wed, 26 Sep 2018 22:58:39 GMT
+    body:
+      encoding: UTF-8
+      string: '{"_type": "SearchResponse", "instrumentation": {"pingUrlBase": "https:\/\/www.bingapis.com\/api\/ping?IG=1698BC38FFB344E684659070EE3E04DF&CID=3B2E53840BBB616C1F865FF20AF76003&ID=",
+        "pageLoadPingUrl": "https:\/\/www.bingapis.com\/api\/ping\/pageload?IG=1698BC38FFB344E684659070EE3E04DF&CID=3B2E53840BBB616C1F865FF20AF76003&Type=Event.CPT&DATA=0"},
+        "webPages": {"webSearchUrl": "https:\/\/www.bing.com\/search?q=weather+(site%3agov+OR+site%3amil)",
+        "webSearchUrlPingSuffix": "DevEx,5417.1", "totalEstimatedMatches": 26600000,
+        "value": [{"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0", "name":
+        "National Weather Service", "url": "https:\/\/www.weather.gov\/", "urlPingSuffix":
+        "DevEx,5064.1", "about": [{"name": "National Weather Service"}, {"name": "National
+        Weather Service"}], "displayUrl": "https:\/\/www.weather.gov", "snippet":
+        "NOAA National Weather Service National Weather Service. Click on the map
+        above for detailed alerts or", "dateLastCrawled": "2018-09-22T05:31:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1", "name": "Weather
+        | National Oceanic and Atmospheric Administration", "url": "https:\/\/www.noaa.gov\/weather",
+        "urlPingSuffix": "DevEx,5076.1", "displayUrl": "https:\/\/www.noaa.gov\/weather",
+        "snippet": "NOAA''s National Weather Service is building a Weather-Ready
+        Nation by providing better information for better decisions to save lives
+        and livelihoods", "dateLastCrawled": "2018-09-22T06:21:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2", "name": "NOAA''s National
+        Weather Service", "url": "http:\/\/w1.weather.gov\/", "urlPingSuffix": "DevEx,5090.1",
+        "about": [{"name": "National Weather Service"}], "displayUrl": "w1.weather.gov",
+        "snippet": "National Weather Service Home page. The starting point for official
+        government weather forecasts, warnings, meteorological products for forecasting
+        the weather, and information about meteorology.", "dateLastCrawled": "2018-09-23T04:57:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3", "name": "National
+        Weather Service Doppler Radar Images", "url": "https:\/\/radar.weather.gov\/",
+        "urlPingSuffix": "DevEx,5103.1", "about": [{"name": "Weather radar"}, {"name":
+        "Weather radar"}], "displayUrl": "https:\/\/radar.weather.gov", "snippet":
+        "Latest weather radar images from the National Weather Service", "dateLastCrawled":
+        "2018-09-19T12:59:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4",
+        "name": "National Forecast Maps - National Weather Service", "url": "https:\/\/www.weather.gov\/forecastmaps",
+        "urlPingSuffix": "DevEx,5117.1", "about": [{"name": "National Weather Service"}],
+        "displayUrl": "https:\/\/www.weather.gov\/forecastmaps", "snippet": "National
+        Weather Maps. Surface Analysis. Highs, lows, fronts, troughs, outflow boundaries,
+        squall lines, drylines for much of North America, the Western Atlantic and
+        Eastern Pacific oceans, and the Gulf of Mexico.", "dateLastCrawled": "2018-09-22T19:47:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5", "name": "Fort Worth\/Dallas,
+        TX - National Weather Service", "url": "https:\/\/www.weather.gov\/fwd\/",
+        "urlPingSuffix": "DevEx,5130.1", "about": [{"name": "National Weather Service
+        Fort Worth, Texas"}], "displayUrl": "https:\/\/www.weather.gov\/fwd", "snippet":
+        "NOAA National Weather Service Fort Worth\/Dallas, TX", "dateLastCrawled":
+        "2018-09-22T01:41:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6",
+        "name": "Pittsburgh, PA - National Weather Service", "url": "https:\/\/www.weather.gov\/pbz\/",
+        "urlPingSuffix": "DevEx,5143.1", "about": [{"name": "US National Weather Service
+        Pittsburgh PA"}], "displayUrl": "https:\/\/www.weather.gov\/pbz", "snippet":
+        "NOAA National Weather Service Pittsburgh, PA. Please Report Down Trees
+        and Large Branches Here; Historical list of tropical systems that have brought
+        rainfall to the region", "dateLastCrawled": "2018-09-22T22:31:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7", "name": "Doppler
+        Radar National Mosaic - weather.gov", "url": "https:\/\/www.weather.gov\/Radar",
+        "urlPingSuffix": "DevEx,5154.1", "about": [{"name": "National Weather Service"}],
+        "displayUrl": "https:\/\/www.weather.gov\/Radar", "snippet": "Latest weather
+        radar images from the National Weather Service", "dateLastCrawled": "2018-09-22T14:28:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8", "name": "Paducah,
+        KY - National Weather Service", "url": "https:\/\/www.weather.gov\/pah\/",
+        "urlPingSuffix": "DevEx,5168.1", "about": [{"name": "NWS Paducah"}], "displayUrl":
+        "https:\/\/www.weather.gov\/pah", "snippet": "NOAA National Weather Service
+        Paducah, KY. US Dept of Commerce National Oceanic and Atmospheric Administration
+        National Weather Service", "dateLastCrawled": "2018-09-22T12:15:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9", "name": "National
+        Weather Service St. Louis, Missouri", "url": "https:\/\/www.weather.gov\/lsx\/",
+        "urlPingSuffix": "DevEx,5181.1", "about": [{"name": "National Weather Service"}],
+        "displayUrl": "https:\/\/www.weather.gov\/lsx", "snippet": "NOAA National
+        Weather Service St. Louis, MO. US Dept of Commerce National Oceanic and Atmospheric
+        Administration National Weather Service", "dateLastCrawled": "2018-09-22T03:54:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10", "name": "Cleveland,
+        OH - National Weather Service", "url": "https:\/\/www.weather.gov\/cle\/",
+        "urlPingSuffix": "DevEx,5193.1", "about": [{"name": "US National Weather Service
+        Cleveland OH"}], "displayUrl": "https:\/\/www.weather.gov\/cle", "snippet":
+        "NOAA National Weather Service Cleveland, OH. US Dept of Commerce National
+        Oceanic and Atmospheric Administration National Weather Service", "dateLastCrawled":
+        "2018-09-21T22:25:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11",
+        "name": "NWS Forecast Office Chicago, IL - National Weather Service", "url":
+        "https:\/\/www.weather.gov\/lot\/", "urlPingSuffix": "DevEx,5206.1", "about":
+        [{"name": "National Weather Service"}], "displayUrl": "https:\/\/www.weather.gov\/lot",
+        "snippet": "NOAA National Weather Service Chicago, IL. US Dept of Commerce
+        National Oceanic and Atmospheric Administration National Weather Service",
+        "dateLastCrawled": "2018-09-22T08:01:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12",
+        "name": "Northern Indiana - National Weather Service", "url": "https:\/\/www.weather.gov\/iwx\/",
+        "urlPingSuffix": "DevEx,5220.1", "about": [{"name": "US National Weather Service
+        Northern Indiana"}], "displayUrl": "https:\/\/www.weather.gov\/iwx", "snippet":
+        "NOAA National Weather Service Northern Indiana. US Dept of Commerce National
+        Oceanic and Atmospheric Administration National Weather Service", "dateLastCrawled":
+        "2018-09-22T05:57:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13",
+        "name": "Twin Cities, MN - National Weather Service", "url": "https:\/\/www.weather.gov\/mpx\/",
+        "urlPingSuffix": "DevEx,5234.1", "about": [{"name": "NWS Twin Cities"}], "displayUrl":
+        "https:\/\/www.weather.gov\/mpx", "snippet": "NOAA National Weather Service
+        Twin Cities, MN. Details on the Severe Weather from Thursday, September
+        20, 2018. Damage survey results, photographs, meteorological information,
+        and storm reports from the severe weather event of Thursday, September 20,
+        2018.", "dateLastCrawled": "2018-09-23T01:03:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14",
+        "name": "National Weather Service - Graphical Forecast", "url": "https:\/\/digital.weather.gov\/",
+        "urlPingSuffix": "DevEx,5247.1", "displayUrl": "https:\/\/digital.weather.gov",
+        "snippet": "NOAA National Weather Service National Weather Service NDFD
+        Graphical Forecast", "dateLastCrawled": "2018-09-22T05:23:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15", "name": "Active Alerts
+        - National Weather Service", "url": "https:\/\/www.weather.gov\/alerts",
+        "urlPingSuffix": "DevEx,5260.1", "about": [{"name": "National Weather Service"}],
+        "displayUrl": "https:\/\/www.weather.gov\/alerts", "snippet": "Active weather
+        alerts. US Dept of Commerce National Oceanic and Atmospheric Administration
+        National Weather Service", "dateLastCrawled": "2018-09-22T01:36:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16", "name": "NWS Forecast
+        Office Pueblo, CO - National Weather Service", "url": "https:\/\/www.weather.gov\/pub\/",
+        "urlPingSuffix": "DevEx,5274.1", "about": [{"name": "National Weather Service"}],
+        "displayUrl": "https:\/\/www.weather.gov\/pub", "snippet": "NOAA National
+        Weather Service Pueblo, CO. US Dept of Commerce National Oceanic and Atmospheric
+        Administration National Weather Service", "dateLastCrawled": "2018-09-21T08:51:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17", "name": "Denver\/Boulder,
+        CO - National Weather Service", "url": "https:\/\/www.weather.gov\/bou\/",
+        "urlPingSuffix": "DevEx,5288.1", "about": [{"name": "US National Weather Service
+        Denver\/Boulder Colorado"}], "displayUrl": "https:\/\/www.weather.gov\/bou",
+        "snippet": "NOAA National Weather Service Denver\/Boulder, CO. Ryan Fire
+        Decision Support; Silver Creek Fire Decision Support; NWS Boulder will be
+        at the Self Reliance Experience this Saturday Sept 22 from 9 am to 6 pm, and
+        Sunday Sept 23 from 10 am to 4 pm, at Denver''s National Western Center.",
+        "dateLastCrawled": "2018-09-22T20:11:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18",
+        "name": "Baltimore\/Washington - National Weather Service", "url": "https:\/\/www.weather.gov\/lwx\/",
+        "urlPingSuffix": "DevEx,5302.1", "about": [{"name": "National Weather Service"}],
+        "displayUrl": "https:\/\/www.weather.gov\/lwx", "snippet": "NOAA National
+        Weather Service Baltimore\/Washington. US Dept of Commerce National Oceanic
+        and Atmospheric Administration National Weather Service", "dateLastCrawled":
+        "2018-09-22T12:24:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19",
+        "name": "Hastings, NE - National Weather Service", "url": "https:\/\/www.weather.gov\/gid\/",
+        "urlPingSuffix": "DevEx,5315.1", "about": [{"name": "NWS Hastings"}], "displayUrl":
+        "https:\/\/www.weather.gov\/gid", "snippet": "NOAA National Weather Service
+        Hastings, NE. Sep. 13-19: Hottest Week This Late In the Year Since 1955 in
+        the Tri Cities!", "dateLastCrawled": "2018-09-22T12:49:00.0000000Z"}]}, "rankingResponse":
+        {"mainline": {"items": [{"answerType": "WebPages", "resultIndex": 0, "value":
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0"}}, {"answerType":
+        "WebPages", "resultIndex": 1, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1"}},
+        {"answerType": "WebPages", "resultIndex": 2, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2"}},
+        {"answerType": "WebPages", "resultIndex": 3, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3"}},
+        {"answerType": "WebPages", "resultIndex": 4, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4"}},
+        {"answerType": "WebPages", "resultIndex": 5, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5"}},
+        {"answerType": "WebPages", "resultIndex": 6, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6"}},
+        {"answerType": "WebPages", "resultIndex": 7, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7"}},
+        {"answerType": "WebPages", "resultIndex": 8, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8"}},
+        {"answerType": "WebPages", "resultIndex": 9, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9"}},
+        {"answerType": "WebPages", "resultIndex": 10, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10"}},
+        {"answerType": "WebPages", "resultIndex": 11, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11"}},
+        {"answerType": "WebPages", "resultIndex": 12, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12"}},
+        {"answerType": "WebPages", "resultIndex": 13, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13"}},
+        {"answerType": "WebPages", "resultIndex": 14, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14"}},
+        {"answerType": "WebPages", "resultIndex": 15, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15"}},
+        {"answerType": "WebPages", "resultIndex": 16, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16"}},
+        {"answerType": "WebPages", "resultIndex": 17, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17"}},
+        {"answerType": "WebPages", "resultIndex": 18, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18"}},
+        {"answerType": "WebPages", "resultIndex": 19, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19"}}]}}}'
+    http_version: 
+  recorded_at: Wed, 26 Sep 2018 22:58:40 GMT
 recorded_with: VCR 4.0.0

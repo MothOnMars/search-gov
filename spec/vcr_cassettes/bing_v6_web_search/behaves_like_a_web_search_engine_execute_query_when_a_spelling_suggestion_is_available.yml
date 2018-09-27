@@ -242,4 +242,237 @@ http_interactions:
         {"answerType": "WebPages", "resultIndex": 19, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19"}}]}}}'
     http_version: 
   recorded_at: Thu, 26 Apr 2018 23:26:54 GMT
+- request:
+    method: get
+    uri: https://www.bingapis.com/api/v6/search?AppId=<BING_V6_APP_ID>&count=20&mkt=en-US&offset=0&q=sailing%20dingies&responseFilter=WebPages&safeSearch=moderate&textDecorations&traffictype=test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - USASearch
+      Ocp-Apim-Subscription-Key:
+      - "<BING_V6_APP_ID>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '3912'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - Wed, 26 Sep 2018 22:47:54 GMT
+      Vary:
+      - Accept-Encoding
+      P3p:
+      - CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
+      Set-Cookie:
+      - MUID=1A5393CA620C66831BE59FBC6340672B; path=/; expires=Mon, 21-Oct-2019 22:48:54
+        GMT; domain=bingapis.com
+      - MUIDB=1A5393CA620C66831BE59FBC6340672B; path=/; httponly; expires=Mon, 21-Oct-2019
+        22:48:54 GMT
+      - SRCHD=AF=NOFORM; domain=.bingapis.com; expires=Sat, 26-Sep-2020 22:48:54 GMT;
+        path=/
+      - SRCHUID=V=2&GUID=F1D638BECCFC438899901F1A9128F157&dmnchg=1; domain=.bingapis.com;
+        expires=Sat, 26-Sep-2020 22:48:54 GMT; path=/
+      - SRCHUSR=DOB=20180926; domain=.bingapis.com; expires=Sat, 26-Sep-2020 22:48:54
+        GMT; path=/
+      - _EDGE_S=mkt=en-us&F=1&SID=2CA9C9948AFC6A86219FC5E28BB06B3D; path=/; httponly;
+        domain=bingapis.com
+      - _EDGE_V=1; path=/; httponly; expires=Mon, 21-Oct-2019 22:48:54 GMT; domain=bingapis.com
+      - _SS=SID=2CA9C9948AFC6A86219FC5E28BB06B3D; domain=.bingapis.com; path=/
+      Bingapis-Traceid:
+      - 93AA54FA6BD145CAA5C7DA2F0F513E92
+      X-Msedge-Clientid:
+      - 1A5393CA620C66831BE59FBC6340672B
+      X-Msapi-Userstate:
+      - '1827'
+      Bingapis-Market:
+      - en-US
+      X-Msedge-Ref:
+      - 'Ref A: 93AA54FA6BD145CAA5C7DA2F0F513E92 Ref B: BY3EDGE0114 Ref C: 2018-09-26T22:48:54Z'
+      Date:
+      - Wed, 26 Sep 2018 22:48:53 GMT
+    body:
+      encoding: UTF-8
+      string: '{"_type": "SearchResponse", "instrumentation": {"pingUrlBase": "https:\/\/www.bingapis.com\/api\/ping?IG=D3A77A49D52644B59F84BF3668E3F335&CID=1A5393CA620C66831BE59FBC6340672B&ID=",
+        "pageLoadPingUrl": "https:\/\/www.bingapis.com\/api\/ping\/pageload?IG=D3A77A49D52644B59F84BF3668E3F335&CID=1A5393CA620C66831BE59FBC6340672B&Type=Event.CPT&DATA=0"},
+        "queryContext": {"originalQuery": "sailing dingies", "alteredQuery": "sailing
+        dinghies", "alterationOverrideQuery": "+sailing dingies", "adultIntent": false},
+        "webPages": {"webSearchUrl": "https:\/\/www.bing.com\/search?q=sailing+dingies",
+        "webSearchUrlPingSuffix": "DevEx,5442.1", "totalEstimatedMatches": 6890000,
+        "value": [{"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0", "name":
+        "Dinghy sailing - Wikipedia", "url": "https:\/\/en.wikipedia.org\/wiki\/Dinghy_sailing",
+        "urlPingSuffix": "DevEx,5071.1", "about": [{"name": "Dinghy sailing"}, {"name":
+        "Dinghy sailing"}], "displayUrl": "https:\/\/en.wikipedia.org\/wiki\/Dinghy_sailing",
+        "snippet": "Dinghy sailing is the activity of sailing small boats by using
+        five essential controls: the sails; the foils (i.e. the daggerboard or centreboard
+        and rudder and sometimes lifting foils as found on the Moth) the trim (forward\/rear
+        angle of the boat in the water)", "snippetAttribution": {"license": {"name":
+        "CC-BY-SA", "url": "http:\/\/creativecommons.org\/licenses\/by-sa\/3.0\/",
+        "urlPingSuffix": "DevEx,5441.1"}, "licenseNotice": "Text under CC-BY-SA license"},
+        "dateLastCrawled": "2018-09-18T03:25:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1",
+        "name": "Best Dinghy | Sailing World", "url": "https:\/\/www.sailingworld.com\/best-dinghy-melges-14",
+        "urlPingSuffix": "DevEx,5085.1", "displayUrl": "https:\/\/www.sailingworld.com\/best-dinghy-melges-14",
+        "snippet": "Best Dinghy: Melges 14. Any discussion of a modern singlehander
+        will inevitably lead to a comparison with the Laser, which is the ultimate
+        in performance and simplicity, the most prolific one ...", "dateLastCrawled":
+        "2018-09-22T19:15:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2",
+        "name": "25 best beginner sailing dinghies - boats.com", "url": "https:\/\/uk.boats.com\/boat-buyers-guide\/25-best-beginner-sailing-dinghies\/",
+        "urlPingSuffix": "DevEx,5098.1", "about": [{"name": "Dinghy sailing"}], "displayUrl":
+        "https:\/\/uk.boats.com\/...\/25-best-beginner-sailing-dinghies", "snippet":
+        "There is a lot of choice on the dinghy sailing market, so which is the best
+        sailing dinghy for beginners? Paula Irish reviews the market.", "dateLastCrawled":
+        "2018-09-21T11:27:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3",
+        "name": "Sailing Dinghy | Portland Pudgy", "url": "http:\/\/www.portlandpudgy.com\/sailing-dinghy\/",
+        "urlPingSuffix": "DevEx,5112.1", "about": [{"name": "Dinghy sailing"}], "displayUrl":
+        "www.portlandpudgy.com\/sailing-dinghy", "snippet": "Portland Pudgy Sailing
+        Dinghy The sail kit makes your Portland Pudgy a fun, safe sailing dinghy.
+        It also makes it a proactive self-rescue boat.", "dateLastCrawled": "2018-09-15T21:48:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4", "name": "Trinka-The
+        Best Rowing\/Sailing Dinghy in the World.", "url": "http:\/\/www.trinka.com\/",
+        "urlPingSuffix": "DevEx,5125.1", "about": [{"name": "Dinghy sailing"}], "displayUrl":
+        "www.trinka.com", "snippet": "Trinka-The best rowing dinghy and sailing yacht
+        dinghy in the world.", "dateLastCrawled": "2018-09-21T17:46:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5", "name": "Sailing
+        dinghy, Navigation tender - All boating and marine ...", "url": "http:\/\/www.nauticexpo.com\/boat-manufacturer\/sailing-dinghy-1760.html",
+        "urlPingSuffix": "DevEx,5141.1", "about": [{"name": "Dinghy sailing"}], "displayUrl":
+        "www.nauticexpo.com\/boat-manufacturer\/sailing-dinghy-1760.html", "snippet":
+        "A sailing dinghy is a small, light sailboat with a centerboard or daggerboard
+        to counter drift. Different models are designed for use by one, two or more
+        crew. Applications", "dateLastCrawled": "2018-09-21T19:27:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6", "name": "Dinghy | Discover
+        Boating", "url": "https:\/\/www.discoverboating.com\/buying\/boat\/dinghies",
+        "urlPingSuffix": "DevEx,5153.1", "about": [{"name": "Dinghy"}], "displayUrl":
+        "https:\/\/www.discoverboating.com\/buying\/boat\/dinghies", "snippet": "A
+        sail-equipped dinghy is also a great first boat for introducing children to
+        sailing. Which Engine is Right For Your Boat Compact, low-horsepower outboards
+        are also an alternative.", "dateLastCrawled": "2018-09-21T10:15:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7", "name": "Sailing
+        Dinghies for sale, used yachts, new sailing dinghy ...", "url": "https:\/\/sailingdinghies.apolloduck.com\/",
+        "urlPingSuffix": "DevEx,5165.1", "about": [{"name": "Dinghy sailing"}], "displayUrl":
+        "https:\/\/sailingdinghies.apolloduck.com", "snippet": "Sailing dinghies,
+        sailing dinghies for sale, Apollo Duck new and used dinghy sales. Sell your
+        dinghy fast with a free photo advert. Find your dinghy in our database of
+        sailing dinghies, sailing boats, skiffs, beach cats, keel boats, catamarans,
+        one designs and racers.", "dateLastCrawled": "2018-09-22T04:19:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8", "name": "Dinghy
+        - Wikipedia", "url": "https:\/\/en.wikipedia.org\/wiki\/Dingy", "urlPingSuffix":
+        "DevEx,5184.1", "about": [{"name": "Dinghy"}], "displayUrl": "https:\/\/en.wikipedia.org\/wiki\/Dingy",
+        "snippet": "A dinghy (or dingey [citation needed]) is a type of small boat,
+        often carried or towed for use as a lifeboat or tender by a larger vessel.The
+        term is a loanword from the Bengali ḍiṅgi, Urdu ḍīngī & Hindi ḍieṁgī. Utility
+        dinghies are usually rowboats or have an outboard motor, but while some are
+        rigged for sailing, they are not to be confused with sailing dinghies which
+        are ...", "snippetAttribution": {"license": {"name": "CC-BY-SA", "url": "http:\/\/creativecommons.org\/licenses\/by-sa\/3.0\/",
+        "urlPingSuffix": "DevEx,5443.1"}, "licenseNotice": "Text under CC-BY-SA license"},
+        "dateLastCrawled": "2018-09-16T20:09:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9",
+        "name": "Sailing Dinghies that You Can Build! - CLC boats", "url": "https:\/\/www.clcboats.com\/shop\/wooden-sailboat-kits\/sailing-dinghies\/",
+        "urlPingSuffix": "DevEx,5197.1", "displayUrl": "https:\/\/www.clcboats.com\/shop\/wooden-sailboat-kits\/sailing-dinghies",
+        "snippet": "\"Dinghy\" is derived from an old Hindi word for a sailing or
+        rowing passenger vessel. In English, a dinghy is a small rowing and sailing
+        boat, often (but not necessarily) serving as a tender to a mother ship.",
+        "dateLastCrawled": "2018-09-20T08:48:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10",
+        "name": "Dinghy Sailing - Topic - YouTube", "url": "https:\/\/www.youtube.com\/channel\/UC1aj5lpRZiCfzVgmN95Pq3Q",
+        "urlPingSuffix": "DevEx,5211.1", "displayUrl": "https:\/\/www.youtube.com\/channel\/UC1aj5lpRZiCfzVgmN95Pq3Q",
+        "snippet": "Dinghy sailing is the activity of sailing small boats by using
+        five essential controls: the sails the foils the trim side-to-side balance
+        of the dinghy by hi...", "dateLastCrawled": "2018-09-16T23:54:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11", "name": "Singlehanded
+        sailing dinghies - boats.com", "url": "https:\/\/uk.boats.com\/reviews\/singlehanded-sailing-dinghies\/",
+        "urlPingSuffix": "DevEx,5223.1", "displayUrl": "https:\/\/uk.boats.com\/reviews\/singlehanded-sailing-dinghies",
+        "snippet": "We look at the world of singlehanded sailing dinghies in the UK,
+        whether you are looking for a dinghy that''s easy to sail or a real challenge
+        with a trapeze or even foils, this is the guide for you.", "dateLastCrawled":
+        "2018-09-17T07:09:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12",
+        "name": "Gig Harbor Boat Works | Rowing and Sailing Dinghies ...", "url":
+        "http:\/\/www.ghboats.com\/", "urlPingSuffix": "DevEx,5237.1", "about": [{"name":
+        "Gig Harbor Boat Works"}, {"name": "Whitehall rowboat"}], "displayUrl": "www.ghboats.com",
+        "snippet": "Gig Harbor Boat Works is the builder of a unique line of custom
+        small boats for rowing and sailing. Our boats are modern reproductions of
+        traditional working boats, used by people who earned their living using only
+        wind and oar.", "dateLastCrawled": "2018-09-22T13:30:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13", "name": "In Search of
+        the Perfect Dinghy: - www.ruach.net: Dinghy ...", "url": "http:\/\/www.ruach.net\/Dinghy.html",
+        "urlPingSuffix": "DevEx,5250.1", "about": [{"name": "Dinghy sailing"}], "displayUrl":
+        "www.ruach.net\/Dinghy.html", "snippet": "Another line of boats that are being
+        brought into the US Market are made by RS Sailing. In the US, probably the
+        best known model is the RS Feva, a 12'' two-handed, rotomolded polyethelyne
+        dinghy which is becoming increasingly popular among youth sailing programs.",
+        "dateLastCrawled": "2018-09-22T20:24:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14",
+        "name": "Sailing Dinghy | eBay", "url": "https:\/\/www.ebay.com\/bhp\/sailing-dinghy",
+        "urlPingSuffix": "DevEx,5265.1", "about": [{"name": "Dinghy sailing"}], "displayUrl":
+        "https:\/\/www.ebay.com\/bhp\/sailing-dinghy", "snippet": "Find great deals
+        on eBay for Sailing Dinghy in Paragliding Equipment and Accessories. Shop
+        with confidence.", "dateLastCrawled": "2018-09-18T00:14:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15", "name": "RS SAILING -
+        RS Sailing, the world’s largest small ...", "url": "https:\/\/www.rssailing.com\/",
+        "urlPingSuffix": "DevEx,5279.1", "about": [{"name": "RS Sailing"}], "displayUrl":
+        "https:\/\/www.rssailing.com", "snippet": "RS Sailing was born from a passion
+        to use the latest design and technology to create boats that are more exciting,
+        faster and easier. Evolving from our heritage in flat-out racing classes,
+        the RS Sailing range has grown to include boats for beginners, families, clubs
+        and schools, developed using that same desire to move the game forward. ...",
+        "dateLastCrawled": "2018-09-21T21:33:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16",
+        "name": "Dinghy Sailboat Line and Rope | APS", "url": "http:\/\/www.apsltd.com\/line\/dinghy-sailboat-line-rope.html",
+        "urlPingSuffix": "DevEx,5293.1", "displayUrl": "www.apsltd.com\/line\/dinghy-sailboat-line-rope.html",
+        "snippet": "Sailing Books, Magazines, CDs & DVDs; Race Marks & Race Committee
+        Items; Docking; ... Dinghy Sailboat Line and Rope. Line Type Guide: Fiber
+        Guide: Diameter Guide: Measurement Guide: ... Dinghy mainsheets need to have
+        low water absorption to keep the sheet light and free running - especially
+        at mark roundings. A line that is easy and comfortable ...", "dateLastCrawled":
+        "2018-09-20T09:59:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17",
+        "name": "Sailing Dinghies for sale UK, used sailing dinghies, new ...", "url":
+        "https:\/\/sailingdinghies.apolloduck.co.uk\/", "urlPingSuffix": "DevEx,5305.1",
+        "about": [{"name": "Dinghy sailing"}], "displayUrl": "https:\/\/sailingdinghies.apolloduck.co.uk",
+        "snippet": "Sailing Dinghies, sailing dinghies for sale UK, Apollo Duck new
+        and used dinghy sales. Sell your boat fast with a free photo advert. Find
+        your boat in our database of yachts, power boats, superyachts, cruisers, houseboats,
+        fishing boats and ships.", "dateLastCrawled": "2018-09-23T12:47:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18", "name": "Dinghy
+        Sailing: Amazon.com", "url": "https:\/\/www.amazon.com\/slp\/dinghy-sailing\/kupqq9ftvnwj95g",
+        "urlPingSuffix": "DevEx,5319.1", "displayUrl": "https:\/\/www.amazon.com\/slp\/dinghy-sailing\/kupqq9ftvnwj95g",
+        "snippet": "Buy products related to dinghy sailing products and see what customers
+        say about dinghy sailing products on Amazon.com FREE DELIVERY possible on
+        eligible purchases", "dateLastCrawled": "2018-09-21T17:04:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19", "name": "Buy Sailing
+        Dinghies & Boats | eBay", "url": "https:\/\/www.ebay.co.uk\/b\/Sailing-Dinghies-Boats\/98955\/bn_2318024",
+        "urlPingSuffix": "DevEx,5335.1", "displayUrl": "https:\/\/www.ebay.co.uk\/b\/Sailing-Dinghies-Boats\/98955",
+        "snippet": "Free Shipping on Many Items! Shop from the world''s largest selection
+        and best deals for Sailing Dinghies & Boats. Shop with confidence on eBay!",
+        "dateLastCrawled": "2018-09-18T15:47:00.0000000Z"}]}, "rankingResponse": {"mainline":
+        {"items": [{"answerType": "WebPages", "resultIndex": 0, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0"}},
+        {"answerType": "WebPages", "resultIndex": 1, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1"}},
+        {"answerType": "WebPages", "resultIndex": 2, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2"}},
+        {"answerType": "WebPages", "resultIndex": 3, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3"}},
+        {"answerType": "WebPages", "resultIndex": 4, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4"}},
+        {"answerType": "WebPages", "resultIndex": 5, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5"}},
+        {"answerType": "WebPages", "resultIndex": 6, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6"}},
+        {"answerType": "WebPages", "resultIndex": 7, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7"}},
+        {"answerType": "WebPages", "resultIndex": 8, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8"}},
+        {"answerType": "WebPages", "resultIndex": 9, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9"}},
+        {"answerType": "WebPages", "resultIndex": 10, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10"}},
+        {"answerType": "WebPages", "resultIndex": 11, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11"}},
+        {"answerType": "WebPages", "resultIndex": 12, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12"}},
+        {"answerType": "WebPages", "resultIndex": 13, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13"}},
+        {"answerType": "WebPages", "resultIndex": 14, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14"}},
+        {"answerType": "WebPages", "resultIndex": 15, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15"}},
+        {"answerType": "WebPages", "resultIndex": 16, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16"}},
+        {"answerType": "WebPages", "resultIndex": 17, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17"}},
+        {"answerType": "WebPages", "resultIndex": 18, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18"}},
+        {"answerType": "WebPages", "resultIndex": 19, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19"}}]}}}'
+    http_version: 
+  recorded_at: Wed, 26 Sep 2018 22:48:54 GMT
 recorded_with: VCR 4.0.0

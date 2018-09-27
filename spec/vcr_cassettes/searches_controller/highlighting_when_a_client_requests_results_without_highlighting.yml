@@ -223,4 +223,237 @@ http_interactions:
         {"answerType": "WebPages", "resultIndex": 19, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19"}}]}}}'
     http_version: 
   recorded_at: Thu, 26 Apr 2018 23:29:20 GMT
+- request:
+    method: get
+    uri: https://www.bingapis.com/api/v6/search?AppId=<BING_V6_APP_ID>&count=20&mkt=en-US&offset=0&q=obama%20(site:gov%20OR%20site:mil)&responseFilter=WebPages&safeSearch=moderate&textDecorations=false&traffictype=test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - USASearch
+      Ocp-Apim-Subscription-Key:
+      - "<BING_V6_APP_ID>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '3918'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - Wed, 26 Sep 2018 22:57:26 GMT
+      Vary:
+      - Accept-Encoding
+      P3p:
+      - CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
+      Set-Cookie:
+      - MUID=29AEF75C955C645426CBFB2A94106543; path=/; expires=Mon, 21-Oct-2019 22:58:26
+        GMT; domain=bingapis.com
+      - MUIDB=29AEF75C955C645426CBFB2A94106543; path=/; httponly; expires=Mon, 21-Oct-2019
+        22:58:26 GMT
+      - SRCHD=AF=NOFORM; domain=.bingapis.com; expires=Sat, 26-Sep-2020 22:58:26 GMT;
+        path=/
+      - SRCHUID=V=2&GUID=EE10EE301EDB40A09EF71F5D93C5F579&dmnchg=1; domain=.bingapis.com;
+        expires=Sat, 26-Sep-2020 22:58:26 GMT; path=/
+      - SRCHUSR=DOB=20180926; domain=.bingapis.com; expires=Sat, 26-Sep-2020 22:58:26
+        GMT; path=/
+      - _EDGE_S=mkt=en-us&F=1&SID=05744D3E637266AA0B804148623E6711; path=/; httponly;
+        domain=bingapis.com
+      - _EDGE_V=1; path=/; httponly; expires=Mon, 21-Oct-2019 22:58:26 GMT; domain=bingapis.com
+      - _SS=SID=05744D3E637266AA0B804148623E6711; domain=.bingapis.com; path=/
+      Bingapis-Traceid:
+      - 0ED25A5B600F4C19A7C7EAF9C4E60144
+      X-Msedge-Clientid:
+      - 29AEF75C955C645426CBFB2A94106543
+      X-Msapi-Userstate:
+      - '3487'
+      Bingapis-Market:
+      - en-US
+      X-Msedge-Ref:
+      - 'Ref A: 0ED25A5B600F4C19A7C7EAF9C4E60144 Ref B: BY3EDGE0311 Ref C: 2018-09-26T22:58:26Z'
+      Date:
+      - Wed, 26 Sep 2018 22:58:25 GMT
+    body:
+      encoding: UTF-8
+      string: '{"_type": "SearchResponse", "instrumentation": {"pingUrlBase": "https:\/\/www.bingapis.com\/api\/ping?IG=0FE3418C739842ADB192DC853890F900&CID=29AEF75C955C645426CBFB2A94106543&ID=",
+        "pageLoadPingUrl": "https:\/\/www.bingapis.com\/api\/ping\/pageload?IG=0FE3418C739842ADB192DC853890F900&CID=29AEF75C955C645426CBFB2A94106543&Type=Event.CPT&DATA=0"},
+        "webPages": {"webSearchUrl": "https:\/\/www.bing.com\/search?q=obama+(site%3agov+OR+site%3amil)",
+        "webSearchUrlPingSuffix": "DevEx,5439.1", "totalEstimatedMatches": 9720000,
+        "value": [{"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0", "name":
+        "The White House", "url": "https:\/\/www.whitehouse.gov\/", "urlPingSuffix":
+        "DevEx,5065.1", "about": [{"name": "The White House"}, {"name": "whitehouse.gov"},
+        {"name": "White House"}], "displayUrl": "https:\/\/www.whitehouse.gov", "snippet":
+        "Search WhiteHouse.gov. Land & Agriculture ... Every president since John
+        Adams has occupied the White House, and the history of this building extends
+        far beyond the construction of its walls.", "dateLastCrawled": "2018-09-22T22:20:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1", "name": "Barack
+        Obama | The White House", "url": "https:\/\/www.whitehouse.gov\/about-the-white-house\/presidents\/barack-obama\/",
+        "urlPingSuffix": "DevEx,5079.1", "about": [{"name": "Barack Obama"}], "displayUrl":
+        "https:\/\/www.whitehouse.gov\/...\/presidents\/barack-obama", "snippet":
+        "Barack Obama served as the 44th President of the United States. His story
+        is the American story — values from the heartland, a middle-class upbringing
+        in a strong family, hard work and education ...", "dateLastCrawled": "2018-09-17T07:48:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2", "name": "The White
+        House | whitehouse.gov", "url": "https:\/\/obamawhitehouse.archives.gov\/",
+        "urlPingSuffix": "DevEx,5093.1", "about": [{"name": "whitehouse.gov"}, {"name":
+        "Barack Obama"}, {"name": "Barack Obama"}, {"name": "White House"}], "displayUrl":
+        "https:\/\/obamawhitehouse.archives.gov", "snippet": "President Obama has
+        protected more natural resources than any other president. American Leadership.
+        President Obama has refocused and reaffirmed American leadership in the world.
+        Economic Progress. President Obama has created jobs, rescued the auto industry,
+        and rebuilt the economy.", "dateLastCrawled": "2018-09-20T23:57:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3", "name": "Contact
+        the White House | The White House", "url": "https:\/\/www.whitehouse.gov\/contact\/",
+        "urlPingSuffix": "DevEx,5106.1", "about": [{"name": "White House"}], "displayUrl":
+        "https:\/\/www.whitehouse.gov\/contact", "snippet": "Keep me posted with regular
+        updates from the White House. required ...", "dateLastCrawled": "2018-09-22T09:31:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4", "name": "Barack
+        Obama Presidential Library", "url": "https:\/\/www.obamalibrary.gov\/", "urlPingSuffix":
+        "DevEx,5121.1", "thumbnailUrl": "https:\/\/www.bing.com\/th?id=OIP.uec73DYm3UcMXWjirKlrhgHaE9&pid=Api",
+        "about": [{"name": "Barack Obama"}, {"name": "Barack Obama Presidential Center"},
+        {"name": "Barack Obama"}], "displayUrl": "https:\/\/www.obamalibrary.gov",
+        "snippet": "The Obama Presidential Library is part of the presidential libraries
+        system administered by the National Archives and Records Administration, a
+        federal agency.", "dateLastCrawled": "2018-09-20T19:28:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5", "name": "The White House
+        Blog | whitehouse.gov", "url": "https:\/\/obamawhitehouse.archives.gov\/blog",
+        "urlPingSuffix": "DevEx,5135.1", "displayUrl": "https:\/\/obamawhitehouse.archives.gov\/blog",
+        "snippet": "The Obama Administration Digital Transition: Moving Forward Here''s
+        the latest on how you can continue to follow and engage with President Obama,
+        the First Lady, and other Obama White House officials moving forward.", "dateLastCrawled":
+        "2018-09-18T04:04:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6",
+        "name": "Thank You | whitehouse.gov", "url": "https:\/\/obamawhitehouse.archives.gov\/blog\/2017\/01\/19\/thank-you",
+        "urlPingSuffix": "DevEx,5149.1", "displayUrl": "https:\/\/obamawhitehouse.archives.gov\/blog\/2017\/01\/19\/thank-you",
+        "snippet": "I wanted to say one final thank you for the honor of serving as
+        your 44th President. Editor''s note: President Obama sent this final message
+        to the White House email list this morning. My fellow Americans,", "dateLastCrawled":
+        "2018-09-14T16:07:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7",
+        "name": "Statement by the President on the Passing of Fidel Castro ...", "url":
+        "https:\/\/obamawhitehouse.archives.gov\/the-press-office\/2016\/11\/26\/statement-president-passing-fidel-castro",
+        "urlPingSuffix": "DevEx,5163.1", "displayUrl": "https:\/\/obamawhitehouse.archives.gov\/the-press-office\/2016\/11\/26\/...",
+        "snippet": "Statement by the President on the Passing of Fidel Castro At this
+        time of Fidel Castro’s passing, we extend a hand of friendship to the Cuban
+        people. We know that this moment fills Cubans - in Cuba and in the United
+        States - with powerful emotions, recalling the countless ways in which Fidel
+        Castro altered the course of individual lives ...", "dateLastCrawled": "2018-09-16T08:16:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8", "name": "Articles
+        | The White House", "url": "https:\/\/www.whitehouse.gov\/articles\/", "urlPingSuffix":
+        "DevEx,5177.1", "about": [{"name": "White House"}], "displayUrl": "https:\/\/www.whitehouse.gov\/articles",
+        "snippet": "This week, I visited Riley Children’s Health in Indianapolis and
+        participated in syringe painting with art therapy patients. We made a colorful
+        mess that turned into canvas prints and a cool ...", "dateLastCrawled": "2018-09-22T20:34:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9", "name": "HealthCare.gov
+        - Get 2018 health coverage. Health ...", "url": "https:\/\/www.healthcare.gov\/",
+        "urlPingSuffix": "DevEx,5191.1", "about": [{"name": "HealthCare.gov"}], "displayUrl":
+        "https:\/\/www.healthcare.gov", "snippet": "News & information from the HealthCare.gov
+        blog Please select a topic. Now that you’re signed up, we’ll send you deadline
+        reminders, plus tips about how to get enrolled, stay enrolled, and get the
+        most from your health insurance.", "dateLastCrawled": "2018-09-21T05:56:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10", "name": "Pardons
+        Granted by President Barack Obama (2009-2017 ...", "url": "https:\/\/www.justice.gov\/pardon\/obama-pardons",
+        "urlPingSuffix": "DevEx,5208.1", "displayUrl": "https:\/\/www.justice.gov\/pardon\/obama-pardons",
+        "snippet": "James Robert Adelman. Offense: Conspiracy to embezzle by trustee
+        or officer; embezzlement by trustee (five counts); making a false account
+        (Northern District of Oklahoma)", "dateLastCrawled": "2018-09-12T06:35:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11", "name": "President
+        Barack Obama | whitehouse.gov", "url": "https:\/\/obamawhitehouse.archives.gov\/administration\/president-obama",
+        "urlPingSuffix": "DevEx,5222.1", "displayUrl": "https:\/\/obamawhitehouse.archives.gov\/administration\/president-obama",
+        "snippet": "President Barack Obama Barack Obama is the 44th President of the
+        United States. His story is the American story -- values from the heartland,
+        a middle-class upbringing in a strong family, hard work and education as the
+        means of getting ahead, and the conviction that a life so blessed should be
+        lived in service to others.", "dateLastCrawled": "2018-09-06T01:17:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12", "name": "America''s
+        Move to Raise A Healthier Generation of Kids", "url": "https:\/\/letsmove.obamawhitehouse.archives.gov\/about",
+        "urlPingSuffix": "DevEx,5236.1", "displayUrl": "https:\/\/letsmove.obamawhitehouse.archives.gov\/about",
+        "snippet": "America''s Move to Raise A Healthier Generation of Kids \"In the
+        end, as First Lady, this isn’t just a policy issue for me. ... President Barack
+        Obama signed a Presidential Memorandum creating the first-ever Task Force
+        on Childhood Obesity to conduct a review of every single program and policy
+        relating to child nutrition and physical activity ...", "dateLastCrawled":
+        "2018-09-10T15:01:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13",
+        "name": "Barack Obama - Travels of the President - Travels ...", "url": "https:\/\/history.state.gov\/departmenthistory\/travels\/president\/obama-barack",
+        "urlPingSuffix": "DevEx,5254.1", "displayUrl": "https:\/\/history.state.gov\/...\/travels\/president\/obama-barack",
+        "snippet": "United Kingdom London Met with Queen Elizabeth II and Prime Minister
+        Brown. Attended the G-20 Economic Summit Meeting. March 31–April 3, 2009 France
+        Strasbourg Attended the NATO Summit Meeting. April 3–4, 2009 Turkey Ankara,
+        Istanbul Met with President Gul and Prime Minister Erdogan; addressed ...",
+        "dateLastCrawled": "2018-09-19T05:45:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14",
+        "name": "President Obama on the Tragic Shooting in Orlando ...", "url": "https:\/\/obamawhitehouse.archives.gov\/blog\/2016\/06\/12\/president-obama-tragic-shooting-orlando",
+        "urlPingSuffix": "DevEx,5268.1", "displayUrl": "https:\/\/obamawhitehouse.archives.gov\/blog\/2016\/06\/12\/president...",
+        "snippet": "President Obama and Vice President Biden visit with survivors
+        and families in Orlando. Today, President Obama and Vice President Biden traveled
+        to Orlando, Florida to meet with survivors and families of victims of the
+        horrific attack and to thank the law enforcement officials who bravely responded.",
+        "dateLastCrawled": "2018-09-12T14:57:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15",
+        "name": "Michelle Obama | The White House", "url": "https:\/\/www.whitehouse.gov\/about-the-white-house\/first-ladies\/michelle-obama\/",
+        "urlPingSuffix": "DevEx,5282.1", "about": [{"name": "Michelle Obama"}], "displayUrl":
+        "https:\/\/www.whitehouse.gov\/...\/first-ladies\/michelle-obama", "snippet":
+        "Michelle LaVaughn Robinson Obama is a lawyer, writer, and the wife of the
+        44th President, Barack Obama. She was the first African-American First Lady
+        of the United States. Through her four main ...", "dateLastCrawled": "2018-09-21T22:03:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16", "name": "Circulars
+        | The White House", "url": "https:\/\/obamawhitehouse.archives.gov\/omb\/circulars_default",
+        "urlPingSuffix": "DevEx,5296.1", "displayUrl": "https:\/\/obamawhitehouse.archives.gov\/omb\/circulars_default",
+        "snippet": "OMB Circulars in Numerical Sequence OMB Circular A-1 , System
+        of Circulars and Bulletins to Executive Departments and Establishments (08\/07\/1952)
+        OMB Circular A-4 , Regulatory Analysis (09\/17\/2003) HTML or PDF (48 pages,
+        435 kb)", "dateLastCrawled": "2018-09-19T23:47:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17",
+        "name": "About Us | Barack Obama Presidential Library", "url": "https:\/\/www.obamalibrary.gov\/about-us",
+        "urlPingSuffix": "DevEx,5310.1", "displayUrl": "https:\/\/www.obamalibrary.gov\/about-us",
+        "snippet": "The Barack Obama Presidential Library is the 14th presidential
+        library administered by the National Archives and Records Administration (NARA),
+        a federal agency. Unlike other Presidential Libraries administered by NARA,
+        the Barack Obama Presidential Library will be a fully digital library.", "dateLastCrawled":
+        "2018-09-20T04:33:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18",
+        "name": "Osama Bin Laden Dead | whitehouse.gov", "url": "https:\/\/obamawhitehouse.archives.gov\/blog\/2011\/05\/02\/osama-bin-laden-dead",
+        "urlPingSuffix": "DevEx,5324.1", "about": [{"name": "Death of Osama bin Laden"}],
+        "displayUrl": "https:\/\/obamawhitehouse.archives.gov\/...\/05\/02\/osama-bin-laden-dead",
+        "snippet": "Tonight, President Obama addressed the Nation to announce that
+        the United States has killed Osama bin Laden, the leader of al Qaeda. Watch
+        his full remarks here or read his full remarks below, and learn more from
+        the transcript of the White House briefing call afterwards.", "dateLastCrawled":
+        "2018-09-11T17:41:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19",
+        "name": "President Trump''s Nominee for the United States Supreme Court",
+        "url": "https:\/\/www.whitehouse.gov\/scotus\/", "urlPingSuffix": "DevEx,5337.1",
+        "displayUrl": "https:\/\/www.whitehouse.gov\/scotus", "snippet": "President
+        Donald J. Trump announced his intent to nominate Judge Brett M. Kavanaugh
+        of the U.S. Court of Appeals for the District of Columbia Circuit to fill
+        the Supreme Court vacancy created by ...", "dateLastCrawled": "2018-09-21T17:07:00.0000000Z"}]},
+        "rankingResponse": {"mainline": {"items": [{"answerType": "WebPages", "resultIndex":
+        0, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0"}}, {"answerType":
+        "WebPages", "resultIndex": 1, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1"}},
+        {"answerType": "WebPages", "resultIndex": 2, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2"}},
+        {"answerType": "WebPages", "resultIndex": 3, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3"}},
+        {"answerType": "WebPages", "resultIndex": 4, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4"}},
+        {"answerType": "WebPages", "resultIndex": 5, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5"}},
+        {"answerType": "WebPages", "resultIndex": 6, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6"}},
+        {"answerType": "WebPages", "resultIndex": 7, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7"}},
+        {"answerType": "WebPages", "resultIndex": 8, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8"}},
+        {"answerType": "WebPages", "resultIndex": 9, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9"}},
+        {"answerType": "WebPages", "resultIndex": 10, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10"}},
+        {"answerType": "WebPages", "resultIndex": 11, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11"}},
+        {"answerType": "WebPages", "resultIndex": 12, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12"}},
+        {"answerType": "WebPages", "resultIndex": 13, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13"}},
+        {"answerType": "WebPages", "resultIndex": 14, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14"}},
+        {"answerType": "WebPages", "resultIndex": 15, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15"}},
+        {"answerType": "WebPages", "resultIndex": 16, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16"}},
+        {"answerType": "WebPages", "resultIndex": 17, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17"}},
+        {"answerType": "WebPages", "resultIndex": 18, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18"}},
+        {"answerType": "WebPages", "resultIndex": 19, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19"}}]}}}'
+    http_version: 
+  recorded_at: Wed, 26 Sep 2018 22:58:26 GMT
 recorded_with: VCR 4.0.0

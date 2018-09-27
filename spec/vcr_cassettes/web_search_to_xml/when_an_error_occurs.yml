@@ -70,4 +70,74 @@ http_interactions:
         "rankingResponse": {}}'
     http_version: 
   recorded_at: Thu, 26 Apr 2018 23:56:40 GMT
+- request:
+    method: get
+    uri: https://www.bingapis.com/api/v6/search?AppId=<BING_V6_APP_ID>&count=20&mkt=en-US&offset=0&q=english%20(site:nonsense.gov)&responseFilter=WebPages&safeSearch=moderate&textDecorations&traffictype=test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - USASearch
+      Ocp-Apim-Subscription-Key:
+      - "<BING_V6_APP_ID>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '241'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - Wed, 26 Sep 2018 22:52:38 GMT
+      Vary:
+      - Accept-Encoding
+      P3p:
+      - CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
+      Set-Cookie:
+      - MUID=1FB045C715D769FF11C449B1149B687E; path=/; expires=Mon, 21-Oct-2019 22:53:38
+        GMT; domain=bingapis.com
+      - MUIDB=1FB045C715D769FF11C449B1149B687E; path=/; httponly; expires=Mon, 21-Oct-2019
+        22:53:38 GMT
+      - SRCHD=AF=NOFORM; domain=.bingapis.com; expires=Sat, 26-Sep-2020 22:53:38 GMT;
+        path=/
+      - SRCHUID=V=2&GUID=D432E617E554470299EA5E3F4F86944F&dmnchg=1; domain=.bingapis.com;
+        expires=Sat, 26-Sep-2020 22:53:38 GMT; path=/
+      - SRCHUSR=DOB=20180926; domain=.bingapis.com; expires=Sat, 26-Sep-2020 22:53:38
+        GMT; path=/
+      - _EDGE_S=mkt=en-us&F=1&SID=2A43C263659E6548148ECE1564D26455; path=/; httponly;
+        domain=bingapis.com
+      - _EDGE_V=1; path=/; httponly; expires=Mon, 21-Oct-2019 22:53:38 GMT; domain=bingapis.com
+      - _SS=SID=2A43C263659E6548148ECE1564D26455; domain=.bingapis.com; path=/
+      Bingapis-Traceid:
+      - 12CE6F23499E42CFBE8BA8024384A54F
+      X-Msedge-Clientid:
+      - 1FB045C715D769FF11C449B1149B687E
+      X-Msapi-Userstate:
+      - f7cf
+      Bingapis-Market:
+      - en-US
+      X-Msedge-Ref:
+      - 'Ref A: 12CE6F23499E42CFBE8BA8024384A54F Ref B: BY3EDGE0113 Ref C: 2018-09-26T22:53:38Z'
+      Date:
+      - Wed, 26 Sep 2018 22:53:38 GMT
+    body:
+      encoding: UTF-8
+      string: '{"_type": "SearchResponse", "instrumentation": {"pingUrlBase": "https:\/\/www.bingapis.com\/api\/ping?IG=3B081891B8AD4430988C6448680185E0&CID=1FB045C715D769FF11C449B1149B687E&ID=",
+        "pageLoadPingUrl": "https:\/\/www.bingapis.com\/api\/ping\/pageload?IG=3B081891B8AD4430988C6448680185E0&CID=1FB045C715D769FF11C449B1149B687E&Type=Event.CPT&DATA=0"},
+        "rankingResponse": {}}'
+    http_version: 
+  recorded_at: Wed, 26 Sep 2018 22:53:38 GMT
 recorded_with: VCR 4.0.0

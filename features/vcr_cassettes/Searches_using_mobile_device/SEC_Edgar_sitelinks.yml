@@ -628,4 +628,727 @@ http_interactions:
         {"answerType": "WebPages", "resultIndex": 19, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19"}}]}}}'
     http_version: 
   recorded_at: Thu, 22 Feb 2018 07:18:31 GMT
+- request:
+    method: get
+    uri: https://www.bingapis.com/api/v6/search?AppId=<BING_V6_APP_ID>&count=20&mkt=en-US&offset=0&q=fannie%20mae%20(site:www.sec.gov/archives/edgar)&responseFilter=WebPages&safeSearch=moderate&textDecorations=true&traffictype=test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - USASearch
+      Ocp-Apim-Subscription-Key:
+      - "<BING_V6_APP_ID>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '4465'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - Wed, 26 Sep 2018 23:10:30 GMT
+      Vary:
+      - Accept-Encoding
+      P3p:
+      - CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
+      Set-Cookie:
+      - MUID=3220CA18CE7664AC3486C66ECF3A65A8; path=/; expires=Mon, 21-Oct-2019 23:11:30
+        GMT; domain=bingapis.com
+      - MUIDB=3220CA18CE7664AC3486C66ECF3A65A8; path=/; httponly; expires=Mon, 21-Oct-2019
+        23:11:30 GMT
+      - SRCHD=AF=NOFORM; domain=.bingapis.com; expires=Sat, 26-Sep-2020 23:11:30 GMT;
+        path=/
+      - SRCHUID=V=2&GUID=2FA08E47C34A49B695C52F6BE7BA5BE5&dmnchg=1; domain=.bingapis.com;
+        expires=Sat, 26-Sep-2020 23:11:30 GMT; path=/
+      - SRCHUSR=DOB=20180926; domain=.bingapis.com; expires=Sat, 26-Sep-2020 23:11:30
+        GMT; path=/
+      - _EDGE_S=mkt=en-us&F=1&SID=233B5837CF806F371A185441CECC6E39; path=/; httponly;
+        domain=bingapis.com
+      - _EDGE_V=1; path=/; httponly; expires=Mon, 21-Oct-2019 23:11:30 GMT; domain=bingapis.com
+      - _SS=SID=233B5837CF806F371A185441CECC6E39; domain=.bingapis.com; path=/
+      Bingapis-Traceid:
+      - 177698A229AE469A9B336A5A77128AD1
+      X-Msedge-Clientid:
+      - 3220CA18CE7664AC3486C66ECF3A65A8
+      X-Msapi-Userstate:
+      - 3d0d
+      Bingapis-Market:
+      - en-US
+      X-Msedge-Ref:
+      - 'Ref A: 177698A229AE469A9B336A5A77128AD1 Ref B: BY3EDGE0517 Ref C: 2018-09-26T23:11:30Z'
+      Date:
+      - Wed, 26 Sep 2018 23:11:29 GMT
+    body:
+      encoding: UTF-8
+      string: '{"_type": "SearchResponse", "instrumentation": {"pingUrlBase": "https:\/\/www.bingapis.com\/api\/ping?IG=AC285922BCBE469E871C1D8485847B12&CID=3220CA18CE7664AC3486C66ECF3A65A8&ID=",
+        "pageLoadPingUrl": "https:\/\/www.bingapis.com\/api\/ping\/pageload?IG=AC285922BCBE469E871C1D8485847B12&CID=3220CA18CE7664AC3486C66ECF3A65A8&Type=Event.CPT&DATA=0"},
+        "webPages": {"webSearchUrl": "https:\/\/www.bing.com\/search?q=fannie+mae+(site%3awww.sec.gov%2farchives%2fedgar)",
+        "webSearchUrlPingSuffix": "DevEx,5416.1", "totalEstimatedMatches": 7140, "value":
+        [{"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0", "name": "FannieMae
+        2014 10K Press Release - SEC.gov", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000031052215000082\/fanniemae201410kpressrelea.htm",
+        "urlPingSuffix": "DevEx,5065.1", "displayUrl": "https:\/\/www.sec.gov\/...\/fanniemae201410kpressrelea.htm",
+        "snippet": "Fannie Mae’s 2014 results were driven by strong revenues from
+        net interest income and income from settlement agreements related to private-label
+        mortgage-related securities sold to Fannie Mae, as well as credit-related
+        income due primarily to increasing home prices during the year.", "dateLastCrawled":
+        "2018-08-29T20:16:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1",
+        "name": "Document", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000031052218000107\/fanniemae201710k.htm",
+        "urlPingSuffix": "DevEx,5076.1", "displayUrl": "https:\/\/www.sec.gov\/...\/310522\/000031052218000107\/fanniemae201710k.htm",
+        "snippet": "In 2014, Fannie Mae and Freddie Mac executed three agreements
+        relating to the governance and operation of CSS, and appointed a chief executive
+        officer and four members of the CSS Board of Managers, two each from Fannie
+        Mae and Freddie Mac. CSS currently operates as a separate company from us
+        and Freddie Mac, with funding and limited ...", "dateLastCrawled": "2018-09-05T04:56:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2", "name": "Document",
+        "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000031052216000569\/fanniemaeq20630201610q.htm",
+        "urlPingSuffix": "DevEx,5088.1", "displayUrl": "https:\/\/www.sec.gov\/...\/000031052216000569\/fanniemaeq20630201610q.htm",
+        "snippet": "Fannie Mae is a government-sponsored enterprise (“GSE”) that
+        was chartered by Congress in 1938. We serve an essential role in the functioning
+        of the U.S. housing market and are investing in improvements to the U.S. housing
+        finance system.", "dateLastCrawled": "2018-07-27T07:41:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3", "name": "FannieMae Q2.06.30.2015
+        10Q - SEC.gov", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000031052215000179\/fanniemaeq20630201510q.htm",
+        "urlPingSuffix": "DevEx,5100.1", "displayUrl": "https:\/\/www.sec.gov\/...\/000031052215000179\/fanniemaeq20630201510q.htm",
+        "snippet": "Fannie Mae provides reliable, large-scale access to affordable
+        mortgage credit and indirectly enables families to buy, refinance or rent
+        homes. We securitize mortgage loans originated by lenders into Fannie Mae
+        mortgage-backed securities that we guarantee, which we refer to as Fannie
+        Mae MBS. One of our key functions is to evaluate, price and ...", "dateLastCrawled":
+        "2018-07-23T13:38:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4",
+        "name": "exv10w3 - SEC.gov | HOME", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/1507951\/000095012311010492\/y04304a1exv10w3.htm",
+        "urlPingSuffix": "DevEx,5113.1", "displayUrl": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/1507951\/000095012311010492\/...",
+        "snippet": "Fannie Mae and Subservicer agree to negotiate in good faith
+        and within 10 days of execution of this Agreement determine and document ongoing
+        responsibility for the payment of amounts of interest required to be paid
+        to Investor pursuant the Applicable Requirements due to shortfalls in 5 .",
+        "dateLastCrawled": "2018-09-09T22:35:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5",
+        "name": "exv10w30", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/1520566\/000095012312001025\/y04863a2exv10w30.htm",
+        "urlPingSuffix": "DevEx,5127.1", "displayUrl": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/1520566\/000095012312001025\/...",
+        "snippet": "NOTE — Pursuant to Fannie Mae internal procedures, the following
+        Lender wire instructions for payments from Fannie Mae should be sent separately
+        to the Fannie Mae address listed above on the Lender’s Letterhead. Bank
+        ...", "dateLastCrawled": "2018-09-13T23:03:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6",
+        "name": "FannieMae2012 10K EX 10.9 Supp Pension Plan of 2003 as ...", "url":
+        "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000031052213000065\/fanniemae201210kex109suppp.htm",
+        "urlPingSuffix": "DevEx,5141.1", "displayUrl": "https:\/\/www.sec.gov\/...\/fanniemae201210kex109suppp.htm",
+        "snippet": "1.1. Establishment.Fannie Mae (the “Corporation”) establishes
+        this Fannie Mae Supplemental Pension Plan of 2003 for the benefit of eligible
+        employees of the Corporation and their beneficiaries.", "dateLastCrawled":
+        "2018-09-14T20:26:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7",
+        "name": "Master Agreement between Homestreet Bank and Fannie Mae", "url":
+        "https:\/\/www.sec.gov\/Archives\/edgar\/data\/1518715\/000119312511168932\/dex1027.htm",
+        "urlPingSuffix": "DevEx,5155.1", "displayUrl": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/1518715\/000119312511168932\/...",
+        "snippet": "Fannie Mae must receive the fully executed Master Agreement
+        within ten business days of Lender’s receipt of this Master Agreement, or
+        Fannie Mae may, at its option, declare this Master Agreement null and void.",
+        "dateLastCrawled": "2018-09-11T10:00:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8",
+        "name": "Fannie Mae As Soon As Pooled Agreement - SEC.gov", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/1283683\/000119312504045739\/dex1033.htm",
+        "urlPingSuffix": "DevEx,5169.1", "displayUrl": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/1283683\/000119312504045739\/...",
+        "snippet": "WHEREAS, Lender seeks to deliver certain residential mortgage
+        loans (the “Mortgage Loans”) to Fannie Mae either for securitization or
+        for Fannie Mae’s mortgage loan portfolio; and WHEREAS, Lender wishes to
+        deliver such Mortgage Loans to Fannie Mae and receive funding for them before
+        it either (i) has grouped them into pools for purposes of securitization or
+        (ii) sells them to Fannie Mae ...", "dateLastCrawled": "2018-09-22T01:40:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9", "name": "Federal
+        National Mortgage Association (Form: 8-K)", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000129993308006051\/htm_30584.htm",
+        "urlPingSuffix": "DevEx,5183.1", "displayUrl": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000129993308006051\/...",
+        "snippet": "On September 6, 2008, the Director of the Federal Housing Finance
+        Authority, or FHFA, our safety and soundness regulator, appointed FHFA as
+        conservator of Fannie Mae (formally, the Federal National Mortgage Association)
+        in accordance with the Federal Housing Finance Regulatory Reform Act of 2008
+        and the Federal Housing Enterprises Financial ...", "dateLastCrawled": "2018-09-05T09:35:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10", "name": "Federal
+        National Mortgage Association (Form: 8-K)", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000129993311003456\/htm_43631.htm",
+        "urlPingSuffix": "DevEx,5197.1", "displayUrl": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000129993311003456\/...",
+        "snippet": "HFAs that participate in the extension of the TCLF program will
+        be required to develop and submit a plan to Treasury, Fannie Mae and Freddie
+        Mac that includes a summary of the methods the HFAs will use to reduce TLCF
+        exposure in the future and that is acceptable to Treasury, Fannie Mae and
+        Freddie Mac.", "dateLastCrawled": "2018-09-21T19:32:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11", "name": "FannieMae2012
+        10K EX 10.32 ...", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000031052213000065\/fanniemae201210kex1032form.htm",
+        "urlPingSuffix": "DevEx,5211.1", "displayUrl": "https:\/\/www.sec.gov\/...\/fanniemae201210kex1032form.htm",
+        "snippet": "(a) materially harmed Fannie Mae by, in connection with the
+        Awardee’s performance of the Awardee’s duties for Fannie Mae, engaging in
+        dishonest or fraudulent actions or willful misconduct, or performing the Awardee’s
+        duties in a grossly negligent manner, or", "dateLastCrawled": "2018-09-17T11:30:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12", "name": "Master
+        Custodial Agreement for Custody of Single Family ...", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/1518715\/000119312511144488\/dex1026.htm",
+        "urlPingSuffix": "DevEx,5225.1", "displayUrl": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/1518715\/000119312511144488\/...",
+        "snippet": "3 RECITALS. This Custodial Agreement is executed by, and delivered
+        to, each of Fannie Mae, Custodian, and Lender, as of the effective date,
+        all as indicated on the cover page hereof.. WHEREAS, Lender is (or will become)
+        the Servicer of certain Mortgage Loans pursuant to a Mortgage Selling and
+        Servicing Contract with Fannie Mae, and may or may not be the Seller with
+        respect to those Mortgage Loans;", "dateLastCrawled": "2018-09-07T11:49:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13", "name": "def14a
+        - SEC.gov", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000095013308001442\/w48664def14a.htm",
+        "urlPingSuffix": "DevEx,5238.1", "displayUrl": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000095013308001442\/...",
+        "snippet": "Prior to 2008, matching gifts under the program were made by the
+        Fannie Mae Foundation rather than Fannie Mae. Other Expenses. We also
+        pay for or reimburse directors for out-of-pocket expenses incurred in connection
+        with their service on the Board, including travel to and from our meetings,
+        accommodations, meals, and training.", "dateLastCrawled": "2018-09-05T23:37:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14", "name": "Federal
+        National Mortgage Association (Form: 8-K)", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000129993304002429\/htm_2364.htm",
+        "urlPingSuffix": "DevEx,5251.1", "displayUrl": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000129993304002429\/...",
+        "snippet": "The Office of Federal Housing Enterprise Oversight (\"OFHEO\")
+        on September 20, 2004 delivered to the Board of Directors of Fannie Mae
+        (formally, the Federal National Mortgage Association) a report of its findings
+        to date of the agency’s special examination of Fannie Mae’s accounting policies
+        and practices.", "dateLastCrawled": "2018-09-16T18:01:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15", "name": "FannieMae
+        Q3.09.30.2012 EX 4.1 - SEC.gov | HOME", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000031052212000141\/fanniemaeq309302012ex41.htm",
+        "urlPingSuffix": "DevEx,5265.1", "displayUrl": "https:\/\/www.sec.gov\/...\/000031052212000141\/fanniemaeq309302012ex41.htm",
+        "snippet": "(f) Any notice, demand or other communication which by any provision
+        of this Certificate is required or permitted to be given or served to or upon
+        the Company shall be given or served in writing addressed (unless and until
+        another address shall be published by the Company) to Fannie Mae, 3900 Wisconsin
+        Avenue NW, Washington, DC 20016, Attn ...", "dateLastCrawled": "2018-09-23T09:50:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16", "name": "FannieMae2012
+        10K EX 4.15 Cert of Des Series S", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000031052213000065\/fanniemae201210kex415certo.htm",
+        "urlPingSuffix": "DevEx,5279.1", "displayUrl": "https:\/\/www.sec.gov\/...\/fanniemae201210kex415certo.htm",
+        "snippet": "If Fannie Mae redeems the Series S Preferred Stock during a
+        Floating Rate Dividend Period, the dividend that would otherwise be payable
+        for the then current quarterly Floating Rate Dividend Period will be included
+        in the redemption price of the shares redeemed and will not be separately
+        payable.", "dateLastCrawled": "2018-09-09T02:58:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17",
+        "name": "Form 10-K, Amendment No. 1 - SEC.gov | HOME", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000119312512105455\/d307691d10ka.htm",
+        "urlPingSuffix": "DevEx,5293.1", "displayUrl": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000119312512105455\/...",
+        "snippet": "Termination by Fannie Mae. If Fannie Mae terminates an executive
+        officer’s employment other than for cause, the Board of Directors may determine,
+        subject to the approval of FHFA in consultation with Treasury, that he or
+        she may receive certain unpaid deferred salary or long-term incentive awards.",
+        "dateLastCrawled": "2018-09-09T18:34:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18",
+        "name": "FannieMae 2012 10K - SEC", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000031052213000065\/fanniemae201210k.htm",
+        "urlPingSuffix": "DevEx,5305.1", "displayUrl": "https:\/\/www.sec.gov\/...\/310522\/000031052213000065\/fanniemae201210k.htm",
+        "snippet": "Fannie Mae’s HPI excludes prices on properties sold in foreclosure.
+        The reported home price change reflects the percentage change in Fannie Mae’s
+        HPI from the fourth quarter of the prior year to the fourth quarter of the
+        reported year. (3)", "dateLastCrawled": "2018-09-18T18:25:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19", "name": "exv10w44 -
+        SEC.gov | HOME", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000095012310018235\/w77413exv10w44.htm",
+        "urlPingSuffix": "DevEx,5318.1", "displayUrl": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000095012310018235\/...",
+        "snippet": "The purpose of this Retainer Letter (“Retainer Letter”) and the
+        attached Fannie Mae Outside Counsel Guidelines (“Guidelines”), incorporated
+        into this Retainer Letter by reference, is to clarify and memorialize the
+        principles under which you provide legal services (“Services”) to Fannie
+        Mae.", "dateLastCrawled": "2018-09-17T17:50:00.0000000Z"}]}, "rankingResponse":
+        {"mainline": {"items": [{"answerType": "WebPages", "resultIndex": 0, "value":
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0"}}, {"answerType":
+        "WebPages", "resultIndex": 1, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1"}},
+        {"answerType": "WebPages", "resultIndex": 2, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2"}},
+        {"answerType": "WebPages", "resultIndex": 3, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3"}},
+        {"answerType": "WebPages", "resultIndex": 4, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4"}},
+        {"answerType": "WebPages", "resultIndex": 5, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5"}},
+        {"answerType": "WebPages", "resultIndex": 6, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6"}},
+        {"answerType": "WebPages", "resultIndex": 7, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7"}},
+        {"answerType": "WebPages", "resultIndex": 8, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8"}},
+        {"answerType": "WebPages", "resultIndex": 9, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9"}},
+        {"answerType": "WebPages", "resultIndex": 10, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10"}},
+        {"answerType": "WebPages", "resultIndex": 11, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11"}},
+        {"answerType": "WebPages", "resultIndex": 12, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12"}},
+        {"answerType": "WebPages", "resultIndex": 13, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13"}},
+        {"answerType": "WebPages", "resultIndex": 14, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14"}},
+        {"answerType": "WebPages", "resultIndex": 15, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15"}},
+        {"answerType": "WebPages", "resultIndex": 16, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16"}},
+        {"answerType": "WebPages", "resultIndex": 17, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17"}},
+        {"answerType": "WebPages", "resultIndex": 18, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18"}},
+        {"answerType": "WebPages", "resultIndex": 19, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19"}}]}}}'
+    http_version: 
+  recorded_at: Wed, 26 Sep 2018 23:11:31 GMT
+- request:
+    method: get
+    uri: https://www.bingapis.com/api/v6/search?AppId=<BING_V6_APP_ID>&count=20&mkt=en-US&offset=0&q=fannie%20mae%20(site:www.sec.gov/news)&responseFilter=WebPages&safeSearch=moderate&textDecorations=true&traffictype=test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - USASearch
+      Ocp-Apim-Subscription-Key:
+      - "<BING_V6_APP_ID>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '4113'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - Wed, 26 Sep 2018 23:10:31 GMT
+      Vary:
+      - Accept-Encoding
+      P3p:
+      - CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
+      Set-Cookie:
+      - MUID=01481EFD28636CE13E38128B292F6D5A; path=/; expires=Mon, 21-Oct-2019 23:11:31
+        GMT; domain=bingapis.com
+      - MUIDB=01481EFD28636CE13E38128B292F6D5A; path=/; httponly; expires=Mon, 21-Oct-2019
+        23:11:31 GMT
+      - SRCHD=AF=NOFORM; domain=.bingapis.com; expires=Sat, 26-Sep-2020 23:11:31 GMT;
+        path=/
+      - SRCHUID=V=2&GUID=B8D2EA8EFAA2447EB536F4F6C4261560&dmnchg=1; domain=.bingapis.com;
+        expires=Sat, 26-Sep-2020 23:11:31 GMT; path=/
+      - SRCHUSR=DOB=20180926; domain=.bingapis.com; expires=Sat, 26-Sep-2020 23:11:31
+        GMT; path=/
+      - _EDGE_S=mkt=en-us&F=1&SID=0AA7A6DA413A60050670AAAC407661C1; path=/; httponly;
+        domain=bingapis.com
+      - _EDGE_V=1; path=/; httponly; expires=Mon, 21-Oct-2019 23:11:31 GMT; domain=bingapis.com
+      - _SS=SID=0AA7A6DA413A60050670AAAC407661C1; domain=.bingapis.com; path=/
+      Bingapis-Traceid:
+      - E05FF5715FF4439F8A0F2A7C9515EA13
+      X-Msedge-Clientid:
+      - '01481EFD28636CE13E38128B292F6D5A'
+      X-Msapi-Userstate:
+      - d7be
+      Bingapis-Market:
+      - en-US
+      X-Msedge-Ref:
+      - 'Ref A: E05FF5715FF4439F8A0F2A7C9515EA13 Ref B: BY3EDGE0111 Ref C: 2018-09-26T23:11:31Z'
+      Date:
+      - Wed, 26 Sep 2018 23:11:31 GMT
+    body:
+      encoding: UTF-8
+      string: '{"_type": "SearchResponse", "instrumentation": {"pingUrlBase": "https:\/\/www.bingapis.com\/api\/ping?IG=4197CEDBA763442B9D90C5309FB7EA0B&CID=01481EFD28636CE13E38128B292F6D5A&ID=",
+        "pageLoadPingUrl": "https:\/\/www.bingapis.com\/api\/ping\/pageload?IG=4197CEDBA763442B9D90C5309FB7EA0B&CID=01481EFD28636CE13E38128B292F6D5A&Type=Event.CPT&DATA=0"},
+        "webPages": {"webSearchUrl": "https:\/\/www.bing.com\/search?q=fannie+mae+(site%3awww.sec.gov%2fnews)",
+        "webSearchUrlPingSuffix": "DevEx,5419.1", "totalEstimatedMatches": 5780, "value":
+        [{"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0", "name": "Testimony:
+        Accounting Irregularities at Fannie Mae ...", "url": "https:\/\/www.sec.gov\/news\/testimony\/2006\/ts061506cc.htm",
+        "urlPingSuffix": "DevEx,5065.1", "displayUrl": "https:\/\/www.sec.gov\/news\/testimony\/2006\/ts061506cc.htm",
+        "snippet": "\"Accounting Irregularities at Fannie Mae\" by Chairman Christopher
+        Cox U.S. Securities & Exchange Commission. Before the U.S. Senate Committee
+        on Banking, Housing and Urban Affairs", "dateLastCrawled": "2018-09-10T18:27:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1", "name": "SEC.gov
+        | Bank of America Admits Disclosure Failures to ...", "url": "https:\/\/www.sec.gov\/news\/press-release\/2014-172",
+        "urlPingSuffix": "DevEx,5079.1", "about": [{"name": "Bank of America"}], "displayUrl":
+        "https:\/\/www.sec.gov\/news\/press-release\/2014-172", "snippet": "These
+        uncertainties included whether Fannie Mae, a mortgage loan purchaser from
+        Bank of America, had changed its repurchase claim practices after being
+        put into conservatorship, the future volume of repurchase claims from Fannie
+        Mae and certain monoline insurance companies that provided credit enhancements
+        on certain mortgage loan sales, and ...", "dateLastCrawled": "2018-09-16T17:05:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2", "name": "Enhancing
+        Disclosure in the Mortgage-Backed - SEC", "url": "https:\/\/www.sec.gov\/news\/studies\/mortgagebacked.htm",
+        "urlPingSuffix": "DevEx,5093.1", "displayUrl": "https:\/\/www.sec.gov\/news\/studies\/mortgagebacked.htm",
+        "snippet": "Like the loans in the Fannie Mae and Freddie Mac swaps, the
+        loans in the mortgage pools comprising Ginnie Mae guaranteed MBS are chosen
+        by the lender, not by Ginnie Mae. 33 Ginnie Mae has pool and disclosure
+        guidelines establishing the permissible content of the pools and required
+        disclosures including the number of issuers, first payment date ...", "dateLastCrawled":
+        "2018-09-21T05:48:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3",
+        "name": "SEC Distributes $356 Million to Defrauded Fannie Mae Investors",
+        "url": "https:\/\/www.sec.gov\/news\/press\/2007\/2007-219.htm", "urlPingSuffix":
+        "DevEx,5107.1", "displayUrl": "https:\/\/www.sec.gov\/news\/press\/2007\/2007-219.htm",
+        "snippet": "SEC Distributes $356 Million to Defrauded Fannie Mae Investors
+        Investor Protection Agency''s \"Fair Funds\" Distributions to Fraud Victims
+        Top $3 Billion Mark", "dateLastCrawled": "2018-07-29T19:25:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4", "name": "UNITED
+        STATES OF AMERICA SECURITIES AND EXCHANGE ...", "url": "https:\/\/www.sec.gov\/news\/press\/2011\/npa-pr2011-267-fanniemae.pdf",
+        "urlPingSuffix": "DevEx,5119.1", "displayUrl": "https:\/\/www.sec.gov\/news\/press\/2011\/npa-pr2011-267-fanniemae.pdf",
+        "snippet": "UNITED STATES OF AMERICA SECURITIES AND EXCHANGE COMMISSION
+        NON-PROSECUTION AGREEMENT 1. ... Fannie Mae''s exposure to SUbprime and
+        Alt-A mortgages (collectively, the \"Investigation\"). Prior to a public enforcement
+        action being brought by the Commission against Fannie Mae,", "dateLastCrawled":
+        "2018-09-11T04:55:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5",
+        "name": "SEC and OFHEO Announce Resolution of Investigation and ...",
+        "url": "https:\/\/www.sec.gov\/news\/press\/2006\/2006-80.htm", "urlPingSuffix":
+        "DevEx,5132.1", "displayUrl": "https:\/\/www.sec.gov\/news\/press\/2006\/2006-80.htm",
+        "snippet": "SEC and OFHEO Announce Resolution of Investigation and Special
+        Examination of Fannie Mae Fannie Mae Agrees to Pay $400 Million Penalty
+        FOR IMMEDIATE RELEASE", "dateLastCrawled": "2018-09-02T07:17:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6", "name": "Office
+        of the Chief Accountant Issues Statement on Fannie ...", "url": "https:\/\/www.sec.gov\/news\/press\/2004-172.htm",
+        "urlPingSuffix": "DevEx,5146.1", "displayUrl": "https:\/\/www.sec.gov\/news\/press\/2004-172.htm",
+        "snippet": "At the request of Fannie Mae, the accounting staff at the Commission
+        has been reviewing whether the accounting used by Fannie Mae complied with
+        Statement Nos. 91 and 133.", "dateLastCrawled": "2018-09-19T17:53:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7", "name": "SEC
+        Testimony: The Application of Federal Securities Law ...", "url": "https:\/\/www.sec.gov\/news\/testimony\/ts021004alb.htm",
+        "urlPingSuffix": "DevEx,5160.1", "displayUrl": "https:\/\/www.sec.gov\/news\/testimony\/ts021004alb.htm",
+        "snippet": "While Fannie Mae and Freddie Mac continue to be exempt from
+        the requirements to register the offer and sale of securities under the Securities
+        Act of 1933, the information about the corporation that would be required
+        to be disclosed in a prospectus contained in a registration statement under
+        the Securities Act is the same as Fannie Mae is, and ...", "dateLastCrawled":
+        "2018-09-13T00:13:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8",
+        "name": "Dissenting Statement at Open Meeting Regarding Final Rule ...", "url":
+        "https:\/\/www.sec.gov\/news\/public-statement\/2014-spch102214cmp", "urlPingSuffix":
+        "DevEx,5173.1", "displayUrl": "https:\/\/www.sec.gov\/news\/public-statement\/2014-spch102214cmp",
+        "snippet": "More broadly, I remain concerned about the continued dominant
+        role in housing finance played by the two government-sponsored enterprises
+        (GSEs) that required the largest taxpayer-funded bailouts in history – the
+        Federal National Mortgage Association (Fannie Mae) and the Federal Home
+        Loan Mortgage Corporation (Freddie Mac).", "dateLastCrawled": "2018-09-08T12:24:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9", "name": "SEC.gov
+        | Agencies Request Comment on Proposed Risk ...", "url": "https:\/\/www.sec.gov\/news\/pressrelease\/2013-167.html",
+        "urlPingSuffix": "DevEx,5187.1", "displayUrl": "https:\/\/www.sec.gov\/news\/pressrelease\/2013-167.html",
+        "snippet": "Agencies Request Comment on Proposed Risk Retention Rule. FOR
+        IMMEDIATE RELEASE 2013-167 ... the rule would recognize the full guarantee
+        on payments of principal and interest provided by Fannie Mae and Freddie
+        Mac for their residential mortgage-backed securities as meeting the risk retention
+        requirements while Fannie Mae and Freddie Mac are in ...", "dateLastCrawled":
+        "2018-09-17T17:11:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10",
+        "name": "SEC Charges Former Fannie Mae and Freddie Mac Executives ...",
+        "url": "https:\/\/www.sec.gov\/news\/press\/2011\/2011-267.htm", "urlPingSuffix":
+        "DevEx,5201.1", "about": [{"name": "Freddie Mac"}], "displayUrl": "https:\/\/www.sec.gov\/news\/press\/2011\/2011-267.htm",
+        "snippet": "Fannie Mae and Freddie Mac each entered into a Non-Prosecution
+        Agreement with the Commission in which each company agreed to accept responsibility
+        for its conduct and not dispute, contest, or contradict the contents of an
+        agreed-upon Statement of Facts without admitting nor denying liability.",
+        "dateLastCrawled": "2018-09-20T14:34:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11",
+        "name": "FREDDIE MAC FANNIE MAE Disclosed - SEC.gov", "url": "https:\/\/www.sec.gov\/news\/press\/2011\/2011-267-chart-subprime-exposure.pdf",
+        "urlPingSuffix": "DevEx,5213.1", "displayUrl": "https:\/\/www.sec.gov\/news\/press\/2011\/2011-267-chart-subprime...",
+        "snippet": "FREDDIE MAC SUBPRIME EXPOSURE: MISLEADING STATEMENTS Data as
+        of 2Q 2008 Source: Securities and Exchange Commission Disclosed $6 Billion
+        Disclosed $8 Billion Actual Estimated Holdings:", "dateLastCrawled": "2018-07-30T11:11:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12", "name": "SEC.gov
+        | Dissenting Statement of Commissioner Daniel M ...", "url": "https:\/\/www.sec.gov\/news\/public-statement\/spch130828dmghtm",
+        "urlPingSuffix": "DevEx,5225.1", "displayUrl": "https:\/\/www.sec.gov\/news\/public-statement\/spch130828dmghtm",
+        "snippet": "The Housing and Community Development Act of 1992, passed with
+        overwhelming bipartisan support, required that 30 percent or more of the loans
+        purchased by Fannie Mae and Freddie Mac (the GSEs) be made to borrowers
+        at or below the median income in their communities.", "dateLastCrawled": "2018-09-03T21:19:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13", "name": "Observations
+        on Management of Recent Credit Default Swap ...", "url": "https:\/\/www.sec.gov\/news\/press\/2009\/report030909.pdf",
+        "urlPingSuffix": "DevEx,5237.1", "displayUrl": "https:\/\/www.sec.gov\/news\/press\/2009\/report030909.pdf",
+        "snippet": "Observations on Management of Recent Credit Default Swap Credit
+        Events March 9, 2009 ... on Management of Recent Credit Default Swap Credit
+        Events. The report summarizes a ... (Fannie Mae and Freddie Mac), a major
+        primary dealer (Lehman Brothers Holdings Inc.), and a European", "dateLastCrawled":
+        "2018-09-19T08:31:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14",
+        "name": "Remarks at Joint News Conference with OFHEO - SEC", "url": "https:\/\/www.sec.gov\/news\/speech\/2006\/spch052306cc.htm",
+        "urlPingSuffix": "DevEx,5250.1", "displayUrl": "https:\/\/www.sec.gov\/news\/speech\/2006\/spch052306cc.htm",
+        "snippet": "Fannie Mae describes itself as \"an instrument of national policy\"
+        and as \"a private company with a public mission.\" For that reason, today''s
+        announcement is especially bitter — because it underscores a breach of trust.",
+        "dateLastCrawled": "2018-09-07T16:08:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15",
+        "name": "Press Release: SEC Enhances Investor Protections Against ...",
+        "url": "https:\/\/www.sec.gov\/news\/press\/2008\/2008-143.htm", "urlPingSuffix":
+        "DevEx,5264.1", "displayUrl": "https:\/\/www.sec.gov\/news\/press\/2008\/2008-143.htm",
+        "snippet": "SEC Enhances Investor Protections Against Naked Short Selling
+        FOR IMMEDIATE RELEASE 2008-143. Washington, D.C., July 15, 2008 - The Securities
+        and Exchange Commission today issued an emergency order to enhance investor
+        protections against \"naked\" short selling in the securities of Fannie Mae,
+        Freddie Mac, and primary dealers at commercial and investment banks.", "dateLastCrawled":
+        "2018-09-16T05:44:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16",
+        "name": "SEC Speech: \"Message from the Chairman\" in SEC’s 2008 ...",
+        "url": "https:\/\/www.sec.gov\/news\/speech\/2008\/spch111408cc.htm", "urlPingSuffix":
+        "DevEx,5278.1", "displayUrl": "https:\/\/www.sec.gov\/news\/speech\/2008\/spch111408cc.htm",
+        "snippet": "Statement by SEC Chairman: \"Message from the Chairman\" in
+        SEC’s 2008 Performance and Accountability Report by Chairman Christopher
+        Cox ... of 2008 gives the SEC Chairman similar oversight and advisory responsibilities
+        with respect to the conservatorship of Fannie Mae and Freddie Mac supervised
+        by the Federal Housing Finance Agency. These ...", "dateLastCrawled": "2018-09-04T08:48:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17", "name": "SEC
+        Testimony: Application of Federal Securities Law ...", "url": "https:\/\/www.sec.gov\/news\/testimony\/ts042105alb.htm",
+        "urlPingSuffix": "DevEx,5292.1", "displayUrl": "https:\/\/www.sec.gov\/news\/testimony\/ts042105alb.htm",
+        "snippet": "While Fannie Mae and Freddie Mac continue to be exempt from
+        the requirements to register the offer and sale of securities under the Securities
+        Act of 1933, the information about the corporation that would be required
+        to be disclosed in a prospectus contained in a registration statement under
+        the Securities Act is the same as what Fannie Mae is ...", "dateLastCrawled":
+        "2018-09-11T16:56:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18",
+        "name": "Chairman Pitt''s Statement On Fannie Mae\/Freddie Mac ...", "url":
+        "https:\/\/www.sec.gov\/news\/speech\/spch574.htm", "urlPingSuffix": "DevEx,5306.1",
+        "displayUrl": "https:\/\/www.sec.gov\/news\/speech\/spch574.htm", "snippet":
+        "Statement By SEC Chairman: On Fannie Mae\/Freddie Mac by Chairman Harvey
+        L. Pitt U.S. Securities and Exchange Commission SEC Headquarters, Washington,
+        D.C.", "dateLastCrawled": "2018-09-19T00:44:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19",
+        "name": "Testimony Concerning the Role of Federal Regulators ...", "url":
+        "https:\/\/www.sec.gov\/news\/testimony\/2008\/ts102308cc.htm", "urlPingSuffix":
+        "DevEx,5320.1", "displayUrl": "https:\/\/www.sec.gov\/news\/testimony\/2008\/ts102308cc.htm",
+        "snippet": "Fannie Mae and Freddie Mac, which got affordable housing credit
+        for buying subprime securitized loans, became a magnet for the creation of
+        enormous volumes of increasingly complex securities that repackaged these
+        mortgages.", "dateLastCrawled": "2018-09-12T11:12:00.0000000Z"}]}, "rankingResponse":
+        {"mainline": {"items": [{"answerType": "WebPages", "resultIndex": 0, "value":
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0"}}, {"answerType":
+        "WebPages", "resultIndex": 1, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1"}},
+        {"answerType": "WebPages", "resultIndex": 2, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2"}},
+        {"answerType": "WebPages", "resultIndex": 3, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3"}},
+        {"answerType": "WebPages", "resultIndex": 4, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4"}},
+        {"answerType": "WebPages", "resultIndex": 5, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5"}},
+        {"answerType": "WebPages", "resultIndex": 6, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6"}},
+        {"answerType": "WebPages", "resultIndex": 7, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7"}},
+        {"answerType": "WebPages", "resultIndex": 8, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8"}},
+        {"answerType": "WebPages", "resultIndex": 9, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9"}},
+        {"answerType": "WebPages", "resultIndex": 10, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10"}},
+        {"answerType": "WebPages", "resultIndex": 11, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11"}},
+        {"answerType": "WebPages", "resultIndex": 12, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12"}},
+        {"answerType": "WebPages", "resultIndex": 13, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13"}},
+        {"answerType": "WebPages", "resultIndex": 14, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14"}},
+        {"answerType": "WebPages", "resultIndex": 15, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15"}},
+        {"answerType": "WebPages", "resultIndex": 16, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16"}},
+        {"answerType": "WebPages", "resultIndex": 17, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17"}},
+        {"answerType": "WebPages", "resultIndex": 18, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18"}},
+        {"answerType": "WebPages", "resultIndex": 19, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19"}}]}}}'
+    http_version: 
+  recorded_at: Wed, 26 Sep 2018 23:11:31 GMT
+- request:
+    method: get
+    uri: https://www.bingapis.com/api/v6/search?AppId=<BING_V6_APP_ID>&count=20&mkt=en-US&offset=0&q=fannie%20mae%20(site:sec.gov/archives/edgar/)&responseFilter=WebPages&safeSearch=moderate&textDecorations=true&traffictype=test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - USASearch
+      Ocp-Apim-Subscription-Key:
+      - "<BING_V6_APP_ID>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '4347'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - Wed, 26 Sep 2018 23:10:32 GMT
+      Vary:
+      - Accept-Encoding
+      P3p:
+      - CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
+      Set-Cookie:
+      - MUID=3F47387E6E6E6B9F2D6834086F226AAC; path=/; expires=Mon, 21-Oct-2019 23:11:32
+        GMT; domain=bingapis.com
+      - MUIDB=3F47387E6E6E6B9F2D6834086F226AAC; path=/; httponly; expires=Mon, 21-Oct-2019
+        23:11:32 GMT
+      - SRCHD=AF=NOFORM; domain=.bingapis.com; expires=Sat, 26-Sep-2020 23:11:32 GMT;
+        path=/
+      - SRCHUID=V=2&GUID=B405BB9AC7A14488AA55A9B3EB7457BC&dmnchg=1; domain=.bingapis.com;
+        expires=Sat, 26-Sep-2020 23:11:32 GMT; path=/
+      - SRCHUSR=DOB=20180926; domain=.bingapis.com; expires=Sat, 26-Sep-2020 23:11:32
+        GMT; path=/
+      - _EDGE_S=mkt=en-us&F=1&SID=023CC4C371016BF00BE1C8B5704D6AB8; path=/; httponly;
+        domain=bingapis.com
+      - _EDGE_V=1; path=/; httponly; expires=Mon, 21-Oct-2019 23:11:32 GMT; domain=bingapis.com
+      - _SS=SID=023CC4C371016BF00BE1C8B5704D6AB8; domain=.bingapis.com; path=/
+      Bingapis-Traceid:
+      - 72876CD635AB44619E8590BD16E274C7
+      X-Msedge-Clientid:
+      - 3F47387E6E6E6B9F2D6834086F226AAC
+      X-Msapi-Userstate:
+      - 7de0
+      Bingapis-Market:
+      - en-US
+      X-Msedge-Ref:
+      - 'Ref A: 72876CD635AB44619E8590BD16E274C7 Ref B: BY3EDGE0314 Ref C: 2018-09-26T23:11:32Z'
+      Date:
+      - Wed, 26 Sep 2018 23:11:31 GMT
+    body:
+      encoding: UTF-8
+      string: '{"_type": "SearchResponse", "instrumentation": {"pingUrlBase": "https:\/\/www.bingapis.com\/api\/ping?IG=0B6CEC1E55174BA28381448C068DA371&CID=3F47387E6E6E6B9F2D6834086F226AAC&ID=",
+        "pageLoadPingUrl": "https:\/\/www.bingapis.com\/api\/ping\/pageload?IG=0B6CEC1E55174BA28381448C068DA371&CID=3F47387E6E6E6B9F2D6834086F226AAC&Type=Event.CPT&DATA=0"},
+        "webPages": {"webSearchUrl": "https:\/\/www.bing.com\/search?q=fannie+mae+(site%3asec.gov%2farchives%2fedgar%2f)",
+        "webSearchUrlPingSuffix": "DevEx,5412.1", "totalEstimatedMatches": 7550, "value":
+        [{"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0", "name": "FannieMae
+        2014 10K Press Release - SEC.gov", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000031052215000082\/fanniemae201410kpressrelea.htm",
+        "urlPingSuffix": "DevEx,5065.1", "displayUrl": "https:\/\/www.sec.gov\/...\/fanniemae201410kpressrelea.htm",
+        "snippet": "Fannie Mae’s 2014 results were driven by strong revenues from
+        net interest income and income from settlement agreements related to private-label
+        mortgage-related securities sold to Fannie Mae, as well as credit-related
+        income due primarily to increasing home prices during the year.", "dateLastCrawled":
+        "2018-08-29T20:16:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1",
+        "name": "Document", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000031052218000107\/fanniemae201710k.htm",
+        "urlPingSuffix": "DevEx,5076.1", "displayUrl": "https:\/\/www.sec.gov\/...\/310522\/000031052218000107\/fanniemae201710k.htm",
+        "snippet": "In 2014, Fannie Mae and Freddie Mac executed three agreements
+        relating to the governance and operation of CSS, and appointed a chief executive
+        officer and four members of the CSS Board of Managers, two each from Fannie
+        Mae and Freddie Mac. CSS currently operates as a separate company from us
+        and Freddie Mac, with funding and limited ...", "dateLastCrawled": "2018-09-05T04:56:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2", "name": "Document",
+        "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000031052216000569\/fanniemaeq20630201610q.htm",
+        "urlPingSuffix": "DevEx,5088.1", "displayUrl": "https:\/\/www.sec.gov\/...\/000031052216000569\/fanniemaeq20630201610q.htm",
+        "snippet": "Fannie Mae is a government-sponsored enterprise (“GSE”) that
+        was chartered by Congress in 1938. We serve an essential role in the functioning
+        of the U.S. housing market and are investing in improvements to the U.S. housing
+        finance system.", "dateLastCrawled": "2018-07-27T07:41:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3", "name": "FannieMae Q2.06.30.2015
+        10Q - SEC.gov", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000031052215000179\/fanniemaeq20630201510q.htm",
+        "urlPingSuffix": "DevEx,5100.1", "displayUrl": "https:\/\/www.sec.gov\/...\/000031052215000179\/fanniemaeq20630201510q.htm",
+        "snippet": "Fannie Mae provides reliable, large-scale access to affordable
+        mortgage credit and indirectly enables families to buy, refinance or rent
+        homes. We securitize mortgage loans originated by lenders into Fannie Mae
+        mortgage-backed securities that we guarantee, which we refer to as Fannie
+        Mae MBS. One of our key functions is to evaluate, price and ...", "dateLastCrawled":
+        "2018-07-23T13:38:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4",
+        "name": "sec.gov", "url": "https:\/\/sec.gov\/Archives\/edgar\/data\/310522\/000031052214000067\/fanniemae201310k.htm",
+        "urlPingSuffix": "DevEx,5111.1", "displayUrl": "https:\/\/sec.gov\/...\/310522\/000031052214000067\/fanniemae201310k.htm",
+        "snippet": "sec.gov", "dateLastCrawled": "2018-09-22T00:03:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5", "name": "exv10w3
+        - SEC.gov | HOME", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/1507951\/000095012311010492\/y04304a1exv10w3.htm",
+        "urlPingSuffix": "DevEx,5124.1", "displayUrl": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/1507951\/000095012311010492\/...",
+        "snippet": "Fannie Mae and Subservicer agree to negotiate in good faith
+        and within 10 days of execution of this Agreement determine and document ongoing
+        responsibility for the payment of amounts of interest required to be paid
+        to Investor pursuant the Applicable Requirements due to shortfalls in 5 .",
+        "dateLastCrawled": "2018-09-09T22:35:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6",
+        "name": "exv10w30 - SEC.gov", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/1520566\/000095012312001025\/y04863a2exv10w30.htm",
+        "urlPingSuffix": "DevEx,5138.1", "displayUrl": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/1520566\/000095012312001025\/...",
+        "snippet": "NOTE — Pursuant to Fannie Mae internal procedures, the following
+        Lender wire instructions for payments from Fannie Mae should be sent separately
+        to the Fannie Mae address listed above on the Lender’s Letterhead. Bank
+        ...", "dateLastCrawled": "2018-09-13T23:03:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7",
+        "name": "FannieMae2012 10K EX 10.9 Supp Pension Plan of 2003 as ...", "url":
+        "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000031052213000065\/fanniemae201210kex109suppp.htm",
+        "urlPingSuffix": "DevEx,5152.1", "displayUrl": "https:\/\/www.sec.gov\/...\/fanniemae201210kex109suppp.htm",
+        "snippet": "1.1. Establishment.Fannie Mae (the “Corporation”) establishes
+        this Fannie Mae Supplemental Pension Plan of 2003 for the benefit of eligible
+        employees of the Corporation and their beneficiaries.", "dateLastCrawled":
+        "2018-09-14T20:26:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8",
+        "name": "Master Agreement between Homestreet Bank and Fannie Mae", "url":
+        "https:\/\/www.sec.gov\/Archives\/edgar\/data\/1518715\/000119312511168932\/dex1027.htm",
+        "urlPingSuffix": "DevEx,5166.1", "displayUrl": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/1518715\/000119312511168932\/...",
+        "snippet": "Fannie Mae must receive the fully executed Master Agreement
+        within ten business days of Lender’s receipt of this Master Agreement, or
+        Fannie Mae may, at its option, declare this Master Agreement null and void.",
+        "dateLastCrawled": "2018-09-11T10:00:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9",
+        "name": "Fannie Mae As Soon As Pooled Agreement - SEC.gov", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/1283683\/000119312504045739\/dex1033.htm",
+        "urlPingSuffix": "DevEx,5180.1", "displayUrl": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/1283683\/000119312504045739\/...",
+        "snippet": "WHEREAS, Lender seeks to deliver certain residential mortgage
+        loans (the “Mortgage Loans”) to Fannie Mae either for securitization or
+        for Fannie Mae’s mortgage loan portfolio; and WHEREAS, Lender wishes to
+        deliver such Mortgage Loans to Fannie Mae and receive funding for them before
+        it either (i) has grouped them into pools for purposes of securitization or
+        (ii) sells them to Fannie Mae ...", "dateLastCrawled": "2018-09-22T01:40:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10", "name": "Federal
+        National Mortgage Association (Form: 8-K)", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000129993308006051\/htm_30584.htm",
+        "urlPingSuffix": "DevEx,5194.1", "displayUrl": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000129993308006051\/...",
+        "snippet": "On September 6, 2008, the Director of the Federal Housing Finance
+        Authority, or FHFA, our safety and soundness regulator, appointed FHFA as
+        conservator of Fannie Mae (formally, the Federal National Mortgage Association)
+        in accordance with the Federal Housing Finance Regulatory Reform Act of 2008
+        and the Federal Housing Enterprises Financial ...", "dateLastCrawled": "2018-09-05T09:35:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11", "name": "Federal
+        National Mortgage Association (Form: 8-K)", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000129993311003456\/htm_43631.htm",
+        "urlPingSuffix": "DevEx,5208.1", "displayUrl": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000129993311003456\/...",
+        "snippet": "HFAs that participate in the extension of the TCLF program will
+        be required to develop and submit a plan to Treasury, Fannie Mae and Freddie
+        Mac that includes a summary of the methods the HFAs will use to reduce TLCF
+        exposure in the future and that is acceptable to Treasury, Fannie Mae and
+        Freddie Mac.", "dateLastCrawled": "2018-09-21T19:32:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12", "name": "FannieMae2012
+        10K EX 10.32 ...", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000031052213000065\/fanniemae201210kex1032form.htm",
+        "urlPingSuffix": "DevEx,5222.1", "displayUrl": "https:\/\/www.sec.gov\/...\/fanniemae201210kex1032form.htm",
+        "snippet": "(a) materially harmed Fannie Mae by, in connection with the
+        Awardee’s performance of the Awardee’s duties for Fannie Mae, engaging in
+        dishonest or fraudulent actions or willful misconduct, or performing the Awardee’s
+        duties in a grossly negligent manner, or", "dateLastCrawled": "2018-09-17T11:30:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13", "name": "Master
+        Custodial Agreement for Custody of Single Family ...", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/1518715\/000119312511144488\/dex1026.htm",
+        "urlPingSuffix": "DevEx,5236.1", "displayUrl": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/1518715\/000119312511144488\/...",
+        "snippet": "3 RECITALS. This Custodial Agreement is executed by, and delivered
+        to, each of Fannie Mae, Custodian, and Lender, as of the effective date,
+        all as indicated on the cover page hereof.. WHEREAS, Lender is (or will become)
+        the Servicer of certain Mortgage Loans pursuant to a Mortgage Selling and
+        Servicing Contract with Fannie Mae, and may or may not be the Seller with
+        respect to those Mortgage Loans;", "dateLastCrawled": "2018-09-07T11:49:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14", "name": "def14a
+        - SEC.gov", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000095013308001442\/w48664def14a.htm",
+        "urlPingSuffix": "DevEx,5249.1", "displayUrl": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000095013308001442\/...",
+        "snippet": "Prior to 2008, matching gifts under the program were made by the
+        Fannie Mae Foundation rather than Fannie Mae. Other Expenses. We also
+        pay for or reimburse directors for out-of-pocket expenses incurred in connection
+        with their service on the Board, including travel to and from our meetings,
+        accommodations, meals, and training.", "dateLastCrawled": "2018-09-05T23:37:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15", "name": "Federal
+        National Mortgage Association (Form: 8-K)", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000129993304002429\/htm_2364.htm",
+        "urlPingSuffix": "DevEx,5262.1", "displayUrl": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000129993304002429\/...",
+        "snippet": "The Office of Federal Housing Enterprise Oversight (\"OFHEO\")
+        on September 20, 2004 delivered to the Board of Directors of Fannie Mae
+        (formally, the Federal National Mortgage Association) a report of its findings
+        to date of the agency’s special examination of Fannie Mae’s accounting policies
+        and practices.", "dateLastCrawled": "2018-09-16T18:01:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16", "name": "FannieMae
+        Q3.09.30.2012 EX 4.1 - SEC.gov | HOME", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000031052212000141\/fanniemaeq309302012ex41.htm",
+        "urlPingSuffix": "DevEx,5276.1", "displayUrl": "https:\/\/www.sec.gov\/...\/000031052212000141\/fanniemaeq309302012ex41.htm",
+        "snippet": "(f) Any notice, demand or other communication which by any provision
+        of this Certificate is required or permitted to be given or served to or upon
+        the Company shall be given or served in writing addressed (unless and until
+        another address shall be published by the Company) to Fannie Mae, 3900 Wisconsin
+        Avenue NW, Washington, DC 20016, Attn ...", "dateLastCrawled": "2018-09-23T09:50:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17", "name": "FannieMae2012
+        10K EX 4.15 Cert of Des Series S", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000031052213000065\/fanniemae201210kex415certo.htm",
+        "urlPingSuffix": "DevEx,5290.1", "displayUrl": "https:\/\/www.sec.gov\/...\/fanniemae201210kex415certo.htm",
+        "snippet": "If Fannie Mae redeems the Series S Preferred Stock during a
+        Floating Rate Dividend Period, the dividend that would otherwise be payable
+        for the then current quarterly Floating Rate Dividend Period will be included
+        in the redemption price of the shares redeemed and will not be separately
+        payable.", "dateLastCrawled": "2018-09-09T02:58:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18",
+        "name": "Form 10-K, Amendment No. 1 - SEC.gov | HOME", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000119312512105455\/d307691d10ka.htm",
+        "urlPingSuffix": "DevEx,5304.1", "displayUrl": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000119312512105455\/...",
+        "snippet": "Termination by Fannie Mae. If Fannie Mae terminates an executive
+        officer’s employment other than for cause, the Board of Directors may determine,
+        subject to the approval of FHFA in consultation with Treasury, that he or
+        she may receive certain unpaid deferred salary or long-term incentive awards.",
+        "dateLastCrawled": "2018-09-09T18:34:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19",
+        "name": "FannieMae 2012 10K - SEC", "url": "https:\/\/www.sec.gov\/Archives\/edgar\/data\/310522\/000031052213000065\/fanniemae201210k.htm",
+        "urlPingSuffix": "DevEx,5316.1", "displayUrl": "https:\/\/www.sec.gov\/...\/310522\/000031052213000065\/fanniemae201210k.htm",
+        "snippet": "Fannie Mae’s HPI excludes prices on properties sold in foreclosure.
+        The reported home price change reflects the percentage change in Fannie Mae’s
+        HPI from the fourth quarter of the prior year to the fourth quarter of the
+        reported year. (3)", "dateLastCrawled": "2018-09-18T18:25:00.0000000Z"}]},
+        "rankingResponse": {"mainline": {"items": [{"answerType": "WebPages", "resultIndex":
+        0, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0"}}, {"answerType":
+        "WebPages", "resultIndex": 1, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1"}},
+        {"answerType": "WebPages", "resultIndex": 2, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2"}},
+        {"answerType": "WebPages", "resultIndex": 3, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3"}},
+        {"answerType": "WebPages", "resultIndex": 4, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4"}},
+        {"answerType": "WebPages", "resultIndex": 5, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5"}},
+        {"answerType": "WebPages", "resultIndex": 6, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6"}},
+        {"answerType": "WebPages", "resultIndex": 7, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7"}},
+        {"answerType": "WebPages", "resultIndex": 8, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8"}},
+        {"answerType": "WebPages", "resultIndex": 9, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9"}},
+        {"answerType": "WebPages", "resultIndex": 10, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10"}},
+        {"answerType": "WebPages", "resultIndex": 11, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11"}},
+        {"answerType": "WebPages", "resultIndex": 12, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12"}},
+        {"answerType": "WebPages", "resultIndex": 13, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13"}},
+        {"answerType": "WebPages", "resultIndex": 14, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14"}},
+        {"answerType": "WebPages", "resultIndex": 15, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15"}},
+        {"answerType": "WebPages", "resultIndex": 16, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16"}},
+        {"answerType": "WebPages", "resultIndex": 17, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17"}},
+        {"answerType": "WebPages", "resultIndex": 18, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18"}},
+        {"answerType": "WebPages", "resultIndex": 19, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19"}}]}}}'
+    http_version: 
+  recorded_at: Wed, 26 Sep 2018 23:11:32 GMT
 recorded_with: VCR 4.0.0

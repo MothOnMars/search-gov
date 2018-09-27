@@ -204,4 +204,236 @@ http_interactions:
         {"answerType": "WebPages", "resultIndex": 19, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19"}}]}}}'
     http_version: 
   recorded_at: Thu, 22 Feb 2018 07:16:43 GMT
+- request:
+    method: get
+    uri: https://www.bingapis.com/api/v6/search?AppId=<BING_V6_APP_ID>&count=20&mkt=en-US&offset=0&q=noticia%20uno%20(site:gov%20OR%20site:mil)&responseFilter=WebPages&safeSearch=moderate&textDecorations=true&traffictype=test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - USASearch
+      Ocp-Apim-Subscription-Key:
+      - "<BING_V6_APP_ID>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '4307'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - Wed, 26 Sep 2018 23:08:50 GMT
+      Vary:
+      - Accept-Encoding
+      P3p:
+      - CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
+      Set-Cookie:
+      - MUID=03E73A1354446C85312C366555086D08; path=/; expires=Mon, 21-Oct-2019 23:09:51
+        GMT; domain=bingapis.com
+      - MUIDB=03E73A1354446C85312C366555086D08; path=/; httponly; expires=Mon, 21-Oct-2019
+        23:09:51 GMT
+      - SRCHD=AF=NOFORM; domain=.bingapis.com; expires=Sat, 26-Sep-2020 23:09:50 GMT;
+        path=/
+      - SRCHUID=V=2&GUID=65CD2D790F2245C78C51DFB532DB0995&dmnchg=1; domain=.bingapis.com;
+        expires=Sat, 26-Sep-2020 23:09:50 GMT; path=/
+      - SRCHUSR=DOB=20180926; domain=.bingapis.com; expires=Sat, 26-Sep-2020 23:09:50
+        GMT; path=/
+      - _EDGE_S=mkt=en-us&F=1&SID=374997F4B01E6D6C10799B82B1526CB5; path=/; httponly;
+        domain=bingapis.com
+      - _EDGE_V=1; path=/; httponly; expires=Mon, 21-Oct-2019 23:09:51 GMT; domain=bingapis.com
+      - _SS=SID=374997F4B01E6D6C10799B82B1526CB5; domain=.bingapis.com; path=/
+      Bingapis-Traceid:
+      - A2725099E9A24E88AF63B44C1EADD31D
+      X-Msedge-Clientid:
+      - 03E73A1354446C85312C366555086D08
+      X-Msapi-Userstate:
+      - b1f7
+      Bingapis-Market:
+      - en-US
+      X-Msedge-Ref:
+      - 'Ref A: A2725099E9A24E88AF63B44C1EADD31D Ref B: BY3EDGE0411 Ref C: 2018-09-26T23:09:51Z'
+      Date:
+      - Wed, 26 Sep 2018 23:09:51 GMT
+    body:
+      encoding: UTF-8
+      string: '{"_type": "SearchResponse", "instrumentation": {"pingUrlBase": "https:\/\/www.bingapis.com\/api\/ping?IG=28DA7A6BB64442ABAFB1220632EEBF97&CID=03E73A1354446C85312C366555086D08&ID=",
+        "pageLoadPingUrl": "https:\/\/www.bingapis.com\/api\/ping\/pageload?IG=28DA7A6BB64442ABAFB1220632EEBF97&CID=03E73A1354446C85312C366555086D08&Type=Event.CPT&DATA=0"},
+        "webPages": {"webSearchUrl": "https:\/\/www.bing.com\/search?q=noticia+uno+(site%3agov+OR+site%3amil)",
+        "webSearchUrlPingSuffix": "DevEx,5422.1", "totalEstimatedMatches": 64400,
+        "value": [{"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0", "name":
+        "El Negociado de la Policía Logra el Arresto de uno de los ...", "url":
+        "https:\/\/policia.pr.gov\/el-negociado-de-la-policia-logra-el-arresto-de-uno-de-los-mas-buscados\/",
+        "urlPingSuffix": "DevEx,5063.1", "displayUrl": "https:\/\/policia.pr.gov\/el-negociado-de-la-policia-logra-el-arresto...",
+        "snippet": "Categorías: Anuncios, Noticias. Tags: El arrestado es conocido
+        como Cuba y se relaciona con casos de asesinatos. 25 de mayo de 2018, ...
+        El Negociado de la Policía Logra el Arresto de uno de los Más Buscados;
+        Continúan los Resultados del Plan Anticrimen del Negociado de la Policía;",
+        "dateLastCrawled": "2018-09-22T09:24:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1",
+        "name": "Preguntas y Respuestas: Se extiende TPS para hondureños ...", "url":
+        "https:\/\/www.uscis.gov\/es\/archivo\/preguntas-y-respuestas-se-extiende-tps-para-hondurenos-por-18-meses-mas",
+        "urlPingSuffix": "DevEx,5079.1", "displayUrl": "https:\/\/www.uscis.gov\/es\/archivo\/preguntas-y-respuestas-se...",
+        "snippet": "IntroduccionEl Departamento de Seguridad Nacional (DHS, por sus
+        siglas en inglés) extenderá por 18 meses el Estatus de Protección Temporal
+        (TPS, por sus siglas en inglés) para los ciudadanos de Ho", "dateLastCrawled":
+        "2018-09-22T13:24:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2",
+        "name": "Policía Informa | Policía de Puerto Rico", "url": "https:\/\/policia.pr.gov\/policia-informa\/",
+        "urlPingSuffix": "DevEx,5092.1", "displayUrl": "https:\/\/policia.pr.gov\/policia-informa",
+        "snippet": "El Negociado de la Policía Logra el Arresto de uno de los Más
+        Buscados. 05\/25\/2018. Anuncios | Noticias. ... También puedes ayudarnos
+        compartiendo esta noticia... LEER MÁS. Helicóptero de FURA gana el Primer
+        Lugar como uno de los Mejores del Mundo. 07\/09\/2015. Noticias.", "dateLastCrawled":
+        "2018-09-20T07:35:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3",
+        "name": "Tarjeta Verde para Familiares Inmediatos de un Ciudadano ...", "url":
+        "https:\/\/www.uscis.gov\/es\/tarjeta-verde\/familiar-inmediato", "urlPingSuffix":
+        "DevEx,5109.1", "displayUrl": "https:\/\/www.uscis.gov\/es\/tarjeta-verde\/familiar-inmediato",
+        "snippet": "Usted podría ajustar su estatus bajo INA 245(i), aún si está sujeto
+        a uno o más vetos de ajuste de estatus y por consiguiente ser inelegible
+        al ajuste de estatus bajo INA 245(a). Para más información, vea las instrucciones
+        del Formulario I-485, Suplemento A, Suplemento A del Formulario I-485, Ajuste
+        de Estatus bajo la Sección 245 (i) .", "dateLastCrawled": "2018-09-21T09:55:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4", "name": "Juno
+        - Mission to Jupiter | NASA", "url": "https:\/\/www.nasa.gov\/mission_pages\/juno\/main\/index.html",
+        "urlPingSuffix": "DevEx,5122.1", "about": [{"name": "Juno"}, {"name": "Juno"}],
+        "displayUrl": "https:\/\/www.nasa.gov\/mission_pages\/juno", "snippet":
+        "Juno will improve our understanding of the solar system''s beginnings by
+        revealing the origin and evolution of Jupiter.", "dateLastCrawled": "2018-09-22T23:19:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5", "name": "Cambios
+        del Seguro Social para el 2015 - ssa.gov", "url": "http:\/\/www.ssa.gov\/espanol\/noticias\/prensa\/hojadedatos\/2015cola-datos.html",
+        "urlPingSuffix": "DevEx,5134.1", "displayUrl": "www.ssa.gov\/espanol\/noticias\/prensa\/hojadedatos\/2015cola-datos.html",
+        "snippet": "Esta página muestra la información de los cambios en el ajuste
+        de costo de vida del 2015.", "dateLastCrawled": "2018-09-12T13:37:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6", "name": "Departamento
+        de Trabajdo y Entrenamiento de Rhode Island ...", "url": "http:\/\/www.dlt.ri.gov\/wc\/InformacionContratistaInd.htm",
+        "urlPingSuffix": "DevEx,5147.1", "displayUrl": "www.dlt.ri.gov\/wc\/InformacionContratistaInd.htm",
+        "snippet": "Solo con llenar de Noticia de Retiro de Designación Como Contratista
+        Independiente formulario por cada uno resignaría su condición como contratista
+        independiente. 11. Está toda la información en este formulario disponible
+        para el público?", "dateLastCrawled": "2018-09-13T16:05:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7", "name": "Preguntas y Respuestas
+        sobre temas relacionados a ...", "url": "https:\/\/www.uscis.gov\/es\/noticias\/preguntas-y-respuestas\/preguntas-y-respuestas-sobre-temas-relacionados-residencia-permanente-green-card",
+        "urlPingSuffix": "DevEx,5164.1", "displayUrl": "https:\/\/www.uscis.gov\/es\/noticias\/preguntas-y-respuestas\/preguntas...",
+        "snippet": "Inicio > Noticias > Preguntas y respuestas > Preguntas y Respuestas
+        sobre temas relacionados a residencia permanente (green card) saltar los enlaces
+        de compartir e imprimir Compartir Esta Página Imprimir. Contenido de Archivo.",
+        "dateLastCrawled": "2018-09-20T17:56:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8",
+        "name": "Información General sobre el ITIN | Internal Revenue Service", "url":
+        "https:\/\/www.irs.gov\/es\/individuals\/international-taxpayers\/general-itin-information",
+        "urlPingSuffix": "DevEx,5176.1", "displayUrl": "https:\/\/www.irs.gov\/es\/individuals\/international-taxpayers\/general...",
+        "snippet": "Puede que tenga que renovar su ITIN. A partir del 1 de enero de
+        2017, todos los ITIN no utilizados en una declaración de impuestos federales
+        por lo menos una vez en los últimos tres años, ya no serán válidos para utilizar.
+        Además, todos los ITIN emitidos antes de 2013 comenzarán a vencer este ...",
+        "dateLastCrawled": "2018-09-22T01:21:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9",
+        "name": "Comunicados de Prensa | USCIS", "url": "https:\/\/www.uscis.gov\/es\/comunicados-de-prensa",
+        "urlPingSuffix": "DevEx,5191.1", "displayUrl": "https:\/\/www.uscis.gov\/es\/comunicados-de-prensa",
+        "snippet": "Inicio > Noticias > Comunicados de Prensa. saltar los enlaces
+        de compartir e imprimir Compartir Esta Página Imprimir Feed RSS . Comunicados
+        de Prensa. Esta página contiene actualizaciones de comunicados de prensa que
+        impactan la inmigración legal.", "dateLastCrawled": "2018-09-23T03:50:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10", "name": "Tarjeta
+        Verde para Inmigrantes Basados en la Familia | USCIS", "url": "https:\/\/www.uscis.gov\/es\/tarjeta-verde\/preferencia-familia",
+        "urlPingSuffix": "DevEx,5206.1", "displayUrl": "https:\/\/www.uscis.gov\/es\/tarjeta-verde\/preferencia-familia",
+        "snippet": "Usted podría ajustar su estatus bajo INA 245(i), aún si está sujeto
+        a uno o más vetos de ajuste de estatus y por consiguiente ser inelegible
+        al ajuste de estatus bajo INA 245(a). Para más información, vea las instrucciones
+        del Formulario I-485, Suplemento A, Suplemento A del Formulario I-485, Ajuste
+        de Estatus bajo la Sección 245 (i) .", "dateLastCrawled": "2018-09-23T10:24:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11", "name": "Después
+        de recibir una decisión | USCIS", "url": "https:\/\/www.uscis.gov\/es\/recursos\/despues-de-recibir-una-decision",
+        "urlPingSuffix": "DevEx,5222.1", "displayUrl": "https:\/\/www.uscis.gov\/es\/recursos\/despues-de-recibir-una-decision",
+        "snippet": "Después de que usted obtiene la residencia permanente nosotros
+        actualizamos nuestros registros y le enviamos una carta de bienvenida. Luego
+        le enviamos su nueva tarjeta de residente permanente. Si usted se muda antes
+        de recibir su tarjeta debe llenar una solicidad de Cambio de Dirección. Si
+        ocurre ...", "dateLastCrawled": "2018-09-21T18:50:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12",
+        "name": "Recién diagnosticado: Pasos a seguir después de un ...", "url": "https:\/\/infosida.nih.gov\/understanding-hiv-aids\/fact-sheets\/21\/65\/recien-diagnosticado--pasos-a-seguir-despues-de-un-resultado-positivo-de-la-prueba-del-vih",
+        "urlPingSuffix": "DevEx,5238.1", "displayUrl": "https:\/\/infosida.nih.gov\/understanding-hiv-aids\/fact-sheets\/21\/65\/...",
+        "snippet": "Un resultado positivo de la prueba del VIH a menudo deja a una
+        persona abrumada con preguntas e inquietudes. Es importante recordar que el
+        VIH es una enfermedad manejable que se puede tratar con medicamentos.", "dateLastCrawled":
+        "2018-09-22T08:54:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13",
+        "name": "Beneficios por incapacidad - ssa.gov", "url": "http:\/\/www.ssa.gov\/pubs\/ES-05-10929.pdf",
+        "urlPingSuffix": "DevEx,5249.1", "displayUrl": "www.ssa.gov\/pubs\/ES-05-10929.pdf",
+        "snippet": "Uno de los formularios recopila información sobre su padecimiento
+        médico y cómo éste afecta su capacidad para trabajar. Otros formularios dan
+        autorización a los doctores, hospitales u otros profesionales de servicios
+        de salud que lo han atendido, para enviarnos información", "dateLastCrawled":
+        "2018-09-20T01:44:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14",
+        "name": "Víctimas de actos criminales: estatus U de no inmigrante ...", "url":
+        "https:\/\/www.uscis.gov\/es\/programas-humanitarios\/victimas-de-la-trata-de-personas-y-de-otros-crimenes\/victimas-de-actos-criminales-estatus-u-de-no-inmigrante",
+        "urlPingSuffix": "DevEx,5264.1", "displayUrl": "https:\/\/www.uscis.gov\/es\/programas-humanitarios\/victimas-de-la...",
+        "snippet": "Evidencia que establezca cada uno de los requisitos de elegibilidad.
+        Visite nuestra sección Formularios, específicamente los Formularios basados
+        en Beneficios Humanitarios. También usted puede solicitar el estatus de No
+        Inmigrante U si está fuera de los Estados Unidos.", "dateLastCrawled": "2018-09-20T17:15:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15", "name": "¿Cuánto
+        tiempo tarda el trámite de residencia? | USCIS", "url": "https:\/\/www.uscis.gov\/es\/tarjeta-verde\/tramite-y-procedimientos-para-la-tarjeta-verde\/cuanto-tiempo-tarda-el-tramite-de-residencia",
+        "urlPingSuffix": "DevEx,5279.1", "displayUrl": "https:\/\/www.uscis.gov\/es\/tarjeta-verde\/tramite-y-procedimientos...",
+        "snippet": "Respuesta: El proceso para solicitar la Residencia Permanente
+        consiste generalmente de dos pasos, aunque existen algunas excepciones:Primero,
+        usted (la persona que está intentando inmigrar) debe hace", "dateLastCrawled":
+        "2018-09-20T17:51:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16",
+        "name": "Tiempos de Procesamiento - egov.uscis.gov", "url": "https:\/\/egov.uscis.gov\/processing-times\/es",
+        "urlPingSuffix": "DevEx,5291.1", "displayUrl": "https:\/\/egov.uscis.gov\/processing-times\/es",
+        "snippet": "Este rango de tiempo es el tiempo que tarda USCIS en procesar
+        su caso a partir de la fecha en que lo recibimos. En general, procesamos casos
+        en el orden en que los recibimos, y actualizaremos esta página cada mes.",
+        "dateLastCrawled": "2018-09-18T13:36:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17",
+        "name": "Lo que necesita saber si recibe beneficios de Seguridad de ...",
+        "url": "https:\/\/www.ssa.gov\/pubs\/ES-05-11024.pdf", "urlPingSuffix": "DevEx,5301.1",
+        "displayUrl": "https:\/\/www.ssa.gov\/pubs\/ES-05-11024.pdf", "snippet":
+        "Contenido. Introducción 1 Sobre sus beneficios 1 Lo que nos debe informar
+        5 Las cosas que debe saber si recibe SSI debido a una incapacidad 20", "dateLastCrawled":
+        "2018-09-18T01:46:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18",
+        "name": "Lo que necesita saber cuándo recibe beneficios por ...", "url": "https:\/\/www.ssa.gov\/pubs\/ES-05-10977.pdf",
+        "urlPingSuffix": "DevEx,5311.1", "displayUrl": "https:\/\/www.ssa.gov\/pubs\/ES-05-10977.pdf",
+        "snippet": "el día tres del mes y el de SSI el día uno del mes. Pagos electrónicos
+        Cuando solicitó los beneficios de Seguro Social, debió haberse inscrito para
+        recibir sus pagos por depósito directo. El depósito directo es una manera
+        simple y segura de recibir sus beneficios. Comuníquese con su banco para",
+        "dateLastCrawled": "2018-09-21T11:04:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19",
+        "name": "Glosario de términos de compensación de trabajadores para ...", "url":
+        "http:\/\/www.dir.ca.gov\/dwc\/WCGlossary_spanish.htm", "urlPingSuffix": "DevEx,5323.1",
+        "displayUrl": "www.dir.ca.gov\/dwc\/WCGlossary_spanish.htm", "snippet":
+        "Notice = Noticia: Vea noticia de beneficio (benefit notice). ... del
+        2004 y el médico que lo está atendiendo indica que probablemente nunca va
+        poder regresar a su trabajo usual o a uno como el y su empleador le ofrece
+        un trabajo modificado o alternativo en lugar de los beneficios de rehabilitación
+        vocacional. ...", "dateLastCrawled": "2018-09-22T15:47:00.0000000Z"}]}, "rankingResponse":
+        {"mainline": {"items": [{"answerType": "WebPages", "resultIndex": 0, "value":
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0"}}, {"answerType":
+        "WebPages", "resultIndex": 1, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1"}},
+        {"answerType": "WebPages", "resultIndex": 2, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2"}},
+        {"answerType": "WebPages", "resultIndex": 3, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3"}},
+        {"answerType": "WebPages", "resultIndex": 4, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4"}},
+        {"answerType": "WebPages", "resultIndex": 5, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5"}},
+        {"answerType": "WebPages", "resultIndex": 6, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6"}},
+        {"answerType": "WebPages", "resultIndex": 7, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7"}},
+        {"answerType": "WebPages", "resultIndex": 8, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8"}},
+        {"answerType": "WebPages", "resultIndex": 9, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9"}},
+        {"answerType": "WebPages", "resultIndex": 10, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10"}},
+        {"answerType": "WebPages", "resultIndex": 11, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11"}},
+        {"answerType": "WebPages", "resultIndex": 12, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12"}},
+        {"answerType": "WebPages", "resultIndex": 13, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13"}},
+        {"answerType": "WebPages", "resultIndex": 14, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14"}},
+        {"answerType": "WebPages", "resultIndex": 15, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15"}},
+        {"answerType": "WebPages", "resultIndex": 16, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16"}},
+        {"answerType": "WebPages", "resultIndex": 17, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17"}},
+        {"answerType": "WebPages", "resultIndex": 18, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18"}},
+        {"answerType": "WebPages", "resultIndex": 19, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19"}}]}}}'
+    http_version: 
+  recorded_at: Wed, 26 Sep 2018 23:09:51 GMT
 recorded_with: VCR 4.0.0

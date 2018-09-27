@@ -141,4 +141,145 @@ http_interactions:
         {"answerType": "WebPages", "resultIndex": 9, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9"}}]}}}'
     http_version: 
   recorded_at: Thu, 26 Apr 2018 23:26:49 GMT
+- request:
+    method: get
+    uri: https://www.bingapis.com/api/v6/search?AppId=<BING_V6_APP_ID>&count=10&mkt=en-US&offset=11&q=anything&responseFilter=WebPages&safeSearch=moderate&textDecorations&traffictype=test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - USASearch
+      Ocp-Apim-Subscription-Key:
+      - "<BING_V6_APP_ID>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '1862'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - Wed, 26 Sep 2018 22:47:52 GMT
+      Vary:
+      - Accept-Encoding
+      P3p:
+      - CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
+      Set-Cookie:
+      - MUID=092202C76B5A60A333FC0EB16A166107; path=/; expires=Mon, 21-Oct-2019 22:48:52
+        GMT; domain=bingapis.com
+      - MUIDB=092202C76B5A60A333FC0EB16A166107; path=/; httponly; expires=Mon, 21-Oct-2019
+        22:48:52 GMT
+      - SRCHD=AF=NOFORM; domain=.bingapis.com; expires=Sat, 26-Sep-2020 22:48:52 GMT;
+        path=/
+      - SRCHUID=V=2&GUID=8A61BE6BB8BF4FFC948B73B9C3139F27&dmnchg=1; domain=.bingapis.com;
+        expires=Sat, 26-Sep-2020 22:48:52 GMT; path=/
+      - SRCHUSR=DOB=20180926; domain=.bingapis.com; expires=Sat, 26-Sep-2020 22:48:52
+        GMT; path=/
+      - _EDGE_S=mkt=en-us&F=1&SID=28883786EDCB609D33233BF0EC876125; path=/; httponly;
+        domain=bingapis.com
+      - _EDGE_V=1; path=/; httponly; expires=Mon, 21-Oct-2019 22:48:52 GMT; domain=bingapis.com
+      - _SS=SID=28883786EDCB609D33233BF0EC876125; domain=.bingapis.com; path=/
+      Bingapis-Traceid:
+      - 5A90E975E14E42418E53B41AE0C6153C
+      X-Msedge-Clientid:
+      - '092202C76B5A60A333FC0EB16A166107'
+      X-Msapi-Userstate:
+      - c478
+      Bingapis-Market:
+      - en-US
+      X-Msedge-Ref:
+      - 'Ref A: 5A90E975E14E42418E53B41AE0C6153C Ref B: BY3EDGE0120 Ref C: 2018-09-26T22:48:52Z'
+      Date:
+      - Wed, 26 Sep 2018 22:48:52 GMT
+    body:
+      encoding: UTF-8
+      string: '{"_type": "SearchResponse", "instrumentation": {"pingUrlBase": "https:\/\/www.bingapis.com\/api\/ping?IG=94ED9048E8E04A31969E93D0125F4265&CID=092202C76B5A60A333FC0EB16A166107&ID=",
+        "pageLoadPingUrl": "https:\/\/www.bingapis.com\/api\/ping\/pageload?IG=94ED9048E8E04A31969E93D0125F4265&CID=092202C76B5A60A333FC0EB16A166107&Type=Event.CPT&DATA=0"},
+        "webPages": {"webSearchUrl": "https:\/\/www.bing.com\/search?q=anything",
+        "webSearchUrlPingSuffix": "DevEx,5270.1", "totalEstimatedMatches": 35500000,
+        "value": [{"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0", "name":
+        "anything Meaning in the Cambridge English Dictionary", "url": "https:\/\/dictionary.cambridge.org\/dictionary\/english\/anything",
+        "urlPingSuffix": "DevEx,5055.1", "displayUrl": "https:\/\/dictionary.cambridge.org\/dictionary\/english\/anything",
+        "snippet": "anything definition: 1. used in questions and negatives to mean
+        \"something\": 2. any event, act, object, or situation: 3. any event, act,
+        or object whatever, or (esp ...", "dateLastCrawled": "2018-08-27T06:49:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1", "name": "Anything
+        - definition of anything by The Free Dictionary", "url": "https:\/\/www.thefreedictionary.com\/anything",
+        "urlPingSuffix": "DevEx,5069.1", "displayUrl": "https:\/\/www.thefreedictionary.com\/anything",
+        "snippet": "2. used in questions and negatives. Anything is very commonly
+        used in questions and negative sentences.", "dateLastCrawled": "2018-09-17T16:46:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2", "name": "anything",
+        "url": "https:\/\/www.anything.com\/#!", "urlPingSuffix": "DevEx,5081.1",
+        "displayUrl": "https:\/\/www.anything.com\/#!", "snippet": "Anything.com,
+        Ltd. © 2018 Anything.com, Ltd.", "dateLastCrawled": "2018-08-22T16:59:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3", "name": "Anything
+        - Definition for English-Language Learners from ...", "url": "http:\/\/www.learnersdictionary.com\/definition\/anything",
+        "urlPingSuffix": "DevEx,5094.1", "displayUrl": "www.learnersdictionary.com\/definition\/anything",
+        "snippet": "Definition of anything written for English Language Learners from
+        the Merriam-Webster Learner''s Dictionary with audio pronunciations, usage
+        examples, and count\/noncount noun labels.", "dateLastCrawled": "2018-09-20T00:42:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4", "name": "Anything:
+        The Prayer That Unlocked My God and My Soul ...", "url": "https:\/\/www.amazon.com\/Anything-Prayer-That-Unlocked-Soul\/dp\/0718037200",
+        "urlPingSuffix": "DevEx,5119.1", "about": [{"name": "Anything: The Prayer
+        That Unlocked My God and My Soul"}, {"name": "Anything: The Prayer That Unlocked
+        My God and My Soul"}], "displayUrl": "https:\/\/www.amazon.com\/Anything-Prayer-That-Unlocked-Soul\/dp\/...",
+        "snippet": "Anything: The Prayer That Unlocked My God and My Soul [Jennie
+        Allen] on Amazon.com. *FREE* shipping on qualifying offers. What if you told
+        God you would do anything . . . and he took you up on it? Jennie Allen, founder
+        of If: Gathering", "dateLastCrawled": "2018-09-22T07:29:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5", "name": "Anything But
+        | Definition of Anything But by Merriam-Webster", "url": "https:\/\/www.merriam-webster.com\/dictionary\/anything%20but",
+        "urlPingSuffix": "DevEx,5133.1", "displayUrl": "https:\/\/www.merriam-webster.com\/dictionary\/anything
+        but", "snippet": "Comments on anything but. What made you want to look up
+        anything but?Please tell us where you read or heard it (including the quote,
+        if possible).", "dateLastCrawled": "2018-09-23T12:51:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6", "name": "Natasha Mosley-
+        Anything (Lyrics) - YouTube", "url": "https:\/\/www.youtube.com\/watch?v=7WanP7v1wFk",
+        "urlPingSuffix": "DevEx,5151.1", "displayUrl": "https:\/\/www.youtube.com\/watch?v=7WanP7v1wFk",
+        "snippet": "Our new desktop experience was built to be your music destination.
+        Listen to official albums & more.", "dateLastCrawled": "2018-09-17T00:56:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7", "name": "Anything
+        dictionary definition | anything defined", "url": "http:\/\/www.yourdictionary.com\/anything",
+        "urlPingSuffix": "DevEx,5165.1", "displayUrl": "www.yourdictionary.com\/anything",
+        "snippet": "An example of anything is a person who will eat any type or kind
+        of food.", "dateLastCrawled": "2018-06-12T00:39:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8",
+        "name": "anything | Definition of anything in English by Oxford ...", "url":
+        "https:\/\/en.oxforddictionaries.com\/definition\/anything", "urlPingSuffix":
+        "DevEx,5178.1", "displayUrl": "https:\/\/en.oxforddictionaries.com\/definition\/anything",
+        "snippet": "Definition of anything - used to refer to a thing, no matter what",
+        "dateLastCrawled": "2018-09-21T16:43:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9",
+        "name": "What is the difference between \"anything\" and \"any thing ...",
+        "url": "http:\/\/www.learnersdictionary.com\/qa\/what-is-the-difference-between-anything-and-any-thing",
+        "urlPingSuffix": "DevEx,5192.1", "displayUrl": "www.learnersdictionary.com\/qa\/what-is-the-difference-between...",
+        "snippet": "Question. What is the difference between \"anything\" and \"any
+        thing\"? - John, from the Philippines Answer. The short answer is that it
+        is nearly always better to use anything.. Anything, which means “a thing of
+        any kind,” can be used in many more contexts than any thing, which is rarely
+        used at all. Below are some examples of the ways that anything is used.",
+        "dateLastCrawled": "2018-09-23T02:59:00.0000000Z"}]}, "rankingResponse": {"mainline":
+        {"items": [{"answerType": "WebPages", "resultIndex": 0, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0"}},
+        {"answerType": "WebPages", "resultIndex": 1, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1"}},
+        {"answerType": "WebPages", "resultIndex": 2, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2"}},
+        {"answerType": "WebPages", "resultIndex": 3, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3"}},
+        {"answerType": "WebPages", "resultIndex": 4, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4"}},
+        {"answerType": "WebPages", "resultIndex": 5, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5"}},
+        {"answerType": "WebPages", "resultIndex": 6, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6"}},
+        {"answerType": "WebPages", "resultIndex": 7, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7"}},
+        {"answerType": "WebPages", "resultIndex": 8, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8"}},
+        {"answerType": "WebPages", "resultIndex": 9, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9"}}]}}}'
+    http_version: 
+  recorded_at: Wed, 26 Sep 2018 22:48:52 GMT
 recorded_with: VCR 4.0.0

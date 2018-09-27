@@ -219,4 +219,245 @@ http_interactions:
         {"answerType": "WebPages", "resultIndex": 19, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19"}}]}}}'
     http_version: 
   recorded_at: Thu, 26 Apr 2018 23:29:12 GMT
+- request:
+    method: get
+    uri: https://www.bingapis.com/api/v6/search?AppId=<BING_V6_APP_ID>&count=20&mkt=en-US&offset=0&q=thunder%20%26%20lightning%20(site:gov%20OR%20site:mil)&responseFilter=WebPages&safeSearch=moderate&textDecorations=true&traffictype=test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - USASearch
+      Ocp-Apim-Subscription-Key:
+      - "<BING_V6_APP_ID>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '4170'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - Wed, 26 Sep 2018 22:57:26 GMT
+      Vary:
+      - Accept-Encoding
+      P3p:
+      - CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
+      Set-Cookie:
+      - MUID=39A6C41A1D366150117AC86C1C7A60C5; path=/; expires=Mon, 21-Oct-2019 22:58:27
+        GMT; domain=bingapis.com
+      - MUIDB=39A6C41A1D366150117AC86C1C7A60C5; path=/; httponly; expires=Mon, 21-Oct-2019
+        22:58:27 GMT
+      - SRCHD=AF=NOFORM; domain=.bingapis.com; expires=Sat, 26-Sep-2020 22:58:26 GMT;
+        path=/
+      - SRCHUID=V=2&GUID=1C18B1DAFB884DF79BBE33E5A3B2B690&dmnchg=1; domain=.bingapis.com;
+        expires=Sat, 26-Sep-2020 22:58:26 GMT; path=/
+      - SRCHUSR=DOB=20180926; domain=.bingapis.com; expires=Sat, 26-Sep-2020 22:58:26
+        GMT; path=/
+      - _EDGE_S=mkt=en-us&F=1&SID=1A26BD99683D671613E1B1EF6971664E; path=/; httponly;
+        domain=bingapis.com
+      - _EDGE_V=1; path=/; httponly; expires=Mon, 21-Oct-2019 22:58:27 GMT; domain=bingapis.com
+      - _SS=SID=1A26BD99683D671613E1B1EF6971664E; domain=.bingapis.com; path=/
+      Bingapis-Traceid:
+      - B9990E1D1905406FAE5DA917A5AC631C
+      X-Msedge-Clientid:
+      - 39A6C41A1D366150117AC86C1C7A60C5
+      X-Msapi-Userstate:
+      - c490
+      Bingapis-Market:
+      - en-US
+      X-Msedge-Ref:
+      - 'Ref A: B9990E1D1905406FAE5DA917A5AC631C Ref B: BY3EDGE0306 Ref C: 2018-09-26T22:58:27Z'
+      Date:
+      - Wed, 26 Sep 2018 22:58:26 GMT
+    body:
+      encoding: UTF-8
+      string: '{"_type": "SearchResponse", "instrumentation": {"pingUrlBase": "https:\/\/www.bingapis.com\/api\/ping?IG=FD3188CD72044A1C983C120972D8B810&CID=39A6C41A1D366150117AC86C1C7A60C5&ID=",
+        "pageLoadPingUrl": "https:\/\/www.bingapis.com\/api\/ping\/pageload?IG=FD3188CD72044A1C983C120972D8B810&CID=39A6C41A1D366150117AC86C1C7A60C5&Type=Event.CPT&DATA=0"},
+        "webPages": {"webSearchUrl": "https:\/\/www.bing.com\/search?q=thunder+%26+lightning+(site%3agov+OR+site%3amil)",
+        "webSearchUrlPingSuffix": "DevEx,5416.1", "totalEstimatedMatches": 2260000,
+        "value": [{"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0", "name":
+        "Thunderstorms & Lightning | Ready.gov", "url": "https:\/\/www.ready.gov\/thunderstorms-lightning",
+        "urlPingSuffix": "DevEx,5065.1", "about": [{"name": "Thunderstorm"}], "displayUrl":
+        "https:\/\/www.ready.gov\/thunderstorms-lightning", "snippet": "Lightning
+        is a leading cause of injury and death from weather-related hazards. Although
+        most lightning victims survive, people struck by lightning often report
+        a variety of long-term, debilitating symptoms. Thunderstorms are dangerous
+        storms that include lightning and can:Include powerful winds over 50 MPH;Create
+        hail; andCause flash flooding and tornadoes.", "dateLastCrawled": "2018-09-20T19:02:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1", "name": "Lightning
+        Safety - weather.gov", "url": "https:\/\/www.weather.gov\/safety\/lightning-safety",
+        "urlPingSuffix": "DevEx,5079.1", "displayUrl": "https:\/\/www.weather.gov\/safety\/lightning-safety",
+        "snippet": "Just remember, When Thunder Roars, Go Indoors. Too many people
+        wait far too long to get to a safe place when thunderstorms approach. Unfortunately,
+        these delayed actions lead to many of the lightning deaths and injuries
+        in the United States.", "dateLastCrawled": "2018-09-22T11:02:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2", "name": "NWS JetStream
+        - Lightning Safety - weather.gov", "url": "https:\/\/www.weather.gov\/jetstream\/lightning_safety",
+        "urlPingSuffix": "DevEx,5092.1", "displayUrl": "https:\/\/www.weather.gov\/jetstream\/lightning_safety",
+        "snippet": "Lightning is the first thunderstorm hazard to arrive and the
+        last to leave. Lightning is one of the most capricious and unpredictable
+        characteristics of a thunderstorm. Because of this, no one can guarantee
+        an individual or group absolute protection from lightning.", "dateLastCrawled":
+        "2018-09-17T16:54:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3",
+        "name": "Lightning Tips - weather.gov", "url": "https:\/\/www.weather.gov\/safety\/lightning-tips",
+        "urlPingSuffix": "DevEx,5106.1", "displayUrl": "https:\/\/www.weather.gov\/safety\/lightning-tips",
+        "snippet": "NO PLACE outside is safe when thunderstorms are in the area!!
+        If you hear thunder, lightning is close enough to strike you. When you hear
+        thunder, immediately move to safe shelter: a substantial building with electricity
+        or plumbing or an enclosed, metal-topped vehicle with windows up. Stay in
+        safe ...", "dateLastCrawled": "2018-09-23T00:58:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4",
+        "name": "Lightning Myths - weather.gov", "url": "https:\/\/www.weather.gov\/safety\/lightning-myths",
+        "urlPingSuffix": "DevEx,5120.1", "displayUrl": "https:\/\/www.weather.gov\/safety\/lightning-myths",
+        "snippet": "Lightning Myths and Facts. Myth: If you''re caught outside during
+        a thunderstorm, you should crouch down to reduce your risk of being struck.
+        Fact: Crouching doesn''t make you any safer outdoors. Run to a substantial
+        building or hard topped vehicle. If you are too far to run to one of these
+        options, you have no good alternative.", "dateLastCrawled": "2018-09-23T07:22:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5", "name": "Understanding
+        Lightning: Thunder - weather.gov", "url": "https:\/\/www.weather.gov\/safety\/lightning-science-thunder",
+        "urlPingSuffix": "DevEx,5134.1", "displayUrl": "https:\/\/www.weather.gov\/safety\/lightning-science-thunder",
+        "snippet": "Thunder is the sound caused by a nearby flash of lightning
+        and can be heard for a distance of only about 10 miles from the lightning
+        strike. The sound of thunder should serve as a warning to anyone outside
+        that they are within striking distance of the storm and need to get to a safe
+        place ...", "dateLastCrawled": "2018-09-23T00:19:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6",
+        "name": "NWS JetStream - The Sound of Thunder", "url": "https:\/\/www.weather.gov\/jetstream\/thunder",
+        "urlPingSuffix": "DevEx,5148.1", "about": [{"name": "Thunder"}], "displayUrl":
+        "https:\/\/www.weather.gov\/jetstream\/thunder", "snippet": "Regardless
+        of whether lightning is positive or negative, thunder is produced the
+        same way. Thunder is the acoustic shock wave resulting from the extreme
+        heat generated by a lightning flash. Lightning can be as hot as 54,000°F
+        (30,000°C), a temperature that is five times hotter than the surface of ...",
+        "dateLastCrawled": "2018-09-10T22:56:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7",
+        "name": "Lightning Safety on the Job - weather.gov", "url": "https:\/\/www.weather.gov\/safety\/lightning-job",
+        "urlPingSuffix": "DevEx,5162.1", "displayUrl": "https:\/\/www.weather.gov\/safety\/lightning-job",
+        "snippet": "If you can hear thunder, lightning is close enough to strike.
+        Stop what you are doing and seek safety in a substantial building or a hard-topped
+        metal vehicle. Know what objects and equipment to avoid during a thunderstorm.",
+        "dateLastCrawled": "2018-09-22T10:44:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8",
+        "name": "Overview: Lightning Safety - weather.gov", "url": "https:\/\/www.weather.gov\/safety\/lightning-safety-overview",
+        "urlPingSuffix": "DevEx,5176.1", "displayUrl": "https:\/\/www.weather.gov\/safety\/lightning-safety-overview",
+        "snippet": "To minimize your personal risk of being struck by lightning,
+        when going outside, plan ahead so that you can get to a safe place quickly
+        if a thunderstorm threatens. If the sky looks threatening or if you hear
+        thunder, get inside a safe place immediately.", "dateLastCrawled": "2018-09-22T22:22:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9", "name": "Lightning
+        Safety Tips and Resources - weather.gov", "url": "https:\/\/www.weather.gov\/safety\/lightning",
+        "urlPingSuffix": "DevEx,5190.1", "about": [{"name": "Lightning"}], "displayUrl":
+        "https:\/\/www.weather.gov\/safety\/lightning", "snippet": "Lightning
+        strikes the United States about 25 million times a year. Although most lightning
+        occurs in the summer, people can be struck at any time of year. Lightning
+        kills an average of 47 people in the United States each year, and hundreds
+        more are severely injured.", "dateLastCrawled": "2018-09-22T18:39:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10", "name": "NOAA
+        SciJinks :: What causes lightning and thunder?", "url": "https:\/\/scijinks.gov\/lightning\/",
+        "urlPingSuffix": "DevEx,5204.1", "displayUrl": "https:\/\/scijinks.gov\/lightning",
+        "snippet": "But the lightning we usually care about most is the lightning
+        that goes from clouds to ground—because that''s us! As the storm moves over
+        the ground, the strong negative charge in the cloud attracts positive charges
+        in the ground.", "dateLastCrawled": "2018-09-20T00:27:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11", "name": "NWS JetStream
+        - How Lightning is Created - weather.gov", "url": "https:\/\/www.weather.gov\/jetstream\/lightning",
+        "urlPingSuffix": "DevEx,5216.1", "displayUrl": "https:\/\/www.weather.gov\/jetstream\/lightning",
+        "snippet": "The conditions needed to produce lightning have been known for
+        some time. However, exactly how lightning forms has never been verified
+        so there is room for debate. Leading theories focus around separation of electric
+        charge and generation of an electric field within a thunderstorm. Recent
+        studies ...", "dateLastCrawled": "2018-09-22T05:18:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12",
+        "name": "NWS JetStream - Introduction to Lightning - weather.gov", "url":
+        "https:\/\/www.weather.gov\/jetstream\/lightning_intro", "urlPingSuffix":
+        "DevEx,5229.1", "displayUrl": "https:\/\/www.weather.gov\/jetstream\/lightning_intro",
+        "snippet": "Lightning has been seen in volcanic eruptions, extremely intense
+        forest fires, surface nuclear detonations, heavy snowstorms, and in large
+        hurricanes. However, it is most often seen in thunderstorms. In fact, lightning
+        (and the resulting thunder) is what makes a storm a thunderstorm.", "dateLastCrawled":
+        "2018-09-21T07:43:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13",
+        "name": "Understanding Lightning - weather.gov", "url": "https:\/\/www.weather.gov\/safety\/lightning-science-scienceintro",
+        "urlPingSuffix": "DevEx,5243.1", "displayUrl": "https:\/\/www.weather.gov\/safety\/lightning-science-scienceintro",
+        "snippet": "Lightning is one of the top three storm-related killers in the
+        United States. It is also one of the least understood weather phenomena. Learn
+        more about lightning science at the links below. You can go through the
+        site sequentially for a complete intro to lightning science or pick the
+        topics of ...", "dateLastCrawled": "2018-09-19T21:37:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14", "name": "Understanding
+        Lightning Science - weather.gov", "url": "https:\/\/www.weather.gov\/safety\/lightning-science-overview",
+        "urlPingSuffix": "DevEx,5257.1", "displayUrl": "https:\/\/www.weather.gov\/safety\/lightning-science-overview",
+        "snippet": "Thunder is the sound made by a flash of lightning. As lightning
+        passes through the air it heats the air quickly. This causes the air to expand
+        rapidly and creates the sound wave we hear as thunder.", "dateLastCrawled":
+        "2018-09-16T14:29:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15",
+        "name": "LIGHTNING IF SOMEONE IS STRUCK SAFETY - weather.gov", "url":
+        "https:\/\/www.weather.gov\/media\/safety\/Lightning-Brochure18.pdf", "urlPingSuffix":
+        "DevEx,5268.1", "displayUrl": "https:\/\/www.weather.gov\/media\/safety\/Lightning-Brochure18.pdf",
+        "snippet": "WHEN THUNDER ROARS, GO INDOORS! Each year in the United States,
+        there are about 25 million cloud-to-ground lightning flashes and about 300
+        people struck by lightning.", "dateLastCrawled": "2018-09-20T20:55:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16", "name": "BE PREPARED
+        FOR A THUNDERSTORM, LIGHTNING, OR HAIL - fema.gov", "url": "https:\/\/www.fema.gov\/media-library-data\/1527866280447-8ee0ba123e9a7b91c75b97dfb62cb657\/ThunderStorm_May2018.pdf",
+        "urlPingSuffix": "DevEx,5278.1", "displayUrl": "https:\/\/www.fema.gov\/...\/ThunderStorm_May2018.pdf",
+        "snippet": "THUNDERSTORM, LIGHTNING, OR HAIL Lightning is a leading
+        cause of injury and death from weather-related hazards. Thunderstorms are
+        dangerous storms that include lightning. 50+ MPH Include powerful winds
+        Create lightning and hail. Cause flash flooding . and tornadoes.", "dateLastCrawled":
+        "2018-09-08T13:00:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17",
+        "name": "Lightning Safety Tips | Lightning", "url": "https:\/\/www.cdc.gov\/disasters\/lightning\/safetytips.html",
+        "urlPingSuffix": "DevEx,5291.1", "displayUrl": "https:\/\/www.cdc.gov\/disasters\/lightning\/safetytips.html",
+        "snippet": "The best defense is to avoid lightning. Here are some outdoor
+        safety tips that can help you avoid being struck: Remember the phrase, \"When
+        thunder roars, go indoors.\" Find a safe, enclosed shelter when you hear
+        thunder. Safe shelters include homes, offices, shopping centers, and hard-top
+        vehicles ...", "dateLastCrawled": "2018-09-19T14:00:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18", "name": "Thunder and
+        Lightning - ready.pa.gov", "url": "https:\/\/www.ready.pa.gov\/BeInformed\/Know-The-Threats\/Pages\/Thunder-and-Lightning-.aspx",
+        "urlPingSuffix": "DevEx,5303.1", "displayUrl": "https:\/\/www.ready.pa.gov\/...\/Pages\/Thunder-and-Lightning-.aspx",
+        "snippet": "Most lightning deaths and injuries occur when people are caught
+        outdoors in the summer months during the afternoon and evening, so be particularly
+        cautious of lightning this time of year. Get an emergency supply kit that
+        includes enough provisions for you and your family to live on for a minimum
+        of three days in case there is a long-term power ...", "dateLastCrawled":
+        "2018-09-15T01:06:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19",
+        "name": "Thunderstorm and Lightning Safety Tips | Mass.gov", "url": "https:\/\/www.mass.gov\/service-details\/thunderstorm-and-lightning-safety-tips",
+        "urlPingSuffix": "DevEx,5316.1", "about": [{"name": "Thunderstorm"}], "displayUrl":
+        "https:\/\/www.mass.gov\/...\/thunderstorm-and-lightning-safety-tips",
+        "snippet": "A thunderstorm comes from rain-bearing clouds that also produce
+        thunder and lightning. All thunderstorms produce lighting and therefore
+        are dangerous. A thunderstorm is classified as a severe thunderstorm when
+        it contains large (at least one inch) hail and\/or winds of 58 MPH or greater.
+        If you can ...", "dateLastCrawled": "2018-09-21T09:41:00.0000000Z"}]}, "rankingResponse":
+        {"mainline": {"items": [{"answerType": "WebPages", "resultIndex": 0, "value":
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0"}}, {"answerType":
+        "WebPages", "resultIndex": 1, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1"}},
+        {"answerType": "WebPages", "resultIndex": 2, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2"}},
+        {"answerType": "WebPages", "resultIndex": 3, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3"}},
+        {"answerType": "WebPages", "resultIndex": 4, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4"}},
+        {"answerType": "WebPages", "resultIndex": 5, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5"}},
+        {"answerType": "WebPages", "resultIndex": 6, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6"}},
+        {"answerType": "WebPages", "resultIndex": 7, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7"}},
+        {"answerType": "WebPages", "resultIndex": 8, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8"}},
+        {"answerType": "WebPages", "resultIndex": 9, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9"}},
+        {"answerType": "WebPages", "resultIndex": 10, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10"}},
+        {"answerType": "WebPages", "resultIndex": 11, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11"}},
+        {"answerType": "WebPages", "resultIndex": 12, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12"}},
+        {"answerType": "WebPages", "resultIndex": 13, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13"}},
+        {"answerType": "WebPages", "resultIndex": 14, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14"}},
+        {"answerType": "WebPages", "resultIndex": 15, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15"}},
+        {"answerType": "WebPages", "resultIndex": 16, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16"}},
+        {"answerType": "WebPages", "resultIndex": 17, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17"}},
+        {"answerType": "WebPages", "resultIndex": 18, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18"}},
+        {"answerType": "WebPages", "resultIndex": 19, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19"}}]}}}'
+    http_version: 
+  recorded_at: Wed, 26 Sep 2018 22:58:27 GMT
 recorded_with: VCR 4.0.0

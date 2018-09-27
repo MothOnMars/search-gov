@@ -8,7 +8,7 @@ describe BingV6WebSearch do
     subject { described_class.new({ enable_highlighting: :enable_highlighting }) }
 
     it 'uses "WebPages,SpellSuggestions" for responseFilter' do
-      expect(subject.params[:responseFilter]).to eq('WebPages,SpellSuggestions')
+      expect(subject.params[:responseFilter]).to eq('WebPages')
     end
 
     it 'gets textDecorations from options' do

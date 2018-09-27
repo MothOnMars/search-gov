@@ -213,4 +213,220 @@ http_interactions:
         "sidebar": {"items": [{"answerType": "Entities"}]}}}'
     http_version: 
   recorded_at: Thu, 26 Apr 2018 23:56:36 GMT
+- request:
+    method: get
+    uri: https://www.bingapis.com/api/v6/search?AppId=<BING_V6_APP_ID>&count=20&mkt=en-US&offset=0&q=mars%20(site:nasa.gov)%20(-site:mars.nasa.gov)&responseFilter=WebPages&safeSearch=moderate&textDecorations&traffictype=test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - USASearch
+      Ocp-Apim-Subscription-Key:
+      - "<BING_V6_APP_ID>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '3274'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - Wed, 26 Sep 2018 22:52:35 GMT
+      Vary:
+      - Accept-Encoding
+      P3p:
+      - CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
+      Set-Cookie:
+      - MUID=1E108F0EBF8161190B3A8378BECD608D; path=/; expires=Mon, 21-Oct-2019 22:53:35
+        GMT; domain=bingapis.com
+      - MUIDB=1E108F0EBF8161190B3A8378BECD608D; path=/; httponly; expires=Mon, 21-Oct-2019
+        22:53:35 GMT
+      - SRCHD=AF=NOFORM; domain=.bingapis.com; expires=Sat, 26-Sep-2020 22:53:35 GMT;
+        path=/
+      - SRCHUID=V=2&GUID=8A7AA0FB11A74B899232ECA0CFC3BE13&dmnchg=1; domain=.bingapis.com;
+        expires=Sat, 26-Sep-2020 22:53:35 GMT; path=/
+      - SRCHUSR=DOB=20180926; domain=.bingapis.com; expires=Sat, 26-Sep-2020 22:53:35
+        GMT; path=/
+      - _EDGE_S=mkt=en-us&F=1&SID=2C5CD0EE9803616D27D6DC98994F6079; path=/; httponly;
+        domain=bingapis.com
+      - _EDGE_V=1; path=/; httponly; expires=Mon, 21-Oct-2019 22:53:35 GMT; domain=bingapis.com
+      - _SS=SID=2C5CD0EE9803616D27D6DC98994F6079; domain=.bingapis.com; path=/
+      Bingapis-Traceid:
+      - 66A5A82E236F49658C2A8CCC3DC33478
+      X-Msedge-Clientid:
+      - 1E108F0EBF8161190B3A8378BECD608D
+      X-Msapi-Userstate:
+      - 38bc
+      Bingapis-Market:
+      - en-US
+      X-Msedge-Ref:
+      - 'Ref A: 66A5A82E236F49658C2A8CCC3DC33478 Ref B: BY3EDGE0212 Ref C: 2018-09-26T22:53:35Z'
+      Date:
+      - Wed, 26 Sep 2018 22:53:35 GMT
+    body:
+      encoding: UTF-8
+      string: '{"_type": "SearchResponse", "instrumentation": {"pingUrlBase": "https:\/\/www.bingapis.com\/api\/ping?IG=33B80CD8E55041C78F571579CD055704&CID=1E108F0EBF8161190B3A8378BECD608D&ID=",
+        "pageLoadPingUrl": "https:\/\/www.bingapis.com\/api\/ping\/pageload?IG=33B80CD8E55041C78F571579CD055704&CID=1E108F0EBF8161190B3A8378BECD608D&Type=Event.CPT&DATA=0"},
+        "webPages": {"webSearchUrl": "https:\/\/www.bing.com\/search?q=mars+(site%3anasa.gov)+(-site%3amars.nasa.gov)",
+        "webSearchUrlPingSuffix": "DevEx,5418.1", "totalEstimatedMatches": 1670000,
+        "value": [{"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0", "name":
+        "NASA’s Mars Exploration Program", "url": "https:\/\/mars.jpl.nasa.gov\/",
+        "urlPingSuffix": "DevEx,5064.1", "about": [{"name": "Mars"}, {"name": "Mars
+        Exploration Program"}], "displayUrl": "https:\/\/mars.jpl.nasa.gov", "snippet":
+        "NASA’s real-time portal for Mars exploration, featuring the latest news,
+        images, and discoveries from the Red Planet.", "dateLastCrawled": "2018-09-23T10:38:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1", "name": "Overview
+        | Mars – Solar System Exploration: NASA Science", "url": "https:\/\/solarsystem.nasa.gov\/planets\/mars\/",
+        "urlPingSuffix": "DevEx,5078.1", "about": [{"name": "Mars"}], "displayUrl":
+        "https:\/\/solarsystem.nasa.gov\/planets\/mars", "snippet": "Mars orbits our
+        Sun, a star. Mars is the fourth planet from the Sun at an average distance
+        of about 228 million km (142 million miles) or 1.52 AU.", "dateLastCrawled":
+        "2018-09-21T18:00:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2",
+        "name": "Moon to Mars | NASA", "url": "https:\/\/www.nasa.gov\/topics\/moon-to-mars\/",
+        "urlPingSuffix": "DevEx,5090.1", "displayUrl": "https:\/\/www.nasa.gov\/topics\/moon-to-mars",
+        "snippet": "Moon to Mars: NASA''s plans to enable human exploration of the
+        Moon as preparation for human missions to Mars and deeper into the solar system.",
+        "dateLastCrawled": "2018-09-23T05:10:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3",
+        "name": "Mars Exploration | NASA", "url": "https:\/\/www.nasa.gov\/mission_pages\/mars\/main\/index.html",
+        "urlPingSuffix": "DevEx,5104.1", "about": [{"name": "Mars"}], "displayUrl":
+        "https:\/\/www.nasa.gov\/mission_pages\/mars\/main", "snippet": "NASA.gov
+        brings you the latest images, videos and news from America''s space agency.
+        Get the latest updates on NASA missions, watch NASA TV live, and learn about
+        our quest to reveal the unknown and benefit all humankind.", "dateLastCrawled":
+        "2018-09-23T11:32:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4",
+        "name": "Moon to Mars Overview | NASA", "url": "https:\/\/www.nasa.gov\/topics\/moon-to-mars\/overview\/",
+        "urlPingSuffix": "DevEx,5116.1", "displayUrl": "https:\/\/www.nasa.gov\/topics\/moon-to-mars\/overview",
+        "snippet": "Overview of Moon to Mars: NASA''s plans to enable human exploration
+        of the Moon as preparation for human missions to Mars and deeper into the
+        solar system.", "dateLastCrawled": "2018-09-21T15:32:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5", "name": "NSSDCA Photo
+        Gallery: Mars - nssdc.gsfc.nasa.gov", "url": "https:\/\/nssdc.gsfc.nasa.gov\/photo_gallery\/photogallery-mars.html",
+        "urlPingSuffix": "DevEx,5128.1", "displayUrl": "https:\/\/nssdc.gsfc.nasa.gov\/photo_gallery\/photogallery-mars.html",
+        "snippet": "Thumbnail Image Description Caption NASA IDs Image Size Hi-Resolution
+        TIFF? Global mosaic of Mars. Visible in the center of this mosaic is the largest
+        known chasm in the solar system, Valles Marineris.", "dateLastCrawled": "2018-09-21T01:42:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6", "name": "Mars 2020
+        Rover | NASA", "url": "https:\/\/www.nasa.gov\/mars2020\/", "urlPingSuffix":
+        "DevEx,5141.1", "about": [{"name": "Mars 2020"}], "displayUrl": "https:\/\/www.nasa.gov\/mars2020",
+        "snippet": "NASA''s Mars 2020 rover will look for signs of past life in a
+        region of Mars where the ancient environment is believed to have been favorable
+        for microbial life.", "dateLastCrawled": "2018-09-19T08:57:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7", "name": "In Depth
+        | Mars – Solar System Exploration: NASA Science", "url": "https:\/\/solarsystem.nasa.gov\/planets\/mars\/in-depth\/",
+        "urlPingSuffix": "DevEx,5153.1", "about": [{"name": "Mars"}], "displayUrl":
+        "https:\/\/solarsystem.nasa.gov\/planets\/mars\/in-depth", "snippet": "Overview.
+        The fourth planet from the Sun, Mars is a dusty, cold, desert world with a
+        very thin atmosphere. This dynamic planet has seasons, polar ice caps, extinct
+        volcanoes, canyons and weather.", "dateLastCrawled": "2018-09-22T15:00:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8", "name": "What Is
+        Mars? | NASA", "url": "https:\/\/www.nasa.gov\/audience\/forstudents\/5-8\/features\/nasa-knows\/what-is-mars-58.html",
+        "urlPingSuffix": "DevEx,5167.1", "about": [{"name": "Mars"}], "displayUrl":
+        "https:\/\/www.nasa.gov\/...\/5-8\/features\/nasa-knows\/what-is-mars-58.html",
+        "snippet": "Earth''s next-door neighbor is often called the Red Planet because
+        of its red soil.", "dateLastCrawled": "2018-09-21T07:28:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9", "name": "What Is Mars?
+        | NASA", "url": "https:\/\/www.nasa.gov\/audience\/forstudents\/k-4\/stories\/nasa-knows\/what-is-mars-k4.html",
+        "urlPingSuffix": "DevEx,5181.1", "about": [{"name": "Mars"}], "displayUrl":
+        "https:\/\/www.nasa.gov\/...\/k-4\/stories\/nasa-knows\/what-is-mars-k4.html",
+        "snippet": "Mars is also called the Red Planet.", "dateLastCrawled": "2018-09-23T02:45:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10", "name": "All About
+        Mars :: NASA Space Place", "url": "https:\/\/spaceplace.nasa.gov\/all-about-mars\/en\/",
+        "urlPingSuffix": "DevEx,5196.1", "about": [{"name": "Mars"}], "displayUrl":
+        "https:\/\/www.spaceplace.nasa.gov\/all-about-mars", "snippet": "Mars is a
+        cold desert world. It is half the size of Earth. Mars is sometimes called
+        the Red Planet. It''s red because of rusty iron in the ground. Like Earth,
+        Mars has seasons, polar ice caps, volcanoes, canyons, and weather. It has
+        a very thin atmosphere made of carbon dioxide, nitrogen, and argon ...", "dateLastCrawled":
+        "2018-09-21T01:11:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11",
+        "name": "NASA''s Journey to Mars | NASA", "url": "https:\/\/www.nasa.gov\/content\/nasas-journey-to-mars\/",
+        "urlPingSuffix": "DevEx,5211.1", "displayUrl": "https:\/\/www.nasa.gov\/content\/nasas-journey-to-mars",
+        "snippet": "NASA is developing the capabilities needed to send humans to an
+        asteroid by 2025 and Mars in the 2030s – goals outlined in the bipartisan
+        NASA Authorization Act of 2010 and in the U.S. National Space Policy, also
+        issued in 2010.", "dateLastCrawled": "2018-09-19T23:34:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12", "name": "Overview | Mars
+        Moons – Solar System Exploration: NASA Science", "url": "https:\/\/solarsystem.nasa.gov\/moons\/mars-moons\/overview\/",
+        "urlPingSuffix": "DevEx,5224.1", "displayUrl": "https:\/\/solarsystem.nasa.gov\/moons\/mars-moons\/overview",
+        "snippet": "Mars'' moons are among the smallest in the solar system.", "dateLastCrawled":
+        "2018-09-22T05:38:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13",
+        "name": "Mars Science Laboratory - Curiosity Rover | NASA", "url": "https:\/\/www.nasa.gov\/mission_pages\/msl\/index.html",
+        "urlPingSuffix": "DevEx,5238.1", "about": [{"name": "Curiosity"}], "displayUrl":
+        "https:\/\/www.nasa.gov\/mission_pages\/msl", "snippet": "The latest news,
+        images and videos from NASA''s car-sized rover exploring the red planet for
+        evidence the planet could have once supported life.", "dateLastCrawled": "2018-09-21T20:26:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14", "name": "Mars
+        Moons - Solar System Exploration: NASA Science", "url": "https:\/\/solarsystem.nasa.gov\/moons\/mars-moons\/in-depth\/",
+        "urlPingSuffix": "DevEx,5251.1", "about": [{"name": "Mars"}], "displayUrl":
+        "https:\/\/solarsystem.nasa.gov\/moons\/mars-moons\/in-depth", "snippet":
+        "Mars'' moons are among the smallest in the solar system. Phobos is a bit
+        larger than Deimos, and orbits only 3,700 miles (6,000 kilometers) above the
+        Martian surface. No known moon orbits closer to its planet. It whips around
+        Mars three times a day, while the more distant Deimos takes 30 hours for each
+        orbit. Phobos is gradually spiraling inward ...", "dateLastCrawled": "2018-09-20T17:58:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15", "name": "Ep18:
+        Mars | NASA", "url": "https:\/\/www.nasa.gov\/johnson\/HWHAP\/mars\/", "urlPingSuffix":
+        "DevEx,5264.1", "displayUrl": "https:\/\/www.nasa.gov\/johnson\/HWHAP\/mars",
+        "snippet": "Dr. Doug Archer, Planetary Scientist, talks about Mars: what its
+        made of, what it''s like on the surface, and why it''s such an intriguing
+        place for humans to visit in the next giant leap. HWHAP Episode 18.", "dateLastCrawled":
+        "2018-09-14T15:15:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16",
+        "name": "Mars Facts | Mars Exploration Program - NASA Mars", "url": "https:\/\/mars.jpl.nasa.gov\/allaboutmars\/facts\/",
+        "urlPingSuffix": "DevEx,5278.1", "displayUrl": "https:\/\/mars.jpl.nasa.gov\/allaboutmars\/facts",
+        "snippet": "Mars planet facts and information. Compare Earth & Mars. Fun science
+        images for kids, school, family & space fans. Mars in space, night sky & history.",
+        "dateLastCrawled": "2018-09-17T14:50:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17",
+        "name": "Is Mars’ Soil Too Dry to Sustain Life? | NASA", "url": "https:\/\/www.nasa.gov\/feature\/ames\/is-mars-soil-too-dry-to-sustain-life\/",
+        "urlPingSuffix": "DevEx,5290.1", "displayUrl": "https:\/\/www.nasa.gov\/feature\/ames\/is-mars-soil-too-dry-to-sustain-life",
+        "snippet": "Life as we know it needs water to thrive. Even so, we see life
+        persist in the driest environments on Earth. But how dry is too dry? At what
+        point is an environment too extreme for even microorganisms, the smallest
+        and often most resilient of lifeforms, to survive?", "dateLastCrawled": "2018-09-23T05:15:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18", "name": "Mars
+        Exploration Rover Mission: Home", "url": "https:\/\/mars.jpl.nasa.gov\/mer\/home\/index.html",
+        "urlPingSuffix": "DevEx,5304.1", "about": [{"name": "Mars Exploration Rover"},
+        {"name": "Spirit"}], "displayUrl": "https:\/\/mars.jpl.nasa.gov\/mer\/home\/index.html",
+        "snippet": "NASA''s Mars rover Opportunity has passed the shortest-daylight
+        weeks of the Martian year with its solar panels in clean condition for a potential
+        dust-storm season in 2018. From Mars Rover: Panorama Above ''Perseverance
+        Valley''", "dateLastCrawled": "2018-09-20T22:44:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19",
+        "name": "Mars Odyssey", "url": "https:\/\/mars.jpl.nasa.gov\/odyssey\/", "urlPingSuffix":
+        "DevEx,5316.1", "about": [{"name": "2001 Mars Odyssey"}, {"name": "2001 Mars
+        Odyssey"}], "displayUrl": "https:\/\/mars.jpl.nasa.gov\/odyssey", "snippet":
+        "2001 Mars Odyssey - missions, videos, images and information", "dateLastCrawled":
+        "2018-09-22T05:09:00.0000000Z"}]}, "rankingResponse": {"mainline": {"items":
+        [{"answerType": "WebPages", "resultIndex": 0, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0"}},
+        {"answerType": "WebPages", "resultIndex": 1, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1"}},
+        {"answerType": "WebPages", "resultIndex": 2, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2"}},
+        {"answerType": "WebPages", "resultIndex": 3, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3"}},
+        {"answerType": "WebPages", "resultIndex": 4, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4"}},
+        {"answerType": "WebPages", "resultIndex": 5, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5"}},
+        {"answerType": "WebPages", "resultIndex": 6, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6"}},
+        {"answerType": "WebPages", "resultIndex": 7, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7"}},
+        {"answerType": "WebPages", "resultIndex": 8, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8"}},
+        {"answerType": "WebPages", "resultIndex": 9, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9"}},
+        {"answerType": "WebPages", "resultIndex": 10, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10"}},
+        {"answerType": "WebPages", "resultIndex": 11, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11"}},
+        {"answerType": "WebPages", "resultIndex": 12, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12"}},
+        {"answerType": "WebPages", "resultIndex": 13, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13"}},
+        {"answerType": "WebPages", "resultIndex": 14, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14"}},
+        {"answerType": "WebPages", "resultIndex": 15, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15"}},
+        {"answerType": "WebPages", "resultIndex": 16, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16"}},
+        {"answerType": "WebPages", "resultIndex": 17, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17"}},
+        {"answerType": "WebPages", "resultIndex": 18, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18"}},
+        {"answerType": "WebPages", "resultIndex": 19, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19"}}]}}}'
+    http_version: 
+  recorded_at: Wed, 26 Sep 2018 22:53:35 GMT
 recorded_with: VCR 4.0.0

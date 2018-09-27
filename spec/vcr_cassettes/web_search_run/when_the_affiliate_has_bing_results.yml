@@ -221,4 +221,234 @@ http_interactions:
         {"answerType": "WebPages", "resultIndex": 19, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19"}}]}}}'
     http_version: 
   recorded_at: Thu, 26 Apr 2018 23:56:26 GMT
+- request:
+    method: get
+    uri: https://www.bingapis.com/api/v6/search?AppId=<BING_V6_APP_ID>&count=20&mkt=en-US&offset=0&q=english%20(site:gov%20OR%20site:mil)&responseFilter=WebPages&safeSearch=moderate&textDecorations&traffictype=test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - USASearch
+      Ocp-Apim-Subscription-Key:
+      - "<BING_V6_APP_ID>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '4472'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - Wed, 26 Sep 2018 22:52:31 GMT
+      Vary:
+      - Accept-Encoding
+      P3p:
+      - CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
+      Set-Cookie:
+      - MUID=3641B26A8ED7630E1326BE1C8F9B62CB; path=/; expires=Mon, 21-Oct-2019 22:53:32
+        GMT; domain=bingapis.com
+      - MUIDB=3641B26A8ED7630E1326BE1C8F9B62CB; path=/; httponly; expires=Mon, 21-Oct-2019
+        22:53:32 GMT
+      - SRCHD=AF=NOFORM; domain=.bingapis.com; expires=Sat, 26-Sep-2020 22:53:31 GMT;
+        path=/
+      - SRCHUID=V=2&GUID=93B062E8288047D5940465560CA571CC&dmnchg=1; domain=.bingapis.com;
+        expires=Sat, 26-Sep-2020 22:53:31 GMT; path=/
+      - SRCHUSR=DOB=20180926; domain=.bingapis.com; expires=Sat, 26-Sep-2020 22:53:31
+        GMT; path=/
+      - _EDGE_S=mkt=en-us&F=1&SID=1BB07C4F71546EBB19BA703970186FDB; path=/; httponly;
+        domain=bingapis.com
+      - _EDGE_V=1; path=/; httponly; expires=Mon, 21-Oct-2019 22:53:32 GMT; domain=bingapis.com
+      - _SS=SID=1BB07C4F71546EBB19BA703970186FDB; domain=.bingapis.com; path=/
+      Bingapis-Traceid:
+      - 805BBF1E59D84F828E904F5FF4CC1E93
+      X-Msedge-Clientid:
+      - 3641B26A8ED7630E1326BE1C8F9B62CB
+      X-Msapi-Userstate:
+      - '3656'
+      Bingapis-Market:
+      - en-US
+      X-Msedge-Ref:
+      - 'Ref A: 805BBF1E59D84F828E904F5FF4CC1E93 Ref B: BY3EDGE0107 Ref C: 2018-09-26T22:53:32Z'
+      Date:
+      - Wed, 26 Sep 2018 22:53:31 GMT
+    body:
+      encoding: UTF-8
+      string: '{"_type": "SearchResponse", "instrumentation": {"pingUrlBase": "https:\/\/www.bingapis.com\/api\/ping?IG=EEDE0BCDFFC74BD39DB75228F0FBAD06&CID=3641B26A8ED7630E1326BE1C8F9B62CB&ID=",
+        "pageLoadPingUrl": "https:\/\/www.bingapis.com\/api\/ping\/pageload?IG=EEDE0BCDFFC74BD39DB75228F0FBAD06&CID=3641B26A8ED7630E1326BE1C8F9B62CB&Type=Event.CPT&DATA=0"},
+        "webPages": {"webSearchUrl": "https:\/\/www.bing.com\/search?q=english+(site%3agov+OR+site%3amil)",
+        "webSearchUrlPingSuffix": "DevEx,5400.1", "totalEstimatedMatches": 19500000,
+        "value": [{"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0", "name":
+        "VDOE :: English Standards of Learning Resources", "url": "http:\/\/www.doe.virginia.gov\/testing\/sol\/standards_docs\/english\/index.shtml",
+        "urlPingSuffix": "DevEx,5065.1", "displayUrl": "www.doe.virginia.gov\/testing\/sol\/standards_docs\/english\/index.shtml",
+        "snippet": "English SOL Crosswalk Between the 2017 and 2010 Standards. Word
+        - ADA Compliant Version; Word - Original Version; Progression Charts identify
+        the grade level at which specific skills are formally introduced in the 2017
+        English SOL for Communication-This is a Word document. (Word) Reading-This
+        ...", "dateLastCrawled": "2018-09-24T20:26:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1",
+        "name": "English Language Arts | Ohio Department of Education", "url": "http:\/\/education.ohio.gov\/Topics\/Learning-in-Ohio\/English-Language-Art",
+        "urlPingSuffix": "DevEx,5079.1", "displayUrl": "education.ohio.gov\/Topics\/Learning-in-Ohio\/English-Language-Art",
+        "snippet": "Explore the new English language arts pages by clicking on each
+        part of the graphic and icons below. Each page has a new look and new information,
+        including a glossary of terms and ways to integrate technology into your classroom
+        instruction!", "dateLastCrawled": "2018-09-21T19:26:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2", "name": "Study Materials
+        for the English Test | USCIS", "url": "https:\/\/www.uscis.gov\/citizenship\/learners\/study-test\/study-materials-english-test",
+        "urlPingSuffix": "DevEx,5097.1", "displayUrl": "https:\/\/www.uscis.gov\/...\/study-test\/study-materials-english-test",
+        "snippet": "The English test has three components: reading, writing, and speaking.
+        Your ability to speak English will be determined by a USCIS Officer during
+        your eligibility interview on Form N-400, Application for Naturalization.",
+        "dateLastCrawled": "2018-09-23T07:36:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3",
+        "name": "American English | For English Language Teachers Around ...", "url":
+        "https:\/\/americanenglish.state.gov\/", "urlPingSuffix": "DevEx,5110.1",
+        "about": [{"name": "Ranju Darshana"}], "displayUrl": "https:\/\/americanenglish.state.gov",
+        "snippet": "American English is a website for teachers and learners of English
+        as a foreign language abroad.", "dateLastCrawled": "2018-09-23T02:07:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4", "name": "MedlinePlus
+        - Health Information from the National Library ...", "url": "https:\/\/medlineplus.gov\/",
+        "urlPingSuffix": "DevEx,5124.1", "about": [{"name": "MedlinePlus"}, {"name":
+        "MedlinePlus"}], "displayUrl": "https:\/\/medlineplus.gov", "snippet": "Find
+        information on health conditions, wellness issues, and more in easy-to-read
+        language on MedlinePlus, the up-to-date, trusted health information site from
+        the NIH and the National Library of Medicine.", "dateLastCrawled": "2018-09-22T17:28:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5", "name": "California
+        Common Core State Standards", "url": "http:\/\/www.cde.ca.gov\/be\/st\/ss\/documents\/finalelaccssstandards.pdf",
+        "urlPingSuffix": "DevEx,5135.1", "about": [{"name": "Common Core State Standards
+        Initiative"}], "displayUrl": "www.cde.ca.gov\/be\/st\/ss\/documents\/finalelaccssstandards.pdf",
+        "snippet": "responsibility—English language arts teachers collaborating with
+        teachers of other academic content subjects for an integrated model of literacy
+        across the curriculum. The standards establish what it means to be a literate
+        person in the twenty-first", "dateLastCrawled": "2018-09-23T12:06:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6", "name": "Standards:
+        English Language Arts - K-12 Standards Section ...", "url": "http:\/\/www.azed.gov\/standards-practices\/k-12standards\/english-language-arts-standards\/",
+        "urlPingSuffix": "DevEx,5148.1", "displayUrl": "www.azed.gov\/...\/k-12standards\/english-language-arts-standards",
+        "snippet": "Standards: English Language Arts Tweet icon Important message
+        to read There will be a two year implementation timeline for the newly adopted
+        standards. 2017-2018 is a transitional implementation year, while full implementation
+        will occur in 2018-2019.", "dateLastCrawled": "2018-09-23T09:28:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7", "name": "English
+        Language Arts and Reading", "url": "https:\/\/tea.texas.gov\/Academics\/Subject_Areas\/English_Language_Arts_and_Reading\/English_Language_Arts_and_Reading\/",
+        "urlPingSuffix": "DevEx,5162.1", "displayUrl": "https:\/\/tea.texas.gov\/...\/English_Language_Arts_and_Reading",
+        "snippet": "This page contains information on curriculum, assessment, and
+        rules. We welcome any suggestions that will improve this page for individuals
+        working to provide high quality English language arts and reading (ELA\/R)
+        programs for students. Join the ELA\/R mailing list and receive updates. The
+        ELA\/R team in t", "dateLastCrawled": "2018-09-20T16:19:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8", "name": "Your Rights Under
+        USERRA", "url": "https:\/\/www.dol.gov\/vets\/programs\/userra\/USERRA_Private.pdf",
+        "urlPingSuffix": "DevEx,5174.1", "displayUrl": "https:\/\/www.dol.gov\/vets\/programs\/userra\/USERRA_Private.pdf",
+        "snippet": "THE UNIFORMED SERVICES EMPLOYMENT . AND REEMPLOYMENT RIGHTS ACT.
+        USERRA protects the job rights of individuals who voluntarily or involuntarily
+        leave employment positions to undertake military service or certain types
+        of service in the National Disaster Medical System. USERRA also prohibits
+        employers from", "dateLastCrawled": "2018-09-20T15:11:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9", "name": "Equal Employment
+        Opportunity isTHE LAW", "url": "https:\/\/www.dol.gov\/ofccp\/regs\/compliance\/posters\/pdf\/eeopost.pdf",
+        "urlPingSuffix": "DevEx,5185.1", "about": [{"name": "Equal Employment Opportunity
+        Commission"}], "displayUrl": "https:\/\/www.dol.gov\/ofccp\/regs\/compliance\/posters\/pdf\/eeopost.pdf",
+        "snippet": "Equal Employment Opportunity isTHE LAW Private Employers, State
+        and Local Governments, Educational Institutions, Employment Agencies and Labor
+        Organizations", "dateLastCrawled": "2018-09-19T15:01:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10", "name": "English Camp
+        - San Juan Island National Historical Park (U ...", "url": "https:\/\/www.nps.gov\/sajh\/learn\/historyculture\/english-camp.htm",
+        "urlPingSuffix": "DevEx,5198.1", "displayUrl": "https:\/\/www.nps.gov\/sajh\/learn\/historyculture\/english-camp.htm",
+        "snippet": "English Camp This artist''s depiction shows the Royal Marine Camp
+        at its apex with 27 structures, a formal garden and ample room on the parade
+        ground. The ship is HMS Boxer, a steam gunboat with shallow enough draft to
+        negotiate the waters of Garrison Bay.", "dateLastCrawled": "2018-09-11T08:46:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11", "name": "EMPLOYEE
+        RIGHTS - United States Department of Labor", "url": "https:\/\/www.dol.gov\/whd\/regs\/compliance\/posters\/eppac.pdf",
+        "urlPingSuffix": "DevEx,5210.1", "displayUrl": "https:\/\/www.dol.gov\/whd\/regs\/compliance\/posters\/eppac.pdf",
+        "snippet": "EMPLOYEE POLYGRAPH PROTECTION ACT The Employee Polygraph Protection
+        Act prohibits most private employers from using lie detector tests either
+        for pre-employment screening or during the course of employment. THE LAW REQUIRES
+        EMPLOYERS TO DISPLAY THIS POSTER", "dateLastCrawled": "2018-09-19T01:32:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12", "name": "English
+        Language Arts and Reading TEKS Review", "url": "https:\/\/tea.texas.gov\/Academics\/English_TEKS_Review\/",
+        "urlPingSuffix": "DevEx,5223.1", "displayUrl": "https:\/\/tea.texas.gov\/Academics\/English_TEKS_Review",
+        "snippet": "The SBOE gave final approval on June 23, 2017, to new English
+        and Spanish language arts and reading TEKS for high school. The new high school
+        TEKS will be implemented in classrooms beginning with the 2020-2021 school
+        year .", "dateLastCrawled": "2018-09-19T10:32:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13",
+        "name": "Communication: Speaking, Listening& Multi-modal Literacies ...",
+        "url": "http:\/\/doe.virginia.gov\/testing\/sol\/standards_docs\/english\/2017\/stds-all-english-2017.docx",
+        "urlPingSuffix": "DevEx,5235.1", "displayUrl": "doe.virginia.gov\/testing\/sol\/standards_docs\/english\/2017\/stds-all...",
+        "snippet": "Proficient use of the English language enables students to explore
+        and articulate the complex issues and ideas encountered in public and personal
+        life. By engaging in critical and creative thinking, students are able to
+        solve problems and use language to further educational, career, and personal
+        endeavors.", "dateLastCrawled": "2018-09-21T03:57:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14",
+        "name": "P Safety Check", "url": "https:\/\/www.cdc.gov\/HomeandRecreationalSafety\/pubs\/English\/booklet_Eng_desktop-a.pdf",
+        "urlPingSuffix": "DevEx,5248.1", "displayUrl": "https:\/\/www.cdc.gov\/HomeandRecreationalSafety\/pubs\/English\/booklet...",
+        "snippet": "Check for Safety. A Home Fall Prevention Checklist for . Department
+        of Health and Human Services Older Adults. Centers for Disease Control and
+        Prevention", "dateLastCrawled": "2018-09-22T21:16:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15",
+        "name": "Many Vaccine Information Statements are Varicella ...", "url": "https:\/\/www.cdc.gov\/vaccines\/hcp\/vis\/vis-statements\/varicella.pdf",
+        "urlPingSuffix": "DevEx,5259.1", "about": [{"name": "Varicella vaccine"}],
+        "displayUrl": "https:\/\/www.cdc.gov\/vaccines\/hcp\/vis\/vis-statements\/varicella.pdf",
+        "snippet": "Varicella (also called chickenpox) is a very contagious viral
+        disease. It is caused by the varicella zoster virus. Chickenpox is usually
+        mild, but it can be serious in infants under 12 months of age, adolescents,
+        adults, pregnant women, and people with weakened immune systems.", "dateLastCrawled":
+        "2018-09-18T05:11:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16",
+        "name": "Trees of Ohio: English Oak", "url": "http:\/\/forestry.ohiodnr.gov\/englishoak",
+        "urlPingSuffix": "DevEx,5274.1", "about": [{"name": "Quercus robur"}], "displayUrl":
+        "forestry.ohiodnr.gov\/englishoak", "snippet": "English Oak Quercus robur
+        ; A deciduous tree from the Beech Family (Fagaceae)", "dateLastCrawled": "2018-09-19T23:54:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17", "name": "English
+        Learners - Tennessee", "url": "https:\/\/www.tn.gov\/education\/student-support\/english-learners.html",
+        "urlPingSuffix": "DevEx,5287.1", "displayUrl": "https:\/\/www.tn.gov\/education\/student-support\/english-learners.html",
+        "snippet": "English Learners Tennessee students speak more than 140 languages,
+        and it is the responsibility of the educational system to ensure all of these
+        students are appropriately supported in their English language development
+        and in their progress toward mastering the academic standards for each grade
+        level and content area.", "dateLastCrawled": "2018-09-23T06:17:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18", "name": "Don’t
+        let anyone take it away.", "url": "https:\/\/www.e-verify.gov\/sites\/default\/files\/everify\/posters\/IER_RighttoWorkPoster.pdf",
+        "urlPingSuffix": "DevEx,5297.1", "displayUrl": "https:\/\/www.e-verify.gov\/sites\/default\/files\/everify\/posters\/IER...",
+        "snippet": "IF YOU HAVE THE RIGHT TO WORK … Immigrant opportunity to resolve
+        the problem. Don’t let anyone take it away. There are laws to protect you
+        from", "dateLastCrawled": "2018-09-23T01:07:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19",
+        "name": "APPLICATION FOR CALFRESH BENEFITS", "url": "http:\/\/www.cdss.ca.gov\/cdssweb\/entres\/forms\/English\/CF285.pdf",
+        "urlPingSuffix": "DevEx,5308.1", "displayUrl": "www.cdss.ca.gov\/cdssweb\/entres\/forms\/English\/CF285.pdf",
+        "snippet": "If you prefer to speak, read, or write in a language other than
+        English, the County will get someone to help you at no cost to you. How do
+        I apply? Use this application if you are applying for CalFresh benefits only.
+        CalFresh is a food assistance program to help ... • Give the application to
+        the County in person, by mail, by fax, or online.", "dateLastCrawled": "2018-09-21T17:50:00.0000000Z"}]},
+        "rankingResponse": {"mainline": {"items": [{"answerType": "WebPages", "resultIndex":
+        0, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0"}}, {"answerType":
+        "WebPages", "resultIndex": 1, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1"}},
+        {"answerType": "WebPages", "resultIndex": 2, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2"}},
+        {"answerType": "WebPages", "resultIndex": 3, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3"}},
+        {"answerType": "WebPages", "resultIndex": 4, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4"}},
+        {"answerType": "WebPages", "resultIndex": 5, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5"}},
+        {"answerType": "WebPages", "resultIndex": 6, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6"}},
+        {"answerType": "WebPages", "resultIndex": 7, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7"}},
+        {"answerType": "WebPages", "resultIndex": 8, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8"}},
+        {"answerType": "WebPages", "resultIndex": 9, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9"}},
+        {"answerType": "WebPages", "resultIndex": 10, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10"}},
+        {"answerType": "WebPages", "resultIndex": 11, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11"}},
+        {"answerType": "WebPages", "resultIndex": 12, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12"}},
+        {"answerType": "WebPages", "resultIndex": 13, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13"}},
+        {"answerType": "WebPages", "resultIndex": 14, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14"}},
+        {"answerType": "WebPages", "resultIndex": 15, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15"}},
+        {"answerType": "WebPages", "resultIndex": 16, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16"}},
+        {"answerType": "WebPages", "resultIndex": 17, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17"}},
+        {"answerType": "WebPages", "resultIndex": 18, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18"}},
+        {"answerType": "WebPages", "resultIndex": 19, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19"}}]}}}'
+    http_version: 
+  recorded_at: Wed, 26 Sep 2018 22:53:32 GMT
 recorded_with: VCR 4.0.0

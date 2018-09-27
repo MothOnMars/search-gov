@@ -236,4 +236,230 @@ http_interactions:
         {"answerType": "WebPages", "resultIndex": 17, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17"}}]}}}'
     http_version: 
   recorded_at: Thu, 26 Apr 2018 23:26:49 GMT
+- request:
+    method: get
+    uri: https://www.bingapis.com/api/v6/search?AppId=<BING_V6_APP_ID>&count=20&mkt=en-US&offset=0&q=white%20house&responseFilter=WebPages&safeSearch=moderate&textDecorations=false&traffictype=test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - USASearch
+      Ocp-Apim-Subscription-Key:
+      - "<BING_V6_APP_ID>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '3402'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - Wed, 26 Sep 2018 22:47:56 GMT
+      Vary:
+      - Accept-Encoding
+      P3p:
+      - CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
+      Set-Cookie:
+      - MUID=10D41097EDAC6D591DE01CE1ECE06CA2; path=/; expires=Mon, 21-Oct-2019 22:48:56
+        GMT; domain=bingapis.com
+      - MUIDB=10D41097EDAC6D591DE01CE1ECE06CA2; path=/; httponly; expires=Mon, 21-Oct-2019
+        22:48:56 GMT
+      - SRCHD=AF=NOFORM; domain=.bingapis.com; expires=Sat, 26-Sep-2020 22:48:56 GMT;
+        path=/
+      - SRCHUID=V=2&GUID=EDFE836082214556805E7B2847ACF73A&dmnchg=1; domain=.bingapis.com;
+        expires=Sat, 26-Sep-2020 22:48:56 GMT; path=/
+      - SRCHUSR=DOB=20180926; domain=.bingapis.com; expires=Sat, 26-Sep-2020 22:48:56
+        GMT; path=/
+      - _EDGE_S=mkt=en-us&F=1&SID=0E7DDF5E9B5B66C93812D3289A1767AB; path=/; httponly;
+        domain=bingapis.com
+      - _EDGE_V=1; path=/; httponly; expires=Mon, 21-Oct-2019 22:48:56 GMT; domain=bingapis.com
+      - _SS=SID=0E7DDF5E9B5B66C93812D3289A1767AB; domain=.bingapis.com; path=/
+      Bingapis-Traceid:
+      - B95C1C6244544B39A05A57F91A2CD777
+      X-Msedge-Clientid:
+      - 10D41097EDAC6D591DE01CE1ECE06CA2
+      X-Msapi-Userstate:
+      - c434
+      Bingapis-Market:
+      - en-US
+      X-Msedge-Ref:
+      - 'Ref A: B95C1C6244544B39A05A57F91A2CD777 Ref B: BY3EDGE0507 Ref C: 2018-09-26T22:48:56Z'
+      Date:
+      - Wed, 26 Sep 2018 22:48:56 GMT
+    body:
+      encoding: UTF-8
+      string: '{"_type": "SearchResponse", "instrumentation": {"pingUrlBase": "https:\/\/www.bingapis.com\/api\/ping?IG=C16D1146C7F547C59FEAF12F6E1C7C87&CID=10D41097EDAC6D591DE01CE1ECE06CA2&ID=",
+        "pageLoadPingUrl": "https:\/\/www.bingapis.com\/api\/ping\/pageload?IG=C16D1146C7F547C59FEAF12F6E1C7C87&CID=10D41097EDAC6D591DE01CE1ECE06CA2&Type=Event.CPT&DATA=0"},
+        "webPages": {"webSearchUrl": "https:\/\/www.bing.com\/search?q=white+house",
+        "webSearchUrlPingSuffix": "DevEx,5434.1", "totalEstimatedMatches": 254000000,
+        "value": [{"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0", "name":
+        "The White House", "url": "https:\/\/www.whitehouse.gov\/", "urlPingSuffix":
+        "DevEx,5066.1", "about": [{"name": "The White House"}, {"name": "whitehouse.gov"},
+        {"name": "White House"}], "displayUrl": "https:\/\/www.whitehouse.gov", "snippet":
+        "History of The White House. Our first president, George Washington, selected
+        the site for the White House in 1791. Every president since John Adams has
+        occupied the White House, and the history of ...", "dateLastCrawled": "2018-09-22T22:20:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1", "name": "White
+        House - Wikipedia", "url": "https:\/\/en.wikipedia.org\/wiki\/White_House",
+        "urlPingSuffix": "DevEx,5084.1", "about": [{"name": "White House"}, {"name":
+        "White House"}], "displayUrl": "https:\/\/en.wikipedia.org\/wiki\/White_House",
+        "snippet": "The White House is the official residence and workplace of the
+        President of the United States.It is located at 1600 Pennsylvania Avenue NW
+        in Washington, D.C. and has been the residence of every U.S. President since
+        John Adams in 1800. The term, \"White House\", is often used as a metonym
+        for the president and his advisers.. The residence was designed by Irish-born
+        architect James Hoban in the ...", "snippetAttribution": {"license": {"name":
+        "CC-BY-SA", "url": "http:\/\/creativecommons.org\/licenses\/by-sa\/3.0\/",
+        "urlPingSuffix": "DevEx,5435.1"}, "licenseNotice": "Text under CC-BY-SA license"},
+        "dateLastCrawled": "2018-09-21T05:01:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2",
+        "name": "TRUMP® WHITE HOUSE | WHITEHOUSE.ORG", "url": "https:\/\/whitehouse.org\/",
+        "urlPingSuffix": "DevEx,5097.1", "about": [{"name": "WHITEHOUSE.ORG"}, {"name":
+        "whitehouse.org"}], "displayUrl": "https:\/\/whitehouse.org", "snippet": "100%
+        OFFICIOUS website of the White House & President Donald J. Trump", "dateLastCrawled":
+        "2018-09-23T04:48:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3",
+        "name": "The White House - YouTube", "url": "https:\/\/www.youtube.com\/whitehouse",
+        "urlPingSuffix": "DevEx,5110.1", "about": [{"name": "White House"}, {"name":
+        "White House"}], "displayUrl": "https:\/\/www.youtube.com\/whitehouse", "snippet":
+        "Official White House Youtube channel. President Trump and The First Lady
+        Meet with the President of the Republic of Poland and Mrs. Kornhauser-Duda.",
+        "dateLastCrawled": "2018-09-22T06:49:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4",
+        "name": "The White House (@WhiteHouse) | Twitter", "url": "https:\/\/twitter.com\/WhiteHouse",
+        "urlPingSuffix": "DevEx,5131.1", "about": [{"name": "White House"}, {"name":
+        "White House"}], "displayUrl": "https:\/\/twitter.com\/WhiteHouse", "snippet":
+        "The latest Tweets from The White House (@WhiteHouse). Welcome to @WhiteHouse!
+        Follow for the latest from President @realDonaldTrump and his Administration.
+        Tweets may ...", "dateLastCrawled": "2018-09-15T16:39:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5", "name": "White House -
+        HISTORY", "url": "https:\/\/www.history.com\/topics\/landmarks\/white-house",
+        "urlPingSuffix": "DevEx,5143.1", "about": [{"name": "White House"}], "displayUrl":
+        "https:\/\/www.history.com\/topics\/landmarks\/white-house", "snippet": "The
+        official home for the U.S. president was designed by Irish-born architect
+        James Hoban in the 1790s. Rebuilt after a British attack in 1814, the “President’s
+        House” evolved with the ...", "dateLastCrawled": "2018-09-23T00:23:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6", "name": "The White
+        House - Home | Facebook", "url": "https:\/\/www.facebook.com\/WhiteHouse",
+        "urlPingSuffix": "DevEx,5160.1", "about": [{"name": "White House"}, {"name":
+        "White House"}, {"name": "White House"}], "displayUrl": "https:\/\/www.facebook.com\/WhiteHouse",
+        "snippet": "The White House. 8.4M likes. Welcome to the official White House
+        Facebook page for the Trump Administration. Comments posted on and messages
+        received...", "dateLastCrawled": "2018-09-22T18:41:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7",
+        "name": "Women''s Clothing, Dresses, Tops, Pants, Petite & Plus Size ...",
+        "url": "https:\/\/www.whitehouseblackmarket.com\/store\/", "urlPingSuffix":
+        "DevEx,5174.1", "about": [{"name": "White House Black Market"}], "displayUrl":
+        "https:\/\/www.whitehouseblackmarket.com", "snippet": "White House Black Market
+        offers polished black and white women''s clothing with pops of color and patterns.
+        Shop tailored dresses, tops, pants and accessories.", "dateLastCrawled": "2018-09-23T11:58:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8", "name": "Contact
+        the White House | The White House", "url": "https:\/\/www.whitehouse.gov\/contact\/",
+        "urlPingSuffix": "DevEx,5187.1", "about": [{"name": "White House"}], "displayUrl":
+        "https:\/\/www.whitehouse.gov\/contact", "snippet": "Keep me posted with regular
+        updates from the White House. required ...", "dateLastCrawled": "2018-09-22T09:31:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9", "name": "Petition
+        the White House on the Issues that Matter to You ...", "url": "https:\/\/petitions.whitehouse.gov\/",
+        "urlPingSuffix": "DevEx,5200.1", "about": [{"name": "We the People"}, {"name":
+        "White House"}], "displayUrl": "https:\/\/petitions.whitehouse.gov", "snippet":
+        "Create a Petition. Call on the White House to take action on the issue that
+        matters to you.", "dateLastCrawled": "2018-09-21T07:14:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10", "name": "Homepage - White
+        House Historical Association", "url": "https:\/\/whitehousehistory.org\/",
+        "urlPingSuffix": "DevEx,5214.1", "about": [{"name": "White House"}, {"name":
+        "Decatur House"}, {"name": "White House Historical Association"}, {"name":
+        "White House Historical Association"}, {"name": "White House Learning Center"},
+        {"name": "White House"}], "displayUrl": "https:\/\/whitehousehistory.org",
+        "snippet": "The White House Historical Association is a non-profit organization
+        enhancing understanding of the White House and is supported by official White
+        House Christma...", "dateLastCrawled": "2018-09-22T11:17:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11", "name": "President''s
+        Park (White House) (U.S. National Park Service)", "url": "https:\/\/www.nps.gov\/whho\/index.htm",
+        "urlPingSuffix": "DevEx,5228.1", "about": [{"name": "President&#39;s Park
+        NPS"}], "displayUrl": "https:\/\/www.nps.gov\/whho", "snippet": "Every president
+        except George Washington has called the White House and its surrounding grounds
+        his place of work, rest, and solitude. Recognizable around the world, the
+        White House stands as a symbol of democracy.", "dateLastCrawled": "2018-08-06T23:55:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12", "name": "Headlines
+        from the White House", "url": "https:\/\/www.cnbc.com\/white-house\/", "urlPingSuffix":
+        "DevEx,5241.1", "about": [{"name": "White House"}], "displayUrl": "https:\/\/www.cnbc.com\/white-house",
+        "snippet": "Latest news from the White House, including video, commentary,
+        and in-depth analysis coverage.", "dateLastCrawled": "2018-09-22T04:31:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13", "name": "The White
+        House — Google Arts & Culture", "url": "https:\/\/artsandculture.google.com\/partner\/the-white-house",
+        "urlPingSuffix": "DevEx,5254.1", "about": [{"name": "White House"}], "displayUrl":
+        "https:\/\/artsandculture.google.com\/partner\/the-white-house", "snippet":
+        "For more than 200 years, the White House has been more than just the home
+        of the Presidents and their families. Throughout the world, it is recognized
+        as t...", "dateLastCrawled": "2018-09-20T17:06:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14",
+        "name": "A look inside the White House - POLITICO", "url": "https:\/\/www.politico.com\/gallery\/a-look-inside-the-white-house",
+        "urlPingSuffix": "DevEx,5268.1", "about": [{"name": "White House"}], "displayUrl":
+        "https:\/\/www.politico.com\/gallery\/a-look-inside-the-white-house", "snippet":
+        "Designed by James Hoban, the White House has 132 rooms, 35 bathrooms and
+        6 levels in the residence. This includes 412 doors, 147 windows, 28 fireplaces,
+        8 staircases and 3 elevators. With White ...", "dateLastCrawled": "2018-09-22T00:52:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15", "name": "The White
+        House | whitehouse.gov", "url": "https:\/\/obamawhitehouse.archives.gov\/",
+        "urlPingSuffix": "DevEx,5282.1", "about": [{"name": "whitehouse.gov"}, {"name":
+        "Barack Obama"}, {"name": "Barack Obama"}, {"name": "White House"}], "displayUrl":
+        "https:\/\/obamawhitehouse.archives.gov", "snippet": "See the President''s
+        daily schedule, explore behind-the-scenes photos from inside the White House,
+        and find out all the ways you can engage with the most interactive administration
+        in our country''s history.", "dateLastCrawled": "2018-09-20T23:57:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16", "name": "White
+        House | History, Location, & Facts | Britannica.com", "url": "https:\/\/www.britannica.com\/topic\/White-House-Washington-DC",
+        "urlPingSuffix": "DevEx,5296.1", "about": [{"name": "White House"}], "displayUrl":
+        "https:\/\/www.britannica.com\/topic\/White-House-Washington-DC", "snippet":
+        "White House: White House, the office and residence of the president of the
+        United States at 1600 Pennsylvania Avenue N.W. in Washington, D.C. Since the
+        administration of George Washington (1789–97), who occupied presidential residences
+        in New York and Philadelphia, every American president has resided at the
+        White House.", "dateLastCrawled": "2018-09-22T10:56:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17", "name": "The White House",
+        "url": "https:\/\/apply.whitehouse.gov\/", "urlPingSuffix": "DevEx,5310.1",
+        "displayUrl": "https:\/\/apply.whitehouse.gov", "snippet": "Thank you for
+        your interest in serving in the Trump Administration. This website is designed
+        for applicants interested in non-career positions within the Trump Administration.",
+        "dateLastCrawled": "2018-09-22T02:42:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18",
+        "name": "White House blocks bill that would protect elections", "url": "https:\/\/www.yahoo.com\/news\/white-house-blocks-bill-protect-elections-173459278.html",
+        "urlPingSuffix": "DevEx,5323.1", "displayUrl": "https:\/\/www.yahoo.com\/news\/white-house-blocks-bill-protect...",
+        "snippet": "A bill that would have significantly bolstered the nation’s electoral
+        security has been held up in the Senate at the behest of the White House,
+        which expressed its displeasure with the proposed ...", "dateLastCrawled":
+        "2018-09-21T12:13:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19",
+        "name": "White House | Fox News", "url": "http:\/\/www.foxnews.com\/category\/politics\/executive\/white-house.html",
+        "urlPingSuffix": "DevEx,5334.1", "displayUrl": "www.foxnews.com\/category\/politics\/executive\/white-house.html",
+        "snippet": "White House stories and articles from Fox News Politics", "dateLastCrawled":
+        "2018-09-22T18:29:00.0000000Z"}]}, "rankingResponse": {"mainline": {"items":
+        [{"answerType": "WebPages", "resultIndex": 0, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0"}},
+        {"answerType": "WebPages", "resultIndex": 1, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1"}},
+        {"answerType": "WebPages", "resultIndex": 2, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2"}},
+        {"answerType": "WebPages", "resultIndex": 3, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3"}},
+        {"answerType": "WebPages", "resultIndex": 4, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4"}},
+        {"answerType": "WebPages", "resultIndex": 5, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5"}},
+        {"answerType": "WebPages", "resultIndex": 6, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6"}},
+        {"answerType": "WebPages", "resultIndex": 7, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7"}},
+        {"answerType": "WebPages", "resultIndex": 8, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8"}},
+        {"answerType": "WebPages", "resultIndex": 9, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9"}},
+        {"answerType": "WebPages", "resultIndex": 10, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10"}},
+        {"answerType": "WebPages", "resultIndex": 11, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11"}},
+        {"answerType": "WebPages", "resultIndex": 12, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12"}},
+        {"answerType": "WebPages", "resultIndex": 13, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13"}},
+        {"answerType": "WebPages", "resultIndex": 14, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14"}},
+        {"answerType": "WebPages", "resultIndex": 15, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15"}},
+        {"answerType": "WebPages", "resultIndex": 16, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16"}},
+        {"answerType": "WebPages", "resultIndex": 17, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17"}},
+        {"answerType": "WebPages", "resultIndex": 18, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18"}},
+        {"answerType": "WebPages", "resultIndex": 19, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19"}}]}}}'
+    http_version: 
+  recorded_at: Wed, 26 Sep 2018 22:48:56 GMT
 recorded_with: VCR 4.0.0

@@ -292,4 +292,222 @@ http_interactions:
         {"answerType": "WebPages", "resultIndex": 19, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19"}}]}}}'
     http_version: 
   recorded_at: Fri, 27 Apr 2018 16:06:46 GMT
+- request:
+    method: get
+    uri: https://www.bingapis.com/api/v6/search?AppId=<BING_V6_APP_ID>&count=20&mkt=en-US&offset=0&q=militry%20(site:www.whitehouse.gov/)&responseFilter=WebPages&safeSearch=moderate&textDecorations&traffictype=test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - USASearch
+      Ocp-Apim-Subscription-Key:
+      - "<BING_V6_APP_ID>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '3852'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - Wed, 26 Sep 2018 22:53:08 GMT
+      Vary:
+      - Accept-Encoding
+      P3p:
+      - CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
+      Set-Cookie:
+      - MUID=1F2825E2226768B705E42994232B691B; path=/; expires=Mon, 21-Oct-2019 22:54:08
+        GMT; domain=bingapis.com
+      - MUIDB=1F2825E2226768B705E42994232B691B; path=/; httponly; expires=Mon, 21-Oct-2019
+        22:54:08 GMT
+      - SRCHD=AF=NOFORM; domain=.bingapis.com; expires=Sat, 26-Sep-2020 22:54:08 GMT;
+        path=/
+      - SRCHUID=V=2&GUID=5884C19BD27D429B9D90B251E370CCC8&dmnchg=1; domain=.bingapis.com;
+        expires=Sat, 26-Sep-2020 22:54:08 GMT; path=/
+      - SRCHUSR=DOB=20180926; domain=.bingapis.com; expires=Sat, 26-Sep-2020 22:54:08
+        GMT; path=/
+      - _EDGE_S=mkt=en-us&F=1&SID=29BF604828B16E871BD66C3E29FD6F4E; path=/; httponly;
+        domain=bingapis.com
+      - _EDGE_V=1; path=/; httponly; expires=Mon, 21-Oct-2019 22:54:08 GMT; domain=bingapis.com
+      - _SS=SID=29BF604828B16E871BD66C3E29FD6F4E; domain=.bingapis.com; path=/
+      Bingapis-Traceid:
+      - 462EDF147C284FFEBC8C033FE42B11F1
+      X-Msedge-Clientid:
+      - 1F2825E2226768B705E42994232B691B
+      X-Msapi-Userstate:
+      - 02ac
+      Bingapis-Market:
+      - en-US
+      X-Msedge-Ref:
+      - 'Ref A: 462EDF147C284FFEBC8C033FE42B11F1 Ref B: BY3EDGE0313 Ref C: 2018-09-26T22:54:08Z'
+      Date:
+      - Wed, 26 Sep 2018 22:54:08 GMT
+    body:
+      encoding: UTF-8
+      string: '{"_type": "SearchResponse", "instrumentation": {"pingUrlBase": "https:\/\/www.bingapis.com\/api\/ping?IG=E87DCA0D3A994BA98C4C9DED8644E258&CID=1F2825E2226768B705E42994232B691B&ID=",
+        "pageLoadPingUrl": "https:\/\/www.bingapis.com\/api\/ping\/pageload?IG=E87DCA0D3A994BA98C4C9DED8644E258&CID=1F2825E2226768B705E42994232B691B&Type=Event.CPT&DATA=0"},
+        "queryContext": {"originalQuery": "militry (site:www.whitehouse.gov\/)", "alteredQuery":
+        "military", "alterationOverrideQuery": "+militry (site:www.whitehouse.gov\/)",
+        "adultIntent": false}, "webPages": {"webSearchUrl": "https:\/\/www.bing.com\/search?q=militry+(site%3awww.whitehouse.gov%2f)",
+        "webSearchUrlPingSuffix": "DevEx,5395.1", "totalEstimatedMatches": 286000,
+        "value": [{"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0", "name":
+        "2018 Amendments to the Manual for Courts-Martial, United ...", "url": "https:\/\/www.whitehouse.gov\/presidential-actions\/2018-amendments-manual-courts-martial-united-states\/",
+        "urlPingSuffix": "DevEx,5064.1", "displayUrl": "https:\/\/www.whitehouse.gov\/presidential-actions\/2018-amendments...",
+        "snippet": "Executive Orders 2018 Amendments to the Manual for Courts-Martial,
+        United States", "dateLastCrawled": "2018-09-23T04:28:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1", "name": "Military Spouses
+        in the Labor Market - whitehouse.gov", "url": "https:\/\/www.whitehouse.gov\/wp-content\/uploads\/2018\/05\/Military-Spouses-in-the-Labor-Market.pdf",
+        "urlPingSuffix": "DevEx,5075.1", "displayUrl": "https:\/\/www.whitehouse.gov\/wp-content\/uploads\/2018\/05\/Military...",
+        "snippet": "military members living abroad or to the separation between military
+        spouses and their active duty husband or wife, since we identify military
+        spouses in the ACS based on the military status of ...", "dateLastCrawled":
+        "2018-09-18T11:27:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2",
+        "name": "Remarks by Vice President Pence on the Future of the U.S ...", "url":
+        "https:\/\/www.whitehouse.gov\/briefings-statements\/remarks-vice-president-pence-future-u-s-military-space\/",
+        "urlPingSuffix": "DevEx,5086.1", "displayUrl": "https:\/\/www.whitehouse.gov\/briefings-statements\/remarks-vice...",
+        "snippet": "By 1945, the American military had nearly 30 times the number
+        of planes, and 85 times the number of pilots and support crews compared to
+        just six years earlier.", "dateLastCrawled": "2018-09-22T17:32:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3", "name": "President
+        Donald J. Trump is Rebuilding and Readying Our ...", "url": "https:\/\/www.whitehouse.gov\/briefings-statements\/president-donald-j-trump-rebuilding-readying-military-defend-threats\/",
+        "urlPingSuffix": "DevEx,5098.1", "displayUrl": "https:\/\/www.whitehouse.gov\/briefings-statements\/president-donald-j...",
+        "snippet": "President Donald J. Trump is continuing to deliver on his pledge
+        to rebuild our military by signing legislation authorizing $716 billion for
+        our national defense.", "dateLastCrawled": "2018-09-23T13:02:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4", "name": "Executive
+        Order Enhancing Noncompetitive Civil Service ...", "url": "https:\/\/www.whitehouse.gov\/presidential-actions\/executive-order-enhancing-noncompetitive-civil-service-appointments-military-spouses\/",
+        "urlPingSuffix": "DevEx,5110.1", "displayUrl": "https:\/\/www.whitehouse.gov\/presidential-actions\/executive-order...",
+        "snippet": "Section 1. Definitions. (a) “Military spouse” means: (i) the husband
+        or wife of a member of the Armed Forces who, as determined by the Secretary
+        of Defense, is performing active duty pursuant ...", "dateLastCrawled": "2018-09-22T02:54:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5", "name": "National
+        Security & Defense | The White House", "url": "https:\/\/www.whitehouse.gov\/issues\/national-security-defense\/",
+        "urlPingSuffix": "DevEx,5123.1", "displayUrl": "https:\/\/www.whitehouse.gov\/issues\/national-security-defense",
+        "snippet": "The depletion of our military in past years resulted in escalating
+        threats the world over. Under President Donald J. Trump, that has changed.",
+        "dateLastCrawled": "2018-09-21T18:54:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6",
+        "name": "MILITARY PERSONNEL ACTIVE AND RESERVE FORCES", "url": "https:\/\/www.whitehouse.gov\/wp-content\/uploads\/2018\/02\/mil-fy2019.pdf",
+        "urlPingSuffix": "DevEx,5135.1", "displayUrl": "https:\/\/www.whitehouse.gov\/wp-content\/uploads\/2018\/02\/mil-fy2019.pdf",
+        "snippet": "DEPARTMENT OF DEFENSE—MILITARY PROGRAMS MILITARY PERSONNEL ACTIVE
+        AND RESERVE FORCES These appropriations finance the personnel costs of the
+        Active, Reserve,", "dateLastCrawled": "2018-09-20T09:51:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7", "name": "CEA Report: Military
+        Spouses in the Labor Market | The ...", "url": "https:\/\/www.whitehouse.gov\/briefings-statements\/cea-report-military-spouses-labor-market\/",
+        "urlPingSuffix": "DevEx,5146.1", "displayUrl": "https:\/\/www.whitehouse.gov\/briefings-statements\/cea-report...",
+        "snippet": "Today, the Council of Economic Advisers (CEA) released a report
+        on the employment challenges facing military spouses. Please see below for
+        the introduction and read the full report here. American ...", "dateLastCrawled":
+        "2018-09-20T05:08:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8",
+        "name": "Executive Order on the Delegation of Authority to Approve ...", "url":
+        "https:\/\/www.whitehouse.gov\/presidential-actions\/executive-order-delegation-authority-approve-certain-military-decorations\/",
+        "urlPingSuffix": "DevEx,5158.1", "displayUrl": "https:\/\/www.whitehouse.gov\/presidential-actions\/executive-order...",
+        "snippet": "The Secretary of the military department concerned, or the Secretary
+        of Homeland Security with respect to the Coast Guard when it is not operating
+        as a service in the Navy, may award the Silver ...", "dateLastCrawled": "2018-09-21T09:35:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9", "name": "President
+        Donald J. Trump Announces Intent to Nominate ...", "url": "https:\/\/www.whitehouse.gov\/presidential-actions\/president-donald-j-trump-announces-intent-nominate-personnel-key-administration-posts-50\/",
+        "urlPingSuffix": "DevEx,5170.1", "displayUrl": "https:\/\/www.whitehouse.gov\/presidential-actions\/president-donald-j...",
+        "snippet": "First-rate leadership and management skills, together with prior
+        collaboration with the United States Agency for International Development
+        and the United States military, will enable her to ...", "dateLastCrawled":
+        "2018-09-23T04:11:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10",
+        "name": "Presidential Message on Purple Heart Day | The White House", "url":
+        "https:\/\/www.whitehouse.gov\/briefings-statements\/presidential-message-purple-heart-day\/",
+        "urlPingSuffix": "DevEx,5182.1", "displayUrl": "https:\/\/www.whitehouse.gov\/briefings-statements\/presidential...",
+        "snippet": "On this day in 1782, General George Washington established the
+        Badge of Military Merit. This decoration, consisting of a simple, heart-shaped
+        purple cloth, recognized soldiers who went above and ...", "dateLastCrawled":
+        "2018-09-23T01:01:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11",
+        "name": "How China’s Economic Aggression Threatens the Technologies ...",
+        "url": "https:\/\/www.whitehouse.gov\/wp-content\/uploads\/2018\/06\/FINAL-China-Technology-Report-6.18.18-PDF.pdf",
+        "urlPingSuffix": "DevEx,5193.1", "displayUrl": "https:\/\/www.whitehouse.gov\/wp-content\/uploads\/2018\/06\/FINAL-China...",
+        "snippet": "military competitor like China, commercial items can be exploited
+        for military purposes. As an example of China’s evasion of U.S. export control
+        laws, consider the case of Amin Yu, a", "dateLastCrawled": "2018-09-21T18:49:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12", "name": "George
+        W. Bush | The White House", "url": "https:\/\/www.whitehouse.gov\/about-the-white-house\/presidents\/george-w-bush\/",
+        "urlPingSuffix": "DevEx,5206.1", "about": [{"name": "George W. Bush"}, {"name":
+        "George H. W. Bush"}], "displayUrl": "https:\/\/www.whitehouse.gov\/...\/presidents\/george-w-bush",
+        "snippet": "George W. Bush, America’s 43rd President (2001-2009), was transformed
+        into a wartime President in the aftermath of the airborne terrorist attacks
+        on September 11, 2001, facing the “greatest ...", "dateLastCrawled": "2018-09-22T04:34:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13", "name": "Statement
+        by President Donald J. Trump on H.R. 5515", "url": "https:\/\/www.whitehouse.gov\/briefings-statements\/statement-president-donald-j-trump-h-r-5515\/",
+        "urlPingSuffix": "DevEx,5218.1", "displayUrl": "https:\/\/www.whitehouse.gov\/briefings-statements\/statement...",
+        "snippet": "Today, I have signed into law H.R. 5515, \"an Act to authorize
+        appropriations for fiscal year 2019 for military activities of the Department
+        of Defense, for", "dateLastCrawled": "2018-08-30T23:53:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14", "name": "Remarks by President
+        Trump at the Presentation of the ...", "url": "https:\/\/www.whitehouse.gov\/briefings-statements\/remarks-president-trump-presentation-medal-honor-technical-sergeant-john-chapman-u-s-air-force\/",
+        "urlPingSuffix": "DevEx,5230.1", "displayUrl": "https:\/\/www.whitehouse.gov\/briefings-statements\/remarks-president...",
+        "snippet": "MILITARY AIDE: The President of the United States of America has
+        awarded, in the name of Congress, the Medal of Honor posthumously to Technical
+        Sergeant John A. Chapman, United States Air Force ...", "dateLastCrawled":
+        "2018-09-21T14:57:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15",
+        "name": "Presidential Proclamation on Women''s Equality Day, 2018 ...", "url":
+        "https:\/\/www.whitehouse.gov\/presidential-actions\/presidential-proclamation-womens-equality-day-2018\/",
+        "urlPingSuffix": "DevEx,5242.1", "displayUrl": "https:\/\/www.whitehouse.gov\/presidential-actions\/presidential...",
+        "snippet": "We all benefit from the leadership and ingenuity of women in education,
+        medicine, government, law, business, military service, and every other field
+        contributing to the greatness of this Nation.", "dateLastCrawled": "2018-09-18T09:02:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16", "name": "President
+        Donald J. Trump Proclaims May 19, 2018, as Armed ...", "url": "https:\/\/www.whitehouse.gov\/presidential-actions\/president-donald-j-trump-proclaims-may-19-2018-armed-forces-day\/",
+        "urlPingSuffix": "DevEx,5254.1", "displayUrl": "https:\/\/www.whitehouse.gov\/presidential-actions\/president-donald-j...",
+        "snippet": "On Armed Forces Day, we pay tribute to the extraordinary men and
+        women who serve our Nation with valor and distinction in all branches of the
+        military. This annual observance honors their ...", "dateLastCrawled": "2018-09-23T06:37:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17", "name": "President
+        Donald J. Trump is Enhancing Opportunity for ...", "url": "https:\/\/www.whitehouse.gov\/briefings-statements\/president-donald-j-trump-enhancing-opportunity-military-families\/",
+        "urlPingSuffix": "DevEx,5266.1", "displayUrl": "https:\/\/www.whitehouse.gov\/briefings-statements\/president-donald-j...",
+        "snippet": "Today, President Trump issued an executive order to enhance opportunities
+        for military spouses looking for employment in the Federal Government.", "dateLastCrawled":
+        "2018-09-22T15:43:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18",
+        "name": "President Donald J. Trump Announces White House ...", "url": "https:\/\/www.whitehouse.gov\/presidential-actions\/president-donald-j-trump-announces-white-house-appointments\/",
+        "urlPingSuffix": "DevEx,5280.1", "displayUrl": "https:\/\/www.whitehouse.gov\/presidential-actions\/president-donald-j...",
+        "snippet": "President Donald J. Trump today announced the following White
+        House appointments: Captain Keith B. Davids will serve as Special Assistant
+        to the President and Deputy Director, White House Military ...", "dateLastCrawled":
+        "2018-09-22T20:04:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19",
+        "name": "Second Lady Karen Pence Assembles Comfort Crew Kits to ...", "url":
+        "https:\/\/www.whitehouse.gov\/briefings-statements\/second-lady-karen-pence-assembles-comfort-crew-kits-support-military-children\/",
+        "urlPingSuffix": "DevEx,5292.1", "displayUrl": "https:\/\/www.whitehouse.gov\/briefings-statements\/second-lady-karen...",
+        "snippet": "About the Comfort Crew for Military Children The Comfort Crew
+        for Military Kids is a 501(c)3 organization that supports school age military
+        kids through programs designed to strengthen their ...", "dateLastCrawled":
+        "2018-09-21T08:48:00.0000000Z"}]}, "rankingResponse": {"mainline": {"items":
+        [{"answerType": "WebPages", "resultIndex": 0, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0"}},
+        {"answerType": "WebPages", "resultIndex": 1, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1"}},
+        {"answerType": "WebPages", "resultIndex": 2, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2"}},
+        {"answerType": "WebPages", "resultIndex": 3, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3"}},
+        {"answerType": "WebPages", "resultIndex": 4, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4"}},
+        {"answerType": "WebPages", "resultIndex": 5, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5"}},
+        {"answerType": "WebPages", "resultIndex": 6, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6"}},
+        {"answerType": "WebPages", "resultIndex": 7, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7"}},
+        {"answerType": "WebPages", "resultIndex": 8, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8"}},
+        {"answerType": "WebPages", "resultIndex": 9, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9"}},
+        {"answerType": "WebPages", "resultIndex": 10, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10"}},
+        {"answerType": "WebPages", "resultIndex": 11, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11"}},
+        {"answerType": "WebPages", "resultIndex": 12, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12"}},
+        {"answerType": "WebPages", "resultIndex": 13, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13"}},
+        {"answerType": "WebPages", "resultIndex": 14, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14"}},
+        {"answerType": "WebPages", "resultIndex": 15, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15"}},
+        {"answerType": "WebPages", "resultIndex": 16, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16"}},
+        {"answerType": "WebPages", "resultIndex": 17, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17"}},
+        {"answerType": "WebPages", "resultIndex": 18, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18"}},
+        {"answerType": "WebPages", "resultIndex": 19, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19"}}]}}}'
+    http_version: 
+  recorded_at: Wed, 26 Sep 2018 22:54:08 GMT
 recorded_with: VCR 4.0.0

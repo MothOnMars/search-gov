@@ -142,4 +142,152 @@ http_interactions:
         {"answerType": "WebPages", "resultIndex": 9, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9"}}]}}}'
     http_version: 
   recorded_at: Tue, 03 Jul 2018 19:25:44 GMT
+- request:
+    method: get
+    uri: https://www.bingapis.com/api/v6/search?AppId=<BING_V6_APP_ID>&count=10&mkt=en-US&offset=20&q=osha%20guidelines&responseFilter=WebPages&safeSearch=moderate&textDecorations=false&traffictype=test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - USASearch
+      Ocp-Apim-Subscription-Key:
+      - "<BING_V6_APP_ID>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '2183'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - Wed, 26 Sep 2018 22:47:57 GMT
+      Vary:
+      - Accept-Encoding
+      P3p:
+      - CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
+      Set-Cookie:
+      - MUID=0D9B9F19DB3C6D6A3443936FDA706C45; path=/; expires=Mon, 21-Oct-2019 22:48:57
+        GMT; domain=bingapis.com
+      - MUIDB=0D9B9F19DB3C6D6A3443936FDA706C45; path=/; httponly; expires=Mon, 21-Oct-2019
+        22:48:57 GMT
+      - SRCHD=AF=NOFORM; domain=.bingapis.com; expires=Sat, 26-Sep-2020 22:48:57 GMT;
+        path=/
+      - SRCHUID=V=2&GUID=DF30EDF9545843E486D95C5EC49302E1&dmnchg=1; domain=.bingapis.com;
+        expires=Sat, 26-Sep-2020 22:48:57 GMT; path=/
+      - SRCHUSR=DOB=20180926; domain=.bingapis.com; expires=Sat, 26-Sep-2020 22:48:57
+        GMT; path=/
+      - _EDGE_S=mkt=en-us&F=1&SID=1F6A9D6233AB62580B80911432E763B6; path=/; httponly;
+        domain=bingapis.com
+      - _EDGE_V=1; path=/; httponly; expires=Mon, 21-Oct-2019 22:48:57 GMT; domain=bingapis.com
+      - _SS=SID=1F6A9D6233AB62580B80911432E763B6; domain=.bingapis.com; path=/
+      Bingapis-Traceid:
+      - 28555C6B469843A9BAC9B7F3113135DB
+      X-Msedge-Clientid:
+      - 0D9B9F19DB3C6D6A3443936FDA706C45
+      X-Msapi-Userstate:
+      - 239f
+      Bingapis-Market:
+      - en-US
+      X-Msedge-Ref:
+      - 'Ref A: 28555C6B469843A9BAC9B7F3113135DB Ref B: BY3EDGE0512 Ref C: 2018-09-26T22:48:57Z'
+      Date:
+      - Wed, 26 Sep 2018 22:48:56 GMT
+    body:
+      encoding: UTF-8
+      string: '{"_type": "SearchResponse", "instrumentation": {"pingUrlBase": "https:\/\/www.bingapis.com\/api\/ping?IG=D6A32FD79028480685F930943926A379&CID=0D9B9F19DB3C6D6A3443936FDA706C45&ID=",
+        "pageLoadPingUrl": "https:\/\/www.bingapis.com\/api\/ping\/pageload?IG=D6A32FD79028480685F930943926A379&CID=0D9B9F19DB3C6D6A3443936FDA706C45&Type=Event.CPT&DATA=0"},
+        "webPages": {"webSearchUrl": "https:\/\/www.bing.com\/search?q=osha+guidelines",
+        "webSearchUrlPingSuffix": "DevEx,5239.1", "totalEstimatedMatches": 357000000,
+        "value": [{"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0", "name":
+        "Training requiremenTs in OsHa sTandards and Training ...", "url": "http:\/\/www.worksafemt.com\/media\/Training_Requirements_in_OSHA_Standards.pdf",
+        "urlPingSuffix": "DevEx,5053.1", "displayUrl": "www.worksafemt.com\/media\/Training_Requirements_in_OSHA_Standards.pdf",
+        "snippet": "www.worksafemt.com Training requiremenTs in OsHa sTandards and
+        Training guidelines Below is a helpful spreadsheet for determining OSHA safety
+        training requirements.", "dateLastCrawled": "2018-09-20T06:22:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1", "name": "Search
+        Regulations | Federal Motor Carrier Safety ...", "url": "https:\/\/www.fmcsa.dot.gov\/regulations\/title49\/b\/5\/3",
+        "urlPingSuffix": "DevEx,5065.1", "displayUrl": "https:\/\/www.fmcsa.dot.gov\/regulations\/title49\/b\/5\/3",
+        "snippet": "49 CFR Parts 300-399 This section of the website provides the
+        ability to find regulations information including regulations parts, content
+        of sections, and interpretations for regulations sections.", "dateLastCrawled":
+        "2018-09-21T21:17:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2",
+        "name": "Training Requirements in OSHA Standards and Training ...", "url":
+        "https:\/\/www.wisconsin.edu\/ehs\/download\/training\/osha2254.pdf", "urlPingSuffix":
+        "DevEx,5077.1", "displayUrl": "https:\/\/www.wisconsin.edu\/ehs\/download\/training\/osha2254.pdf",
+        "snippet": "Training Requirements in OSHA Standards and Training Guidelines
+        Many standards promulgated by the Occupational Safety and Health Admin-istration
+        (OSHA) explicitly require the employer to train employees in the safety",
+        "dateLastCrawled": "2018-09-19T14:25:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3",
+        "name": "OSHA Recordkeeping Requirements - Grainger Safety Record", "url":
+        "https:\/\/safety.grainger.com\/people\/osha-recordkeeping-requirements",
+        "urlPingSuffix": "DevEx,5090.1", "displayUrl": "https:\/\/safety.grainger.com\/people\/osha-recordkeeping-requirements",
+        "snippet": "Understand how OSHA''s extensive recordkeeping and reporting rules
+        affect your business. The current rule includes updated forms and privacy
+        standards.", "dateLastCrawled": "2018-09-16T16:10:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4",
+        "name": "OSHA and DOT Regulations - Safety.BLR.com", "url": "https:\/\/safety.blr.com\/workplace-safety-regulations\/",
+        "urlPingSuffix": "DevEx,5103.1", "displayUrl": "https:\/\/safety.blr.com\/workplace-safety-regulations",
+        "snippet": "eCFR [Unknown Topic] administrative code from OSHA and DOT Federal
+        Motor Carrier Safety and Hazardous Materials regs.", "dateLastCrawled": "2018-09-19T21:57:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5", "name": "Occupational
+        Safety & Health (CONN-OSHA) - State of ...", "url": "http:\/\/www.ctdol.state.ct.us\/osha\/osha.htm",
+        "urlPingSuffix": "DevEx,5116.1", "about": [{"name": "Occupational Safety and
+        Health Administration"}], "displayUrl": "www.ctdol.state.ct.us\/osha\/osha.htm",
+        "snippet": "Legal Notice - Request for Proposals, Occupational Health Clinics
+        Grant Fiscal Year 2019 . The Connecticut Department of Labor''s Division of
+        Occupational Safety and Health (CONN-OSHA) enforces state occupational safety
+        and health regulations as they apply to state and municipal employees. CONN-OSHA
+        also offers free consultation services to Connecticut employers both public
+        and private.", "dateLastCrawled": "2018-09-20T06:59:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6", "name": "OSHA: Regulations
+        and Bloodborne Pathogens - - RN.org®", "url": "http:\/\/www.rn.org\/courses\/coursematerial-171.pdf",
+        "urlPingSuffix": "DevEx,5128.1", "displayUrl": "www.rn.org\/courses\/coursematerial-171.pdf",
+        "snippet": "OSHA: Regulations and Bloodborne Pathogens WWW.RN.ORG® Reviewed
+        October, 2018, Expires October, 2020 Provider Information and Specifics available
+        on our Website", "dateLastCrawled": "2018-09-22T00:55:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7", "name": "Interim Guidance
+        for Protecting Workers from Occupational ...", "url": "https:\/\/www.cdc.gov\/niosh\/topics\/outdoor\/mosquito-borne\/pdfs\/osha-niosh_fs-3855_zika_virus_04-2016.pdf",
+        "urlPingSuffix": "DevEx,5139.1", "displayUrl": "https:\/\/www.cdc.gov\/niosh\/topics\/outdoor\/mosquito-borne\/pdfs\/osha...",
+        "snippet": "Fact. Sheet. Interim Guidance for Protecting Workers from Occupational
+        Exposure to Zika Virus. The Occupational Safety and Health Administration
+        (OSHA) and the National Institute", "dateLastCrawled": "2018-09-22T20:43:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8", "name": "OSHA Requirements
+        for Phlebotomists | Chron.com", "url": "https:\/\/work.chron.com\/osha-requirements-phlebotomists-16757.html",
+        "urlPingSuffix": "DevEx,5150.1", "displayUrl": "https:\/\/work.chron.com\/osha-requirements-phlebotomists-16757.html",
+        "snippet": "A phlebotomist''s main duty is to draw blood from a patient''s
+        vein for diagnostic testing, transfusions or treatments. Phlebotomists risk
+        exposure to a variety of bloodborne pathogens including HIV and Hepatitis
+        B and C. The Occupational Safety and Health Administration enforces regulations
+        to ensure the safety and ...", "dateLastCrawled": "2018-09-22T12:31:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9", "name": "OSHA Resources
+        - Regulations, How-Tos & More | Graphic ...", "url": "https:\/\/www.graphicproducts.com\/osha\/",
+        "urlPingSuffix": "DevEx,5164.1", "displayUrl": "https:\/\/www.graphicproducts.com\/osha",
+        "snippet": "Reduce accidents, injuries, and fatalities by meeting OSHA compliance
+        requirements. Improve morale & safety by using compliant visual workplace
+        communication.", "dateLastCrawled": "2018-09-23T00:05:00.0000000Z"}]}, "rankingResponse":
+        {"mainline": {"items": [{"answerType": "WebPages", "resultIndex": 0, "value":
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0"}}, {"answerType":
+        "WebPages", "resultIndex": 1, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1"}},
+        {"answerType": "WebPages", "resultIndex": 2, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2"}},
+        {"answerType": "WebPages", "resultIndex": 3, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3"}},
+        {"answerType": "WebPages", "resultIndex": 4, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4"}},
+        {"answerType": "WebPages", "resultIndex": 5, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5"}},
+        {"answerType": "WebPages", "resultIndex": 6, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6"}},
+        {"answerType": "WebPages", "resultIndex": 7, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7"}},
+        {"answerType": "WebPages", "resultIndex": 8, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8"}},
+        {"answerType": "WebPages", "resultIndex": 9, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9"}}]}}}'
+    http_version: 
+  recorded_at: Wed, 26 Sep 2018 22:48:57 GMT
 recorded_with: VCR 4.0.0

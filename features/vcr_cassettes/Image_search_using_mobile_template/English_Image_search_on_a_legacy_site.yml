@@ -634,4 +634,233 @@ http_interactions:
         {"answerType": "WebPages", "resultIndex": 19, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19"}}]}}}'
     http_version: 
   recorded_at: Thu, 22 Feb 2018 07:45:09 GMT
+- request:
+    method: get
+    uri: https://www.bingapis.com/api/v6/search?AppId=<BING_V6_APP_ID>&count=20&mkt=en-US&offset=0&q=sunset%20(site:gov%20OR%20site:mil)&responseFilter=WebPages&safeSearch=moderate&textDecorations=true&traffictype=test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - USASearch
+      Ocp-Apim-Subscription-Key:
+      - "<BING_V6_APP_ID>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '4300'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - Wed, 26 Sep 2018 23:09:23 GMT
+      Vary:
+      - Accept-Encoding
+      P3p:
+      - CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
+      Set-Cookie:
+      - MUID=2C6EA663E11F68803D18AA15E0536962; path=/; expires=Mon, 21-Oct-2019 23:10:23
+        GMT; domain=bingapis.com
+      - MUIDB=2C6EA663E11F68803D18AA15E0536962; path=/; httponly; expires=Mon, 21-Oct-2019
+        23:10:23 GMT
+      - SRCHD=AF=NOFORM; domain=.bingapis.com; expires=Sat, 26-Sep-2020 23:10:23 GMT;
+        path=/
+      - SRCHUID=V=2&GUID=99BF87D215FA402BA7FC1C1AD27A4182&dmnchg=1; domain=.bingapis.com;
+        expires=Sat, 26-Sep-2020 23:10:23 GMT; path=/
+      - SRCHUSR=DOB=20180926; domain=.bingapis.com; expires=Sat, 26-Sep-2020 23:10:23
+        GMT; path=/
+      - _EDGE_S=mkt=en-us&F=1&SID=2EC730BCC4686EB8241B3CCAC5246F51; path=/; httponly;
+        domain=bingapis.com
+      - _EDGE_V=1; path=/; httponly; expires=Mon, 21-Oct-2019 23:10:23 GMT; domain=bingapis.com
+      - _SS=SID=2EC730BCC4686EB8241B3CCAC5246F51; domain=.bingapis.com; path=/
+      Bingapis-Traceid:
+      - 3E7125F02CE149E09CCA652525A81657
+      X-Msedge-Clientid:
+      - 2C6EA663E11F68803D18AA15E0536962
+      X-Msapi-Userstate:
+      - dcd7
+      Bingapis-Market:
+      - en-US
+      X-Msedge-Ref:
+      - 'Ref A: 3E7125F02CE149E09CCA652525A81657 Ref B: BY3EDGE0407 Ref C: 2018-09-26T23:10:23Z'
+      Date:
+      - Wed, 26 Sep 2018 23:10:22 GMT
+    body:
+      encoding: UTF-8
+      string: '{"_type": "SearchResponse", "instrumentation": {"pingUrlBase": "https:\/\/www.bingapis.com\/api\/ping?IG=9EFBA713E99C4C17855A5BA126014DC2&CID=2C6EA663E11F68803D18AA15E0536962&ID=",
+        "pageLoadPingUrl": "https:\/\/www.bingapis.com\/api\/ping\/pageload?IG=9EFBA713E99C4C17855A5BA126014DC2&CID=2C6EA663E11F68803D18AA15E0536962&Type=Event.CPT&DATA=0"},
+        "webPages": {"webSearchUrl": "https:\/\/www.bing.com\/search?q=sunset+(site%3agov+OR+site%3amil)",
+        "webSearchUrlPingSuffix": "DevEx,5429.1", "totalEstimatedMatches": 7050000,
+        "value": [{"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0", "name":
+        "Sunset Campground - Sequoia & Kings Canyon National Parks ...", "url":
+        "https:\/\/www.nps.gov\/seki\/planyourvisit\/sunset.htm", "urlPingSuffix":
+        "DevEx,5065.1", "about": [{"name": "Sunset Campground"}, {"name": "Sunset
+        Campground"}], "displayUrl": "https:\/\/www.nps.gov\/seki\/planyourvisit\/sunset.htm",
+        "snippet": "Sunset Campground is in the Grant Grove area of Kings Canyon
+        National Park, 3 miles (5 km) from the park entrance on Hwy 180. The campground
+        is near Grant Grove Village in an open stand of evergreen trees at an elevation
+        of 6,500 ft (1,980 m).", "dateLastCrawled": "2018-09-11T09:18:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1", "name": "Sun or
+        Moon Rise\/Set Table for One Year", "url": "http:\/\/aa.usno.navy.mil\/data\/docs\/RS_OneYear.php",
+        "urlPingSuffix": "DevEx,5078.1", "displayUrl": "aa.usno.navy.mil\/data\/docs\/RS_OneYear.php",
+        "snippet": "This data service provides a table of Sunrise\/Sunset, Moonrise\/Moonset,
+        or beginning and end of twilight times for a year.", "dateLastCrawled": "2018-09-19T07:08:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2", "name": "Facility
+        Details - SUNSET, OR - Recreation.gov", "url": "https:\/\/www.recreation.gov\/camping\/sunset\/r\/campgroundDetails.do?contractCode=NRSO&parkId=73538",
+        "urlPingSuffix": "DevEx,5092.1", "displayUrl": "https:\/\/www.recreation.gov\/camping\/sunset\/r\/campgroundDetails.do?...",
+        "snippet": "Sunset Campground is located on the banks of scenic Lake of
+        the Woods, in close proximity to several wilderness areas, offering visitors
+        opportunities to experience both the serene and wild aspects of south central
+        Oregon.", "dateLastCrawled": "2018-09-23T10:45:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3",
+        "name": "Texas Sunset Commission", "url": "https:\/\/www.sunset.texas.gov\/",
+        "urlPingSuffix": "DevEx,5106.1", "about": [{"name": "Sunset Advisory Commission"},
+        {"name": "Sunset Advisory Commission"}], "displayUrl": "https:\/\/www.sunset.texas.gov",
+        "snippet": "The Sunset staff is composed of evaluation and administrative
+        professionals that support the Commission by performing agency reviews and
+        assisting in the legislative process. Commission Members The Impact", "dateLastCrawled":
+        "2018-09-20T23:41:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4",
+        "name": "Sunset Products - Defense Information Systems Agency", "url":
+        "https:\/\/iase.disa.mil\/stigs\/sunset\/Pages\/index.aspx", "urlPingSuffix":
+        "DevEx,5123.1", "displayUrl": "https:\/\/iase.disa.mil\/stigs\/sunset\/Pages\/index.aspx",
+        "snippet": "Sunset products are older SRGs, STIGs, Checklists, or Tools
+        (i.e., DISA Products) that MAY be relevant to the vendor products they address,
+        but are no longer supported by DISA for various reasons.", "dateLastCrawled":
+        "2018-09-19T17:16:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5",
+        "name": "Sunrise and Sunset Information", "url": "https:\/\/www.weather.gov\/mrx\/sr_ss",
+        "urlPingSuffix": "DevEx,5137.1", "displayUrl": "https:\/\/www.weather.gov\/mrx\/sr_ss",
+        "snippet": "sunrise and sunset times for locations in east tennessee", "dateLastCrawled":
+        "2018-09-20T16:27:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6",
+        "name": "THE COLORS OF TWILIGHT AND SUNSET - Stephen F. Corfidi", "url":
+        "https:\/\/www.spc.noaa.gov\/publications\/corfidi\/sunset\/", "urlPingSuffix":
+        "DevEx,5149.1", "about": [{"name": "Sunset"}], "displayUrl": "https:\/\/www.spc.noaa.gov\/publications\/corfidi\/sunset",
+        "snippet": "The Colors of Sunset and Twilight. Stephen F. Corfidi. NOAA\/NWS
+        Storm Prediction Center. Norman, OK 73072. September 2014 (An early, abridged
+        version of this paper appeared in Weatherwise magazine, June\/July 1996; photographs
+        are by the author) Everyone at one time or another has marveled at the beautiful
+        red and orange colors of a sunrise or sunset.", "dateLastCrawled": "2018-09-08T01:28:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7", "name": "Sunset
+        SB - CA State Parks", "url": "http:\/\/www.parks.ca.gov\/?page_id=544",
+        "urlPingSuffix": "DevEx,5163.1", "about": [{"name": "Sunset State Beach"},
+        {"name": "Sunset State Beach"}], "displayUrl": "www.parks.ca.gov\/?page_id=544",
+        "snippet": "Visiting Sunset. A peaceful campground under the pines, picnicking
+        on the beach, and unmatched views of Monterey Bay make Sunset State Beach
+        a favorite year-round destination.", "dateLastCrawled": "2018-09-21T12:15:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8", "name": "Sunrise
+        and Sunset Tables for Select Cities", "url": "https:\/\/www.weather.gov\/dvn\/sunrise-sunset",
+        "urlPingSuffix": "DevEx,5177.1", "displayUrl": "https:\/\/www.weather.gov\/dvn\/sunrise-sunset",
+        "snippet": "Sunrise\/Sunset Tables are courtesy of the U.S. Naval Observatory.
+        Times are Central Standard. Add one hour for daylight time, when in use.",
+        "dateLastCrawled": "2018-09-17T23:09:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9",
+        "name": "Sunset Campground - Bryce Canyon National Park (U.S ...", "url":
+        "https:\/\/www.nps.gov\/brca\/planyourvisit\/sunsetcampground.htm", "urlPingSuffix":
+        "DevEx,5191.1", "about": [{"name": "Sunset Campground"}, {"name": "Bryce Canyon
+        National Park"}, {"name": "Sunset Campground"}], "displayUrl": "https:\/\/www.nps.gov\/brca\/planyourvisit\/sunsetcampground.htm",
+        "snippet": "Sunset Campground is located west of Sunset Point, approximately
+        1.5 miles south of the Bryce Canyon Visitor Center, and is comprised of 100
+        sites in 3 loops; A, B, and C. 20 tent sites are reservable during certain
+        times of the year in Loop B (see reservation dates below). Loop A is for RV
+        campers ...", "dateLastCrawled": "2018-08-03T15:47:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10",
+        "name": "Sunset Point - Bryce Canyon National Park (U.S. National ...",
+        "url": "https:\/\/www.nps.gov\/brca\/planyourvisit\/sunset.htm", "urlPingSuffix":
+        "DevEx,5205.1", "about": [{"name": "Bryce Canyon National Park"}], "displayUrl":
+        "https:\/\/www.nps.gov\/brca\/planyourvisit\/sunset.htm", "snippet": "Sunset
+        Point offers vistas of some of the most famous and breathtaking of Bryce
+        Canyon''s hoodoos. Directly below the point and to the south, the Silent City
+        rises from the canyon floor, a maze of hoodoos and fins packed in tight formation.
+        Just below the overlook on the northern edge, Thor''s Hammer ...", "dateLastCrawled":
+        "2018-09-11T07:00:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11",
+        "name": "Complete Sun and Moon Data for One Day", "url": "http:\/\/aa.usno.navy.mil\/data\/docs\/RS_OneDay.php\/",
+        "urlPingSuffix": "DevEx,5219.1", "about": [{"name": "Sun transit time"}],
+        "displayUrl": "aa.usno.navy.mil\/data\/docs\/RS_OneDay.php", "snippet":
+        "Complete Sun and Moon Data for One Day Skip navigation. Astronomical Applications
+        Department. Data Services. Complete Sun and Moon Data for One Day; Rise\/Set\/Twilight
+        Table for an Entire Year; ... Sunset photo by Lu Rarogiewicz from Mt. Wilson,
+        California. Back to . . . top Form A Form B .", "dateLastCrawled": "2018-09-18T00:05:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12", "name": "Town
+        of Sunset Beach", "url": "https:\/\/www.sunsetbeachnc.gov\/", "urlPingSuffix":
+        "DevEx,5232.1", "about": [{"name": "Sunset Beach"}], "displayUrl": "https:\/\/www.sunsetbeachnc.gov",
+        "snippet": "Sunset Beach Public Boat Ramp on Sunset Blvd. North At the
+        end of Park Road off of Sunset Blvd. North Near the sharp curve on Shoreline
+        Drive West and Beach Drive beside the Regency", "dateLastCrawled": "2018-09-23T06:00:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13", "name": "Sunset
+        Crater Volcano National Monument (U.S. National ...", "url": "https:\/\/www.nps.gov\/sucr\/index.htm",
+        "urlPingSuffix": "DevEx,5246.1", "about": [{"name": "Sunset Crater Volcano
+        National Monument"}, {"name": "Sunset Crater"}], "displayUrl": "https:\/\/www.nps.gov\/sucr",
+        "snippet": "The cinder cone volcano''s rim is the dusky red of sunset, but
+        the crater is only part of the story. Around 1085 the ground began to shake,
+        and lava spewed high into the air. When the eruption finished, it had changed
+        both the landscape and the people who lived here. Today, it teaches how nature
+        and ...", "dateLastCrawled": "2018-06-27T12:55:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14",
+        "name": "Sunset Park - Miami-Dade County", "url": "http:\/\/www.miamidade.gov\/parks\/sunset.asp",
+        "urlPingSuffix": "DevEx,5260.1", "displayUrl": "www.miamidade.gov\/parks\/sunset.asp",
+        "snippet": "Hurricane Irma As we continue our recovery and cleanup efforts,
+        please visit the Emergency website for the latest information on openings
+        and closings in Miami-Dade County. Sunset Park", "dateLastCrawled": "2018-09-22T16:02:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15", "name": "Sunset
+        Swimming Pool | City of Longmont, Colorado", "url": "https:\/\/www.longmontcolorado.gov\/departments\/departments-n-z\/recreation-services\/facility-information-recreation\/sunset-swimming-pool",
+        "urlPingSuffix": "DevEx,5273.1", "displayUrl": "https:\/\/www.longmontcolorado.gov\/...\/sunset-swimming-pool",
+        "snippet": "Sunset Pool is a heated outdoor pool with six lap lanes, a large
+        wading area, three diving boards, and two fast and fun waterslides.", "dateLastCrawled":
+        "2018-09-18T04:57:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16",
+        "name": "Sunset Review 2017 - 2019 | TSLAC", "url": "https:\/\/www.tsl.texas.gov\/sunset",
+        "urlPingSuffix": "DevEx,5287.1", "displayUrl": "https:\/\/www.tsl.texas.gov\/sunset",
+        "snippet": "The Sunset review involves three steps. First, Sunset Commission
+        staff will evaluate the State Library and Archives Commission and issue a
+        report in July 2018 recommending solutions to problems found.", "dateLastCrawled":
+        "2018-09-17T17:47:00.0000000Z"}, {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17",
+        "name": "NOAA Improved Sunrise\/Sunset Calculation", "url": "https:\/\/www.esrl.noaa.gov\/gmd\/grad\/solcalc\/sunrise.html",
+        "urlPingSuffix": "DevEx,5301.1", "displayUrl": "https:\/\/www.esrl.noaa.gov\/gmd\/grad\/solcalc\/sunrise.html",
+        "snippet": "Sunrise\/Sunset Calculator: Earth System Research Lab: ... For
+        locations above the Arctic Circle and below the Antarctic Circle, when a sunrise
+        or sunset does not occur on the given day the program locates the local
+        time and date of the most recent sunrise or sunset, and the next sunset
+        or sunrise. ...", "dateLastCrawled": "2018-09-20T14:08:00.0000000Z"}, {"id":
+        "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18", "name": "COPRRR Sunset
+        Reviews | DORA OPRRR", "url": "https:\/\/www.colorado.gov\/pacific\/dora-oprrr\/coprrr-sunset-reviews",
+        "urlPingSuffix": "DevEx,5313.1", "displayUrl": "https:\/\/www.colorado.gov\/pacific\/dora-oprrr\/coprrr-sunset-reviews",
+        "snippet": "In Colorado, a sunset review will generally question the need
+        for regulation to protect the public. If regulation is determined to be needed,
+        the sunset review will look for the least restrictive level of regulation
+        consistent with the public interest.", "dateLastCrawled": "2018-09-22T17:37:00.0000000Z"},
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19", "name": "Sunset
+        Commission Meetings | Texas Sunset Commission", "url": "https:\/\/www.sunset.texas.gov\/meetings",
+        "urlPingSuffix": "DevEx,5327.1", "displayUrl": "https:\/\/www.sunset.texas.gov\/meetings",
+        "snippet": "The Sunset Commission cannot override an agency’s decisions.
+        At least a month after the public hearing, the Sunset Commission meets again
+        to vote on its recommendations to the full Legislature about an agency.",
+        "dateLastCrawled": "2018-09-22T07:50:00.0000000Z"}]}, "rankingResponse": {"mainline":
+        {"items": [{"answerType": "WebPages", "resultIndex": 0, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0"}},
+        {"answerType": "WebPages", "resultIndex": 1, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.1"}},
+        {"answerType": "WebPages", "resultIndex": 2, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.2"}},
+        {"answerType": "WebPages", "resultIndex": 3, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.3"}},
+        {"answerType": "WebPages", "resultIndex": 4, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.4"}},
+        {"answerType": "WebPages", "resultIndex": 5, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.5"}},
+        {"answerType": "WebPages", "resultIndex": 6, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6"}},
+        {"answerType": "WebPages", "resultIndex": 7, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.7"}},
+        {"answerType": "WebPages", "resultIndex": 8, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.8"}},
+        {"answerType": "WebPages", "resultIndex": 9, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.9"}},
+        {"answerType": "WebPages", "resultIndex": 10, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.10"}},
+        {"answerType": "WebPages", "resultIndex": 11, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.11"}},
+        {"answerType": "WebPages", "resultIndex": 12, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.12"}},
+        {"answerType": "WebPages", "resultIndex": 13, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.13"}},
+        {"answerType": "WebPages", "resultIndex": 14, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.14"}},
+        {"answerType": "WebPages", "resultIndex": 15, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.15"}},
+        {"answerType": "WebPages", "resultIndex": 16, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.16"}},
+        {"answerType": "WebPages", "resultIndex": 17, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.17"}},
+        {"answerType": "WebPages", "resultIndex": 18, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.18"}},
+        {"answerType": "WebPages", "resultIndex": 19, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.19"}}]}}}'
+    http_version: 
+  recorded_at: Wed, 26 Sep 2018 23:10:23 GMT
 recorded_with: VCR 4.0.0

@@ -120,4 +120,82 @@ http_interactions:
         {"answerType": "WebPages", "resultIndex": 6, "value": {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.6"}}]}}}'
     http_version: 
   recorded_at: Thu, 22 Feb 2018 07:16:52 GMT
+- request:
+    method: get
+    uri: https://www.bingapis.com/api/v6/search?AppId=<BING_V6_APP_ID>&count=20&mkt=en-US&offset=0&q=noaa%20(site:www.sba.gov/blogs/)&responseFilter=WebPages&safeSearch=moderate&textDecorations=true&traffictype=test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - USASearch
+      Ocp-Apim-Subscription-Key:
+      - "<BING_V6_APP_ID>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '598'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - Wed, 26 Sep 2018 23:08:58 GMT
+      Vary:
+      - Accept-Encoding
+      P3p:
+      - CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
+      Set-Cookie:
+      - MUID=141681A5EF3F694B27128DD3EE736872; path=/; expires=Mon, 21-Oct-2019 23:09:58
+        GMT; domain=bingapis.com
+      - MUIDB=141681A5EF3F694B27128DD3EE736872; path=/; httponly; expires=Mon, 21-Oct-2019
+        23:09:58 GMT
+      - SRCHD=AF=NOFORM; domain=.bingapis.com; expires=Sat, 26-Sep-2020 23:09:58 GMT;
+        path=/
+      - SRCHUID=V=2&GUID=98B2462FD8E748249677A2BF92E681B8&dmnchg=1; domain=.bingapis.com;
+        expires=Sat, 26-Sep-2020 23:09:58 GMT; path=/
+      - SRCHUSR=DOB=20180926; domain=.bingapis.com; expires=Sat, 26-Sep-2020 23:09:58
+        GMT; path=/
+      - _EDGE_S=mkt=en-us&F=1&SID=0F1A0C841B0362AE037700F21A4F639E; path=/; httponly;
+        domain=bingapis.com
+      - _EDGE_V=1; path=/; httponly; expires=Mon, 21-Oct-2019 23:09:58 GMT; domain=bingapis.com
+      - _SS=SID=0F1A0C841B0362AE037700F21A4F639E; domain=.bingapis.com; path=/
+      Bingapis-Traceid:
+      - AC4F12134E564BFE9A8CE38ABF3FFEA8
+      X-Msedge-Clientid:
+      - 141681A5EF3F694B27128DD3EE736872
+      X-Msapi-Userstate:
+      - 0f3e
+      Bingapis-Market:
+      - en-US
+      X-Msedge-Ref:
+      - 'Ref A: AC4F12134E564BFE9A8CE38ABF3FFEA8 Ref B: BY3EDGE0505 Ref C: 2018-09-26T23:09:58Z'
+      Date:
+      - Wed, 26 Sep 2018 23:09:58 GMT
+    body:
+      encoding: UTF-8
+      string: '{"_type": "SearchResponse", "instrumentation": {"pingUrlBase": "https:\/\/www.bingapis.com\/api\/ping?IG=BDBBB2C8088448E1985C4516BC1735DD&CID=141681A5EF3F694B27128DD3EE736872&ID=",
+        "pageLoadPingUrl": "https:\/\/www.bingapis.com\/api\/ping\/pageload?IG=BDBBB2C8088448E1985C4516BC1735DD&CID=141681A5EF3F694B27128DD3EE736872&Type=Event.CPT&DATA=0"},
+        "webPages": {"webSearchUrl": "https:\/\/www.bing.com\/search?q=noaa+(site%3awww.sba.gov%2fblogs%2f)",
+        "webSearchUrlPingSuffix": "DevEx,5073.1", "totalEstimatedMatches": 2, "value":
+        [{"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0", "name": "U.S.
+        Small Business Administration", "url": "https:\/\/www.sba.gov\/blogs\/payroll-concerns-remote-employees",
+        "urlPingSuffix": "DevEx,5036.1", "displayUrl": "https:\/\/www.sba.gov\/blogs\/payroll-concerns-remote-employees",
+        "snippet": "We would like to show you a description here but the site won’t
+        allow us.", "dateLastCrawled": "2018-09-21T11:30:00.0000000Z"}]}, "rankingResponse":
+        {"mainline": {"items": [{"answerType": "WebPages", "resultIndex": 0, "value":
+        {"id": "https:\/\/www.bingapis.com\/api\/v6\/#WebPages.0"}}]}}}'
+    http_version: 
+  recorded_at: Wed, 26 Sep 2018 23:09:58 GMT
 recorded_with: VCR 4.0.0
