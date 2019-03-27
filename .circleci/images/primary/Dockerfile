@@ -1,5 +1,5 @@
 # using legacy image for phantomjs
-FROM circleci/ruby:2.3.8-browsers-legacy
+FROM circleci/ruby:2.6.2-stretch-browsers-legacy
 
 USER root
 

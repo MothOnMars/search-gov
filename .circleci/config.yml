@@ -10,7 +10,7 @@ executors:
 
     docker:
       # using custom image, see .circleci/images/primary/Dockerfile
-      - image: searchgov/circleci:20190313
+      - image: searchgov/circleci:20190327
         environment:
           RAILS_ENV: test
 
