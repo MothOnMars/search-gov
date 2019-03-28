@@ -12,11 +12,9 @@ working development environment for Rails up and running, including the database
 
 ## Ruby
 
-You will need Ruby 2.3.8 Verify that your path points to the correct version of Ruby:
+You will need the version of Ruby specified in `.ruby-version`. Verify that your path points to the correct version of Ruby:
 
-    devbox:usasearch
     $ ruby -v
-    ruby 2.3.8p459 (2018-10-18 revision 65136) [x86_64-darwin16]
 
 ## Packages
 
