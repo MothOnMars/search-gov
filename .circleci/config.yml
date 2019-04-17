@@ -5,6 +5,12 @@
 version: 2.1
 
 executors:
+  base_executor:
+    working_directory: ~/search-gov
+
+    docker:
+      - image: circleci/ruby:2.5.5-stretch
+
   test_executor:
     working_directory: ~/search-gov
 
@@ -221,7 +227,7 @@ jobs:
           destination: test-results
 
   report_coverage:
-    executor: test_executor
+    executor: base_executor
 
     steps:
       - restore_cache:
