@@ -13,7 +13,7 @@ class ElasticFederalRegisterDocument
                     analyzer: 'en_analyzer' },
         comments_close_on: { type: 'date', format: 'date' },
         publication_date: { type: 'date', format: 'date' },
-        group_id: ElasticSettings::KEYWORD,
+        group_id: { type: 'keyword' },
         document_number: ElasticSettings::KEYWORD,
         document_type: ElasticSettings::KEYWORD,
         federal_register_agency_ids: { type: 'integer' },

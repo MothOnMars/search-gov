@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module ElasticSettings
+  #verify whether this is being used appropriately
   KEYWORD = { type: 'text',
               analyzer: 'case_insensitive_keyword_analyzer' }.freeze
 
