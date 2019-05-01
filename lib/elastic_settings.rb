@@ -2,8 +2,10 @@
 
 module ElasticSettings
   #verify whether this is being used appropriately
-  KEYWORD = { type: 'text',
-              analyzer: 'case_insensitive_keyword_analyzer' }.freeze
+  KEYWORD = { type: 'keyword',
+              normalizer: 'case_insensitive_normalizer' }.freeze
+
+  KEYWORD_NORMALIZER
 
   COMMON = {
     index: {
@@ -43,10 +45,22 @@ module ElasticSettings
             char_filter: %w(ignore_chars),
             filter: %w(standard asciifolding lowercase bigram_filter)
           },
+          #can this go bye bye?
           case_insensitive_keyword_analyzer: {
             tokenizer: 'keyword',
             char_filter: %w(ignore_chars),
-            filter: %w(standard asciifolding lowercase) } } } }
+            filter: %w(standard asciifolding lowercase)
+          }
+        }
+      },
+      normalizer: {
+        case_insensitive_normalizer: {
+          type: "custom",
+          char_filter: %w(ignore_chars),
+          filter: %w(standard asciifolding lowercase)
+        }
+      }
+    }
   }.freeze
 
 end
