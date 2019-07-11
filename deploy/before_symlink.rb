@@ -7,20 +7,10 @@ dgsearch_rails_database :usasearch do
   group 'www-data'
 end
 
-run 'bundle env | head'
-
-run 'gem list'
-run 'ruby -v'
 # Pre-compile assets. Also, a very small subset of the assets
 # need to be available without digest fingerprints in their
 # filenames - assets that live "in the wild" and can't be
 # updated whenever our asset fingerprints change.
-run <<COMPILE
-  cd #{release_path} && \
-  ruby -v && bundle env && gem env
-COMPILE
-
-=begin
 run <<COMPILE
   cd #{release_path} && \
   RAILS_ENV=#{rails_env} bundle exec rake assets:precompile && \
@@ -30,4 +20,3 @@ run <<COMPILE
   for png in bootstrap/glyphicons-halflings bootstrap/glyphicons-halflings-white; do cp ${png}-*.png ${png}.png; done && \
   find . -type f -perm 600 | xargs --no-run-if-empty chmod 644
 COMPILE
-=end
