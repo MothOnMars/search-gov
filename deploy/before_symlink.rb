@@ -9,6 +9,8 @@ end
 
 run 'bundle env | head'
 
+run 'gem list'
+run 'ruby -v'
 # Pre-compile assets. Also, a very small subset of the assets
 # need to be available without digest fingerprints in their
 # filenames - assets that live "in the wild" and can't be
