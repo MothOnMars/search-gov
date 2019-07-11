@@ -15,8 +15,7 @@ run 'bundle env | head'
 # updated whenever our asset fingerprints change.
 run <<COMPILE
   cd #{release_path} && \
-  ruby -v && bundle env && gem env && \
-  RAILS_ENV=#{rails_env} bundle exec rake assets:precompile
+  ruby -v && bundle env && gem env
 COMPILE
 
 =begin
