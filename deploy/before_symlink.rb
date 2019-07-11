@@ -13,6 +13,12 @@ end
 # updated whenever our asset fingerprints change.
 run <<COMPILE
   cd #{release_path} && \
+  RAILS_ENV=#{rails_env} bundle exec rake assets:precompile
+COMPILE
+
+=begin
+run <<COMPILE
+  cd #{release_path} && \
   RAILS_ENV=#{rails_env} bundle exec rake assets:precompile && \
   cd #{release_path}/public/assets && \
   for js in sayt_loader_libs sayt_loader stats; do cp ${js}-*.js ${js}.js && cp ${js}-*.js.gz ${js}.js.gz; done && \
@@ -20,3 +26,4 @@ run <<COMPILE
   for png in bootstrap/glyphicons-halflings bootstrap/glyphicons-halflings-white; do cp ${png}-*.png ${png}.png; done && \
   find . -type f -perm 600 | xargs --no-run-if-empty chmod 644
 COMPILE
+=end
