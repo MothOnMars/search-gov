@@ -54,7 +54,7 @@ gem 'will_paginate-bootstrap', '~> 1.0.1'
 gem 'virtus', '~> 1.0.5'
 gem 'truncator', '~> 0.1.7'
 gem 'em-http-request', '~> 1.1.5'
-gem "validate_url", '= 0.2.0' # Newer versions use Addressable::URI for validation, which is more permissive than what we want
+gem "validate_url", '~> 1.0'
 gem 'elasticsearch', '~> 6.0.0'
 gem 'elasticsearch-watcher', '~> 0.0.1'
 gem 'federal_register', '~> 0.6.3'
