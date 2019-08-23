@@ -47,3 +47,8 @@ AZURE_CACHE_DURATION = 0
 BING_CACHE_DURATION = 0
 GOOGLE_CACHE_DURATION = 0
 I14Y_CACHE_DURATION = 0
+
+# Number of Elasticsearch shards per index
+# Using a single shard prevents intermittent relevancy issues in tests
+# https://www.elastic.co/guide/en/elasticsearch/guide/current/relevance-is-broken.html
+NUM_SHARDS = 1

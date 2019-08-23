@@ -46,3 +46,6 @@ AZURE_CACHE_DURATION = 1.day
 BING_CACHE_DURATION = 1.day
 GOOGLE_CACHE_DURATION = 5.minutes
 I14Y_CACHE_DURATION = 1.day
+
+# Number of Elasticsearch shards per index
+NUM_SHARDS = 1
