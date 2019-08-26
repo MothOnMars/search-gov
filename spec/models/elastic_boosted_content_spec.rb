@@ -331,17 +331,25 @@ describe ElasticBoostedContent do
         expect(ElasticBoostedContent.search_for(q: 'bîdéÑ', affiliate_id: affiliate.id, language: affiliate.indexing_locale).total).to eq(1)
       end
 
-      context "when query contains problem characters" do
+      context 'when query contains problem characters' do
         ['"   ', '   "       ', '+++', '+-', '-+'].each do |query|
-          specify { expect(ElasticBoostedContent.search_for(q: query, affiliate_id: affiliate.id, language: affiliate.indexing_locale).total).to be_zero }
+          specify do
+            expect(ElasticBoostedContent.search_for(search_params.merge(q: query)).total).
+              to be_zero
+          end
         end
 
-        %w(+++obama --obama +-obama).each do |query|
-          specify { expect(ElasticBoostedContent.search_for(q: query, affiliate_id: affiliate.id, language: affiliate.indexing_locale).total).to eq(1) }
+        %w(+++yosemite --yosemite +-yosemite).each do |query|
+          specify do
+            expect(ElasticBoostedContent.search_for(search_params.merge(q: query)).total)
+              .to eq(1)
+          end
         end
       end
 
-      context 'when affiliate is English' do
+      # Disabling until we re-implement per-language analysis:
+      # https://cm-jira.usa.gov/browse/SRCH-474
+      pending 'when affiliate is English' do
         before do
           affiliate.boosted_contents.create!(title: 'The affiliate interns use powerful engineering computers',
                                              status: 'active',
@@ -359,7 +367,9 @@ describe ElasticBoostedContent do
         end
       end
 
-      context 'when affiliate is Spanish' do
+      # Disabling until we re-implement per-language analysis:
+      # https://cm-jira.usa.gov/browse/SRCH-474
+      pending 'when affiliate is Spanish' do
         before do
           affiliate.locale = 'es'
           affiliate.boosted_contents.create!(title: 'Leyes y el rey',
