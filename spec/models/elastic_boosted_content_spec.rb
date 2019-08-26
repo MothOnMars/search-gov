@@ -4,6 +4,16 @@ require 'spec_helper'
 describe ElasticBoostedContent do
   fixtures :affiliates
   let(:affiliate) { affiliates(:basic_affiliate) }
+  let(:query) { 'Tropical' }
+  let(:search_params) do
+    {
+      q: query,
+      affiliate_id: affiliate.id,
+      size: 1,
+      offset: 1,
+      language: affiliate.indexing_locale
+    }
+  end
 
   before do
     ElasticBoostedContent.recreate_index
@@ -311,9 +321,9 @@ describe ElasticBoostedContent do
     end
 
     describe "title and description" do
-      it 'should be case insentitive' do
-        expect(ElasticBoostedContent.search_for(q: 'OBAMA', affiliate_id: affiliate.id, language: affiliate.indexing_locale).total).to eq(1)
-        expect(ElasticBoostedContent.search_for(q: 'BIDEN', affiliate_id: affiliate.id, language: affiliate.indexing_locale).total).to eq(1)
+      it 'is case insentitive' do
+        expect(ElasticBoostedContent.search_for(search_params.merge(q: 'YOSEMITE')).total)
+          .to eq(1)
       end
 
       it 'should perform ASCII folding' do
