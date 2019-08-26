@@ -66,9 +66,7 @@ describe ElasticBoostedContent do
     end
   end
 
-  # Temporarily disabling these specs during ES56 upgrade
-  # https://cm-jira.usa.gov/browse/SRCH-828
-  pending "highlighting results" do
+  describe "highlighting results" do
     before do
       affiliate.boosted_contents.create!(title: 'Tropical Hurricane Names',
                                          status: 'active',
@@ -98,7 +96,7 @@ describe ElasticBoostedContent do
       end
 
       it 'should escape the entity but show the highlight' do
-        search = ElasticBoostedContent.search_for(q: 'carrot', affiliate_id: affiliate.id, language: affiliate.indexing_locale)
+        search = ElasticBoostedContent.search_for(q: 'carrots', affiliate_id: affiliate.id, language: affiliate.indexing_locale)
         first = search.results.first
         expect(first.title).to eq("Peas &amp; <strong>Carrots</strong>")
         search = ElasticBoostedContent.search_for(q: 'entities', affiliate_id: affiliate.id, language: affiliate.indexing_locale)
