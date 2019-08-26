@@ -225,12 +225,12 @@ describe ElasticBoostedContent do
     end
   end
 
-  pending "recall" do
+  describe 'recall' do
     let(:valid_bc_params) do
       {
         title: 'Obamå and Bideñ',
         status: 'active',
-        description: 'Yosemite publications spelling',
+        description: 'Yosemite publication spelling',
         url: 'http://www.nhc.noaa.gov/aboutnames.shtml',
         publish_start_on: Date.current
       }
