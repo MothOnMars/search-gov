@@ -312,7 +312,9 @@ describe ElasticBoostedContent do
         expect(ElasticBoostedContent.search_for(q: 'cORAzon', affiliate_id: affiliate.id, language: affiliate.indexing_locale).total).to eq(1)
       end
 
-      it 'should perform ASCII folding' do
+      # Temporarily disabling until ASCII folding is re-implemented
+      # https://cm-jira.usa.gov/browse/SRCH-839
+      xit 'should perform ASCII folding' do
         expect(ElasticBoostedContent.search_for(q: 'coràzon', affiliate_id: affiliate.id, language: affiliate.indexing_locale).total).to eq(1)
       end
 
@@ -328,7 +330,9 @@ describe ElasticBoostedContent do
           .to eq(1)
       end
 
-      it 'should perform ASCII folding' do
+      # Temporarily disabling until ASCII folding is re-implemented
+      # https://cm-jira.usa.gov/browse/SRCH-839
+      xit 'should perform ASCII folding' do
         expect(ElasticBoostedContent.search_for(q: 'øbåmà', affiliate_id: affiliate.id, language: affiliate.indexing_locale).total).to eq(1)
         expect(ElasticBoostedContent.search_for(q: 'bîdéÑ', affiliate_id: affiliate.id, language: affiliate.indexing_locale).total).to eq(1)
       end
