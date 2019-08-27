@@ -22,7 +22,7 @@ module ElasticSettings
           es_stem_filter: { type: "stemmer", name: "light_spanish" }
         },
         analyzer: {
-          babel_analyzer: {
+          default: {
             type: "custom",
             tokenizer: "standard",
             filter: %w(standard asciifolding lowercase) },
