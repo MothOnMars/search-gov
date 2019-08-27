@@ -272,7 +272,9 @@ describe ElasticBoostedContent do
       end
     end
 
-    context 'when various apostrophes are present in title/desc/keywords' do
+    # Disabling until we re-implement per-language analysis:
+    # https://cm-jira.usa.gov/browse/SRCH-474
+    pending 'when various apostrophes are present in title/desc/keywords' do
       before do
         apostrophe_1 = affiliate.boosted_contents.build(title: "hawai`i o'reilly",
                                                            status: 'active',
