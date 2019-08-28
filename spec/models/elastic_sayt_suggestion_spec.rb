@@ -1,10 +1,18 @@
 require 'spec_helper'
 
-# Temporarily disabling these specs during ES56 upgrade
-# https://cm-jira.usa.gov/browse/SRCH-821
 describe ElasticSaytSuggestion do
   fixtures :affiliates
   let(:affiliate) { affiliates(:basic_affiliate) }
+  let(:search_params) do
+    {
+      q: 'suggest',
+      affiliate_id: affiliate.id,
+      size: 1,
+      offset: 0,
+      language: affiliate.indexing_locale
+    }
+  end
+  let(:search) { ElasticSaytSuggestion.search_for(search_params) }
 
   before do
     ElasticSaytSuggestion.recreate_index
@@ -12,9 +20,19 @@ describe ElasticSaytSuggestion do
     affiliate.locale = 'en'
   end
 
-  pending ".search_for" do
-    describe "results structure" do
+  describe '.search_for' do
+    describe 'results structure' do
       context 'when there are results' do
+        let(:search_params) do
+          {
+            q: 'suggest',
+            affiliate_id: affiliate.id,
+            size: 1,
+            offset: 1,
+            language: affiliate.indexing_locale
+          }
+        end
+
         before do
           affiliate.sayt_suggestions.create!(phrase: 'hi suggest me', popularity: 30)
           affiliate.sayt_suggestions.create!(phrase: 'suggest me too', popularity: 29)
@@ -22,8 +40,8 @@ describe ElasticSaytSuggestion do
           ElasticSaytSuggestion.commit
         end
 
-        it 'should return results in an easy to access structure ordered by most popular' do
-          search = ElasticSaytSuggestion.search_for(q: 'suggests', affiliate_id: affiliate.id, size: 1, offset: 1, language: affiliate.indexing_locale)
+        it 'returns results in an easy to access structure ordered by most popular' do
+          search = ElasticSaytSuggestion.search_for(search_params)
           expect(search.total).to eq(3)
           expect(search.results.size).to eq(1)
           expect(search.results.first).to be_instance_of(SaytSuggestion)
@@ -38,17 +56,16 @@ describe ElasticSaytSuggestion do
           end
 
           it 'should return zero results' do
-            search = ElasticSaytSuggestion.search_for(q: 'suggests', affiliate_id: affiliate.id, size: 1, offset: 1, language: affiliate.indexing_locale)
+            search = ElasticSaytSuggestion.search_for(search_params)
             expect(search.total).to be_zero
             expect(search.results.size).to be_zero
           end
         end
       end
-
     end
   end
 
-  pending "highlighting results" do
+  describe 'highlighting results' do
     before do
       affiliate.sayt_suggestions.create!(phrase: 'hi suggest me', popularity: 30)
       ElasticSaytSuggestion.commit
@@ -56,7 +73,7 @@ describe ElasticSaytSuggestion do
 
     context 'when no highlight param is sent in' do
       it 'should highlight appropriate fields with default highlighting' do
-        search = ElasticSaytSuggestion.search_for(q: 'suggests', affiliate_id: affiliate.id, language: affiliate.indexing_locale)
+        search = ElasticSaytSuggestion.search_for(search_params)
         first = search.results.first
         expect(first.phrase).to eq("hi <strong>suggest</strong> me")
       end
@@ -64,7 +81,7 @@ describe ElasticSaytSuggestion do
 
     context 'when highlight is turned off' do
       it 'should not highlight matches' do
-        search = ElasticSaytSuggestion.search_for(q: 'suggests', affiliate_id: affiliate.id, language: affiliate.indexing_locale, highlighting: false)
+        search = ElasticSaytSuggestion.search_for(q: 'suggest', affiliate_id: affiliate.id, language: affiliate.indexing_locale, highlighting: false)
         first = search.results.first
         expect(first.phrase).to eq("hi suggest me")
       end
@@ -86,14 +103,14 @@ describe ElasticSaytSuggestion do
 
   end
 
-  pending "filters" do
+  describe 'filters' do
     context 'when query is exact match of phrase' do
       before do
         affiliate.sayt_suggestions.create!(phrase: 'the exact match', popularity: 30)
         ElasticSaytSuggestion.commit
       end
 
-      it "should ignore exact matches regardless of case" do
+      it 'ignores exact matches regardless of case' do
         ['the exact match', 'THE EXACT MATCH'].each do |query|
           expect(ElasticSaytSuggestion.search_for(q: query, affiliate_id: affiliate.id, language: affiliate.indexing_locale).total).to be_zero
         end
@@ -122,7 +139,7 @@ describe ElasticSaytSuggestion do
 
   end
 
-  pending "recall" do
+  describe 'recall' do
     before do
       affiliate.sayt_suggestions.create!(phrase: 'obama and biden', popularity: 30)
       ElasticSaytSuggestion.commit
@@ -151,6 +168,8 @@ describe ElasticSaytSuggestion do
         end
 
         it 'should do standard English stemming with basic stopwords' do
+          # Disabling until we re-implement per-language analysis
+          pending('https://cm-jira.usa.gov/browse/SRCH-474')
           appropriate_stemming = ['The computer with an internal and affiliates', 'Organics symbolizes a the view']
           appropriate_stemming.each do |query|
             expect(ElasticSaytSuggestion.search_for(q: query, affiliate_id: affiliate.id, language: affiliate.indexing_locale).total).to eq(1)
@@ -167,6 +186,8 @@ describe ElasticSaytSuggestion do
         end
 
         it 'should do minimal Spanish stemming with basic stopwords' do
+          # Disabling until we re-implement per-language analysis
+          pending('https://cm-jira.usa.gov/browse/SRCH-474')
           appropriate_stemming = ['ley con reyes', 'financieros']
           appropriate_stemming.each do |query|
             expect(ElasticSaytSuggestion.search_for(q: query, affiliate_id: affiliate.id, language: affiliate.indexing_locale).total).to eq(1)
