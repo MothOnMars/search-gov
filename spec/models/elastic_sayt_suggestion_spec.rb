@@ -93,7 +93,7 @@ describe ElasticSaytSuggestion do
         ElasticSaytSuggestion.commit
       end
 
-      it "should ignore exact matches regardless of case" do
+      it 'ignores exact matches regardless of case' do
         ['the exact match', 'THE EXACT MATCH'].each do |query|
           expect(ElasticSaytSuggestion.search_for(q: query, affiliate_id: affiliate.id, language: affiliate.indexing_locale).total).to be_zero
         end
