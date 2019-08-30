@@ -16,7 +16,9 @@ class ElasticResults
   private
 
   def extract_suggestion(suggestions)
-    Hashie::Mash::Rash.new(suggestions.first['options'].first) rescue nil
+    Hashie::Mash::Rash.new(suggestions.first['options'].first)
+  rescue
+    nil
   end
 
   def extract_results(hits)
