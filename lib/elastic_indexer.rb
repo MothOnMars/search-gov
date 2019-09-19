@@ -9,9 +9,13 @@ class ElasticIndexer
   end
 
   def index_all
+    start_time = Time.now
+    puts "Indexing #{@rails_klass}: #{start_time}"
     @rails_klass.includes(@includes).find_in_batches(batch_size: DEFAULT_BATCH_SIZE) do |batch|
       index_batch(batch)
     end
+    end_time = Time.now
+    puts "Done Indexing #{@rails_klass}: #{end_time}. Elapsed: #{end_time - start_time}"
   end
 
   def index_batch(batch)
