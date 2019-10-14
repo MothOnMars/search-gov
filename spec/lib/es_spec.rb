@@ -39,7 +39,7 @@ describe ES do
       let(:host) { ES::ELK.client_reader.transport.hosts.first }
 
       it 'uses the values from the secrets.yml analytics[elasticsearch][reader] entry' do
-        expect(host[:host]).to eq(URI(es_config['reader']['hosts']).host)
+        expect(host[:host]).to eq(URI(es_config['reader']['host']).host)
         expect(host[:user]).to eq(es_config['reader']['user'])
       end
     end
@@ -61,12 +61,15 @@ describe ES do
     let(:es_config) { Rails.application.secrets.custom_indices['elasticsearch'] }
 
     describe '.client_reader' do
+      let(:client) { ES::CustomIndices.client_reader }
       let(:host) { ES::CustomIndices.client_reader.transport.hosts.first }
 
       it 'uses the values from the secrets.yml custom_indices[elasticsearch][reader] entry' do
         expect(host[:host]).to eq(URI(es_config['reader']['hosts'].first).host)
         expect(host[:user]).to eq(es_config['reader']['user'])
       end
+
+      it_behaves_like 'an Elasticsearch client'
     end
 
     describe '.client_writers' do
