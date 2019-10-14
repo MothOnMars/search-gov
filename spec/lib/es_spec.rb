@@ -75,7 +75,7 @@ describe ES do
         expect(ES::CustomIndices.client_writers.size).to eq(count)
         count.times do |i|
           host = ES::CustomIndices.client_writers.first.transport.hosts[i]
-          expect(host[:host]).to eq(URI(es_config['writers'][i]['host']).host)
+          expect(host[:host]).to eq(URI(es_config['writers'][i]['hosts'].first).host)
           expect(host[:user]).to eq(es_config['writers'][i]['user'])
         end
       end
