@@ -73,6 +73,8 @@ describe ES do
     end
 
     describe '.client_writers' do
+      let(:client) { ES::CustomIndices.client_writers.first }
+
       it 'uses the value(s) from the secrets.yml custom_indices[elasticsearch][writers] entry' do
         count = Rails.application.secrets.custom_indices['elasticsearch']['writers'].count
         expect(ES::CustomIndices.client_writers.size).to eq(count)
@@ -82,6 +84,8 @@ describe ES do
           expect(host[:user]).to eq(es_config['writers'][i]['user'])
         end
       end
+
+      it_behaves_like 'an Elasticsearch client'
     end
   end
 end

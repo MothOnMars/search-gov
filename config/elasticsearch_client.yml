@@ -1,0 +1,11 @@
+default: &DEFAULT
+  retry_on_failure: true
+
+development:
+  <<: *DEFAULT
+
+test:
+  <<: *DEFAULT
+
+production:
+  <<: *DEFAULT
