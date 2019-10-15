@@ -9,5 +9,9 @@ shared_examples 'an Elasticsearch client' do
       puts client.transport.options.to_s.red
       expect(client.transport.options).to include( retry_on_failure: true )
     end
+
+    it 'can connect to Elasticsearch' do
+      expect(client.ping).to eq(true)
+    end
   end
 end
