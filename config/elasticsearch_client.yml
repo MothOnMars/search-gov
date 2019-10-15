@@ -1,8 +1,13 @@
 default: &DEFAULT
+  log: false
+  randomize_connections: true
+  reload_connections: true
+  reload_on_failure: true
   retry_on_failure: true
 
 development:
   <<: *DEFAULT
+  retry_on_failure: false
 
 test:
   <<: *DEFAULT

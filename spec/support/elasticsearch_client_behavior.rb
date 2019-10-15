@@ -6,8 +6,14 @@ shared_examples 'an Elasticsearch client' do
     end
 
     it 'uses the specified options' do
-      puts client.transport.options.to_s.red
-      expect(client.transport.options).to include( retry_on_failure: true )
+      options = {
+        log: false,
+        randomize_connections: true,
+        reload_connections: true,
+        reload_on_failure: true,
+        retry_on_failure: true
+      }
+      expect(client.transport.options).to include(options)
     end
 
     it 'can connect to Elasticsearch' do
