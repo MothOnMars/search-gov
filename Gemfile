@@ -166,7 +166,7 @@ group :test do
   gem 'shoulda-matchers', '~> 4.1.1'
   gem 'shoulda-kept-assign-to', '~> 1.1.0'
   gem 'vcr', '~> 4.0'
-  gem 'webmock', '~> 3.1.1'
+  gem 'webmock', '~> 3.7'
   gem 'rspec-activemodel-mocks', '~> 1.0.3'
   gem 'timecop', '~> 0.9.1'
   gem 'rspec_junit_formatter', '~> 0.3.0'
