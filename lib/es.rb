@@ -27,7 +27,9 @@ module ES
   end
 
   def initialize_client(config)
-    Elasticsearch::Client.new(config.merge(CLIENT_CONFIG))
+    Elasticsearch::Client.new(config.merge(CLIENT_CONFIG).merge(logger: Rails.logger)).tap do |client|
+      client.transport.logger.level = 2
+    end
   end
 
   module ELK

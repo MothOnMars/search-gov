@@ -1,5 +1,5 @@
 default: &DEFAULT
-  log: false
+  log: true
   randomize_hosts: true
   reload_connections: true
   reload_on_failure: true
