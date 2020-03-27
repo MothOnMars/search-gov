@@ -7,6 +7,7 @@ describe DateRangeTopNFieldQuery do
                                 Date.parse('2014-06-29'),
                                 'params.url',
                                 'some_url',
+                                'click',
                                 { field: 'params.query.raw', size: 100 })
   end
   let(:expected_body) do
@@ -22,6 +23,11 @@ describe DateRangeTopNFieldQuery do
             {
               "term": {
                 "params.url": "some_url"
+              }
+            },
+            {
+              "term": {
+                "type": "click"
               }
             },
             {

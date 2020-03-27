@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module AnalyticsDSL
-  attr_reader :affiliate_name
+  attr_reader :affiliate_name, :type, :agg_options
 
   def filter_booleans(json)
     json.query do
@@ -66,6 +66,7 @@ module AnalyticsDSL
   end
 
   def must_affiliate(json, site_name)
+    puts "adding affiliate".red
     json.filter do
       json.child! { json.term { json.set! 'params.affiliate', site_name } }
     end
@@ -83,7 +84,7 @@ module AnalyticsDSL
     must_not_spider(json)
   end
 
-  def must_type(json, type)
+  def must_type(json) #fixme
     json.filter do
       json.child! { json.term { json.type type } }
     end
