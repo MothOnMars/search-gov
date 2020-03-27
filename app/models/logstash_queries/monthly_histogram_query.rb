@@ -5,6 +5,7 @@ class MonthlyHistogramQuery
   def initialize(affiliate_name, since = RTU_START_DATE)
     @affiliate_name = affiliate_name
     @since = since
+    @type = 'search'
   end
 
   def body
@@ -28,8 +29,9 @@ class MonthlyHistogramQuery
   end
 
   def booleans(json)
+    must_affiliate(json, affiliate_name)
+    must_type(json)
     json.filter do
-      json.child! { json.term { json.set! 'params.affiliate', @affiliate_name } }
       json.child! { since(json, @since) }
     end
     must_not_spider(json)

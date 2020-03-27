@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RtuMonthlyReport
   include LogstashPrefix
   include QueryCtrCollector
@@ -23,6 +25,7 @@ class RtuMonthlyReport
   def no_result_queries
     @no_result_queries ||= begin
       query = DateRangeTopNMissingQuery.new(@site.name,
+                                            'search',
                                             @month_range.begin,
                                             @month_range.end,
                                             field: 'params.query.raw',
@@ -65,8 +68,9 @@ class RtuMonthlyReport
   private
 
   def month_count(type)
-    count_query = CountQuery.new(@site.name)
-    RtuCount.count("#{logstash_prefix(@filter_bots)}#{@year}.#{'%02d' % @month}.*", type, count_query.body)
+    count_query = CountQuery.new(@site.name, type)
+    index = "#{logstash_prefix(@filter_bots)}#{@year}.#{'%02d' % @month}.*"
+    RtuCount.count(index, count_query.body)
   end
 
   def mmyyyy(date)
