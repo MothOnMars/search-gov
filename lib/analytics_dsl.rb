@@ -66,7 +66,6 @@ module AnalyticsDSL
   end
 
   def must_affiliate(json, site_name)
-    puts "adding affiliate".red
     json.filter do
       json.child! { json.term { json.set! 'params.affiliate', site_name } }
     end
