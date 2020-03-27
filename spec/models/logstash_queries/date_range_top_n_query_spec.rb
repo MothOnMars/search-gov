@@ -5,7 +5,10 @@ describe DateRangeTopNQuery do
     DateRangeTopNQuery.new('affiliate_name',
                            Date.parse('2019-11-01'),
                            Date.parse('2019-11-07'),
-                           { field: 'params.query.raw', size: 1000 })
+                           'search',
+                           { field: 'params.query.raw',
+                             size: 1000 }
+                          )
   end
   let(:expected_body) do
     {
@@ -15,6 +18,11 @@ describe DateRangeTopNQuery do
             {
               "term": {
                 "params.affiliate": "affiliate_name"
+              }
+            },
+            {
+              "term": {
+                "type": "search"
               }
             },
             {
