@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class DateRangeTopNQuery < TopNQuery
-  def initialize(affiliate_name, start_date, end_date, type, agg_options = {})
+  def initialize(affiliate_name, type, start_date, end_date, agg_options = {})
     super(affiliate_name, type, agg_options)
     @start_date = start_date
     @end_date = end_date
