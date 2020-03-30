@@ -3,11 +3,11 @@ require 'spec_helper'
 describe DateRangeTopNFieldQuery do
   let(:query) do
     DateRangeTopNFieldQuery.new('affiliate_name',
+                                'search',
                                 Date.parse('2014-06-28'),
                                 Date.parse('2014-06-29'),
                                 'params.url',
                                 'some_url',
-                                'click',
                                 { field: 'params.query.raw', size: 100 })
   end
   let(:expected_body) do
@@ -22,12 +22,12 @@ describe DateRangeTopNFieldQuery do
             },
             {
               "term": {
-                "params.url": "some_url"
+                "type": "search"
               }
             },
             {
               "term": {
-                "type": "click"
+                "params.url": "some_url"
               }
             },
             {
@@ -57,6 +57,7 @@ describe DateRangeTopNFieldQuery do
   context 'when the affiliate is nil' do
     let(:query) do
       DateRangeTopNFieldQuery.new(nil,
+                                  'click',
                                   Date.parse("2014-06-28"),
                                   Date.parse("2014-06-29"),
                                   'params.url',
@@ -68,6 +69,11 @@ describe DateRangeTopNFieldQuery do
         "query": {
           "bool": {
             "filter": [
+              {
+                "term": {
+                  "type": "click"
+                }
+              },
               {
                 "term": {
                   "params.url": "some_url"

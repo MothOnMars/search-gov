@@ -1,9 +1,10 @@
 class DateRangeTopNFieldQuery < DateRangeTopNQuery
   attr_reader :filters
 
-  def initialize(affiliate_name, start_date, end_date, filter_field, filter_value, agg_options = {})
-    super(affiliate_name, start_date, end_date, agg_options)
-    @filters = { 'params.affiliate' => @affiliate_name,
+  def initialize(affiliate_name, type, start_date, end_date, filter_field, filter_value, agg_options = {})
+    super(affiliate_name, type, start_date, end_date, agg_options)
+    @filters = { 'params.affiliate' => affiliate_name,
+                 'type' => type,
                  filter_field => filter_value }.compact
   end
 
@@ -14,8 +15,6 @@ class DateRangeTopNFieldQuery < DateRangeTopNQuery
       end
     end
 
-    json.filter do
-      json.child! { date_range(json, @start_date, @end_date) }
-    end
+    must_date_range(json, start_date, end_date)
   end
 end
