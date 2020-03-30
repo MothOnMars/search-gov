@@ -19,8 +19,8 @@ describe DateRangeTopNMissingQuery do
               }
             },
             {
-              "term": {
-                "type": "search"
+              "terms": {
+                "type": ["search"]
               }
             },
             {

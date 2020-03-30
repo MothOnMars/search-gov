@@ -19,8 +19,8 @@ describe TopNMissingQuery do
               }
             },
             {
-              "term": {
-                "type": "search"
+              "terms": {
+                "type": ["search"]
               }
             }
           ],

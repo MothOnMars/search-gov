@@ -83,9 +83,9 @@ module AnalyticsDSL
     must_not_spider(json)
   end
 
-  def must_type(json) #fixme
+  def must_type(json)
     json.filter do
-      json.child! { json.term { json.type type } }
+      json.child! { json.terms { json.type Array(type) } }
     end
   end
 end

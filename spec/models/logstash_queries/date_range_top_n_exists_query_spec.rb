@@ -19,8 +19,8 @@ describe DateRangeTopNExistsQuery do
               }
             },
             {
-              "term": {
-                "type": "search"
+              "terms": {
+                "type": ["search"]
               }
             },
             {

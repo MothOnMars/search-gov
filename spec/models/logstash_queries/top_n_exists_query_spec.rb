@@ -19,8 +19,8 @@ describe TopNExistsQuery do
               }
             },
             {
-              "term": {
-                "type": "search"
+              "terms": {
+                "type": ["search"]
               }
             },
             {

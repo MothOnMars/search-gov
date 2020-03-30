@@ -21,8 +21,8 @@ describe DateRangeTopNFieldQuery do
               }
             },
             {
-              "term": {
-                "type": "search"
+              "terms": {
+                "type": ["search"]
               }
             },
             {
@@ -70,8 +70,8 @@ describe DateRangeTopNFieldQuery do
           "bool": {
             "filter": [
               {
-                "term": {
-                  "type": "click"
+                "terms": {
+                  "type": ["click"]
                 }
               },
               {

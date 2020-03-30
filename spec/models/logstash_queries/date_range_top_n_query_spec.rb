@@ -21,8 +21,8 @@ describe DateRangeTopNQuery do
               }
             },
             {
-              "term": {
-                "type": "search"
+              "terms": {
+                "type": ["search"]
               }
             },
             {
