@@ -152,7 +152,7 @@ jobs:
                               --format RspecJunitFormatter \
                               --out /tmp/test-results/rspec.xml \
                               --format progress \
-                              --seed 8328 \ #FIXME
+                              --seed 8328 \
                               $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
 
             ./cc-test-reporter format-coverage --output coverage/codeclimate.rspec.$CIRCLE_NODE_INDEX.json
