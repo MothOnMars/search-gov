@@ -39,7 +39,7 @@ class RtuMonthlyReport
     @low_ctr_queries ||= begin
       low_ctr_query = LowCtrQuery.new(@site.name, @month_range.begin, @month_range.end)
       indexes = monthly_index_wildcard_spanning_date(@month_range.begin, @filter_bots)
-      buckets = top_n(low_ctr_query.body, %w(search click), indexes)
+      buckets = top_n(low_ctr_query.body, indexes)
       low_ctr_queries_from_buckets(buckets, 20, 10)
     end
   end
@@ -77,8 +77,14 @@ class RtuMonthlyReport
     (date || Date.current).strftime('%m/%Y')
   end
 
-  def top_n(query_body, type, indexes)
-    ES::ELK.client_reader.search(index: indexes, type: type, body: query_body, size: 0)["aggregations"]["agg"]["buckets"] rescue []
+  def top_n(query_body, indexes)
+    ES::ELK.client_reader.search(
+      index: indexes,
+      body: query_body,
+      size: 0
+    )["aggregations"]["agg"]["buckets"]
+  rescue StandardError => error
+    Rails.logger.error("Error querying top_n data: #{error}")
+    []
   end
-
 end
