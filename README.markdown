@@ -35,6 +35,11 @@ The packages below are included in the [custom Docker image](/Dockerfile) used f
 * [Java Runtime Environment](https://www.java.com/en/download/)
 * [PhantomJS](http://phantomjs.org/download.html) - required to run JavaScript in Cucumber features
 
+## Gems
+
+The Docker app container automatically installs gems when the container is built. If you make any changes to the gems, you should rebuild the app image:
+
+    $ docker-compose build app
 
 ## Service credentials; how we protect secrets
 
@@ -98,13 +103,10 @@ Same thing, but using Resque to index in parallel:
 
 Make sure the unit tests, functional and integration tests run:
     
-    # Run all the specs
-    $ docker-compose exec app bin/rake
+    # Run the RSpec tests
+    $ docker-compose exec app bundle exec rspec spec/
     
-    # Run just the RSpec tests
-    $ docker-compose exec app bin/rspec spec
-    
-    # Run just the Cucumber integration tests
+    # Run the Cucumber integration tests
     $ docker-compose exec app bundle exec cucumber features/
 
 ## Circle CI
@@ -113,7 +115,7 @@ We use [CircleCI](https://circleci.com/gh/GSA/usasearch) for continuous integrat
 
 # Code Coverage
 
-We track test coverage of the codebase over time, to help identify areas where we could write better tests and to see when poorly tested code got introduced. After running the tests, open `coverage/index.html` in your favorite browser to view the report.
+We track test coverage of the codebase over time, to help identify areas where we could write better tests and to see when poorly tested code got introduced. After running the tests (both RSpec & Cucumber), open `coverage/index.html` in your favorite browser to view the report.
 
 You can click around on the files that have < 100% coverage to see what lines weren't exercised.
 
@@ -198,7 +200,7 @@ Example:
 
 1. Schedule a delayed job: `SitemapMonitorJob.set(wait: 5.minutes).perform_later`
 
-3. Check the 'Delayed' tab in [Resque web](http://0.0.0.0:5678/delayed) to see your job.
+1. Check the 'Delayed' tab in [Resque web](http://0.0.0.0:5678/delayed) to see your job.
 
 # Performance
 We use New Relic to monitor our site performance, especially on search requests. If you are doing something around search, make
