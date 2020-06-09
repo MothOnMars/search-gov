@@ -24,7 +24,7 @@ We have configured Elasticsearch 6.8 to run on port 9268, and Elasticsearch 7.7 
 
 * [MySQL](https://dev.mysql.com/doc/refman/5.6/en/) 5.6 - database, accessible from user 'root' with no password
 * [Redis](https://redis.io/) 5.0 - We're using the Redis key-value store for caching, queue workflow via Resque, and some analytics.
-* TIKA
+* [Tika](https://tika.apache.org/) - for extracting plain text from PDFs, etc.
 
 ### Packages
 The packages below are included in the [custom Docker image](/Dockerfile) used for building the search-gov `app` container.

@@ -20,10 +20,7 @@ services:
       - ES_A_HOST=http://elasticsearch6:9200
       - ES_B_HOST=http://elasticsearch7:9200
       - REDIS_HOST=redis
-
-
-  # TODO: COPY SECRETS
-  # TODO: update ports in readme
+      - TIKA_HOST=tika
 
   elasticsearch6:
     image: docker.elastic.co/elasticsearch/elasticsearch:6.8.9
@@ -85,6 +82,11 @@ services:
     image: redis:5.0.9
     ports:
       - 6379:6379
+
+  tika:
+    image: apache/tika:1.21
+    ports:
+      - 9998:9998
 
   resque-web:
     command: 'bundle exec resque-web ./lib/setup_resque.rb -F -r redis:6379'
