@@ -93,7 +93,6 @@ RSpec.configure do |config|
 
   config.after(:suite) do
     TestServices::delete_es_indexes
-    TestServices::stop_redis unless ENV['TRAVIS']
   end
 
   # Add VCR to all tests

@@ -83,7 +83,6 @@ TestServices::create_es_indexes
 
 at_exit do
   TestServices::delete_es_indexes
-  TestServices::stop_redis unless ENV['TRAVIS']
   exit ScenarioStatusTracker.success
 end
 Capybara.asset_host = "http://localhost:3000"
