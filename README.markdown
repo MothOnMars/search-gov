@@ -9,7 +9,7 @@
 
 ### Docker
 
-The search-gov app and its required services (Redis, MySQL, etc.) can all be installed and run using [Docker](https://www.docker.com/get-started). If you prefer to install the services and packages without Docker, see the [wiki](https://github.com/GSA/search-gov/wiki/Local-Installation-and-Management-of-dependencies). We recommend setting the max memory alloted to Docker to 4GB (in Docker Desktop, Preferences > Resources > Advanced).
+The search-gov app and its required services (Redis, MySQL, etc.) can all be installed and run using [Docker](https://www.docker.com/get-started). If you prefer to install the services and packages without Docker, see the [wiki](https://github.com/GSA/search-gov/wiki/Local-Installation-and-Management-of-dependencies). We recommend setting the max memory alloted to Docker to 4GB (in Docker Desktop, Preferences > Resources > Advanced). All of the `docker-compose exec ...` commands below require you to have a running app container via `docker-compose up`. See [the wiki](https://github.com/GSA/search-gov/wiki/Docker-Command-Reference) for more documentation on Docker commands.
     
 ### Services
 The required services listed below can be configured and run using Docker. You can run them all, including the search-gov app, with `docker-compose up`. Alternatively, you can run them individually, i.e. `docker-compose up elasticsearch`.  
@@ -22,11 +22,12 @@ We have configured Elasticsearch 6.8 to run on port 9268, and Elasticsearch 7.7 
     
 * [Kibana](https://www.elastic.co/kibana) - Kibana is not required, but can be very useful for debugging Elasticsearch. Confirm Kibana is available for the Elasticsearch 6.8 cluster by visiting <http://localhost:5668>.
 
-* [MySQL](https://dev.mysql.com/doc/refman/5.6/en/) 5.6 - database
+* [MySQL](https://dev.mysql.com/doc/refman/5.6/en/) 5.6 - database, accessible from user 'root' with no password
 * [Redis](https://redis.io/) 5.0 - We're using the Redis key-value store for caching, queue workflow via Resque, and some analytics.
+* TIKA
 
 ### Packages
-The packages below are included in the custom Docker image used for building the search-gov `app` container.
+The packages below are included in the [custom Docker image](/Dockerfile) used for building the search-gov `app` container.
 
 * C++ compiler - required by the [cld3](https://github.com/akihikodaki/cld3-ruby) gem, which we use for language detection
 * Google's [protocol buffers](https://developers.google.com/protocol-buffers/) - also required by the cld gem
@@ -49,10 +50,10 @@ Anything listed in the `secret_keys` entry of that file will automatically be ma
 ## Database
 
 
-Create and set up your development and test databases. The database.yml file assumes you have a local database server up and running (MySQL 5.6.x), accessible from user 'root' with no password.
+Create and set up your development and test databases:
 
-    $ docker-compose run --rm app bin/rails db:setup
-    $ docker-compose run --rm app bin/rails db:test:prepare
+    $ docker-compose exec app bin/rails db:setup
+    $ docker-compose exec app app bin/rails db:test:prepare
 
 ## Asset pipeline
 
@@ -70,34 +71,31 @@ A few tips when working with asset pipeline:
 
 You can create the USASearch-related indexes like this:
 
-    $ docker-compose run --rm app rake usasearch:elasticsearch:create_indexes
+    $ docker-compose exec app rake usasearch:elasticsearch:create_indexes
 
 You can index all the records from ActiveRecord-backed indexes like this:
 
-    $ docker-compose run --rm app rake usasearch:elasticsearch:index_all[FeaturedCollection+BoostedContent]
+    $ docker-compose exec app rake usasearch:elasticsearch:index_all[FeaturedCollection+BoostedContent]
 
 If you want it to run in parallel using Resque workers, call it like this:
 
-    $ docker-compose run --rm app rake usasearch:elasticsearch:resque_index_all[FeaturedCollection+BoostedContent]
+    $ docker-compose exec app rake usasearch:elasticsearch:resque_index_all[FeaturedCollection+BoostedContent]
 
 Note that indexing everything uses whatever index/mapping/setting is in place. If you need to change the Elasticsearch schema first, do this:
 
-    $ docker-compose run --rm app rake usasearch:elasticsearch:recreate_index[FeaturedCollection]
+    $ docker-compose exec app rake usasearch:elasticsearch:recreate_index[FeaturedCollection]
 
 If you are changing a schema and want to migrate the index without having it be unavailable, do this:
 
-    $ docker-compose run --rm app rake usasearch:elasticsearch:migrate[FeaturedCollection]
+    $ docker-compose exec app rake usasearch:elasticsearch:migrate[FeaturedCollection]
 
 Same thing, but using Resque to index in parallel:
 
-    $ docker-compose run --rm app rake usasearch:elasticsearch:resque_migrate[FeaturedCollection]
+    $ docker-compose exec app rake usasearch:elasticsearch:resque_migrate[FeaturedCollection]
 
 # Tests
 
 Make sure the unit tests, functional and integration tests run:
-
-    # Spin up all the services in Docker containers
-    $ docker-compose up
     
     # Run all the specs
     $ docker-compose exec app bin/rake
@@ -143,7 +141,7 @@ To create a new local admin account we will need to:
 3. Add an admin user to your local app.
 
 #### 1. Login sandbox
-[Create an account](https://idp.int.identitysandbox.gov/sign_up/enter_email) on Login's sandbox environment. This will need to be a real, valid government email address that you can get emails at. Something like `your-real-name+search-local@gsa.gov`. You'll receive a validation email to set a password and secondary authentication method.
+[Create an account](https://idp.int.identitysandbox.gov/sign_up/enter_email) on Login's sandbox environment. This will need to be a valid email address that you can get emails at. You'll receive a validation email to set a password and secondary authentication method.
 
 #### 2. Get the Login sandbox private key
 Ask your team members for the current `config/logindotgov.pem` file. This private key will let your local app complete the handshake with the Login sandbox servers.
