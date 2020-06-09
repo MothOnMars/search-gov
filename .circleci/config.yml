@@ -59,7 +59,6 @@ jobs:
 
     steps:
       - checkout
-# TODO: delete 5.6 references
 
       - run:
           name: Wait for Elasticsearch 6.8

@@ -75,9 +75,6 @@ module ScenarioStatusTracker
 end
 
 require_relative '../../spec/test_services.rb'
-unless ENV['TRAVIS']
-  TestServices::start_redis
-end
 
 EmailTemplate.load_default_templates
 OutboundRateLimit.load_defaults
