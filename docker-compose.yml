@@ -15,12 +15,8 @@ services:
     volumes:
       - .:/usr/src/app
       - gem_cache:/gems
-    environment:
-      - DB_HOST=mysql
-      - ES_6_HOST=http://elasticsearch6:9200
-      - ES_7_HOST=http://elasticsearch7:9200
-      - REDIS_HOST=redis
-      - TIKA_HOST=tika
+    env_file:
+      - .env/development/app
 
   elasticsearch6:
     image: docker.elastic.co/elasticsearch/elasticsearch:6.8.9
@@ -74,9 +70,8 @@ services:
       - db_data:/var/lib/mysql/data
     ports:
       - 3306:3306
-    environment:
-      - MYSQL_ALLOW_EMPTY_PASSWORD=true
-      - MYSQL_USER=root
+    env_file:
+      - .env/development/mysql
 
   redis:
     image: redis:5.0.9
@@ -103,12 +98,9 @@ services:
       - elasticsearch6
       - mysql
       - redis
-    environment:
-      - DB_HOST=mysql
-      - ES_6_HOST=http://elasticsearch6:9200
-      - REDIS_HOST=redis
-      - QUEUE=*
-      - VERBOSE=true
+    env_file:
+      - .env/development/app
+      - .env/development/resque
 
   resque-scheduler:
     command: 'bundle exec rake resque:scheduler'
@@ -117,12 +109,9 @@ services:
       - elasticsearch6
       - mysql
       - redis
-    environment:
-      - DB_HOST=mysql
-      - ES_6_HOST=http://elasticsearch6:9200
-      - REDIS_HOST=redis
-      - QUEUE=*
-      - VERBOSE=true
+    env_file:
+      - .env/development/app
+      - .env/development/resque
 
 volumes:
   db_data:
