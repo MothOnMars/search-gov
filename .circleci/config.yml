@@ -43,6 +43,8 @@ executors:
           xpack.security.enabled: false
           ES_JAVA_OPTS: '-Xms512m -Xmx512m'
 
+      - image: apache/tika:1.21
+
 
 commands:
   prepare_database:
