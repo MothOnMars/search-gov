@@ -6,7 +6,6 @@ describe Click do
   let(:url) { 'http://www.fda.gov/foo.html' }
   let(:ip) { '0.0.0.0' }
   let(:position) { '7' }
-  let(:module_code) { 'BOOS' }
   let(:params) do
     {
       url: url,
@@ -14,7 +13,7 @@ describe Click do
       client_ip: ip,
       affiliate: 'nps.gov',
       position: position,
-      module_code: module_code,
+      module_code: 'BWEB',
       vertical: 'web',
       user_agent: 'mozilla'
     }
