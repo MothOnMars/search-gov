@@ -171,7 +171,7 @@ jobs:
             ./cc-test-reporter before-build
 
             # Run cucumber tests
-            bundle exec cucumber --format progress \
+            bundle exec cucumber --format documentation \
                                 --format junit \
                                 --out /tmp/test-results/cucumber.xml \
                                 --format progress \
