@@ -19,6 +19,8 @@ class Click
     @affiliate = params[:affiliate]
     @position = params[:position]
     @module_code = params[:module_code]
+    puts "module code: #{module_code}"
+    puts "included? #{SearchModule.pluck(:tag).include? @module_code}"
     @vertical = params[:vertical]
     @user_agent = params[:user_agent]
   end

@@ -23,6 +23,9 @@ describe Click do
   subject(:click) { described_class.new params }
 
   context 'with required params' do
+    before do
+      Rails.logger.info "STARTING SPEC"
+    end
     describe '#valid?' do
       it { is_expected.to be_valid }
     end
