@@ -124,10 +124,9 @@ jobs:
             ./cc-test-reporter before-build
 
             # Run Rspec tests
-            bundle exec rspec --format progress \
+            bundle exec rspec --format documentation \
                               --format RspecJunitFormatter \
                               --out /tmp/test-results/rspec.xml \
-                              --format progress \
                               $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
 
             ./cc-test-reporter format-coverage --output coverage/codeclimate.rspec.$CIRCLE_NODE_INDEX.json
