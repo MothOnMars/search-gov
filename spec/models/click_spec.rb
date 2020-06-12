@@ -13,7 +13,7 @@ describe Click do
       client_ip: ip,
       affiliate: 'nps.gov',
       position: position,
-      module_code: 'BWEB',
+      module_code: 'BOOS',
       vertical: 'web',
       user_agent: 'mozilla'
     }
