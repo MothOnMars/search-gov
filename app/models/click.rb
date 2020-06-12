@@ -8,9 +8,6 @@ class Click
   attr_reader :url, :query, :position, :module_code, :client_ip, :user_agent
 
 
-  before_validation do
-    SearchModule.pluck(:tag)
-  end
   validates :url, :query, :position, :module_code, :client_ip, :user_agent, presence: true
   validates :position, numericality: { only_integer: true, greater_than_or_equal_to: 0, allow_blank: true }
   validates :module_code,
