@@ -12,7 +12,7 @@ class Click
   validates :position, numericality: { only_integer: true, greater_than_or_equal_to: 0, allow_blank: true }
   validates :module_code,
     inclusion: {
-      in: SEARCH_MODULES,
+      in: mods,
       allow_blank: true, message: '%{value} is not a valid module'
   }
   #validates :module_code, inclusion: { in: ["BBG", "BOOS", "BWEB", "CREL", "QRTD", "VIDEO"], allow_blank: true, message: '%{value} is not a valid module' }
@@ -38,6 +38,11 @@ class Click
   end
 
   private
+
+  def mods
+    puts "MODS: #{SearchModule.pluck(:tag)}"
+    SearchModule.pluck(:tag)
+  end
 
   def client_ip_validation
     return if client_ip.blank?
