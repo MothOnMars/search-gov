@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Click
+  MODULES = SearchModule.pluck(:tag)
+
   include ActiveModel::Validations
 
   attr_reader :url, :query, :position, :module_code, :client_ip, :user_agent
@@ -13,7 +15,7 @@ class Click
   validates :position, numericality: { only_integer: true, greater_than_or_equal_to: 0, allow_blank: true }
   validates :module_code,
     inclusion: {
-      in: SearchModule.pluck(:tag),
+      in: MODULES,
       allow_blank: true, message: '%{value} is not a valid module'
   }
   #validates :module_code, inclusion: { in: ["BBG", "BOOS", "BWEB", "CREL", "QRTD", "VIDEO"], allow_blank: true, message: '%{value} is not a valid module' }
