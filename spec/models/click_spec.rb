@@ -6,7 +6,7 @@ describe Click do
   let(:url) { 'http://www.fda.gov/foo.html' }
   let(:ip) { '0.0.0.0' }
   let(:position) { '7' }
-  let(:module_code) { 'BWEB' }
+  let(:module_code) { 'BOOS' }
   let(:params) do
     {
       url: url,
