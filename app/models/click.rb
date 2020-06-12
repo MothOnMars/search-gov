@@ -12,6 +12,7 @@ class Click
   validate :client_ip_validation
 
   def initialize(params)
+    puts "MODULES: #{SearchModule.pluck(:tag)}"
     @url = unescape_url(params[:url])
     @query = params[:query]
     @client_ip = params[:client_ip]
