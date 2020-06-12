@@ -41,6 +41,9 @@ VCR.configure do |config|
 
   # Tika
   config.ignore_request { |request| URI(request.uri).port == 9998 }
+  config.ignore_request { |request| URI(request.uri).port.between?(9200,9299) } #Elasticsearch
+  config.ignore_request { |request| URI(request.uri).port == 9515 } # Selenium Webdriver
+  config.ignore_request { |request| URI(request.uri).port == 9517 } # Chrome Webdriver
 
   secrets = YAML.load(ERB.new(File.read(Rails.root.join('config', 'secrets.yml'))).result)
   secrets['secret_keys'].each do |service, keys|
@@ -51,6 +54,11 @@ VCR.configure do |config|
 
   config.before_record do |i|
     i.response.body.force_encoding('UTF-8')
+  end
+
+  #Capybara: http://stackoverflow.com/a/6120205/1020168
+  config.ignore_request do |request|
+    URI(request.uri).request_uri == "/__identify__"
   end
 
   #For future debugging reference:

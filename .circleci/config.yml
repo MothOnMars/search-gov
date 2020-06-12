@@ -124,16 +124,10 @@ jobs:
             bundle exec rake usasearch:elasticsearch:create_indexes
 
             mkdir /tmp/test-results
-            ./cc-test-reporter before-build
 
             # Run Rspec tests
-            bundle exec rspec --format progress \
-                              --format RspecJunitFormatter \
-                              --out /tmp/test-results/rspec.xml \
-                              --format progress \
-                              $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
+            bundle exec rspec spec/models/click_spec.rb --format documentation
 
-            ./cc-test-reporter format-coverage --output coverage/codeclimate.rspec.$CIRCLE_NODE_INDEX.json
 
       - persist_to_workspace:
           root: ~/search-gov/coverage
@@ -174,7 +168,7 @@ jobs:
             ./cc-test-reporter before-build
 
             # Run cucumber tests
-            bundle exec cucumber --format progress \
+            bundle exec cucumber --format documentation \
                                 --format junit \
                                 --out /tmp/test-results/cucumber.xml \
                                 --format progress \
@@ -231,11 +225,3 @@ workflows:
           requires:
             - bundle_install
 
-      - cucumber:
-          requires:
-            - bundle_install
-
-      - report_coverage:
-          requires:
-            - rspec
-            - cucumber

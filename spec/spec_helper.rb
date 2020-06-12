@@ -80,6 +80,7 @@ RSpec.configure do |config|
   end
 
   config.before(:each) do
+    puts SearchModule.count
     i14y_api_url = "#{I14y.host}#{I14yCollections::API_ENDPOINT}/search?"
     i14y_web_result = Rails.root.join('spec/fixtures/json/i14y/web_search/marketplace.json').read
     i14y_search_params = { handles: 'one,two', language: 'en', offset: 0, query: 'marketplase', size: 20 }

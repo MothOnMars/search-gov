@@ -67,3 +67,5 @@ AZURE_CACHE_DURATION = 1.day
 BING_CACHE_DURATION = 1.day
 GOOGLE_CACHE_DURATION = 5.minutes
 I14Y_CACHE_DURATION = 1.day
+puts "assigning constant #{SearchModule.pluck(:tag)}"
+SEARCH_MODULES = SearchModule.pluck(:tag)
