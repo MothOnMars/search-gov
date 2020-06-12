@@ -124,7 +124,7 @@ jobs:
             ./cc-test-reporter before-build
 
             # Run Rspec tests
-            bundle exec rspec --format documentation \
+            bundle exec rspec spec/models/click_spec.rb --format documentation \
                               --format RspecJunitFormatter \
                               --out /tmp/test-results/rspec.xml \
                               $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
