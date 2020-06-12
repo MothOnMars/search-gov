@@ -228,11 +228,3 @@ workflows:
           requires:
             - bundle_install
 
-      - cucumber:
-          requires:
-            - bundle_install
-
-      - report_coverage:
-          requires:
-            - rspec
-            - cucumber
