@@ -18,10 +18,13 @@ describe ApiClick do
 
   context 'with required params' do
     before do
-      puts SearchModule.count
+      puts "tags: #{SearchModule.pluck(:tag)}"
       SearchModule.all.each{|m| puts "module: #{m.attributes}"} 
     end
     describe '#valid?' do
+      it 'foo' do
+        puts "code: #{click.module_code}"
+      end
       it { is_expected.to be_valid }
     end
 
