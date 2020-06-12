@@ -57,5 +57,5 @@ VCR.configure do |config|
   end
 
   #For future debugging reference:
-  #config.debug_logger = STDOUT
+  config.debug_logger = STDOUT
 end
