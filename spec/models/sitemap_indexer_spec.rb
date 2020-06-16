@@ -182,5 +182,15 @@ describe SitemapIndexer do
         index
       end
     end
+
+    context 'when parsing the sitemap raises an error' do
+      let(:sitemap_entries) { '<url><loc>http://agency.gov/doc1</loc></bad_tag>' }
+
+      it 'does not raise an error' do
+        
+      end
+
+
+    end
   end
 end
