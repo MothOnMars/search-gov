@@ -183,14 +183,12 @@ describe SitemapIndexer do
       end
     end
 
-    context 'when parsing the sitemap raises an error' do
+    context 'when the sitemap XML is poorly formatted' do
       let(:sitemap_entries) { '<url><loc>http://agency.gov/doc1</loc></bad_tag>' }
 
       it 'does not raise an error' do
-        
+        expect{ index }.not_to raise_error
       end
-
-
     end
   end
 end

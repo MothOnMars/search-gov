@@ -18,14 +18,22 @@ class SitemapIndexer
   private
 
   def sitemaps
-    @sitemaps ||= Sitemaps.parse(sitemap).sitemaps
+    @sitemaps ||= parsed_sitemap.sitemaps
+  end
+
+  def parsed_sitemap
+    @parsed_sitemap ||= Sitemaps.parse(sitemap)
+  rescue StandardError => error
+    error_info = { error: error.message }
+    Sitemaps.parse(nil) #FIXME
+    #Rails.logger.error "[Searchgov SitemapIndexer] #{log_info.merge(sitemap_entry_failed:  sitemap_url, error: e.message).to_json}".red
   end
 
   def sitemap_entries
     # Eventually we might add an option to the Sitemaps gem to limit the URLS
     # to those strictly adhering to the sitemap protocol, but this should suffice for now
     # https://www.pivotaltracker.com/story/show/157485118
-    @sitemap_entries ||= Sitemaps.parse(sitemap).entries.select do |entry|
+    @sitemap_entries ||= parsed_sitemap.entries.select do |entry|
       entry.loc.host == domain
     end
   end
