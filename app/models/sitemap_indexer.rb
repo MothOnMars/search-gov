@@ -22,11 +22,13 @@ class SitemapIndexer
   end
 
   def parsed_sitemap
-    @parsed_sitemap ||= Sitemaps.parse(sitemap)
-  rescue StandardError => error
-    error_info = { error: error.message }
-    Sitemaps.parse(nil) #FIXME
-    #Rails.logger.error "[Searchgov SitemapIndexer] #{log_info.merge(sitemap_entry_failed:  sitemap_url, error: e.message).to_json}".red
+    @parsed_sitemap ||= begin
+      Sitemaps.parse(sitemap)
+    rescue StandardError => error
+      error_info = { error: error.message }
+      Rails.logger.error "[Searchgov SitemapIndexer] #{log_info.merge(error_info).to_json}".red
+      Sitemaps.parse(nil) #FIXME
+    end
   end
 
   def sitemap_entries
