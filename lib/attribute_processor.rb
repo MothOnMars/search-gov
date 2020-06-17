@@ -9,7 +9,7 @@ module AttributeProcessor
   def self.sanitize_attributes(record, *attribute_names)
     attribute_names.each do |attr_name|
       value = record.send :"#{attr_name}"
-      record.send :"#{attr_name}=", Sanitize.clean(value)
+      record.send :"#{attr_name}=", Loofah.fragment(value).to_text
     end
   end
 
