@@ -148,7 +148,8 @@ class MedTopic < ApplicationRecord
   end
 
   def truncated_summary
-    sentences = Sanitize.clean(summary_html).gsub(/[[:space:]]/, ' ').squish.split(/\.\s*/)
+    sentences = Loofah.fragment(summary_html).
+      to_text.gsub(/[[:space:]]/, ' ').squish.split(/\.\s*/)
     summary = ''
 
     sentences.slice(0,3).each do |sentence|
