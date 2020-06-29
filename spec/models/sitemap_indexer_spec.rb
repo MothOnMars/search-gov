@@ -191,8 +191,7 @@ describe SitemapIndexer do
       end
 
       it 'logs the error' do
-        expect(Rails.logger).to receive(:error).
-          with(/Missing end tag for 'url'/)
+        expect(Rails.logger).to receive(:error).with(/Missing end tag for 'url'/)
         index
       end
     end

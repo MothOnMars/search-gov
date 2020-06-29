@@ -26,8 +26,8 @@ class SitemapIndexer
       Sitemaps.parse(sitemap)
     rescue StandardError => error
       error_info = { error: error.message }
-      Rails.logger.error "[Searchgov SitemapIndexer] #{log_info.merge(error_info).to_json}".red
-      Sitemaps.parse(nil) #FIXME
+      Rails.logger.error("Error parsing sitemap: #{log_info.merge(error_info).to_json}")
+      Sitemaps.parse(nil)
     end
   end
 
