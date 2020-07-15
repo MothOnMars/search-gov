@@ -83,7 +83,7 @@ class SitemapIndexer
   def sitemap
     @sitemap ||= begin
       HTTP.headers(user_agent: DEFAULT_USER_AGENT).
-        timeout(connect: 20, read: 60).follow.get(uri).to_s.freeze
+        timeout(connect: 20, read: 60).follow.get(uri).to_s
     rescue => e
       error_info = log_info.merge(error: e.message)
       log_line = "[Searchgov SitemapIndexer] #{error_info.to_json}"
