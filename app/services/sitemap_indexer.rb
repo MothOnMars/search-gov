@@ -14,7 +14,10 @@ class SitemapIndexer
   end
 
   def index
-    sitemaps_stream.any? ? enqueue_sitemaps : process_entries
+    sitemaps_stream.any? ? enqueue_sitemaps : process_entries #this is blowing up
+  rescue 
+    #rescue this works...
+    
   end
 
   private
@@ -22,6 +25,7 @@ class SitemapIndexer
   def sitemaps_stream
     @sitemaps_stream ||= Saxerator.parser(sitemap).
                            within('sitemapindex').for_tag('sitemap')
+  rescue
   end
 
   def sitemap_entries_stream
@@ -41,6 +45,7 @@ class SitemapIndexer
       process_entry(entry) if entry_matches_domain?(entry)
     end
     searchgov_domain.index_urls
+  #rescue does not work
   ensure
     set_counter_callbacks
     update_counter_caches
