@@ -212,5 +212,18 @@ describe SitemapIndexer do
         index
       end
     end
+
+    context 'when a sitemap contains an invalid URL' do
+      let(:sitemap_entries) { '<url><loc>http://agency.gov/doc (1).pdf</loc></url>' }
+
+      it 'does not raise an error' do
+        expect{ indexer.index }.not_to raise_error
+      end
+
+      it 'logs the error' do
+        expect(Rails.logger).to receive(:error).with(/Invalid URL/)
+        index
+      end
+    end
   end
 end

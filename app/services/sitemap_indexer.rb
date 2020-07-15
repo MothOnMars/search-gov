@@ -69,7 +69,10 @@ class SitemapIndexer
     # strictly adhering to the sitemap protocol,
     # but matching the domain should suffice for now.
     # https://www.pivotaltracker.com/story/show/157485118
-    URI(entry['loc'].strip).host == domain
+    url = entry['loc'].strip
+    URI(url).host == domain
+  rescue URI::InvalidURIError
+    Rails.logger.error("Error processing sitemap entry. Invalid URL: #{url}")
   end
 
   def log_info
@@ -84,7 +87,7 @@ class SitemapIndexer
     @sitemap ||= begin
       HTTP.headers(user_agent: DEFAULT_USER_AGENT).
         timeout(connect: 20, read: 60).follow.get(uri).to_s
-    rescue => e
+    rescue StandardError => e
       error_info = log_info.merge(error: e.message)
       log_line = "[Searchgov SitemapIndexer] #{error_info.to_json}"
       Rails.logger.warn log_line.red
