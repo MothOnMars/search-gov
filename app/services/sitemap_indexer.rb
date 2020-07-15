@@ -47,9 +47,8 @@ class SitemapIndexer
       process_entry(entry) if entry_matches_domain?(entry)
     end
     searchgov_domain.index_urls
-  rescue
-    puts 'rescuing in process entries'
-  #rescue does not work
+  rescue => e
+    Rails.logger.error("Error processing entries for #{uri}: #{e}")
   ensure
     set_counter_callbacks
     update_counter_caches

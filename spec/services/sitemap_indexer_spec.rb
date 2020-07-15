@@ -200,7 +200,7 @@ describe SitemapIndexer do
         expect(SearchgovUrl.find_by(url: 'http://agency.gov/good')).not_to be_nil
       end
 
-      xit 'logs the error' do
+      it 'logs the error' do
         expect(Rails.logger).to receive(:error).with(/Missing end tag for 'url'/)
         index
       end
