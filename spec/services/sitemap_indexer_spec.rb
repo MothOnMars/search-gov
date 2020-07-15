@@ -204,6 +204,13 @@ describe SitemapIndexer do
         expect(Rails.logger).to receive(:error).with(/Missing end tag for 'url'/)
         index
       end
+
+      it 'kicks off indexing' do
+        allow(SearchgovDomain).to receive(:find_by).
+          with(domain: 'agency.gov').and_return(searchgov_domain)
+        expect(searchgov_domain).to receive(:index_urls)
+        index
+      end
     end
   end
 end

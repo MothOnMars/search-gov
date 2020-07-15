@@ -14,7 +14,7 @@ class SitemapIndexer
   end
 
   def index
-    sitemap_index? ? enqueue_sitemaps : process_entries #this is blowing up
+    sitemap_index? ? enqueue_sitemaps : process_entries
   end
 
   private
@@ -46,10 +46,10 @@ class SitemapIndexer
     sitemap_entries_stream.each do |entry|
       process_entry(entry) if entry_matches_domain?(entry)
     end
-    searchgov_domain.index_urls
   rescue => e
-    Rails.logger.error("Error processing entries for #{uri}: #{e}")
+    Rails.logger.error("Error processing sitemap entries for #{uri}: #{e}")
   ensure
+    searchgov_domain.index_urls
     set_counter_callbacks
     update_counter_caches
   end
