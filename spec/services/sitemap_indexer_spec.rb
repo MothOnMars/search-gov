@@ -184,10 +184,20 @@ describe SitemapIndexer do
     end
 
     context 'when the sitemap XML is poorly formatted' do
-      let(:sitemap_entries) { '<url><loc>http://agency.gov/doc1</loc></bad_tag>' }
+      let(:sitemap_entries) do
+        <<~SITEMAP_ENTRIES
+          <url><loc>http://agency.gov/good</loc></url>'
+          <url><loc>http://agency.gov/bad</loc></bad_tag>'
+        SITEMAP_ENTRIES
+      end
 
       it 'does not raise an error' do
         expect{ index }.not_to raise_error
+      end
+
+      it 'processes as many entries as possible' do
+        index
+        expect(SearchgovUrl.find_by(url: 'http://agency.gov/good')).not_to be_nil
       end
 
       xit 'logs the error' do

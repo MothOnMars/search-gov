@@ -14,10 +14,7 @@ class SitemapIndexer
   end
 
   def index
-    sitemaps_stream.any? ? enqueue_sitemaps : process_entries #this is blowing up
-  rescue 
-    #rescue this works...
-    
+    sitemap_index? ? enqueue_sitemaps : process_entries #this is blowing up
   end
 
   private
@@ -26,6 +23,12 @@ class SitemapIndexer
     @sitemaps_stream ||= Saxerator.parser(sitemap).
                            within('sitemapindex').for_tag('sitemap')
   rescue
+  end
+
+  def sitemap_index?
+    sitemaps_stream.any?
+  rescue Saxerator::ParseException
+    puts 'RESCUING'.cyan
   end
 
   def sitemap_entries_stream
@@ -45,6 +48,8 @@ class SitemapIndexer
       process_entry(entry) if entry_matches_domain?(entry)
     end
     searchgov_domain.index_urls
+  rescue
+    puts 'rescuing in process entries'
   #rescue does not work
   ensure
     set_counter_callbacks
