@@ -22,13 +22,12 @@ class SitemapIndexer
   def sitemaps_stream
     @sitemaps_stream ||= Saxerator.parser(sitemap).
                            within('sitemapindex').for_tag('sitemap')
-  rescue
   end
 
   def sitemap_index?
     sitemaps_stream.any?
   rescue Saxerator::ParseException
-    puts 'RESCUING'.cyan
+    false
   end
 
   def sitemap_entries_stream
