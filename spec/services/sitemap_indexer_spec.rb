@@ -183,7 +183,7 @@ describe SitemapIndexer do
       end
     end
 
-    context 'when the sitemap XML is poorly formatted' do
+    context 'when the XML is poorly formatted' do
       let(:sitemap_entries) do
         <<~SITEMAP_ENTRIES
           <url><loc>http://agency.gov/good</loc></url>'

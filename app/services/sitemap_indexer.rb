@@ -27,6 +27,7 @@ class SitemapIndexer
   def sitemap_index?
     sitemaps_stream.any?
   rescue Saxerator::ParseException
+    # We're rescuing and moving on, in case we can process any URLs
     false
   end
 
@@ -87,7 +88,7 @@ class SitemapIndexer
     @sitemap ||= begin
       HTTP.headers(user_agent: DEFAULT_USER_AGENT).
         timeout(connect: 20, read: 60).follow.get(uri).to_s
-    rescue StandardError => e
+    rescue  => e
       error_info = log_info.merge(error: e.message)
       log_line = "[Searchgov SitemapIndexer] #{error_info.to_json}"
       Rails.logger.warn log_line.red
