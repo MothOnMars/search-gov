@@ -27,6 +27,7 @@ class SearchgovCrawler
       Medusa.crawl(base_url, @medusa_opts) do |medusa|
         medusa.skip_links_like(skip_extensions_regex)
         medusa.skip_links_like(repeating_segments_regex)
+        medusa.skip_links_like(/(calendar|monthview)\.asp\?this/i)
 
         medusa.on_every_page do |page|
           begin
