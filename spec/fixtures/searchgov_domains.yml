@@ -3,4 +3,4 @@ DEFAULTS: &DEFAULTS
 
 basic_domain:
   <<: *DEFAULTS
-  domain: gsa.gov
+  domain: foo.gov
