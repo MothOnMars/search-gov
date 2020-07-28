@@ -12,11 +12,11 @@ describe SearchgovDomainReindexerJob do
 
   context 'when the domain has indexed URLs' do
     let!(:indexed_url) do
-      searchgov_domain.searchgov_urls.create!(url: 'https://agency.gov/ok',
+      searchgov_domain.searchgov_urls.create!(url: 'https://foo.gov/ok',
                                               last_crawl_status: 'OK')
     end
     let!(:failed_url) do
-      searchgov_domain.searchgov_urls.create!(url: 'https://agency.gov/failed',
+      searchgov_domain.searchgov_urls.create!(url: 'https://foo.gov/failed',
                                               last_crawl_status: 'failed')
     end
 
