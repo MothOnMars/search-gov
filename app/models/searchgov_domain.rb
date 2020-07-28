@@ -78,6 +78,7 @@ class SearchgovDomain < ApplicationRecord
 
   def reindex
     #move to job?
+    # reindex everything?
     searchgov_urls.ok.in_batches.update_all(enqueued_for_reindex: true)
     index_sitemaps
   end
