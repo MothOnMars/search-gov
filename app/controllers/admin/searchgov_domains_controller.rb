@@ -24,8 +24,8 @@ class Admin::SearchgovDomainsController < Admin::AdminController
   end
 
   def reindex
-    process_action_link_action do | record|
-      record.reindex
-    end
+    process_action_link_action { |searchgov_domain| searchgov_domain.reindex }
+
+    # TODO: flash?
   end
 end
