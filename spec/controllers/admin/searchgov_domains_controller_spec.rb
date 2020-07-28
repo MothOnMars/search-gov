@@ -11,8 +11,8 @@ describe Admin::SearchgovDomainsController do
       subject(:reindex) { post :reindex, params: params }
 
       it 'triggers a reindex on the domain' do
-        expect_any_instance_of(SearchgovDomain).to receive(:reindex)
-        reindex
+        expect { reindex }.to have_enqueued_job(SearchgovDomainReindexerJob).
+          with(searchgov_domain: searchgov_domain)
       end
     end
   end

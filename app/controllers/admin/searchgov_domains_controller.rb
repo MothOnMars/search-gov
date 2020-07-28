@@ -25,7 +25,7 @@ class Admin::SearchgovDomainsController < Admin::AdminController
 
   def reindex
     process_action_link_action do |searchgov_domain|
-      searchgov_domain.reindex
+      SearchgovDomainReindexerJob.perform_later(searchgov_domain: searchgov_domain)
 
       flash[:info] = "Reindexing has been enqueued for #{searchgov_domain.domain}"
     end
