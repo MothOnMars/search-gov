@@ -1,5 +1,6 @@
-#FIXME ?
-agency_domain:
-  domain: agency.gov
-  scheme: https
-  status: OK
+DEFAULTS: &DEFAULTS
+  status: 200 OK
+
+basic_domain:
+  <<: *DEFAULTS
+  domain: gsa.gov

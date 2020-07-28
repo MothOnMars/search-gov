@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Admin::SearchgovDomainsController do
-  let(:searchgov_domain) { searchgov_domains(:agency_domain) }
+  let(:searchgov_domain) { searchgov_domains(:basic_domain) }
   let(:params) do
     { id: searchgov_domain.id }
   end

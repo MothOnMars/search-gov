@@ -3,7 +3,7 @@ require 'spec_helper'
 describe SearchgovDomainReindexerJob do
   subject(:perform) { SearchgovDomainReindexerJob.perform_now(args) }
 
-  let(:searchgov_domain) { searchgov_domains(:agency_domain) }
+  let(:searchgov_domain) { searchgov_domains(:basic_domain) }
   let(:args) do
     { searchgov_domain: searchgov_domain }
   end
