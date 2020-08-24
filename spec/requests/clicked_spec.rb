@@ -17,7 +17,7 @@ describe '/clicked' do
 
   before do
     Rails.application.env_config['HTTP_USER_AGENT'] = 'test_user_agent'
-    Rails.application.env_config['HTTP_REFERER'] = 'test_referer'
+    Rails.application.env_config['HTTP_REFERER'] = 'https://example.gov/referrer'
   end
 
   after do
@@ -30,7 +30,7 @@ describe '/clicked' do
       valid_params.merge(
         client_ip: '127.0.0.1',
         user_agent: 'test_user_agent',
-        referrer: 'test_referrer'
+        referrer: 'https://example.gov/referrer'
       )
     end
 
