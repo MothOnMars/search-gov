@@ -7,7 +7,7 @@ class Click
   attr_accessor :url
 
   attr_reader :affiliate, :query, :position,
-              :module_code, :client_ip, :user_agent, :vertical
+              :module_code, :client_ip, :user_agent, :vertical, :referrer
 
   before_validation :unescape_url
 
@@ -30,6 +30,7 @@ class Click
     @module_code = params[:module_code]
     @vertical = params[:vertical]
     @user_agent = params[:user_agent]
+    @referrer = params[:referrer]
   end
 
   def log
@@ -65,7 +66,18 @@ class Click
       position: position,
       module_code: module_code,
       vertical: vertical,
-      user_agent: user_agent
+      user_agent: user_agent,
+      referrer: referrer
+      #TODO: add time
     }
   end
 end
+
+=begin
+    "params": {
+      "query": "associated business bureau",
+      "position": 1,
+      "affiliate": "everify",
+      "url": "https://www.e-verify.gov/"
+    },
+=end
