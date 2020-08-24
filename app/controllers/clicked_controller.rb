@@ -17,7 +17,7 @@ class ClickedController < ApplicationController
   private
 
   def permitted_params
-    permitted = params.permit(
+    params.permit(
       :url,
       :query,
       :position,
