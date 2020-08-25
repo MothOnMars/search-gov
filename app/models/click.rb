@@ -59,16 +59,19 @@ class Click
 
   def click_hash
     {
-      url: url,
-      query: query,
       client_ip: client_ip,
-      affiliate: affiliate,
-      position: position,
       module_code: module_code,
       vertical: vertical,
       user_agent: user_agent,
-      referrer: referrer
+      referrer: referrer,
+      params: {
+        url: url,
+        affiliate: affiliate,
+        query: query,
+        position: position
+      }
       #TODO: add time
+      #TODO: add request
     }
   end
 end
