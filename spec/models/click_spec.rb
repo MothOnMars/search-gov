@@ -35,15 +35,17 @@ describe Click do
         click.log
 
         click_json = {
-          url: 'http://www.fda.gov/foo.html',
-          query: 'my query',
           client_ip: '0.0.0.0',
-          affiliate: 'nps.gov',
-          position: '7',
           module_code: 'BWEB',
           vertical: 'web',
           user_agent: 'mozilla',
-          referrer: 'http://www.fda.gov/referrer'
+          referrer: 'http://www.fda.gov/referrer',
+          params: {
+            url: 'http://www.fda.gov/foo.html',
+            affiliate: 'nps.gov',
+            query: 'my query',
+            position: '7'
+          }
         }.to_json
 
         expect(Rails.logger).to have_received(:info).with("[Click] #{click_json}")
