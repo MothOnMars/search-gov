@@ -17,7 +17,7 @@ describe Click do
       module_code: module_code,
       vertical: 'web',
       user_agent: 'mozilla',
-      referrer: 'https://foo.gov/referrer'
+      referrer: 'http://www.fda.gov/referrer'
     }
   end
 
@@ -32,15 +32,21 @@ describe Click do
       before { allow(Rails.logger).to receive(:info) }
 
       it 'logs almost-JSON info about the click' do
-        click.validate # validating causes other instance variables to appear.
         click.log
 
-        expected_log = '[Click] {"url":"http://www.fda.gov/foo.html",'\
-                       '"query":"my query","client_ip":"0.0.0.0",'\
-                       '"affiliate":"nps.gov","position":"7","module_code":"BWEB",'\
-                       '"vertical":"web","user_agent":"mozilla","referrer":"https://foo.gov/referrer"}'
+        click_json = {
+          url: 'http://www.fda.gov/foo.html',
+          query: 'my query',
+          client_ip: '0.0.0.0',
+          affiliate: 'nps.gov',
+          position: '7',
+          module_code: 'BWEB',
+          vertical: 'web',
+          user_agent: 'mozilla',
+          referrer: 'http://www.fda.gov/referrer'
+        }.to_json
 
-        expect(Rails.logger).to have_received(:info).with(expected_log)
+        expect(Rails.logger).to have_received(:info).with("[Click] #{click_json}")
       end
 
       context 'when the URL is encoded' do

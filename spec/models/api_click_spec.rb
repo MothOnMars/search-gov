@@ -5,7 +5,7 @@ require 'spec_helper'
 describe ApiClick do
   let(:affiliate) { 'nps.gov' }
   subject(:click) do
-    described_class.new url: 'http://www.fda.gov/foo.html',
+    described_class.new(url: 'http://www.fda.gov/foo.html',
                         query: 'my query',
                         client_ip: '123.123.123.123',
                         affiliate: affiliate,
@@ -13,7 +13,8 @@ describe ApiClick do
                         module_code: 'BWEB',
                         vertical: 'web',
                         user_agent: 'mozilla',
-                        access_key: 'basic_key'
+                        access_key: 'basic_key',
+                        referrer: 'https://foo.gov/referrer')
   end
 
   context 'with required params' do
@@ -25,7 +26,6 @@ describe ApiClick do
       it 'logs almost-JSON info about the click' do
         allow(Rails.logger).to receive(:info)
 
-        click.validate #validating causes other instance variables to appear.
         click.log
 
         expected_log = '[Click] {"url":"http://www.fda.gov/foo.html",'\
