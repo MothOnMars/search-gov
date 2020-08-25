@@ -41,7 +41,7 @@ describe Click do
 
 
         puts  Time.now.to_formatted_s(:db)
-
+        
         click_json = {
           client_ip: '0.0.0.0',
           #request?
@@ -59,6 +59,7 @@ describe Click do
           }
         }.to_json
 
+        puts click_json.green
         expect(Rails.logger).to have_received(:info).with("[Click] #{click_json}")
       end
 

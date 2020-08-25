@@ -35,6 +35,7 @@ class Click
   end
 
   def log
+    puts click_hash.to_json.red
     Rails.logger.info('[Click] ' + click_hash.to_json)
   end
 
@@ -63,8 +64,10 @@ class Click
       client_ip: client_ip,
       referrer: referrer,
       user_agent: user_agent,
+      time: Time.now.to_formatted_s(:db),
       vertical: vertical,
       #request
+      #TODO: consider renaming module_code to modules
       module_code: module_code,
       params: {
         url: url,
