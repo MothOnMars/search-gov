@@ -31,6 +31,7 @@ class Click
     @vertical = params[:vertical]
     @user_agent = params[:user_agent]
     @referrer = params[:referrer]
+    @request = params[:request]
   end
 
   def log
@@ -60,10 +61,11 @@ class Click
   def click_hash
     {
       client_ip: client_ip,
-      module_code: module_code,
-      vertical: vertical,
-      user_agent: user_agent,
       referrer: referrer,
+      user_agent: user_agent,
+      vertical: vertical,
+      #request
+      module_code: module_code,
       params: {
         url: url,
         affiliate: affiliate,

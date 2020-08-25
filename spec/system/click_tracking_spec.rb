@@ -45,6 +45,7 @@ describe 'A user searches', js: true, vcr: { preserve_exact_body_bytes: true } d
             expect(logline).to include('"vertical":"i14y"')
             expect(logline).to include('"user_agent":')
             expect(logline).to include('"referrer":')
+            expect(logline).to include('"request":')
           end
         end
       end

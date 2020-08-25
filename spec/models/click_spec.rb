@@ -36,10 +36,13 @@ describe Click do
 
         click_json = {
           client_ip: '0.0.0.0',
-          module_code: 'BWEB',
-          vertical: 'web',
-          user_agent: 'mozilla',
+          #request
           referrer: 'http://www.fda.gov/referrer',
+          user_agent: 'mozilla',
+          #time
+          vertical: 'web',
+          module_code: 'BWEB',
+          # click domain?
           params: {
             url: 'http://www.fda.gov/foo.html',
             affiliate: 'nps.gov',
