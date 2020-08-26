@@ -64,9 +64,8 @@ class Click
       client_ip: client_ip,
       referrer: referrer,
       user_agent: user_agent,
-      time: Time.now.to_formatted_s(:db),
+      time: Time.current.to_formatted_s(:db),
       vertical: vertical,
-      #request
       #TODO: consider renaming module_code to modules
       module_code: module_code,
       params: {

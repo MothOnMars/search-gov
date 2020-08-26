@@ -31,7 +31,7 @@ describe Click do
     describe '#log' do
       before do
         allow(Rails.logger).to receive(:info)
-        travel_to(Time.gm(2020, 1, 1))
+        travel_to(Time.utc(2020, 1, 1))
       end
 
       after { travel_back }
@@ -39,12 +39,8 @@ describe Click do
       it 'logs almost-JSON info about the click' do
         click.log
 
-
-        puts  Time.now.to_formatted_s(:db)
-        
         click_json = {
           client_ip: '0.0.0.0',
-          #request?
           referrer: 'http://www.fda.gov/referrer',
           user_agent: 'mozilla',
           time: "2020-01-01 00:00:00",
