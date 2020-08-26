@@ -41,7 +41,7 @@ describe 'A user searches', js: true, vcr: { preserve_exact_body_bytes: true } d
             expect(logline).to include('"client_ip":"127.0.0.1"')
             expect(logline).to include('"affiliate":"searchgovaffiliate"')
             expect(logline).to include('"position":"1"')
-            expect(logline).to include('"module_code":"BOOS"')
+            expect(logline).to include('"modules":"BOOS"')
             expect(logline).to include('"vertical":"i14y"')
             expect(logline).to include('"user_agent":')
             expect(logline).to include('"referrer":')
@@ -82,7 +82,7 @@ describe 'A user searches', js: true, vcr: { preserve_exact_body_bytes: true } d
             expect(logline).to include('"client_ip":"127.0.0.1"')
             expect(logline).to include('"affiliate":"bingV7affiliate"')
             expect(logline).to include('"position":"1"')
-            expect(logline).to include('"module_code":"BWEB"')
+            expect(logline).to include('"modules":"BWEB"')
             expect(logline).to include('"vertical":"web"')
             expect(logline).to include('"user_agent":')
           end

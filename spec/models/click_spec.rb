@@ -45,7 +45,7 @@ describe Click do
           user_agent: 'mozilla',
           time: "2020-01-01 00:00:00",
           vertical: 'web',
-          module_code: 'BWEB',
+          modules: 'BWEB',
           # click domain?
           params: {
             url: 'http://www.fda.gov/foo.html',

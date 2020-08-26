@@ -67,15 +67,13 @@ class Click
       time: Time.current.to_formatted_s(:db),
       vertical: vertical,
       #TODO: consider renaming module_code to modules
-      module_code: module_code,
+      modules: module_code,
       params: {
         url: url,
         affiliate: affiliate,
         query: query,
         position: position
       }
-      #TODO: add time
-      #TODO: add request
     }
   end
 end
