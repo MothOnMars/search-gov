@@ -7,10 +7,11 @@ describe Click do
   let(:ip) { '0.0.0.0' }
   let(:position) { '7' }
   let(:module_code) { 'BWEB' }
+  let(:query) { 'my query' }
   let(:params) do
     {
       url: url,
-      query: 'my query',
+      query: query,
       client_ip: ip,
       affiliate: 'nps.gov',
       position: position,
@@ -65,6 +66,17 @@ describe Click do
         it 'logs the escaped URL' do
           click.log
           expect(Rails.logger).to have_received(:info).with(%r{https://search.gov/(:|)})
+        end
+      end
+
+      # The different search engines use different formatters, but for simplicity's
+      # sake, we simply downcase the query that we log for logstash
+      context 'when the URL contains capital letters' do
+        let(:query) { 'DOWNCASE ME' }
+
+        it 'downcases the query' do
+          click.log
+          expect(Rails.logger).to have_received(:info).with(/downcase me/)
         end
       end
     end
