@@ -23,7 +23,7 @@ class Click
 
   def initialize(params)
     @url = params[:url]
-    @query = params[:query]
+    @query = params[:query] #TODO: decode - logstash used to do this
     @client_ip = params[:client_ip]
     @affiliate = params[:affiliate]
     @position = params[:position]
@@ -67,6 +67,7 @@ class Click
       time: Time.current.to_formatted_s(:db),
       vertical: vertical,
       modules: module_code,
+      click_domain: URI(url).host,
       params: {
         url: url,
         affiliate: affiliate,
