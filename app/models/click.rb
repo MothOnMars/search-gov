@@ -66,7 +66,6 @@ class Click
       user_agent: user_agent,
       time: Time.current.to_formatted_s(:db),
       vertical: vertical,
-      #TODO: consider renaming module_code to modules
       modules: module_code,
       params: {
         url: url,
@@ -77,12 +76,3 @@ class Click
     }
   end
 end
-
-=begin
-    "params": {
-      "query": "associated business bureau",
-      "position": 1,
-      "affiliate": "everify",
-      "url": "https://www.e-verify.gov/"
-    },
-=end
