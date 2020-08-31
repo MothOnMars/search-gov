@@ -41,7 +41,7 @@ describe Click do
         click.log
 
         click_json = {
-          client_ip: '0.0.0.0',
+          clientip: '0.0.0.0',
           referrer: 'http://www.fda.gov/referrer',
           user_agent: 'mozilla',
           time: '2020-01-01 00:00:00',

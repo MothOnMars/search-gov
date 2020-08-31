@@ -62,7 +62,7 @@ class Click
 
   def click_hash
     {
-      client_ip: client_ip,
+      clientip: client_ip,
       referrer: referrer,
       user_agent: user_agent,
       time: Time.current.to_formatted_s(:db),
