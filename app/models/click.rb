@@ -23,8 +23,7 @@ class Click
 
   def initialize(params)
     @url = params[:url]
-    #maybe squish query: "query":"this & that is not a test   what    ?"}
-    @query = params[:query] #TODO: decode - logstash used to do this...looks liek this is ok - test
+    @query = params[:query]
     @client_ip = params[:client_ip]
     @affiliate = params[:affiliate]
     @position = params[:position]

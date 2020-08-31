@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-pending ApiClick do
+describe ApiClick do
   let(:affiliate) { 'nps.gov' }
   subject(:click) do
     described_class.new(url: 'http://www.fda.gov/foo.html',

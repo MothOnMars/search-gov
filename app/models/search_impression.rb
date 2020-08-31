@@ -35,29 +35,3 @@ class SearchImpression
     diagnostics_hash.keys.sort.map { |k| diagnostics_hash[k].merge(module: k) }
   end
 end
-
-=begin
-{
-     "clientip" => "::1",
-      "request" => "http://localhost:3000/search?utf8=%E2%9C%93&affiliate=logstash_testing&query=test",
-     "referrer" => "http://localhost:3000/search?affiliate=logstash_testing",
-   "user_agent" => "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36",
-  "diagnostics" => [
-    {
-              "result_count" => 0,
-                "from_cache" => "none",
-               "retry_count" => 0,
-           "elapsed_time_ms" => 185,
-      "tracking_information" => nil,
-                    "module" => "BWEB"
-    }
-  ],
-         "time" => "2020-08-24 10:54:11",
-     "vertical" => "web",
-      "modules" => "BOOS",
-       "params" => {
-    "affiliate" => "logstash_testing",
-        "query" => "test"
-  }
-}
-=end
