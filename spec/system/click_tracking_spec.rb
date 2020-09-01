@@ -38,14 +38,13 @@ describe 'A user searches', js: true, vcr: { preserve_exact_body_bytes: true } d
           expect(Rails.logger).to have_received(:info).with(match) do |logline|
             expect(logline).to include('"url":"http://example.com/"')
             expect(logline).to include('"query":"boosted"')
-            expect(logline).to include('"client_ip":"127.0.0.1"')
+            expect(logline).to include('"clientip":"127.0.0.1"')
             expect(logline).to include('"affiliate":"searchgovaffiliate"')
             expect(logline).to include('"position":"1"')
             expect(logline).to include('"modules":"BOOS"')
             expect(logline).to include('"vertical":"i14y"')
             expect(logline).to include('"user_agent":')
             expect(logline).to include('"referrer":')
-            expect(logline).to include('"request":')
           end
         end
       end
@@ -79,7 +78,7 @@ describe 'A user searches', js: true, vcr: { preserve_exact_body_bytes: true } d
           expect(Rails.logger).to have_received(:info).with(match) do |logline|
             expect(logline).to include('"url":"https://www.va.gov/welcome-kit/"')
             expect(logline).to include('"query":"hello"')
-            expect(logline).to include('"client_ip":"127.0.0.1"')
+            expect(logline).to include('"clientip":"127.0.0.1"')
             expect(logline).to include('"affiliate":"bingV7affiliate"')
             expect(logline).to include('"position":"1"')
             expect(logline).to include('"modules":"BWEB"')
