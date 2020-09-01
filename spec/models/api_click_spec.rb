@@ -49,7 +49,8 @@ describe ApiClick do
             affiliate: 'nps.gov',
             query: 'my query',
             position: '7'
-          }
+          },
+          tags: ['api']
         }.to_json
 puts click_json.green
         expect(Rails.logger).to have_received(:info).with("[Click] #{click_json}")
