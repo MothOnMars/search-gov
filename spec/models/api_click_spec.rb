@@ -4,6 +4,7 @@ require 'spec_helper'
 
 describe ApiClick do
   let(:affiliate) { 'nps.gov' }
+
   subject(:click) do
     described_class.new(url: 'http://www.fda.gov/foo.html',
                         query: 'my query',
@@ -23,19 +24,8 @@ describe ApiClick do
     end
 
     describe '#log' do
-      before do
-        allow(Rails.logger).to receive(:info)
-        travel_to(Time.utc(2020, 1, 1))
-      end
-
-      after { travel_back }
-
-      it 'logs almost-JSON info about the click' do
-        allow(Rails.logger).to receive(:info)
-
-        click.log
-
-        click_json = {
+      let(:click_json) do
+        {
           clientip: '0.0.0.0',
           referrer: 'http://www.fda.gov/referrer',
           user_agent: 'mozilla',
@@ -51,6 +41,17 @@ describe ApiClick do
           },
           tags: ['api']
         }.to_json
+      end
+
+      before do
+        allow(Rails.logger).to receive(:info)
+        travel_to(Time.utc(2020, 1, 1))
+      end
+
+      after { travel_back }
+
+      it 'logs almost-JSON info about the click' do
+        click.log
 
         expect(Rails.logger).to have_received(:info).with("[Click] #{click_json}")
       end

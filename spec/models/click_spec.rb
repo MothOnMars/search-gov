@@ -21,23 +21,6 @@ describe Click do
       referrer: 'http://www.fda.gov/referrer'
     }
   end
-  let(:click_json) do
-    {
-      clientip: '0.0.0.0',
-      referrer: 'http://www.fda.gov/referrer',
-      user_agent: 'mozilla',
-      time: '2020-01-01 00:00:00',
-      vertical: 'web',
-      modules: 'BWEB',
-      click_domain: 'www.fda.gov',
-      params: {
-        url: 'http://www.fda.gov/foo.html',
-        affiliate: 'nps.gov',
-        query: 'my query',
-        position: '7'
-      }
-    }.to_json
-  end
 
   subject(:click) { described_class.new(params) }
 
@@ -47,6 +30,24 @@ describe Click do
     end
 
     describe '#log' do
+      let(:click_json) do
+        {
+          clientip: '0.0.0.0',
+          referrer: 'http://www.fda.gov/referrer',
+          user_agent: 'mozilla',
+          time: '2020-01-01 00:00:00',
+          vertical: 'web',
+          modules: 'BWEB',
+          click_domain: 'www.fda.gov',
+          params: {
+            url: 'http://www.fda.gov/foo.html',
+            affiliate: 'nps.gov',
+            query: 'my query',
+            position: '7'
+          }
+        }.to_json
+      end
+
       before do
         allow(Rails.logger).to receive(:info)
         travel_to(Time.utc(2020, 1, 1))
