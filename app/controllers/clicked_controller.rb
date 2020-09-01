@@ -5,7 +5,7 @@ class ClickedController < ApplicationController
 
   def index
     click = Click.new(click_params)
-    #request.headers['X-Original-Request'] or request.url
+
     if click.valid?
       click.log
       head :ok

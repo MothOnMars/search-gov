@@ -22,7 +22,6 @@ describe ApiClick do
       it { is_expected.to be_valid }
     end
 
-    #TODO: share or remove duplicate tests
     describe '#log' do
       before do
         allow(Rails.logger).to receive(:info)
@@ -52,7 +51,7 @@ describe ApiClick do
           },
           tags: ['api']
         }.to_json
-puts click_json.green
+
         expect(Rails.logger).to have_received(:info).with("[Click] #{click_json}")
       end
     end

@@ -31,11 +31,9 @@ class Click
     @vertical = params[:vertical]
     @user_agent = params[:user_agent]
     @referrer = params[:referrer]
-    @request = params[:request]
   end
 
   def log
-    puts click_hash.to_json.red
     Rails.logger.info('[Click] ' + click_hash.to_json)
   end
 

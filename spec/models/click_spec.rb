@@ -57,7 +57,6 @@ describe Click do
       it 'logs almost-JSON info about the click' do
         click.log
 
-        puts click_json.green
         expect(Rails.logger).to have_received(:info).with("[Click] #{click_json}")
       end
 

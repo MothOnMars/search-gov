@@ -27,7 +27,6 @@ class SearchImpression
       request.headers['X-Original-Request']
     else
       request.url
-      # "http://localhost:3000/search?utf8=%E2%9C%93&affiliate=logstash_testing&query=testing"
     end
   end
 
