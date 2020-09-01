@@ -59,6 +59,9 @@ class Click
     errors.add(:module_code, "#{module_code} is not a valid module")
   end
 
+  # This hash is used in click logging for consumption by Logstash. Any changes
+  # to this hash or to the log line may require corresponding changes to our Logstash
+  # template or config in the cookbooks.
   def click_hash
     {
       clientip: client_ip,

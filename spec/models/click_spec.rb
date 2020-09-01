@@ -21,8 +21,25 @@ describe Click do
       referrer: 'http://www.fda.gov/referrer'
     }
   end
+  let(:click_json) do
+    {
+      clientip: '0.0.0.0',
+      referrer: 'http://www.fda.gov/referrer',
+      user_agent: 'mozilla',
+      time: '2020-01-01 00:00:00',
+      vertical: 'web',
+      modules: 'BWEB',
+      click_domain: 'www.fda.gov',
+      params: {
+        url: 'http://www.fda.gov/foo.html',
+        affiliate: 'nps.gov',
+        query: 'my query',
+        position: '7'
+      }
+    }.to_json
+  end
 
-  subject(:click) { described_class.new params }
+  subject(:click) { described_class.new(params) }
 
   context 'with required params' do
     describe '#valid?' do
@@ -39,22 +56,6 @@ describe Click do
 
       it 'logs almost-JSON info about the click' do
         click.log
-
-        click_json = {
-          clientip: '0.0.0.0',
-          referrer: 'http://www.fda.gov/referrer',
-          user_agent: 'mozilla',
-          time: '2020-01-01 00:00:00',
-          vertical: 'web',
-          modules: 'BWEB',
-          click_domain: 'www.fda.gov',
-          params: {
-            url: 'http://www.fda.gov/foo.html',
-            affiliate: 'nps.gov',
-            query: 'my query',
-            position: '7'
-          }
-        }.to_json
 
         puts click_json.green
         expect(Rails.logger).to have_received(:info).with("[Click] #{click_json}")

@@ -24,17 +24,26 @@ describe ApiClick do
 
     #TODO: share or remove duplicate tests
     describe '#log' do
+      before do
+        allow(Rails.logger).to receive(:info)
+        travel_to(Time.utc(2020, 1, 1))
+      end
+
+      after { travel_back }
+
       it 'logs almost-JSON info about the click' do
         allow(Rails.logger).to receive(:info)
 
         click.log
 
         click_json = {
-          client_ip: '0.0.0.0',
-          module_code: 'BWEB',
-          vertical: 'web',
-          user_agent: 'mozilla',
+          clientip: '0.0.0.0',
           referrer: 'http://www.fda.gov/referrer',
+          user_agent: 'mozilla',
+          time: '2020-01-01 00:00:00',
+          vertical: 'web',
+          modules: 'BWEB',
+          click_domain: 'www.fda.gov',
           params: {
             url: 'http://www.fda.gov/foo.html',
             affiliate: 'nps.gov',
@@ -42,13 +51,7 @@ describe ApiClick do
             position: '7'
           }
         }.to_json
-
-
-        expected_log = '[Click] {"url":"http://www.fda.gov/foo.html",'\
-                       '"query":"my query","client_ip":"123.123.123.123",'\
-                       '"affiliate":"nps.gov","position":"7","module_code":"BWEB",'\
-                       '"vertical":"web","user_agent":"mozilla","access_key":"basic_key"}'
-
+puts click_json.green
         expect(Rails.logger).to have_received(:info).with("[Click] #{click_json}")
       end
     end

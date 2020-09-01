@@ -32,6 +32,6 @@ class ApiClick < Click
   end
 
   def click_hash
-    super.merge access_key: access_key
+    super#.merge access_key: access_key
   end
 end
