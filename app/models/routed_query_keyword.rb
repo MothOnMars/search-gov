@@ -2,6 +2,7 @@ class RoutedQueryKeyword < ApplicationRecord
   include Dupable
 
   before_validation do |record|
+    AttributeProcessor.sanitize_attributes record, :keyword
     AttributeProcessor.squish_attributes record,
                                          :keyword,
                                          assign_nil_on_blank: true
