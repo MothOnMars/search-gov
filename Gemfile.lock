@@ -871,7 +871,7 @@ DEPENDENCIES
   medusa!
   mobile-fu (~> 1.4.0)
   mry (= 0.59.0.0)
-  mysql2 (~> 0.4.10)
+  mysql2 (~> 0.4.4)
   net-http-persistent (~> 2.9.3)
   newrelic_rpm (~> 5.0.0)
   nokogiri (~> 1.11.1)
