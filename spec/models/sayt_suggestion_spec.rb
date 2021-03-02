@@ -200,24 +200,25 @@ describe SaytSuggestion do
   end
 
   describe "#related_search" do
+    let(:affiliate) { affiliates(:basic_affiliate) }
+
     before do
-      @affiliate = affiliates(:basic_affiliate)
       SaytSuggestion.destroy_all
-      SaytSuggestion.create!(:affiliate_id => @affiliate.id, :phrase => "suggest me", :popularity => 30)
+      SaytSuggestion.create!(:affiliate_id => affiliate.id, :phrase => "suggest me", :popularity => 30)
       ElasticSaytSuggestion.commit
     end
 
     it "should return an array of highlighted strings" do
-      expect(SaytSuggestion.related_search("suggest", @affiliate)).to eq(["<strong>suggest</strong> me"])
+      expect(SaytSuggestion.related_search("suggest", affiliate)).to eq(["<strong>suggest</strong> me"])
     end
 
     context "when affiliate has related searches disabled" do
       before do
-        @affiliate.is_related_searches_enabled = false
+        affiliate.is_related_searches_enabled = false
       end
 
       it "should return an empty array" do
-        expect(SaytSuggestion.related_search("suggest", @affiliate)).to eq([])
+        expect(SaytSuggestion.related_search("suggest", affiliate)).to eq([])
       end
     end
 
