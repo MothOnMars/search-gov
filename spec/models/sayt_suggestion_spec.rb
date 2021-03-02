@@ -3,11 +3,11 @@ require 'spec_helper'
 
 describe SaytSuggestion do
   let(:affiliate) { affiliates(:power_affiliate) } #why?
-  before do
-    @valid_attributes = {
-      :affiliate_id => affiliate.id,
-      :phrase => "some valid suggestion",
-      :popularity => 100
+  let(:valid_attributes) do
+    {
+      affiliate_id: affiliate.id,
+      phrase: 'some valid suggestion',
+      popularity: 100
     }
   end
 
@@ -24,12 +24,12 @@ describe SaytSuggestion do
     end
 
     it 'validates the uniqueness of the phrase scoped to the affiliate id' do
-      SaytSuggestion.create!(@valid_attributes)
-      expect(SaytSuggestion.new(@valid_attributes)).to_not be_valid
+      SaytSuggestion.create!(valid_attributes)
+      expect(SaytSuggestion.new(valid_attributes)).to_not be_valid
     end
 
     it "should create a new instance given valid attributes" do
-      SaytSuggestion.create!(@valid_attributes)
+      SaytSuggestion.create!(valid_attributes)
     end
 
     it "should downcase the phrase before entering into DB" do
@@ -82,12 +82,18 @@ describe SaytSuggestion do
     end
   end
 
-  pending "#expire(days_back)" do
-    context 'when suggestions exist' do
+  describe "#expire(days_back)" do
+    subject(:expire) { SaytSuggesion.expire(days_back) }
 
-    end
-    it 'destroys unprotected suggestions that have not been updated in X days' do
-      SaytSuggestion.expire(30)
+    let(:days_back) { 30 }
+
+    context 'when suggestions exist' do
+      before do
+       # SaytSuggestion.create!(valid_
+      end
+      xit 'destroys unprotected suggestions that have not been updated in X days' do
+        SaytSuggestion.expire(30)
+      end
     end
   end
 
