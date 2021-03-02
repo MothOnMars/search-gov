@@ -24,48 +24,48 @@ describe SaytSuggestion do
     end
 
     it 'validates the uniqueness of the phrase scoped to the affiliate id' do
-      SaytSuggestion.create!(valid_attributes)
-      expect(SaytSuggestion.new(valid_attributes)).to_not be_valid
+      described_class.create!(valid_attributes)
+      expect(described_class.new(valid_attributes)).to_not be_valid
     end
 
     it "should create a new instance given valid attributes" do
-      SaytSuggestion.create!(valid_attributes)
+      described_class.create!(valid_attributes)
     end
 
     it "should downcase the phrase before entering into DB" do
-      SaytSuggestion.create!(:phrase => "ALL CAPS", :affiliate => affiliate)
-      expect(SaytSuggestion.find_by_phrase("all caps").phrase).to eq("all caps")
+      described_class.create!(:phrase => "ALL CAPS", :affiliate => affiliate)
+      expect(described_class.find_by_phrase("all caps").phrase).to eq("all caps")
     end
 
     it "should strip whitespace from phrase before inserting in DB" do
       phrase = " leading and trailing whitespaces "
-      sf = SaytSuggestion.create!(:phrase => phrase, :affiliate => affiliate)
+      sf = described_class.create!(:phrase => phrase, :affiliate => affiliate)
       expect(sf.phrase).to eq(phrase.strip)
     end
 
     it "should squish multiple whitespaces between words in the phrase before entering into DB" do
-      SaytSuggestion.create!(:phrase => "two  spaces", :affiliate => affiliate)
-      expect(SaytSuggestion.find_by_phrase("two spaces").phrase).to eq("two spaces")
+      described_class.create!(:phrase => "two  spaces", :affiliate => affiliate)
+      expect(described_class.find_by_phrase("two spaces").phrase).to eq("two spaces")
     end
 
     it "should not correct misspellings before entering in DB if the suggestion belongs to an affiliate" do
-      SaytSuggestion.create!(:phrase => "barack ubama", :affiliate => affiliates(:basic_affiliate))
-      expect(SaytSuggestion.find_by_phrase("barack ubama")).not_to be_nil
+      described_class.create!(:phrase => "barack ubama", :affiliate => affiliates(:basic_affiliate))
+      expect(described_class.find_by_phrase("barack ubama")).not_to be_nil
     end
 
     it "should default popularity to 1 if not specified" do
-      SaytSuggestion.create!(:phrase => "popular", :affiliate => affiliate)
-      expect(SaytSuggestion.find_by_phrase("popular").popularity).to eq(1)
+      described_class.create!(:phrase => "popular", :affiliate => affiliate)
+      expect(described_class.find_by_phrase("popular").popularity).to eq(1)
     end
 
     it "should default protected status to false" do
-      suggestion = SaytSuggestion.create!(:phrase => "unprotected", :affiliate => affiliate)
+      suggestion = described_class.create!(:phrase => "unprotected", :affiliate => affiliate)
       expect(suggestion.is_protected).to be false
     end
 
     it "should not create a new suggestion if one exists, but is marked as deleted" do
-      SaytSuggestion.create!(:phrase => "deleted", :affiliate => affiliate, :deleted_at => Time.now)
-      expect(SaytSuggestion.create(:phrase => 'deleted', :affiliate => affiliate).id).to be_nil
+      described_class.create!(:phrase => "deleted", :affiliate => affiliate, :deleted_at => Time.now)
+      expect(described_class.create(:phrase => 'deleted', :affiliate => affiliate).id).to be_nil
     end
   end
 
@@ -75,24 +75,35 @@ describe SaytSuggestion do
     end
 
     it 'should set the is_whitelisted flag accordingly' do
-      ss = SaytSuggestion.create!(:phrase => "accept me please", :affiliate => affiliate, :deleted_at => Time.now)
+      ss = described_class.create!(:phrase => "accept me please", :affiliate => affiliate, :deleted_at => Time.now)
       expect(ss.is_whitelisted).to be true
-      ss = SaytSuggestion.create!(:phrase => "not me please", :affiliate => affiliate, :deleted_at => Time.now)
+      ss = described_class.create!(:phrase => "not me please", :affiliate => affiliate, :deleted_at => Time.now)
       expect(ss.is_whitelisted).to be false
     end
   end
 
   describe "#expire(days_back)" do
-    subject(:expire) { SaytSuggesion.expire(days_back) }
+    subject(:expire) { described_class.expire(days_back) }
 
     let(:days_back) { 30 }
 
     context 'when suggestions exist' do
       before do
-       # SaytSuggestion.create!(valid_
+        described_class.create!(
+          valid_attributes.merge(phrase: 'outdated', updated_at: 31.days.ago)
+        )
+        described_class.create!(
+          valid_attributes.merge(phrase: 'old but protected',
+                                 is_protected: true,
+                                 updated_at: 31.days.ago)
+        )
+        described_class.create!(valid_attributes.merge(phrase: 'new'))
       end
-      xit 'destroys unprotected suggestions that have not been updated in X days' do
-        SaytSuggestion.expire(30)
+
+      it 'destroys unprotected suggestions that have not been updated in X days' do
+        expire
+        expect(affiliate.sayt_suggestions.pluck(:phrase)).
+          to eq ['new', 'old but protected']
       end
     end
   end
@@ -100,9 +111,9 @@ describe SaytSuggestion do
   describe "#populate_for(day, limit = nil)" do
     it "should populate SAYT suggestions for all affiliates in affiliate table" do
       Affiliate.all.each do |aff|
-        expect(SaytSuggestion).to receive(:populate_for_affiliate_on).with(aff.name, aff.id, Date.current, 100)
+        expect(described_class).to receive(:populate_for_affiliate_on).with(aff.name, aff.id, Date.current, 100)
       end
-      SaytSuggestion.populate_for(Date.current, 100)
+      described_class.populate_for(Date.current, 100)
     end
 
   end
@@ -115,7 +126,7 @@ describe SaytSuggestion do
     let(:aff) { affiliates(:basic_affiliate) }
 
     it "should enqueue the affiliate for processing" do
-      SaytSuggestion.populate_for_affiliate_on(aff.name, aff.id, Date.current, 100)
+      described_class.populate_for_affiliate_on(aff.name, aff.id, Date.current, 100)
       expect(SaytSuggestionDiscovery).to have_queued(aff.name, aff.id, Date.current, 100)
     end
 
@@ -125,41 +136,41 @@ describe SaytSuggestion do
     let(:affiliate) { affiliates(:power_affiliate) }
 
     it 'should return empty array if there is no matching suggestion' do
-      SaytSuggestion.create!(:phrase => 'child', :popularity => 10, :affiliate_id => affiliate.id)
-      expect(SaytSuggestion.fetch_by_affiliate_id(affiliate.id, 'kids', 10)).to be_empty
+      described_class.create!(:phrase => 'child', :popularity => 10, :affiliate_id => affiliate.id)
+      expect(described_class.fetch_by_affiliate_id(affiliate.id, 'kids', 10)).to be_empty
     end
 
     it 'should return records for that affiliate_id' do
       SaytSuggestion.create!(:phrase => 'child', :popularity => 10, :affiliate_id => affiliate.id)
-      SaytSuggestion.create!(:phrase => 'child care', :popularity => 1, :affiliate_id => affiliate.id)
-      SaytSuggestion.create!(:phrase => 'children', :popularity => 100, :affiliate_id => affiliate.id)
-      SaytSuggestion.create!(:phrase => 'child default', :popularity => 100, :affiliate_id => affiliates(:basic_affiliate).id)
+      described_class.create!(:phrase => 'child care', :popularity => 1, :affiliate_id => affiliate.id)
+      described_class.create!(:phrase => 'children', :popularity => 100, :affiliate_id => affiliate.id)
+      described_class.create!(:phrase => 'child default', :popularity => 100, :affiliate_id => affiliates(:basic_affiliate).id)
 
-      suggestions = SaytSuggestion.fetch_by_affiliate_id(affiliate.id, 'child', 10)
+      suggestions = described_class.fetch_by_affiliate_id(affiliate.id, 'child', 10)
       expect(suggestions.size).to eq(3)
     end
 
     context 'when there are more than num_suggestions results available' do
       before do
-        SaytSuggestion.create!(:phrase => 'child', :popularity => 10, :affiliate_id => affiliate.id)
-        SaytSuggestion.create!(:phrase => 'child care', :popularity => 1, :affiliate_id => affiliate.id)
-        SaytSuggestion.create!(:phrase => 'children', :popularity => 100, :affiliate_id => affiliate.id)
+        described_class.create!(:phrase => 'child', :popularity => 10, :affiliate_id => affiliate.id)
+        described_class.create!(:phrase => 'child care', :popularity => 1, :affiliate_id => affiliate.id)
+        described_class.create!(:phrase => 'children', :popularity => 100, :affiliate_id => affiliate.id)
       end
 
       it 'should return at most num_suggestions results' do
-        expect(SaytSuggestion.fetch_by_affiliate_id(affiliate.id, 'child', 2).count).to eq(2)
+        expect(described_class.fetch_by_affiliate_id(affiliate.id, 'child', 2).count).to eq(2)
       end
     end
 
     context 'when there are multiple suggestions available' do
       before do
-        SaytSuggestion.create!(:phrase => 'child', :popularity => 10, :affiliate_id => affiliate.id)
-        SaytSuggestion.create!(:phrase => 'child care', :popularity => 1, :affiliate_id => affiliate.id)
-        SaytSuggestion.create!(:phrase => 'children', :popularity => 100, :affiliate_id => affiliate.id)
+        described_class.create!(:phrase => 'child', :popularity => 10, :affiliate_id => affiliate.id)
+        described_class.create!(:phrase => 'child care', :popularity => 1, :affiliate_id => affiliate.id)
+        described_class.create!(:phrase => 'children', :popularity => 100, :affiliate_id => affiliate.id)
       end
 
       it 'should return results in order of popularity' do
-        suggestions = SaytSuggestion.fetch_by_affiliate_id(affiliate.id, 'child', 10)
+        suggestions = described_class.fetch_by_affiliate_id(affiliate.id, 'child', 10)
         expect(suggestions.first.phrase).to eq('children')
         expect(suggestions.last.phrase).to eq('child care')
       end
@@ -167,13 +178,13 @@ describe SaytSuggestion do
 
     context 'when multiple suggestions have the same popularity' do
       before do
-        SaytSuggestion.create!(:phrase => 'eliz hhh', :popularity => 100, :affiliate_id => affiliate.id)
-        SaytSuggestion.create!(:phrase => 'eliz aaa', :popularity => 100, :affiliate_id => affiliate.id)
-        SaytSuggestion.create!(:phrase => 'eliz ggg', :popularity => 100, :affiliate_id => affiliate.id)
+        described_class.create!(:phrase => 'eliz hhh', :popularity => 100, :affiliate_id => affiliate.id)
+        described_class.create!(:phrase => 'eliz aaa', :popularity => 100, :affiliate_id => affiliate.id)
+        described_class.create!(:phrase => 'eliz ggg', :popularity => 100, :affiliate_id => affiliate.id)
       end
 
       it 'should return results in alphabetical order' do
-        suggestions = SaytSuggestion.fetch_by_affiliate_id(affiliate.id, 'eliz', 3)
+        suggestions = described_class.fetch_by_affiliate_id(affiliate.id, 'eliz', 3)
         expect(suggestions.first.phrase).to eq('eliz aaa')
         expect(suggestions.last.phrase).to eq('eliz hhh')
       end
@@ -188,20 +199,20 @@ describe SaytSuggestion do
       @phrases = %w{ one two three }
       tempfile = File.open('spec/fixtures/txt/sayt_suggestions.txt')
       @file = Rack::Test::UploadedFile.new(tempfile, content_type)
-      @dummy_suggestion = SaytSuggestion.create(:phrase => 'dummy suggestions')
+      @dummy_suggestion = described_class.create(:phrase => 'dummy suggestions')
     end
 
     it "should create SAYT suggestions using the affiliate provided, if provided" do
       @phrases.each do |phrase|
-        expect(SaytSuggestion).to receive(:create).with({:phrase => phrase, :affiliate => affiliate, :is_protected => true, :popularity => SaytSuggestion::MAX_POPULARITY}).and_return @dummy_suggestion
+        expect(described_class).to receive(:create).with({:phrase => phrase, :affiliate => affiliate, :is_protected => true, :popularity => described_class::MAX_POPULARITY}).and_return @dummy_suggestion
       end
-      SaytSuggestion.process_sayt_suggestion_txt_upload(@file, affiliate)
+      described_class.process_sayt_suggestion_txt_upload(@file, affiliate)
     end
   end
 
   describe "#to_label" do
     it "should return the phrase" do
-      expect(SaytSuggestion.new(:phrase => 'dummy suggestion', :affiliate => affiliate).to_label).to eq('dummy suggestion')
+      expect(described_class.new(:phrase => 'dummy suggestion', :affiliate => affiliate).to_label).to eq('dummy suggestion')
     end
   end
 
@@ -209,13 +220,13 @@ describe SaytSuggestion do
     let(:affiliate) { affiliates(:basic_affiliate) }
 
     before do
-      SaytSuggestion.destroy_all
-      SaytSuggestion.create!(:affiliate_id => affiliate.id, :phrase => "suggest me", :popularity => 30)
+      described_class.destroy_all
+      described_class.create!(:affiliate_id => affiliate.id, :phrase => "suggest me", :popularity => 30)
       ElasticSaytSuggestion.commit
     end
 
     it "should return an array of highlighted strings" do
-      expect(SaytSuggestion.related_search("suggest", affiliate)).to eq(["<strong>suggest</strong> me"])
+      expect(described_class.related_search("suggest", affiliate)).to eq(["<strong>suggest</strong> me"])
     end
 
     context "when affiliate has related searches disabled" do
@@ -224,7 +235,7 @@ describe SaytSuggestion do
       end
 
       it "should return an empty array" do
-        expect(SaytSuggestion.related_search("suggest", affiliate)).to eq([])
+        expect(described_class.related_search("suggest", affiliate)).to eq([])
       end
     end
 

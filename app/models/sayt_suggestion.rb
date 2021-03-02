@@ -1,4 +1,5 @@
-# coding: utf-8
+# frozen_string_literal: true
+
 class SaytSuggestion < ApplicationRecord
   include Dupable
 
@@ -59,9 +60,8 @@ class SaytSuggestion < ApplicationRecord
     end
 
     def expire(days_back)
-      destroy_all(["updated_at < ? AND is_protected = ?", days_back.days.ago.beginning_of_day.to_s(:db), false])
+      #destroy_all(["updated_at < ? AND is_protected = ?", days_back.days.ago.beginning_of_day.to_s(:db), false])
     end
-
   end
 
   def squish_whitespace_and_downcase
