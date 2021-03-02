@@ -175,11 +175,10 @@ describe SaytSuggestion do
   end
 
   describe "#process_sayt_suggestion_txt_upload" do
-    fixtures :affiliates
     let(:content_type) { 'text/plain' }
+    let(:affiliate) { affiliates(:basic_affiliate) }
 
     before do
-      @affiliate = affiliates(:basic_affiliate)
       @phrases = %w{ one two three }
       tempfile = File.open('spec/fixtures/txt/sayt_suggestions.txt')
       @file = Rack::Test::UploadedFile.new(tempfile, content_type)
@@ -188,15 +187,15 @@ describe SaytSuggestion do
 
     it "should create SAYT suggestions using the affiliate provided, if provided" do
       @phrases.each do |phrase|
-        expect(SaytSuggestion).to receive(:create).with({:phrase => phrase, :affiliate => @affiliate, :is_protected => true, :popularity => SaytSuggestion::MAX_POPULARITY}).and_return @dummy_suggestion
+        expect(SaytSuggestion).to receive(:create).with({:phrase => phrase, :affiliate => affiliate, :is_protected => true, :popularity => SaytSuggestion::MAX_POPULARITY}).and_return @dummy_suggestion
       end
-      SaytSuggestion.process_sayt_suggestion_txt_upload(@file, @affiliate)
+      SaytSuggestion.process_sayt_suggestion_txt_upload(@file, affiliate)
     end
   end
 
   describe "#to_label" do
     it "should return the phrase" do
-      expect(SaytSuggestion.new(:phrase => 'dummy suggestion', :affiliate => @affiliate).to_label).to eq('dummy suggestion')
+      expect(SaytSuggestion.new(:phrase => 'dummy suggestion', :affiliate => affiliate).to_label).to eq('dummy suggestion')
     end
   end
 
