@@ -1,12 +1,11 @@
-# coding: utf-8
+# frozen_string_literal: true
 require 'spec_helper'
 
 describe SaytSuggestion do
-  fixtures :sayt_suggestions, :misspellings, :affiliates
+  let(:affiliate) { affiliates(:power_affiliate) } #why?
   before do
-    @affiliate = affiliates(:power_affiliate)
     @valid_attributes = {
-      :affiliate_id => @affiliate.id,
+      :affiliate_id => affiliate.id,
       :phrase => "some valid suggestion",
       :popularity => 100
     }
@@ -34,18 +33,18 @@ describe SaytSuggestion do
     end
 
     it "should downcase the phrase before entering into DB" do
-      SaytSuggestion.create!(:phrase => "ALL CAPS", :affiliate => @affiliate)
+      SaytSuggestion.create!(:phrase => "ALL CAPS", :affiliate => affiliate)
       expect(SaytSuggestion.find_by_phrase("all caps").phrase).to eq("all caps")
     end
 
     it "should strip whitespace from phrase before inserting in DB" do
       phrase = " leading and trailing whitespaces "
-      sf = SaytSuggestion.create!(:phrase => phrase, :affiliate => @affiliate)
+      sf = SaytSuggestion.create!(:phrase => phrase, :affiliate => affiliate)
       expect(sf.phrase).to eq(phrase.strip)
     end
 
     it "should squish multiple whitespaces between words in the phrase before entering into DB" do
-      SaytSuggestion.create!(:phrase => "two  spaces", :affiliate => @affiliate)
+      SaytSuggestion.create!(:phrase => "two  spaces", :affiliate => affiliate)
       expect(SaytSuggestion.find_by_phrase("two spaces").phrase).to eq("two spaces")
     end
 
@@ -55,18 +54,18 @@ describe SaytSuggestion do
     end
 
     it "should default popularity to 1 if not specified" do
-      SaytSuggestion.create!(:phrase => "popular", :affiliate => @affiliate)
+      SaytSuggestion.create!(:phrase => "popular", :affiliate => affiliate)
       expect(SaytSuggestion.find_by_phrase("popular").popularity).to eq(1)
     end
 
     it "should default protected status to false" do
-      suggestion = SaytSuggestion.create!(:phrase => "unprotected", :affiliate => @affiliate)
+      suggestion = SaytSuggestion.create!(:phrase => "unprotected", :affiliate => affiliate)
       expect(suggestion.is_protected).to be false
     end
 
     it "should not create a new suggestion if one exists, but is marked as deleted" do
-      SaytSuggestion.create!(:phrase => "deleted", :affiliate => @affiliate, :deleted_at => Time.now)
-      expect(SaytSuggestion.create(:phrase => 'deleted', :affiliate => @affiliate).id).to be_nil
+      SaytSuggestion.create!(:phrase => "deleted", :affiliate => affiliate, :deleted_at => Time.now)
+      expect(SaytSuggestion.create(:phrase => 'deleted', :affiliate => affiliate).id).to be_nil
     end
   end
 
@@ -76,16 +75,18 @@ describe SaytSuggestion do
     end
 
     it 'should set the is_whitelisted flag accordingly' do
-      ss = SaytSuggestion.create!(:phrase => "accept me please", :affiliate => @affiliate, :deleted_at => Time.now)
+      ss = SaytSuggestion.create!(:phrase => "accept me please", :affiliate => affiliate, :deleted_at => Time.now)
       expect(ss.is_whitelisted).to be true
-      ss = SaytSuggestion.create!(:phrase => "not me please", :affiliate => @affiliate, :deleted_at => Time.now)
+      ss = SaytSuggestion.create!(:phrase => "not me please", :affiliate => affiliate, :deleted_at => Time.now)
       expect(ss.is_whitelisted).to be false
     end
   end
 
-  describe "#expire(days_back)" do
-    it "should destroy suggestions that have not been updated in X days, and that are unprotected" do
-      expect(SaytSuggestion).to receive(:destroy_all).with(["updated_at < ? AND is_protected = ?", 30.days.ago.beginning_of_day.to_s(:db), false])
+  pending "#expire(days_back)" do
+    context 'when suggestions exist' do
+
+    end
+    it 'destroys unprotected suggestions that have not been updated in X days' do
       SaytSuggestion.expire(30)
     end
   end
