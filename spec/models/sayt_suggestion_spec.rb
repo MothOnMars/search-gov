@@ -11,15 +11,15 @@ describe SaytSuggestion do
     }
   end
 
-  describe "Creating new instance" do
+  describe 'Creating new instance' do
     it { is_expected.to belong_to :affiliate }
     it { is_expected.to validate_presence_of :affiliate }
     it { is_expected.to validate_presence_of :phrase }
     it { is_expected.to validate_length_of(:phrase).is_at_least(3).is_at_most(80) }
-    ["citizenship[", "email@address.com", "\"over quoted\"", "colon: here", "http:something", "site:something", "intitle:something", "passports'", ".mp3", "' pictures"].each do |phrase|
+    ['citizenship[', 'email@address.com', '"over quoted"', 'colon: here', 'http:something', 'site:something', 'intitle:something', "passports'", '.mp3', "' pictures"].each do |phrase|
       it { is_expected.not_to allow_value(phrase).for(:phrase) }
     end
-    ["basic phrase", "my-name", "1099 form", "Senator Frank S. Farley State Marina", "Oswald West State Park's Smuggler Cove", "en español", "último pronóstico", "¿Qué"].each do |phrase|
+    ['basic phrase', 'my-name', '1099 form', 'Senator Frank S. Farley State Marina', "Oswald West State Park's Smuggler Cove", 'en español', 'último pronóstico', '¿Qué'].each do |phrase|
       it { is_expected.to allow_value(phrase).for(:phrase) }
     end
 
@@ -28,43 +28,43 @@ describe SaytSuggestion do
       expect(described_class.new(valid_attributes)).to_not be_valid
     end
 
-    it "should create a new instance given valid attributes" do
+    it 'should create a new instance given valid attributes' do
       described_class.create!(valid_attributes)
     end
 
-    it "should downcase the phrase before entering into DB" do
-      described_class.create!(:phrase => "ALL CAPS", :affiliate => affiliate)
-      expect(described_class.find_by_phrase("all caps").phrase).to eq("all caps")
+    it 'should downcase the phrase before entering into DB' do
+      described_class.create!(:phrase => 'ALL CAPS', :affiliate => affiliate)
+      expect(described_class.find_by_phrase('all caps').phrase).to eq('all caps')
     end
 
-    it "should strip whitespace from phrase before inserting in DB" do
-      phrase = " leading and trailing whitespaces "
+    it 'should strip whitespace from phrase before inserting in DB' do
+      phrase = ' leading and trailing whitespaces '
       sf = described_class.create!(:phrase => phrase, :affiliate => affiliate)
       expect(sf.phrase).to eq(phrase.strip)
     end
 
-    it "should squish multiple whitespaces between words in the phrase before entering into DB" do
-      described_class.create!(:phrase => "two  spaces", :affiliate => affiliate)
-      expect(described_class.find_by_phrase("two spaces").phrase).to eq("two spaces")
+    it 'should squish multiple whitespaces between words in the phrase before entering into DB' do
+      described_class.create!(:phrase => 'two  spaces', :affiliate => affiliate)
+      expect(described_class.find_by_phrase('two spaces').phrase).to eq('two spaces')
     end
 
-    it "should not correct misspellings before entering in DB if the suggestion belongs to an affiliate" do
-      described_class.create!(:phrase => "barack ubama", :affiliate => affiliates(:basic_affiliate))
-      expect(described_class.find_by_phrase("barack ubama")).not_to be_nil
+    it 'should not correct misspellings before entering in DB if the suggestion belongs to an affiliate' do
+      described_class.create!(:phrase => 'barack ubama', :affiliate => affiliates(:basic_affiliate))
+      expect(described_class.find_by_phrase('barack ubama')).not_to be_nil
     end
 
-    it "should default popularity to 1 if not specified" do
-      described_class.create!(:phrase => "popular", :affiliate => affiliate)
-      expect(described_class.find_by_phrase("popular").popularity).to eq(1)
+    it 'should default popularity to 1 if not specified' do
+      described_class.create!(:phrase => 'popular', :affiliate => affiliate)
+      expect(described_class.find_by_phrase('popular').popularity).to eq(1)
     end
 
-    it "should default protected status to false" do
-      suggestion = described_class.create!(:phrase => "unprotected", :affiliate => affiliate)
+    it 'should default protected status to false' do
+      suggestion = described_class.create!(:phrase => 'unprotected', :affiliate => affiliate)
       expect(suggestion.is_protected).to be false
     end
 
-    it "should not create a new suggestion if one exists, but is marked as deleted" do
-      described_class.create!(:phrase => "deleted", :affiliate => affiliate, :deleted_at => Time.now)
+    it 'should not create a new suggestion if one exists, but is marked as deleted' do
+      described_class.create!(:phrase => 'deleted', :affiliate => affiliate, :deleted_at => Time.now)
       expect(described_class.create(:phrase => 'deleted', :affiliate => affiliate).id).to be_nil
     end
   end
@@ -75,14 +75,14 @@ describe SaytSuggestion do
     end
 
     it 'should set the is_whitelisted flag accordingly' do
-      ss = described_class.create!(:phrase => "accept me please", :affiliate => affiliate, :deleted_at => Time.now)
+      ss = described_class.create!(:phrase => 'accept me please', :affiliate => affiliate, :deleted_at => Time.now)
       expect(ss.is_whitelisted).to be true
-      ss = described_class.create!(:phrase => "not me please", :affiliate => affiliate, :deleted_at => Time.now)
+      ss = described_class.create!(:phrase => 'not me please', :affiliate => affiliate, :deleted_at => Time.now)
       expect(ss.is_whitelisted).to be false
     end
   end
 
-  describe "#expire(days_back)" do
+  describe '#expire(days_back)' do
     subject(:expire) { described_class.expire(days_back) }
 
     let(:days_back) { 30 }
@@ -108,8 +108,8 @@ describe SaytSuggestion do
     end
   end
 
-  describe "#populate_for(day, limit = nil)" do
-    it "should populate SAYT suggestions for all affiliates in affiliate table" do
+  describe '#populate_for(day, limit = nil)' do
+    it 'should populate SAYT suggestions for all affiliates in affiliate table' do
       Affiliate.all.each do |aff|
         expect(described_class).to receive(:populate_for_affiliate_on).with(aff.name, aff.id, Date.current, 100)
       end
@@ -118,14 +118,14 @@ describe SaytSuggestion do
 
   end
 
-  describe "#populate_for_affiliate_on(affiliate_name, affiliate_id, day, limit)" do
+  describe '#populate_for_affiliate_on(affiliate_name, affiliate_id, day, limit)' do
     before do
       ResqueSpec.reset!
     end
 
     let(:aff) { affiliates(:basic_affiliate) }
 
-    it "should enqueue the affiliate for processing" do
+    it 'should enqueue the affiliate for processing' do
       described_class.populate_for_affiliate_on(aff.name, aff.id, Date.current, 100)
       expect(SaytSuggestionDiscovery).to have_queued(aff.name, aff.id, Date.current, 100)
     end
@@ -191,7 +191,7 @@ describe SaytSuggestion do
     end
   end
 
-  describe "#process_sayt_suggestion_txt_upload" do
+  describe '#process_sayt_suggestion_txt_upload' do
     let(:content_type) { 'text/plain' }
     let(:affiliate) { affiliates(:basic_affiliate) }
 
@@ -202,7 +202,7 @@ describe SaytSuggestion do
       @dummy_suggestion = described_class.create(:phrase => 'dummy suggestions')
     end
 
-    it "should create SAYT suggestions using the affiliate provided, if provided" do
+    it 'should create SAYT suggestions using the affiliate provided, if provided' do
       @phrases.each do |phrase|
         expect(described_class).to receive(:create).with({:phrase => phrase, :affiliate => affiliate, :is_protected => true, :popularity => described_class::MAX_POPULARITY}).and_return @dummy_suggestion
       end
@@ -210,32 +210,32 @@ describe SaytSuggestion do
     end
   end
 
-  describe "#to_label" do
-    it "should return the phrase" do
+  describe '#to_label' do
+    it 'should return the phrase' do
       expect(described_class.new(:phrase => 'dummy suggestion', :affiliate => affiliate).to_label).to eq('dummy suggestion')
     end
   end
 
-  describe "#related_search" do
+  describe '#related_search' do
     let(:affiliate) { affiliates(:basic_affiliate) }
 
     before do
       described_class.destroy_all
-      described_class.create!(:affiliate_id => affiliate.id, :phrase => "suggest me", :popularity => 30)
+      described_class.create!(:affiliate_id => affiliate.id, :phrase => 'suggest me', :popularity => 30)
       ElasticSaytSuggestion.commit
     end
 
-    it "should return an array of highlighted strings" do
-      expect(described_class.related_search("suggest", affiliate)).to eq(["<strong>suggest</strong> me"])
+    it 'should return an array of highlighted strings' do
+      expect(described_class.related_search('suggest', affiliate)).to eq(['<strong>suggest</strong> me'])
     end
 
-    context "when affiliate has related searches disabled" do
+    context 'when affiliate has related searches disabled' do
       before do
         affiliate.is_related_searches_enabled = false
       end
 
-      it "should return an empty array" do
-        expect(described_class.related_search("suggest", affiliate)).to eq([])
+      it 'should return an empty array' do
+        expect(described_class.related_search('suggest', affiliate)).to eq([])
       end
     end
 
