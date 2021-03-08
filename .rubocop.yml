@@ -34,3 +34,12 @@ Style/MethodCallWithArgsParentheses:
     - 'app/models/watcher.rb'
     - 'lib/analytics_dsl.rb'
     - 'lib/watcher_dsl.rb'
+
+Style/NumericLiterals:
+  Exclude:
+    # Exclude files that tend to contain long, numeric ID's
+    - /**/**/*twitter*
+    - /**/**/*tweet*
+    - spec/support/api_search_as_json_behavior.rb
+
+
