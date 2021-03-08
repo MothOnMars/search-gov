@@ -42,4 +42,9 @@ Style/NumericLiterals:
     - /**/**/*tweet*
     - spec/support/api_search_as_json_behavior.rb
 
+#SHARE ME
+RSpec/ImplicitSubject:
+  EnforcedStyle: single_statement_only
+
+
 
