@@ -141,16 +141,14 @@ group :development, :test do
   gem 'launchy', '~> 2.4.3'
   gem 'i18n-tasks', '~> 0.9.19'
   gem 'pry-byebug', '~> 3.5'
-  # Updating rubocop? Update & run mry to ensure rubocop.yml is updated:
-  # https://github.com/pocke/mry#usage (include the target version to add new cops)
-  # Also bump the rubocop channel in .codeclimate.yml:
-  # https://docs.codeclimate.com/v1.0/docs/rubocop#section-using-rubocop-s-newer-versions
-  gem 'rubocop', '0.60.0'
   gem 'faker', '~> 1.8'
   gem 'pry-rails', '~> 0.3.6'
   gem 'awesome_print'
-  gem 'mry', '0.59.0.0'
   gem 'puma', '~> 3.12'
+  # Bumping searchgov_style? Be sure to update the Rubocop channel in .codeclimate.yml
+  # to match the channel in searchgov_style
+  gem 'searchgov_style', '~> 0.1', require: false, git: 'https://github.com/MothOnMars/searchgov_style',
+    branch: 'upgrade_rubocop_1963'
 end
 
 group :test do
@@ -170,5 +168,4 @@ group :test do
   gem 'rspec_junit_formatter', '~> 0.3.0'
   gem 'rails-controller-testing', '~> 1.0.4'
   gem 'webdrivers', '~> 4.0'
-  gem 'rubocop-rspec', '~> 1.35', require: false
 end

@@ -14,7 +14,7 @@ describe ApiBingSearch do
       query: 'food nutrition' }
   end
 
-  let(:search) { ApiBingSearch.new search_params }
+  let(:search) { described_class.new search_params }
 
   before { affiliate.site_domains.create!(domain: 'usa.gov') }
 
@@ -148,8 +148,8 @@ describe ApiBingSearch do
 
   describe '#as_json' do
     subject(:search) do
-      agency = Agency.create!({:name => 'Some New Agency', :abbreviation => 'SNA' })
-      AgencyOrganizationCode.create!(organization_code: "XX00", agency: agency)
+      agency = Agency.create!({name: 'Some New Agency', abbreviation: 'SNA' })
+      AgencyOrganizationCode.create!(organization_code: 'XX00', agency: agency)
       allow(affiliate).to receive(:agency).and_return(agency)
 
       described_class.new affiliate: affiliate,
