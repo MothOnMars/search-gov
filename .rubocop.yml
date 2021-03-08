@@ -43,6 +43,9 @@ Style/NumericLiterals:
     - spec/support/api_search_as_json_behavior.rb
 
 #SHARE ME
+RSpec/DescribedClass:
+  SkipBlocks: true
+
 RSpec/ImplicitSubject:
   EnforcedStyle: single_statement_only
 
