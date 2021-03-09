@@ -82,7 +82,7 @@ describe SaytSuggestion do
     end
   end
 
-  describe '#expire(days_back)' do
+  describe '.expire(days_back)' do
     subject(:expire) { described_class.expire(days_back) }
 
     let(:days_back) { 30 }
