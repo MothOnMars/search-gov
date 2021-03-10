@@ -115,7 +115,6 @@ describe SaytSuggestion do
       end
       described_class.populate_for(Date.current, 100)
     end
-
   end
 
   describe '#populate_for_affiliate_on(affiliate_name, affiliate_id, day, limit)' do
@@ -129,7 +128,6 @@ describe SaytSuggestion do
       described_class.populate_for_affiliate_on(aff.name, aff.id, Date.current, 100)
       expect(SaytSuggestionDiscovery).to have_queued(aff.name, aff.id, Date.current, 100)
     end
-
   end
 
   describe '#fetch_by_affiliate_id(affiliate_id, query, num_suggestions)' do
@@ -204,7 +202,7 @@ describe SaytSuggestion do
 
     it 'creates SAYT suggestions using the affiliate provided, if provided' do
       @phrases.each do |phrase|
-        expect(described_class).to receive(:create).with({phrase: phrase, affiliate: affiliate, is_protected: true, popularity: described_class::MAX_POPULARITY}).and_return @dummy_suggestion
+        expect(described_class).to receive(:create).with({ phrase: phrase, affiliate: affiliate, is_protected: true, popularity: described_class::MAX_POPULARITY }).and_return @dummy_suggestion
       end
       described_class.process_sayt_suggestion_txt_upload(@file, affiliate)
     end
@@ -238,6 +236,5 @@ describe SaytSuggestion do
         expect(described_class.related_search('suggest', affiliate)).to eq([])
       end
     end
-
   end
 end
