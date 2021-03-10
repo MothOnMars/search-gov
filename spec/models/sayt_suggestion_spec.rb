@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'spec_helper'
 
 describe SaytSuggestion do
@@ -139,7 +140,7 @@ describe SaytSuggestion do
     end
 
     it 'returns records for that affiliate_id' do
-      SaytSuggestion.create!(phrase: 'child', popularity: 10, affiliate_id: affiliate.id)
+      described_class.create!(phrase: 'child', popularity: 10, affiliate_id: affiliate.id)
       described_class.create!(phrase: 'child care', popularity: 1, affiliate_id: affiliate.id)
       described_class.create!(phrase: 'children', popularity: 100, affiliate_id: affiliate.id)
       described_class.create!(phrase: 'child default', popularity: 100, affiliate_id: affiliates(:basic_affiliate).id)
