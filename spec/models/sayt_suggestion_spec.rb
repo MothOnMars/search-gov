@@ -34,7 +34,7 @@ describe SaytSuggestion do
 
     it 'downcases the phrase before entering into DB' do
       described_class.create!(phrase: 'ALL CAPS', affiliate: affiliate)
-      expect(described_class.find_by_phrase('all caps').phrase).to eq('all caps')
+      expect(described_class.find_by(phrase: 'all caps').phrase).to eq('all caps')
     end
 
     it 'strips whitespace from phrase before inserting in DB' do
@@ -45,17 +45,17 @@ describe SaytSuggestion do
 
     it 'squishes multiple whitespaces between words in the phrase before entering into DB' do
       described_class.create!(phrase: 'two  spaces', affiliate: affiliate)
-      expect(described_class.find_by_phrase('two spaces').phrase).to eq('two spaces')
+      expect(described_class.find_by(phrase: 'two spaces').phrase).to eq('two spaces')
     end
 
     it 'does not correct misspellings before entering in DB if the suggestion belongs to an affiliate' do
       described_class.create!(phrase: 'barack ubama', affiliate: affiliates(:basic_affiliate))
-      expect(described_class.find_by_phrase('barack ubama')).not_to be_nil
+      expect(described_class.find_by(phrase: 'barack ubama')).not_to be_nil
     end
 
     it 'defaults popularity to 1 if not specified' do
       described_class.create!(phrase: 'popular', affiliate: affiliate)
-      expect(described_class.find_by_phrase('popular').popularity).to eq(1)
+      expect(described_class.find_by(phrase: 'popular').popularity).to eq(1)
     end
 
     it 'defaults protected status to false' do
@@ -194,7 +194,7 @@ describe SaytSuggestion do
     let(:affiliate) { affiliates(:basic_affiliate) }
 
     before do
-      @phrases = %w{ one two three }
+      @phrases = %w{one two three}
       tempfile = File.open('spec/fixtures/txt/sayt_suggestions.txt')
       @file = Rack::Test::UploadedFile.new(tempfile, content_type)
       @dummy_suggestion = described_class.create(phrase: 'dummy suggestions')
