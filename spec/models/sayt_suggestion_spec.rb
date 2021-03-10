@@ -25,7 +25,7 @@ describe SaytSuggestion do
 
     it 'validates the uniqueness of the phrase scoped to the affiliate id' do
       described_class.create!(valid_attributes)
-      expect(described_class.new(valid_attributes)).to_not be_valid
+      expect(described_class.new(valid_attributes)).not_to be_valid
     end
 
     it 'creates a new instance given valid attributes' do
