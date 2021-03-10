@@ -11,7 +11,9 @@ class SaytSuggestion < ApplicationRecord
   validates :phrase, presence: true
   validates :phrase, uniqueness: { scope: :affiliate_id, case_sensitive: false }
   validates :phrase, length: { within: (3..80) }
-  validates :phrase, format: { with: /\A[a-z0-9#{LETTERS_WITH_DIACRITIC}]+([\s_\.'\-]+[a-z0-9#{LETTERS_WITH_DIACRITIC}]+)*\z/iu }
+  validates :phrase, format: {
+    with: /\A[a-z0-9#{LETTERS_WITH_DIACRITIC}]+([\s_\.'\-]+[a-z0-9#{LETTERS_WITH_DIACRITIC}]+)*\z/iu
+  }
   belongs_to :affiliate
 
   MAX_POPULARITY = 2**30
@@ -38,8 +40,12 @@ class SaytSuggestion < ApplicationRecord
     end
 
     def populate_for(day, limit)
-      name_id_list = Affiliate.select([:id, :name]).collect { |aff| { name: aff.name, id: aff.id } }
-      name_id_list.each { |element| populate_for_affiliate_on(element[:name], element[:id], day, limit) }
+      name_id_list = Affiliate.select([:id, :name]).collect do |aff|
+        { name: aff.name, id: aff.id }
+      end
+      name_id_list.each do |element|
+        populate_for_affiliate_on(element[:name], element[:id], day, limit)
+      end
     end
 
     def populate_for_affiliate_on(affiliate_name, affiliate_id, day, limit)
@@ -48,21 +54,22 @@ class SaytSuggestion < ApplicationRecord
 
     def process_sayt_suggestion_txt_upload(txtfile, affiliate)
       valid_content_types = %w[application/octet-stream text/plain txt]
-      if valid_content_types.include?(txtfile.content_type)
-        created, ignored = 0, 0
-        txtfile.tempfile.readlines.each do |phrase|
-          entry = phrase.chomp.strip
-          if entry.present?
-            create(
-              phrase: entry,
-              affiliate: affiliate,
-              is_protected: true,
-              popularity: MAX_POPULARITY
-            ).id.nil? ? (ignored += 1) : (created += 1)
-          end
+      return unless valid_content_types.include?(txtfile.content_type)
+
+      created = 0
+      ignored = 0
+      txtfile.tempfile.readlines.each do |phrase|
+        entry = phrase.chomp.strip
+        if entry.present?
+          create(
+            phrase: entry,
+            affiliate: affiliate,
+            is_protected: true,
+            popularity: MAX_POPULARITY
+          ).id.nil? ? (ignored += 1) : (created += 1)
         end
-        { created: created, ignored: ignored }
       end
+      { created: created, ignored: ignored }
     end
 
     def expire(days_back)
