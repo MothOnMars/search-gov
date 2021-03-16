@@ -1,1 +1,11 @@
-maximum_profile_updates_per_day: 300
+default: &DEFAULT
+  maximum_profile_updates_per_day: 300
+  
+development:
+  <<: *DEFAULT
+  
+test:
+  <<: *DEFAULT
+
+production:
+  <<: *DEFAULT

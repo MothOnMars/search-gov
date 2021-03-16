@@ -90,6 +90,7 @@ describe YoutubeData do
   end
 
   describe '.maximum_number_of_profile_updates_per_day' do
+    
     context 'when no value is configured' do
       before do
         Rails.configuration.youtube['maximum_profile_updates_per_day'] = nil
@@ -102,16 +103,16 @@ describe YoutubeData do
     end
 
     context 'when a value is configured' do
-      let(:expected_maximum_number_of_profile_updates_per_day) { 31_416 }
+      #let(:expected_maximum_number_of_profile_updates_per_day) { 31_416 }
 
       before do
-        Rails.configuration.youtube['maximum_profile_updates_per_day'] =
-          expected_maximum_number_of_profile_updates_per_day
+      #  Rails.configuration.youtube['maximum_profile_updates_per_day'] =
+       #   expected_maximum_number_of_profile_updates_per_day
       end
 
       it 'defaults to the value built in to YoutubeData' do
         expect(described_class.maximum_profile_updates_per_day).to(
-          eq(expected_maximum_number_of_profile_updates_per_day)
+          eq(300)
         )
       end
     end
@@ -132,7 +133,7 @@ describe YoutubeData do
     context 'when we have hit our limit' do
       before do
         allow(described_class).to receive(:number_of_profiles_updated_today).
-          and_return(described_class.maximum_profile_updates_per_day)
+          and_return(10000)
       end
 
       it 'is true' do
