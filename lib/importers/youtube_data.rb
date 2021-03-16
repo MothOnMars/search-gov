@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class YoutubeData
-  #DEFAULT_MAXIMUM_PROFILE_UPDATES_PER_DAY = 300
   CONFIG = Rails.application.config_for(:youtube).freeze
 
   attr_reader :all_news_item_ids,
@@ -20,42 +19,22 @@ class YoutubeData
       end
     end
     Rails.logger.info(
-      "Already imported #{maximum_profile_updates_per_day} YouTube profiles"
+      "Already imported #{number_of_profiles_updated_today} YouTube profiles"
     )
   end
 
   def self.next_profile_to_update
-   # return nil if already_imported_enough_profiles_today?
-
     profile = YoutubeProfile.active.stale.first
     Rails.logger.info 'No stale YouTube profiles' unless profile
     profile
   end
 
   def self.number_of_profiles_updated_today
-    #today = Time.now.utc.to_date
-
-    #YoutubeProfile.select(:updated_at).
-    #  to_a.
-    #  select { |profile| profile.updated_at.utc.to_date == today }.
-    #  count
     YoutubeProfile.where('updated_at > ?', Date.today).count
-  end
-
-  def self.maximum_profile_updates_per_day
-    CONFIG['maximum_profile_updates_per_day']
-  #  Rails.configuration.youtube['maximum_profile_updates_per_day'] ||
-   #   DEFAULT_MAXIMUM_PROFILE_UPDATES_PER_DAY
   end
 
   def self.already_imported_enough_profiles_today?
     number_of_profiles_updated_today > CONFIG['maximum_profile_updates_per_day']
-    #return false if number_of_profiles_updated_today < maximum_profile_updates_per_day
-
-    #Rails.logger.info(
-    #  "Already imported #{maximum_profile_updates_per_day} YouTube profiles"
-    #)
-    #true
   end
 
   def initialize(youtube_profile)
