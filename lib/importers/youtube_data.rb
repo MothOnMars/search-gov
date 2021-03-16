@@ -8,7 +8,7 @@ class YoutubeData
               :rss_feed_url
 
   def self.refresh
-    loop do
+    until already_imported_enough_profiles_today? do
       profile = next_profile_to_update
       if profile
         YoutubeData.new(profile).import
