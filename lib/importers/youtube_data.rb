@@ -32,12 +32,13 @@ class YoutubeData
   end
 
   def self.number_of_profiles_updated_today
-    today = Time.now.utc.to_date
+    #today = Time.now.utc.to_date
 
-    YoutubeProfile.select(:updated_at).
-      to_a.
-      select { |profile| profile.updated_at.utc.to_date == today }.
-      count
+    #YoutubeProfile.select(:updated_at).
+    #  to_a.
+    #  select { |profile| profile.updated_at.utc.to_date == today }.
+    #  count
+    YoutubeProfile.where('updated_at > ?', Date.today).count
   end
 
   def self.maximum_profile_updates_per_day
