@@ -1,4 +1,4 @@
-Feature: Legacy Search
+Feature: Search
   In order to get government-related information from specific affiliate agencies
   As a site visitor
   I want to be able to search for information
