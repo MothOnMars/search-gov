@@ -75,19 +75,15 @@ Feature: Legacy Search
     When I am on bar.gov's search page
     And I fill in "Enter your search term" with "first item"
     And I press "Search" within the search box
-    Then show me the page
     Then I should see "News about first item"
     And I should not see "stale"
     And I should see "First <b> item </b>" in the rss feed govbox
     And I should not see "First video item" in the rss feed govbox
     And I should not see "Photo Gallery 7 days ago"
-    And I should see "Videos of 'first item' by bar site"
     And I should see "First video item" in the video rss feed govbox
-    And I should see an image with alt text "First video item"
+    #And I should see an image with alt text "First video item"
     And I should see an image with src "https://i.ytimg.com/vi/0hLMc-6ocRk/default.jpg"
     And I should not see "First item" in the video rss feed govbox
-    And I should not see "Show Options" in the left column
-    And I should not see "Hide Options" in the left column
 
     When I follow "News for 'first item'"
     Then I should be on the news search page

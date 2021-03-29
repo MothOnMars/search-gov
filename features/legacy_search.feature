@@ -75,17 +75,16 @@ Feature: Legacy Search
     When I am on bar.gov's search page
     And I fill in "Enter your search term" with "first item"
     And I press "Search" in the legacy search box
-    Then show me the page
     Then I should see "News for 'first item' by bar site"
     And I should not see "stale"
-    And I should see "First <b> item </b>" in the rss feed govbox
-    And I should not see "First video item" in the rss feed govbox
+    And I should see "First <b> item </b>" in the legacy rss feed govbox
+    And I should not see "First video item" in the legacy rss feed govbox
     And I should not see "Photo Gallery 7 days ago"
     And I should see "Videos of 'first item' by bar site"
-    And I should see "First video item" in the video rss feed govbox
+    And I should see "First video item" in the legacy video rss feed govbox
     And I should see an image with alt text "First video item"
     And I should see an image with src "https://i.ytimg.com/vi/0hLMc-6ocRk/default.jpg"
-    And I should not see "First item" in the video rss feed govbox
+    And I should not see "First item" in the legacy video rss feed govbox
     And I should not see "Show Options" in the left column
     And I should not see "Hide Options" in the left column
 
@@ -135,7 +134,7 @@ Feature: Legacy Search
     And I fill in "Ingrese su búsqueda" with "noticia uno"
     And I press "Buscar" in the legacy search box
     Then I should see "Videos de 'noticia uno' de Spanish bar site"
-    And I should see "Noticia video uno" in the video rss feed govbox
+    And I should see "Noticia video uno" in the legacy video rss feed govbox
 
     When I am on bar.gov's search page
     And I fill in "query" with "item"
