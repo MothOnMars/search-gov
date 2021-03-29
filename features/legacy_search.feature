@@ -75,6 +75,7 @@ Feature: Legacy Search
     When I am on bar.gov's search page
     And I fill in "Enter your search term" with "first item"
     And I press "Search" in the legacy search box
+    Then show me the page
     Then I should see "News for 'first item' by bar site"
     And I should not see "stale"
     And I should see "First <b> item </b>" in the rss feed govbox
