@@ -5,7 +5,7 @@ gem 'rails', '~> 5.2.0'
 gem 'rake', '~> 12.3.2'
 gem 'rack-contrib', '~> 2.1.0'
 gem 'rails-observers', '~> 0.1.5'
-#gem 'responders', '~> 2.0'
+gem 'responders', '~> 2.0' #maybe remove - see failures
 gem 'mysql2', '~> 0.4.4'
 gem 'curb', '~> 0.9.4'
 gem 'haml', '~> 5.0.4'
@@ -18,7 +18,7 @@ gem 'omniauth_login_dot_gov', git: 'https://github.com/18f/omniauth_login_dot_go
                               ref: '08ce9b5322efb2d82b2df3f6d774308c4028ee6c'
 gem 'omniauth-rails_csrf_protection', '~> 0.1.2'
 gem 'airbrake', '~> 7.1.1'
-gem 'yajl-ruby', '~> 1.3.1', :require => 'yajl'
+#gem 'yajl-ruby', '~> 1.3.1', :require => 'yajl' #remove me?
 gem 'redis', '~> 4.0.1'
 gem 'redis-namespace', '~> 1.6.0'
 gem 'redis-rails', '~> 5.0.2'
@@ -27,7 +27,7 @@ gem 'resque-priority', :git => 'https://github.com/GSA/resque-priority.git'
 gem 'resque-timeout', '~> 1.0.0'
 gem 'resque-lock-timeout', '~> 0.4.5'
 gem 'resque-scheduler', '~> 4.3.1'
-gem 'cocaine', '~> 0.5.8'
+gem 'cocaine', '~> 0.5.8' #remove me?
 gem 'paperclip', '~> 5.2.0'
 gem 'googlecharts', '~> 1.6.12'
 gem 'tweetstream', '~> 2.6.1' # no longer maintained?
@@ -35,32 +35,33 @@ gem 'twitter', git: 'https://github.com/GSA/twitter.git', branch: '5-stable'
 gem 'flickraw', '~> 0.9.9'
 gem 'active_scaffold', '~> 3.5.0'
 gem 'active_scaffold_export', git: 'https://github.com/naaano/active_scaffold_export'
+# remove us_states_select?
 gem 'us_states_select', '~> 1.2.0', :git => 'https://github.com/jeremydurham/us-state-select-plugin.git', :require => 'us_states_select'
 gem 'mobile-fu', '~> 1.4.0'
 gem "recaptcha", '~> 4.6.3', :require => "recaptcha/rails"
 gem 'newrelic_rpm', '~> 5.0.0'
-gem 'american_date', '~> 1.1.1'
+gem 'american_date', '~> 1.1.1' #remove me?
 gem 'sass', '~> 3.3.0'
 gem 'sass-rails', '~> 5.0.7'
 # Gem no longer being maintained. See https://cm-jira.usa.gov/browse/SRCH-694
 gem 'google_visualr',
     git: 'https://github.com/winston/google_visualr',
     ref: '17b97114a345baadd011e7b442b9a6c91a2b7ab5'
-gem 'oj', '~> 3.3.10'
+gem 'oj', '~> 3.3.10' # remove me?
 gem 'faraday_middleware', '~> 0.12.2'
 gem 'net-http-persistent', '~> 2.9.3'
 gem 'rash_alt', git: 'https://github.com/MothOnMars/rash_alt', ref: 'bbd107061fbb066709523c68de4a217a76a8a945', require: 'rash'
 gem 'geoip', '~> 1.6.3'
-gem 'us_states', '~> 0.1.1'
-gem 'htmlentities', '~> 4.3.4'
-gem 'html_truncator', '~> 0.4.2'
+gem 'us_states', '~> 0.1.1' #remove me?
+gem 'htmlentities', '~> 4.3.4' #ONLY USED IN GOOGLE WEB SEARCH
+gem 'html_truncator', '~> 0.4.2' #keep
 gem 'addressable', '~> 2.5.2'
-gem 'select2-rails', '~> 4.0.3'
+gem 'select2-rails', '~> 4.0.3' #keep
 gem 'turbolinks', '~> 5.0.1'
 gem 'will_paginate-bootstrap', '~> 1.0.1'
 gem 'virtus', '~> 1.0.5'
-gem 'truncator', '~> 0.1.7'
-gem 'em-http-request', '~> 1.1.5'
+gem 'truncator', '~> 0.1.7' #keep
+gem 'em-http-request', '~> 1.1.5' #event machine
 gem "validate_url", '= 0.2.0' # Newer versions use Addressable::URI for validation, which is more permissive than what we want
 gem 'elasticsearch', '~> 7.4.0'
 gem 'elasticsearch-xpack', '~> 7.4.0'
