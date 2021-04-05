@@ -18,7 +18,7 @@ gem 'omniauth_login_dot_gov', git: 'https://github.com/18f/omniauth_login_dot_go
                               ref: '08ce9b5322efb2d82b2df3f6d774308c4028ee6c'
 gem 'omniauth-rails_csrf_protection', '~> 0.1.2'
 gem 'airbrake', '~> 7.1.1'
-#gem 'yajl-ruby', '~> 1.3.1', :require => 'yajl' #remove me?
+#gem 'yajl-ruby', '~> 1.3.1', :require => 'yajl' #remove
 gem 'redis', '~> 4.0.1'
 gem 'redis-namespace', '~> 1.6.0'
 gem 'redis-rails', '~> 5.0.2'
@@ -27,7 +27,7 @@ gem 'resque-priority', :git => 'https://github.com/GSA/resque-priority.git'
 gem 'resque-timeout', '~> 1.0.0'
 gem 'resque-lock-timeout', '~> 0.4.5'
 gem 'resque-scheduler', '~> 4.3.1'
-gem 'cocaine', '~> 0.5.8' #remove me?
+#gem 'cocaine', '~> 0.5.8' #remove me?
 gem 'paperclip', '~> 5.2.0'
 gem 'googlecharts', '~> 1.6.12'
 gem 'tweetstream', '~> 2.6.1' # no longer maintained?

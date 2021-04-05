@@ -834,7 +834,6 @@ DEPENDENCIES
   capybara (~> 2.18.0)
   capybara-screenshot
   cld3 (~> 3.2.3)
-  cocaine (~> 0.5.8)
   coffee-rails (~> 4.2.2)
   colorize (~> 0.8.1)
   compass-blueprint (~> 1.0.0)
