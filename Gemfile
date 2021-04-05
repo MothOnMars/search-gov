@@ -52,7 +52,7 @@ gem 'faraday_middleware', '~> 0.12.2'
 gem 'net-http-persistent', '~> 2.9.3'
 gem 'rash_alt', git: 'https://github.com/MothOnMars/rash_alt', ref: 'bbd107061fbb066709523c68de4a217a76a8a945', require: 'rash'
 gem 'geoip', '~> 1.6.3'
-#gem 'us_states', '~> 0.1.1' #remove me?
+#gem 'us_states', '~> 0.1.1' #remove me
 gem 'htmlentities', '~> 4.3.4' #ONLY USED IN GOOGLE WEB SEARCH
 gem 'html_truncator', '~> 0.4.2' #keep
 gem 'addressable', '~> 2.5.2'
@@ -108,8 +108,8 @@ gem 'compass-rails', '~> 3.1.0'
 gem 'compass-blueprint', '~> 1.0.0'
 gem 'jquery-ui-rails', '~> 6.0.1'
 gem 'jquery-rails', '~> 4.4.0'
-gem 'therubyracer', '~> 0.12.3'
-gem 'yui-compressor', '~> 0.12.0'
+#gem 'therubyracer', '~> 0.12.3'
+gem 'yui-compressor', '~> 0.12.0' #remove me?
 gem 'twitter-typeahead-rails', '~> 0.11.1'
 # Why do we have two versions of Font Awesome?
 # One is for general use around the app, in places where
