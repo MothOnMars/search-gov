@@ -47,12 +47,12 @@ gem 'sass-rails', '~> 5.0.7'
 gem 'google_visualr',
     git: 'https://github.com/winston/google_visualr',
     ref: '17b97114a345baadd011e7b442b9a6c91a2b7ab5'
-#gem 'oj', '~> 3.3.10' # remove me?
+#gem 'oj', '~> 3.3.10' # remove me
 gem 'faraday_middleware', '~> 0.12.2'
 gem 'net-http-persistent', '~> 2.9.3'
 gem 'rash_alt', git: 'https://github.com/MothOnMars/rash_alt', ref: 'bbd107061fbb066709523c68de4a217a76a8a945', require: 'rash'
 gem 'geoip', '~> 1.6.3'
-gem 'us_states', '~> 0.1.1' #remove me?
+#gem 'us_states', '~> 0.1.1' #remove me?
 gem 'htmlentities', '~> 4.3.4' #ONLY USED IN GOOGLE WEB SEARCH
 gem 'html_truncator', '~> 0.4.2' #keep
 gem 'addressable', '~> 2.5.2'
