@@ -27,7 +27,7 @@ gem 'resque-priority', :git => 'https://github.com/GSA/resque-priority.git'
 gem 'resque-timeout', '~> 1.0.0'
 gem 'resque-lock-timeout', '~> 0.4.5'
 gem 'resque-scheduler', '~> 4.3.1'
-#gem 'cocaine', '~> 0.5.8' #remove me?
+#gem 'cocaine', '~> 0.5.8' #remove
 gem 'paperclip', '~> 5.2.0'
 gem 'googlecharts', '~> 1.6.12'
 gem 'tweetstream', '~> 2.6.1' # no longer maintained?
@@ -36,7 +36,7 @@ gem 'flickraw', '~> 0.9.9'
 gem 'active_scaffold', '~> 3.5.0'
 gem 'active_scaffold_export', git: 'https://github.com/naaano/active_scaffold_export'
 # remove us_states_select?
-gem 'us_states_select', '~> 1.2.0', :git => 'https://github.com/jeremydurham/us-state-select-plugin.git', :require => 'us_states_select'
+#gem 'us_states_select', '~> 1.2.0', :git => 'https://github.com/jeremydurham/us-state-select-plugin.git', :require => 'us_states_select'
 gem 'mobile-fu', '~> 1.4.0'
 gem "recaptcha", '~> 4.6.3', :require => "recaptcha/rails"
 gem 'newrelic_rpm', '~> 5.0.0'
