@@ -190,11 +190,12 @@ jobs:
             ./cc-test-reporter before-build
 
             # Run cucumber tests
-            bundle exec cucumber --format progress \
-                                --format junit \
-                                --out /tmp/test-results/cucumber.xml \
-                                --format progress \
-                                -- $(circleci tests glob "features/*.feature" | circleci tests split --split-by=timings)
+            bundle exec cucumber --strict-undefined \
+                                 --format progress \
+                                 --format junit \
+                                 --out /tmp/test-results/cucumber.xml \
+                                 --format progress \
+                                 -- $(circleci tests glob "features/*.feature" | circleci tests split --split-by=timings)
 
             ./cc-test-reporter format-coverage --output coverage/codeclimate.cucumber.$CIRCLE_NODE_INDEX.json
 
