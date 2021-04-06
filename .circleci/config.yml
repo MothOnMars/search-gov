@@ -190,14 +190,15 @@ jobs:
             ./cc-test-reporter before-build
 
             # Run cucumber tests
-            bundle exec cucumber --strict \
-                                 --format progress \
-                                 --format junit \
-                                 --out /tmp/test-results/cucumber.xml \
-                                 --format progress \
-                                 -- $(circleci tests glob "features/*.feature" | circleci tests split --split-by=timings)
+            bundle exec cucumber --strict --format progress features/searches.feature
+            #  bundle exec cucumber --strict \
+            #                       --format progress \
+            #                       --format junit \
+            #                       --out /tmp/test-results/cucumber.xml \
+            #                       --format progress \
+            #                       -- $(circleci tests glob "features/*.feature" | circleci tests split --split-by=timings)
 
-            ./cc-test-reporter format-coverage --output coverage/codeclimate.cucumber.$CIRCLE_NODE_INDEX.json
+            #            ./cc-test-reporter format-coverage --output coverage/codeclimate.cucumber.$CIRCLE_NODE_INDEX.json
 
       - persist_to_workspace:
           root: ~/search-gov/coverage
@@ -268,10 +269,10 @@ workflows:
             parameters:
               ruby_version: ["2.5.5"]
 
-      - report_coverage:
-          requires:
-            - rspec
-            - cucumber
-          matrix:
-            parameters:
-              ruby_version: ["2.5.5"]
+                # - report_coverage:
+                #     requires:
+                #       - rspec
+                #       - cucumber
+                #     matrix:
+                #       parameters:
+                #         ruby_version: ["2.5.5"]
