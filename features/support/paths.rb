@@ -10,13 +10,13 @@ module NavigationHelpers
 
     when /the search page/
       search_path
-    when /the Spanish mobile search results page for "([^\"]*)"$/
+    when /the Spanish mobile search results page for "([^\"]*)"$/ # update - this should just be mobile
       search_path(:query => $1, :locale => 'en', :m => 'true')
     when /^(.*)'s search page$/
       search_path(:affiliate => $1)
-    when /^(.*)'s mobile search page$/
+    when /^(.*)'s mobile search page$/ # legacy SERP
       search_path(:affiliate => $1, :m => 'true')
-    when /^(.*)'s overridden search page$/
+    when /^(.*)'s overridden search page$/ # legacy SERP
       search_path(:affiliate => $1, :m => 'override')
     when /^(.*)'s advanced search page$/
       advanced_search_path(:affiliate => $1)
