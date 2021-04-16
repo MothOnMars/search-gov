@@ -535,8 +535,8 @@ Feature: Manage Display
     And I should not see an image with alt text "Header Tagline Logo"
 
   @javascript
-  Scenario: Error when Editing Managed Header & Footer
-    Given the following legacy Affiliates exist:
+  Scenario: Error when Editing Header & Footer
+    Given the following Affiliates exist:
       | display_name | name       | contact_email   | first_name   | last_name |
       | agency site  | agency.gov | john@agency.gov | John         | Bar       |
     And I am logged in with email "john@agency.gov"
