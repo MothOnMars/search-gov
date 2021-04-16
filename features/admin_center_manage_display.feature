@@ -669,12 +669,11 @@ Feature: Manage Display
     Then I should not see a link to "http://news.agency.gov"
 
   @javascript
-  Scenario: Errors when Editing No Results Page on non legacy Affiliate
+  Scenario: Errors when Editing No Results Page
     Given the following Affiliates exist:
-      | display_name | name       | contact_email   | first_name | last_name | uses_managed_header_footer | website                |
-      | agency site  | agency.gov | john@agency.gov | John       | Bar       | true                       | http://main.agency.gov |
+      | display_name | name       | contact_email   | first_name | last_name |  website                |
+      | agency site  | agency.gov | john@agency.gov | John       | Bar       |  http://main.agency.gov |
     And I am logged in with email "john@agency.gov"
-    And no emails have been sent
     When I go to the agency.gov's No Results Page page
 
     When I fill in the following:
@@ -699,7 +698,6 @@ Feature: Manage Display
       | Alternative Link URL 0    | news.agency.gov |
     And I submit the form by pressing "Save"
     Then I should see "You have updated your No Results Page."
-
     And the "Alternative Link URL 0" field should contain "http://news.agency.gov"
 
   @javascript
