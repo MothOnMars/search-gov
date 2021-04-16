@@ -554,6 +554,7 @@ Feature: Manage Display
       | display_name | name       | contact_email   | first_name   | last_name     | staged_header |
       | agency site  | agency.gov | john@agency.gov | John         | Bar           | header        |
     And I am logged in with email "john@agency.gov"
+    And no emails have been sent
     When I go to the agency.gov's Header & Footer page
     And I follow "Switch to Advanced Mode"
     And I fill in the following:
