@@ -540,7 +540,6 @@ Feature: Manage Display
       | display_name | name       | contact_email   | first_name   | last_name |
       | agency site  | agency.gov | john@agency.gov | John         | Bar       |
     And I am logged in with email "john@agency.gov"
-    And no emails have been sent
     When I go to the agency.gov's Header & Footer page
     And I fill in the following:
       | Header Link Title 0 | News               |
@@ -555,7 +554,6 @@ Feature: Manage Display
       | display_name | name       | contact_email   | first_name   | last_name     | staged_header |
       | agency site  | agency.gov | john@agency.gov | John         | Bar           | header        |
     And I am logged in with email "john@agency.gov"
-    And no emails have been sent
     When I go to the agency.gov's Header & Footer page
     And I follow "Switch to Advanced Mode"
     And I fill in the following:
@@ -596,7 +594,6 @@ Feature: Manage Display
       | display_name   | name       | contact_email   | first_name    | last_name |
       | agency site    | agency.gov | john@agency.gov | John          | Bar       |
     And I am logged in with email "john@agency.gov"
-    And no emails have been sent
     When I go to the agency.gov's Header & Footer page
     And I follow "Switch to Advanced Mode"
     And I fill in the following:
@@ -609,12 +606,11 @@ Feature: Manage Display
     Then I should see "Invalid CSS"
 
     @javascript
-    Scenario: Editing No Results Page on non legacy Affiliate
+    Scenario: Editing No Results Page
       Given the following Affiliates exist:
-        | display_name | name       | contact_email   | first_name   | last_name | uses_managed_header_footer | website                    |
-        | agency site  | agency.gov | john@agency.gov | John         | Bar       | true                       | http://main.agency.gov     |
+        | display_name | name       | contact_email   | first_name   | last_name | website                    |
+        | agency site  | agency.gov | john@agency.gov | John         | Bar       | http://main.agency.gov     |
       And I am logged in with email "john@agency.gov"
-      And no emails have been sent
       When I go to the agency.gov's No Results Page page
 
       And I fill in "Additional Guidance Text" with "The GSA apologizes for not having any relevant results."
@@ -640,7 +636,7 @@ Feature: Manage Display
       And the "Alternative Link Title 1" field should contain "Blog"
       And the "Alternative Link URL 1" field should contain "http://blog.agency.gov"
 
-    When I am on agency.gov's mobile search page
+    When I am on agency.gov's search page
     Then I should not see "News"
     Then I should not see a link to "http://news.agency.gov"
     Then I should not see "Blog"
@@ -662,7 +658,7 @@ Feature: Manage Display
     And I submit the form by pressing "Save"
     Then I should be able to access 1 no results pages alternative link rows
 
-    When I am on agency.gov's mobile search page
+    When I am on agency.gov's search page
     And I fill in "Enter your search term" with "hdakfjd;kljowaurei;ak"
     And I submit the form by pressing "Search"
     Then I should not see "News"

@@ -1,0 +1,139 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.cognitive.microsoft.com/bing/v7.0/search?count=20&mkt=en-US&offset=0&q=hdakfjd%3Bkljowaurei%3Bak%20(site:gov%20OR%20site:mil)&responseFilter=WebPages&safeSearch=moderate&textDecorations=true&traffictype=test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - USASearch
+      Ocp-Apim-Subscription-Key:
+      - "<BING_V7_SUBSCRIPTION_ID>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - Fri, 16 Apr 2021 18:14:24 GMT
+      Vary:
+      - Accept-Encoding
+      P3p:
+      - CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
+      X-Snr-Routing:
+      - '1'
+      Bingapis-Traceid:
+      - 22C0866CD0104C4BB0CCE2B0C0ACEFEE
+      Bingapis-Sessionid:
+      - 60E53DC572D14A93A5144DC1F4589400
+      X-Msedge-Clientid:
+      - 1B902FDF4D5665583C243FC44C196428
+      X-Msapi-Userstate:
+      - 8ec4
+      Bingapis-Market:
+      - en-US
+      X-Search-Responseinfo:
+      - InternalResponseTime=169,MSDatacenter=BN2B
+      X-Msedge-Ref:
+      - 'Ref A: 22C0866CD0104C4BB0CCE2B0C0ACEFEE Ref B: BLUEDGE1217 Ref C: 2021-04-16T18:15:24Z'
+      Apim-Request-Id:
+      - ea464e04-3216-41ad-810b-72d0b9f879a3
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      Csp-Billing-Usage:
+      - CognitiveServices.BingSearchV7.Transaction=1
+      Date:
+      - Fri, 16 Apr 2021 18:15:23 GMT
+    body:
+      encoding: UTF-8
+      string: '{"_type": "SearchResponse", "queryContext": {"originalQuery": "hdakfjd;kljowaurei;ak
+        (site:gov OR site:mil)"}, "rankingResponse": {}}'
+    http_version:
+  recorded_at: Fri, 16 Apr 2021 18:15:24 GMT
+- request:
+    method: get
+    uri: https://api.cognitive.microsoft.com/bing/v7.0/search?count=20&mkt=en-US&offset=0&q=hdakfjd%3Bkljowaurei%3Bak%20(site:gov%20OR%20site:mil)&responseFilter=WebPages&safeSearch=moderate&textDecorations=true&traffictype=test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - USASearch
+      Ocp-Apim-Subscription-Key:
+      - "<BING_V7_SUBSCRIPTION_ID>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - Fri, 16 Apr 2021 18:14:25 GMT
+      Vary:
+      - Accept-Encoding
+      P3p:
+      - CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
+      X-Snr-Routing:
+      - '1'
+      Bingapis-Traceid:
+      - 65DC48AE6D9E48D3B02A7D032986126E
+      Bingapis-Sessionid:
+      - 96566C59973C4F8D95F44D8725B81239
+      X-Msedge-Clientid:
+      - 2090FD717F9764451FDDED6A7E8865F0
+      X-Msapi-Userstate:
+      - d1d9
+      Bingapis-Market:
+      - en-US
+      X-Search-Responseinfo:
+      - InternalResponseTime=164,MSDatacenter=BN2B
+      X-Msedge-Ref:
+      - 'Ref A: 65DC48AE6D9E48D3B02A7D032986126E Ref B: BLUEDGE2022 Ref C: 2021-04-16T18:15:25Z'
+      Apim-Request-Id:
+      - d0e81985-d3e9-4a3d-a1a0-94201a9bf4d5
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      Csp-Billing-Usage:
+      - CognitiveServices.BingSearchV7.Transaction=1
+      Date:
+      - Fri, 16 Apr 2021 18:15:24 GMT
+    body:
+      encoding: UTF-8
+      string: '{"_type": "SearchResponse", "queryContext": {"originalQuery": "hdakfjd;kljowaurei;ak
+        (site:gov OR site:mil)"}, "rankingResponse": {}}'
+    http_version:
+  recorded_at: Fri, 16 Apr 2021 18:15:25 GMT
+recorded_with: VCR 4.0.0
