@@ -433,7 +433,7 @@ Feature: Manage Display
 
   @javascript
   Scenario: Editing Managed Header & Footer
-    Given the following legacy Affiliates exist:
+    Given the following Affiliates exist:
       | display_name | name       | contact_email   | first_name | last_name | footer_fragment                   |
       | agency site  | agency.gov | john@agency.gov | John       | Bar       | <strong>my HTML fragment</strong> |
     And affiliate "agency.gov" has the following document collections:
