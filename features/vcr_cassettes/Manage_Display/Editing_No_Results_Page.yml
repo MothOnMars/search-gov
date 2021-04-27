@@ -31,7 +31,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Expires:
-      - Fri, 16 Apr 2021 18:14:24 GMT
+      - Tue, 27 Apr 2021 16:36:44 GMT
       Vary:
       - Accept-Encoding
       P3p:
@@ -39,21 +39,21 @@ http_interactions:
       X-Snr-Routing:
       - '1'
       Bingapis-Traceid:
-      - 22C0866CD0104C4BB0CCE2B0C0ACEFEE
+      - B19DB27FF5FA407196DA0D2D7A55CBB8
       Bingapis-Sessionid:
-      - 60E53DC572D14A93A5144DC1F4589400
+      - DD8A1897BA0C440AB55FCA4D76E84BC5
       X-Msedge-Clientid:
-      - 1B902FDF4D5665583C243FC44C196428
+      - 0FDB43EDB76562563F4C53CBB67763A9
       X-Msapi-Userstate:
-      - 8ec4
+      - c7ab
       Bingapis-Market:
       - en-US
       X-Search-Responseinfo:
-      - InternalResponseTime=169,MSDatacenter=BN2B
+      - InternalResponseTime=163,MSDatacenter=BN2B
       X-Msedge-Ref:
-      - 'Ref A: 22C0866CD0104C4BB0CCE2B0C0ACEFEE Ref B: BLUEDGE1217 Ref C: 2021-04-16T18:15:24Z'
+      - 'Ref A: B19DB27FF5FA407196DA0D2D7A55CBB8 Ref B: BLUEDGE1512 Ref C: 2021-04-27T16:37:44Z'
       Apim-Request-Id:
-      - ea464e04-3216-41ad-810b-72d0b9f879a3
+      - bd94a7e6-0082-4d83-a09b-85212164b652
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -61,13 +61,13 @@ http_interactions:
       Csp-Billing-Usage:
       - CognitiveServices.BingSearchV7.Transaction=1
       Date:
-      - Fri, 16 Apr 2021 18:15:23 GMT
+      - Tue, 27 Apr 2021 16:37:43 GMT
     body:
       encoding: UTF-8
       string: '{"_type": "SearchResponse", "queryContext": {"originalQuery": "hdakfjd;kljowaurei;ak
         (site:gov OR site:mil)"}, "rankingResponse": {}}'
     http_version:
-  recorded_at: Fri, 16 Apr 2021 18:15:24 GMT
+  recorded_at: Tue, 27 Apr 2021 16:37:44 GMT
 - request:
     method: get
     uri: https://api.cognitive.microsoft.com/bing/v7.0/search?count=20&mkt=en-US&offset=0&q=hdakfjd%3Bkljowaurei%3Bak%20(site:gov%20OR%20site:mil)&responseFilter=WebPages&safeSearch=moderate&textDecorations=true&traffictype=test
@@ -99,7 +99,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Expires:
-      - Fri, 16 Apr 2021 18:14:25 GMT
+      - Tue, 27 Apr 2021 16:36:45 GMT
       Vary:
       - Accept-Encoding
       P3p:
@@ -107,21 +107,21 @@ http_interactions:
       X-Snr-Routing:
       - '1'
       Bingapis-Traceid:
-      - 65DC48AE6D9E48D3B02A7D032986126E
+      - 651802221D2E49F38B2A2C116AD1C881
       Bingapis-Sessionid:
-      - 96566C59973C4F8D95F44D8725B81239
+      - C684F79139A1490B85D6516BB6E35724
       X-Msedge-Clientid:
-      - 2090FD717F9764451FDDED6A7E8865F0
+      - '09C9AD543ECF610C32ECBD723FDD60FB'
       X-Msapi-Userstate:
-      - d1d9
+      - d143
       Bingapis-Market:
       - en-US
       X-Search-Responseinfo:
-      - InternalResponseTime=164,MSDatacenter=BN2B
+      - InternalResponseTime=116,MSDatacenter=BN2B
       X-Msedge-Ref:
-      - 'Ref A: 65DC48AE6D9E48D3B02A7D032986126E Ref B: BLUEDGE2022 Ref C: 2021-04-16T18:15:25Z'
+      - 'Ref A: 651802221D2E49F38B2A2C116AD1C881 Ref B: BLUEDGE1509 Ref C: 2021-04-27T16:37:45Z'
       Apim-Request-Id:
-      - d0e81985-d3e9-4a3d-a1a0-94201a9bf4d5
+      - 3cf9329d-1eb3-4a49-a697-869e5264da1a
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -129,11 +129,11 @@ http_interactions:
       Csp-Billing-Usage:
       - CognitiveServices.BingSearchV7.Transaction=1
       Date:
-      - Fri, 16 Apr 2021 18:15:24 GMT
+      - Tue, 27 Apr 2021 16:37:45 GMT
     body:
       encoding: UTF-8
       string: '{"_type": "SearchResponse", "queryContext": {"originalQuery": "hdakfjd;kljowaurei;ak
         (site:gov OR site:mil)"}, "rankingResponse": {}}'
     http_version:
-  recorded_at: Fri, 16 Apr 2021 18:15:25 GMT
+  recorded_at: Tue, 27 Apr 2021 16:37:45 GMT
 recorded_with: VCR 4.0.0

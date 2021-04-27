@@ -665,8 +665,8 @@ Feature: Manage Display
   @javascript
   Scenario: Errors when Editing No Results Page
     Given the following Affiliates exist:
-      | display_name | name       | contact_email   | first_name | last_name |  website                |
-      | agency site  | agency.gov | john@agency.gov | John       | Bar       |  http://main.agency.gov |
+      | display_name | name       | contact_email   | first_name | last_name | website                |
+      | agency site  | agency.gov | john@agency.gov | John       | Bar       | http://main.agency.gov |
     And I am logged in with email "john@agency.gov"
     When I go to the agency.gov's No Results Page page
 
