@@ -433,7 +433,7 @@ Feature: Manage Display
 
   @javascript
   Scenario: Editing Managed Header & Footer
-    Given the following legacy Affiliates exist:
+    Given the following Affiliates exist:
       | display_name | name       | contact_email   | first_name | last_name | footer_fragment                   |
       | agency site  | agency.gov | john@agency.gov | John       | Bar       | <strong>my HTML fragment</strong> |
     And affiliate "agency.gov" has the following document collections:
@@ -473,6 +473,7 @@ Feature: Manage Display
     And I submit the form by pressing "Save"
 
     Then I should see "You have updated your header and footer information"
+    Then show me the page
     And the "Header Tagline" field should contain "Office website of the Awesome Agency"
 
     And the "Header Tagline URL" field should contain "http://awesomeagency.gov"
@@ -488,6 +489,7 @@ Feature: Manage Display
     And the "Footer Link URL 1" field should contain "http://tos.agency.gov"
 
     When I am on agency.gov's search page
+    Then show me the page
     Then I should see a link to "News" with url for "http://news.agency.gov"
     And I should see a link to "Blog" with url for "http://blog.agency.gov"
     And I should see a link to "Contact" with url for "mailto:contact@agency.gov"
