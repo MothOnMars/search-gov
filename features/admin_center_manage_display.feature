@@ -432,8 +432,7 @@ Feature: Manage Display
     And I should not see an image with alt text "Logo"
 
   @javascript
-  #update name
-  Scenario: Editing Managed Header & Footer
+  Scenario: Editing Header & Footer
     Given the following Affiliates exist:
       | display_name | name       | contact_email   | first_name | last_name | footer_fragment                   |
       | agency site  | agency.gov | john@agency.gov | John       | Bar       | <strong>my HTML fragment</strong> |
