@@ -1,5 +1,5 @@
 module AffiliateHelper
-  def render_affiliate_header(affiliate)
+  def render_affiliate_header(affiliate) # deprecated - legacy SERP, SRCH-368
     if affiliate.uses_managed_header_footer?
       html = render_managed_header(affiliate)
       if affiliate.managed_header_links.present?
@@ -11,7 +11,7 @@ module AffiliateHelper
     end
   end
 
-  def render_managed_header(affiliate)
+  def render_managed_header(affiliate) # deprecated - legacy SERP, SRCH-368
     content = ''
     if affiliate.header_image_file_name.present?
       begin
@@ -27,7 +27,7 @@ module AffiliateHelper
     content.blank? ? content : content_tag(:div, content.html_safe, id: 'managed_header').html_safe
   end
 
-  def render_managed_links(links)
+  def render_managed_links(links) # deprecated - legacy SERP, SRCH-368
     content = ''
     links.each_with_index do |link, index|
       options = {:class => 'first'} if index == 0
@@ -36,7 +36,7 @@ module AffiliateHelper
     content_tag(:ul, content.html_safe, :class => 'managed-header-footer-links')
   end
 
-  def render_affiliate_footer(affiliate)
+  def render_affiliate_footer(affiliate) # deprecated - legacy SERP, SRCH-368
     if affiliate.uses_managed_header_footer? and affiliate.managed_footer_links.present?
       html = content_tag(:div, render_managed_links(affiliate.managed_footer_links).html_safe, :class => 'managed-header-footer-links-wrapper')
       content_tag(:div, html.html_safe, id: 'usasearch_footer', class: 'managed')
@@ -45,14 +45,14 @@ module AffiliateHelper
     end
   end
 
-  def render_affiliate_body_class(affiliate)
+  def render_affiliate_body_class(affiliate) # deprecated - legacy SERP, SRCH-368
     classes = "one-serp default #{I18n.locale}"
     classes << ' with-content-border' if affiliate.show_content_border?
     classes << ' with-content-box-shadow' if affiliate.show_content_box_shadow?
     classes
   end
 
-  def render_affiliate_body_style(affiliate)
+  def render_affiliate_body_style(affiliate) # deprecated - legacy SERP, SRCH-368
     style = ''
     background_color = render_affiliate_css_property_value(affiliate.css_property_hash, :page_background_color)
     background_image_url = affiliate.page_background_image.url rescue nil if affiliate.page_background_image_file_name.present?
@@ -77,12 +77,12 @@ module AffiliateHelper
     javascript_tag embed_code
   end
 
-  def available_templates(affiliate)
+  def available_templates(affiliate) # deprecated - Search Consumer, SRCH-1080
     templates = affiliate.available_templates
     templates.blank? ? [Template.default] : templates
   end
 
-  def unavailable_templates(affiliate)
+  def unavailable_templates(affiliate) # deprecated - Search Consumer, SRCH-1080
     Template.all - available_templates(affiliate)
   end
 end
