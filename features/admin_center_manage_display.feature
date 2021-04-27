@@ -432,6 +432,7 @@ Feature: Manage Display
     And I should not see an image with alt text "Logo"
 
   @javascript
+  #update name
   Scenario: Editing Managed Header & Footer
     Given the following Affiliates exist:
       | display_name | name       | contact_email   | first_name | last_name | footer_fragment                   |
@@ -445,7 +446,7 @@ Feature: Manage Display
       | Inactive news search | http://en.agency.gov/feed/News | false        | 5        | false                   |
     And I am logged in with email "john@agency.gov"
 
-    When I am on agency.gov's mobile search page
+    When I am on agency.gov's search page
     Then I should not see "Browse site"
 
     When I go to the agency.gov's Header & Footer page
@@ -473,7 +474,6 @@ Feature: Manage Display
     And I submit the form by pressing "Save"
 
     Then I should see "You have updated your header and footer information"
-    Then show me the page
     And the "Header Tagline" field should contain "Office website of the Awesome Agency"
 
     And the "Header Tagline URL" field should contain "http://awesomeagency.gov"
@@ -489,13 +489,13 @@ Feature: Manage Display
     And the "Footer Link URL 1" field should contain "http://tos.agency.gov"
 
     When I am on agency.gov's search page
-    Then show me the page
+    When I press "Browse site"
     Then I should see a link to "News" with url for "http://news.agency.gov"
     And I should see a link to "Blog" with url for "http://blog.agency.gov"
     And I should see a link to "Contact" with url for "mailto:contact@agency.gov"
     And I should see a link to "Terms of Service" with url for "http://tos.agency.gov"
 
-    When I am on agency.gov's mobile search page
+    When I am on agency.gov's search page
     And the page body should contain "mini_logo.png"
     Then I should see "Office website of the Awesome Agency"
     And I should see a left aligned menu button
@@ -520,10 +520,6 @@ Feature: Manage Display
     Then I should find "News" in the main menu
     Then I should see a link to "News" with url for "http://news.agency.gov"
     Then I should see a link to "Blog" with url for "http://blog.agency.gov"
-
-    When I go to the agency.gov's Header & Footer page
-    And I follow "Switch to Advanced Mode"
-    Then I should see "CSS to customize the top and bottom of your search results page"
 
     When I go to the agency.gov's Header & Footer page
     And I check "Mark Header Tagline Logo for Deletion"
