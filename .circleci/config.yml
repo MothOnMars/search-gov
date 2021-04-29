@@ -273,4 +273,4 @@ workflows:
             - cucumber
           matrix:
             parameters:
-              ruby_version: ["2.5.5", "2.6.6"]
+              ruby_version: ["2.6.6"] # CodeClimate only accepts a single report per commit
