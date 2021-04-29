@@ -1,4 +1,5 @@
 module AffiliateHelper
+  # :nocov: - deprecated - legacy SERP
   def render_affiliate_header(affiliate)
     if affiliate.uses_managed_header_footer?
       html = render_managed_header(affiliate)
@@ -10,7 +11,9 @@ module AffiliateHelper
       content_tag(:div, affiliate.header.html_safe, :id => 'header', :class => 'header-footer')
     end
   end
+  # :nocov:
 
+  # :nocov: - deprecated - legacy SERP
   def render_managed_header(affiliate)
     content = ''
     if affiliate.header_image_file_name.present?
@@ -26,7 +29,9 @@ module AffiliateHelper
     end
     content.blank? ? content : content_tag(:div, content.html_safe, id: 'managed_header').html_safe
   end
+  # :nocov:
 
+  # :nocov: - deprecated - legacy SERP
   def render_managed_links(links)
     content = ''
     links.each_with_index do |link, index|
@@ -35,7 +40,9 @@ module AffiliateHelper
     end
     content_tag(:ul, content.html_safe, :class => 'managed-header-footer-links')
   end
+  # :nocov:
 
+  # :nocov: - deprecated - legacy SERP
   def render_affiliate_footer(affiliate)
     if affiliate.uses_managed_header_footer? and affiliate.managed_footer_links.present?
       html = content_tag(:div, render_managed_links(affiliate.managed_footer_links).html_safe, :class => 'managed-header-footer-links-wrapper')
@@ -44,14 +51,18 @@ module AffiliateHelper
       content_tag(:div, affiliate.footer.html_safe, id: 'usasearch_footer', class: 'header-footer')
     end
   end
+  # :nocov:
 
+  # :nocov: - deprecated - legacy SERP
   def render_affiliate_body_class(affiliate)
     classes = "one-serp default #{I18n.locale}"
     classes << ' with-content-border' if affiliate.show_content_border?
     classes << ' with-content-box-shadow' if affiliate.show_content_box_shadow?
     classes
   end
+  # :nocov:
 
+  # :nocov: - deprecated - legacy SERP
   def render_affiliate_body_style(affiliate)
     style = ''
     background_color = render_affiliate_css_property_value(affiliate.css_property_hash, :page_background_color)
@@ -64,6 +75,7 @@ module AffiliateHelper
     end
     style
   end
+  # :nocov:
 
   def render_embed_code_javascript(affiliate)
     embed_code = <<-JS
@@ -77,11 +89,13 @@ module AffiliateHelper
     javascript_tag embed_code
   end
 
+  # deprecated - Search Consumer
   def available_templates(affiliate)
     templates = affiliate.available_templates
     templates.blank? ? [Template.default] : templates
   end
 
+  # deprecated - Search Consumer
   def unavailable_templates(affiliate)
     Template.all - available_templates(affiliate)
   end
