@@ -155,7 +155,7 @@ end
 
 group :test do
   gem 'capybara-screenshot'
-  gem 'simplecov', '~> 0.16.0', require: false
+  gem 'simplecov', '~> 0.21.0', require: false
   # Limiting the cucumber version until v4 is compatible with VCR
   # https://github.com/vcr/vcr/issues/825
   gem 'cucumber', '~> 3.0', require: false
