@@ -13,9 +13,9 @@ class SearchesController < ApplicationController
   before_action :redirect_to_search_consumer, only: [:index, :news, :docs]
   before_action :set_web_search_options, :only => [:advanced, :index]
   before_action :set_docs_search_options, :only => :docs
-  before_action :set_news_search_options, :only => [:news, :video_news]
+  before_action :set_news_search_options, :only => [:news]
   before_action :force_request_format, :only => [:advanced, :docs, :index, :news]
-  after_action :log_search_impression, :only => [:index, :news, :docs, :video_news]
+  after_action :log_search_impression, :only => [:index, :news, :docs]
   include QueryRoutableController
 
   def index
@@ -57,18 +57,6 @@ class SearchesController < ApplicationController
     respond_to { |format| format.any(:html, :mobile) {} }
   end
 
-  def video_news
-    @search = VideoNewsSearch.new(@search_options)
-    @search.run
-    @form_path = video_news_search_path
-    set_news_search_page_title
-    set_search_page_title
-    @search_vertical = :news
-    request.format = :html
-    set_search_params
-    respond_to { |format| format.html { render action: :news } }
-  end
-
   def advanced
     @page_title = "#{t(:advanced_search)} - #{@affiliate.display_name}"
     @search = WebSearch.new(@search_options)
@@ -101,6 +89,7 @@ class SearchesController < ApplicationController
     end
   end
 
+  # delete me?
   def handle_old_advanced_form
     if permitted_params['form'] == 'advanced-firstgov'
       redirect_to advanced_search_path permitted_params

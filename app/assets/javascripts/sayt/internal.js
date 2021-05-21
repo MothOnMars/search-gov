@@ -65,6 +65,8 @@ function monkeyPatchAutocomplete() {
   };
 }
 
+// clean me up. Deprecated values:
+// search_form
 jQuery(document).ready(function() {
   monkeyPatchAutocomplete();
   var isMobile = (jQuery('.mobile-web').length > 0);

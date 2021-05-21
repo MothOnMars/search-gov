@@ -253,7 +253,6 @@ class Affiliate < ApplicationRecord
                                 fields: [:header, # legacy SERP
                                          :footer, # legacy SERP
                                          :header_footer_css, # legacy SERP
-                                         :nested_header_footer_css, # legacy SERP
                                          :managed_header_links,
                                          :managed_footer_links,
                                          :external_tracking_code,
@@ -749,7 +748,6 @@ class Affiliate < ApplicationRecord
 
   def generate_look_and_feel_css
     renderer = Renderers::AffiliateCss.new(build_css_hash)
-    self.look_and_feel_css = renderer.render_desktop_css # legacy SERP
     self.mobile_look_and_feel_css = renderer.render_mobile_css
   end
 

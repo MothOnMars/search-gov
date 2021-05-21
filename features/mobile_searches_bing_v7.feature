@@ -699,17 +699,6 @@ Feature: Searches using mobile device
     When I am on en.agency.gov's search page
     Then I should not see "New alert for the test aff"
 
-  Scenario: English Image search
-    Given the following legacy Affiliates exist:
-      | display_name | name   | contact_email | first_name | last_name | header         | domains        | search_engine |
-      | USA.gov      | usagov | aff@bar.gov   | John       | Bar       | USA.gov Header | whitehouse.gov | BingV7        |
-    When I am on usagov's image search page
-    When I fill in "query" with "White House"
-    And I press "Search"
-    Then I should see the browser page titled "White House - USA.gov Search Results"
-    And I should see 20 image results
-    And I should see Powered by Bing logo
-
   Scenario: Image search with spelling suggestion
     Given the following Affiliates exist:
       | display_name | name   | contact_email | first_name | last_name | search_engine |

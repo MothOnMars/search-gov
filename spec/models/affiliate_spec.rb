@@ -205,10 +205,7 @@ describe Affiliate do
 
       it 'should set look_and_feel_css' do
         affiliate = described_class.create! valid_attributes
-
-        expect(affiliate.look_and_feel_css).to include('font-family:"Maven Pro"')
-        expect(affiliate.look_and_feel_css).to match(/#usasearch_footer_button\{color:#fff;background-color:#00396f\}\n$/)
-        expect(affiliate.look_and_feel_css).to include('#usasearch_footer.managed a:visited{color:#00396f}')
+        expect(affiliate.mobile_look_and_feel_css).to include('font-family:"Maven Pro"')
         expect(affiliate.mobile_look_and_feel_css).to include('a:visited{color:purple}')
       end
 

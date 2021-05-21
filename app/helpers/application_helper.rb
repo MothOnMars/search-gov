@@ -1,4 +1,3 @@
-# coding: utf-8
 module ApplicationHelper
 
   def current_user_is?(role)
@@ -46,10 +45,6 @@ module ApplicationHelper
       end
       content_tag(:ul, list_items.join("\n").html_safe).html_safe
     end
-  end
-
-  def english_locale?
-    I18n.locale.to_s == "en"
   end
 
   def url_for_logout

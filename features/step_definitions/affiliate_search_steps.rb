@@ -128,16 +128,6 @@ Then /^I should see (\d+) search result title links? with url for "([^"]*)"$/ do
   page.should have_selector(".title a[href='#{url}']", count: count)
 end
 
-# legacy SERP
-Then /^I should see (\d+) news results?$/ do |count|
-  page.should have_selector(".newsitem", :count => count)
-end
-
-# legacy SERP
-Then /^I should see (\d+) (image|video) news results$/ do |count, media_type|
-  page.should have_selector(".newsitem.#{media_type}", count: count)
-end
-
 Given /^the following Twitter Profiles exist:$/ do |table|
   table.hashes.each do |hash|
     affiliate = Affiliate.find_by_name(hash[:affiliate])
@@ -170,14 +160,6 @@ end
 
 Then /^I should not see collapsible facet value$/ do
   page.should_not have_selector('.collapsible')
-end
-
-Then /^I should see the left column options expanded$/ do
-  page.should have_selector('#left_column .options-wrapper.expanded')
-end
-
-Then /^I should not see the left column options expanded$/ do
-  page.should_not have_selector('#left_column .options-wrapper.expanded')
 end
 
 # only used in legacy_search.feature

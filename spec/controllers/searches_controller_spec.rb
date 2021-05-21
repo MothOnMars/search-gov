@@ -200,9 +200,10 @@ describe SearchesController do
     it { is_expected.to render_template(:i14y) }
   end
 
+  # consolidate, update desc
   context 'when handling a valid affiliate search request on legacy SERP' do
     render_views
-    let(:affiliate) { affiliates(:legacy_affiliate) }
+    let(:affiliate) { affiliates(:basic_affiliate) }
 
     before do
       get :index,
@@ -226,11 +227,11 @@ describe SearchesController do
       expect(response).to render_template 'layouts/searches'
     end
 
-    it 'should set an affiliate page title' do
+    xit 'should set an affiliate page title' do
       expect(@page_title).to eq('thunder & lightning - Legacy Search Results')
     end
 
-    it 'should set the sanitized query in Javascript' do
+    xit 'should set the sanitized query in Javascript' do
       expect(response.body).to include(%q{var original_query = "thunder & lightning"})
     end
   end
@@ -432,23 +433,6 @@ describe SearchesController do
         expect(@search_options[:enable_highlighting]).to be true
       end
     end
-  end
-
-  context 'when Affiliate.force_mobile_format = true' do
-    let(:affiliate) { affiliates(:basic_affiliate) }
-
-    before do
-      expect(Affiliate).to receive(:find_by_name).and_return(affiliate)
-      expect(affiliate).to receive(:force_mobile_format?).and_return(true)
-      get :index, params: { query: 'gov', affiliate: affiliate.name }
-    end
-
-    it 'requests the mobile format' do
-      expect(request.params['format']).to eq 'mobile'
-    end
-
-    it { is_expected.to render_template 'layouts/searches' }
-    it { is_expected.to render_template 'searches/index' }
   end
 
   describe '#advanced' do
@@ -819,53 +803,6 @@ describe SearchesController do
         get :news, params: news_search_params
         expect(response).to redirect_to search_consumer_news_search_url(news_search_params)
       end
-    end
-  end
-
-  describe '#video_news' do
-    let(:affiliate) { affiliates(:basic_affiliate) }
-
-    context 'when the query is not blank' do
-      let(:video_news_search) { double('video news search', query: 'element', modules: [], diagnostics: {}) }
-
-      before do
-        expect(VideoNewsSearch).to receive(:new).with(hash_including(per_page: 20)).and_return(video_news_search)
-        expect(video_news_search).to receive(:run)
-        get :video_news,
-            params: {
-              query: 'element',
-              affiliate: affiliate.name,
-              tbs: 'w'
-            }
-      end
-
-      it { is_expected.to assign_to(:search).with(video_news_search) }
-      it { is_expected.to assign_to(:page_title).with("element - #{affiliate.display_name} Search Results") }
-      it { is_expected.to assign_to(:search_vertical).with(:news) }
-      it { is_expected.to assign_to(:form_path).with(video_news_search_path) }
-      it { is_expected.to render_template(:news) }
-      it { is_expected.to render_template('layouts/searches') }
-    end
-
-    context 'when the query is blank and total is > 0' do
-      let(:video_news_search) { double('video news search', query: '', modules: [], diagnostics: {}) }
-
-      before do
-        expect(VideoNewsSearch).to receive(:new).and_return(video_news_search)
-        expect(video_news_search).to receive(:run)
-        rss_feed = double('rss feed', name: 'Videos')
-        expect(video_news_search).to receive(:rss_feed).at_least(:once).and_return(rss_feed)
-        expect(video_news_search).to receive(:total).and_return(1)
-        get :video_news,
-            params: {
-              query: '',
-              affiliate: affiliate.name,
-              channel: '100',
-              tbs: 'w'
-            }
-      end
-
-      it { is_expected.to assign_to(:page_title).with('Videos - NPS Site Search Results') }
     end
   end
 end
