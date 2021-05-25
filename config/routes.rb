@@ -209,7 +209,6 @@ Rails.application.routes.draw do
     resources :features, concerns: :active_scaffold
     resources :affiliate_feature_additions, concerns: :active_scaffold
     resources :help_links, concerns: :active_scaffold
-    resources :compare_search_results, only: :index
     resources :bing_urls, concerns: :active_scaffold
     resources :statuses, concerns: :active_scaffold
     resources :system_alerts, concerns: :active_scaffold
