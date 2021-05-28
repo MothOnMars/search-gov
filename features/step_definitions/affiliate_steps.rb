@@ -7,9 +7,9 @@ Given /^the following( legacy| search consumer| SearchGov)? Affiliates exist:$/ 
         last_name: hash[:last_name],
         organization_name: 'Agency'
     }
-    user = User.find_by_email(hash[:contact_email]) || User.create!( valid_options)
-    user.update_attribute(:is_affiliate, true)
-    user.update_attribute(:approval_status, 'approved')
+    #user = User.find_by_email(hash[:contact_email]) || User.create!( valid_options)
+    #user.update_attribute(:is_affiliate, true)
+    #user.update_attribute(:approval_status, 'approved')
 
     excluded_keys = %w[agency_abbreviation contact_email first_name last_name domains youtube_handles is_image_search_navigable]
     affiliate_attributes = hash.except *excluded_keys
@@ -18,7 +18,7 @@ Given /^the following( legacy| search consumer| SearchGov)? Affiliates exist:$/ 
     affiliate_attributes['search_engine'] = 'SearchGov' if (/SearchGov/ === affiliate_type)
     affiliate = Affiliate.create! affiliate_attributes
     affiliate.image_search_label.navigation.update_attributes!(is_active: true) if hash[:is_image_search_navigable] == 'true'
-    affiliate.users << user
+    #affiliate.users << user
 
     if hash[:agency_abbreviation].present?
       agency = Agency.find_by_abbreviation hash[:agency_abbreviation]
