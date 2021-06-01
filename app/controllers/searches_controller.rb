@@ -1,9 +1,6 @@
 # frozen_string_literal: true
 
 class SearchesController < ApplicationController
-  include MobileFriendlyController
-  has_no_mobile_fu_for :advanced
-
   skip_before_action :verify_authenticity_token, :set_default_locale
 
   before_action :handle_old_advanced_form, :only => [:index]

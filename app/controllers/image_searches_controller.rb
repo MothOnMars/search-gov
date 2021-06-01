@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class ImageSearchesController < ApplicationController
-  include MobileFriendlyController
-
   layout 'searches'
 
   before_action :set_affiliate, :set_locale_based_on_affiliate_locale
@@ -35,6 +33,6 @@ class ImageSearchesController < ApplicationController
   end
 
   def search_klass
-    @affiliate.force_mobile_format? ? ImageSearch : LegacyImageSearch
+    ImageSearch
   end
 end
