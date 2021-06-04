@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   get '/search/images' => 'image_searches#index', as: :image_search
   get '/search/docs' => 'searches#docs', as: :docs_search
   get '/search/news' => 'searches#news', as: :news_search
-  get '/search/news/videos' => 'searches#video_news', as: :video_news_search
+  # Provide some backward compatibility for searchers using the legacy video news search URL
+  get '/search/news/videos', to: redirect(path: '/search')
   get '/auth/logindotgov/callback', to: 'omniauth_callbacks#login_dot_gov'
 
   namespace :api, defaults: { format: :json } do
