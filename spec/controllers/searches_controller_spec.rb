@@ -822,7 +822,7 @@ describe SearchesController do
     end
   end
 
-  describe '#video_news' do
+  pending '#video_news' do
     let(:affiliate) { affiliates(:basic_affiliate) }
 
     context 'when the query is not blank' do
