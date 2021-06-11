@@ -8,8 +8,8 @@ gem 'rails-observers', '~> 0.1.5'
 gem 'responders', '~> 2.0'
 gem 'mysql2', '~> 0.4.4'
 gem 'curb', '~> 0.9.4'
-gem 'haml', '~> 5.0.4'
-gem 'will_paginate', '~> 3.1.6'
+gem 'haml'#, '~> 5.0.4'
+gem 'will_paginate'#, '~> 3.1.6'
 gem 'nokogiri', '~> 1.11.1'
 gem 'bcrypt-ruby', '~> 3.1.5', :require => 'bcrypt'
 gem 'authlogic', '~> 3.8.0'
@@ -37,8 +37,9 @@ gem 'mobile-fu', '~> 1.4.0' # deprecated - legacy SERP
 gem "recaptcha", '~> 4.6.3', :require => "recaptcha/rails"
 gem 'newrelic_rpm', '~> 5.0.0'
 gem 'american_date', '~> 1.1.1'
-gem 'sass', '~> 3.3.0'
-gem 'sass-rails', '~> 5.0.7'
+# https://sass-lang.com/blog/ruby-sass-is-unsupported
+gem 'sass'#, '~> 3.3.0'
+gem 'sass-rails'#, '~> 5.0.7'
 # Gem no longer being maintained. See https://cm-jira.usa.gov/browse/SRCH-694
 gem 'google_visualr',
     git: 'https://github.com/winston/google_visualr',
@@ -50,9 +51,9 @@ gem 'geoip', '~> 1.6.3'
 gem 'htmlentities', '~> 4.3.4' # deprecated - only used in Google web search
 gem 'html_truncator', '~> 0.4.2'
 gem 'addressable', '~> 2.5.2'
-gem 'select2-rails', '~> 4.0.3'
-gem 'turbolinks', '~> 5.0.1'
-gem 'will_paginate-bootstrap', '~> 1.0.1'
+gem 'select2-rails'#, '~> 4.0.3'
+gem 'turbolinks'#, '~> 5.0.1'
+gem 'will_paginate-bootstrap'#, '~> 1.0.1'
 gem 'virtus', '~> 1.0.5'
 gem 'truncator', '~> 0.1.7'
 gem 'em-http-request', '~> 1.1.5'
@@ -96,21 +97,21 @@ gem 'retriable', '~> 3.1'
 gem 'cld3', '~> 3.2.3'
 
 # Assets-related gems
-gem 'coffee-rails', '~> 4.2.2'
-gem 'uglifier', '~> 4.1.2'
+gem 'coffee-rails'#, '~> 4.2.2'
+gem 'uglifier'#, '~> 4.1.2'
 gem 'less-rails-bootstrap', git: 'https://github.com/GSA/less-rails-bootstrap.git',
                             branch: 'master'
-gem 'compass-rails', '~> 3.1.0'
-gem 'compass-blueprint', '~> 1.0.0'
-gem 'jquery-ui-rails', '~> 6.0.1'
-gem 'jquery-rails', '~> 4.4.0'
+gem 'compass-rails'#, '~> 3.1.0'
+gem 'compass-blueprint'#, '~> 1.0.0'
+gem 'jquery-ui-rails'#, '~> 6.0.1'
+gem 'jquery-rails'#, '~> 4.4.0'
 gem 'therubyracer', '~> 0.12.3'
-gem 'yui-compressor', '~> 0.12.0'
-gem 'twitter-typeahead-rails', '~> 0.11.1'
+gem 'yui-compressor'#, '~> 0.12.0'
+gem 'twitter-typeahead-rails'#, '~> 0.11.1'
 # Why do we have two versions of Font Awesome?
 # One is for general use around the app, in places where
 # web fonts are expected to work...
-gem 'font-awesome-rails', '~> 4.7.0'
+gem 'font-awesome-rails'#, '~> 4.7.0'
 # ... and one is for the admin area only, where web fonts
 # may be blocked due to government security policy. For
 # this area we use a restricted subset of Font Awesome 4.3.x
