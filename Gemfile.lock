@@ -686,11 +686,7 @@ GEM
     rubyzip (2.3.0)
     rufus-scheduler (3.7.0)
       fugit (~> 1.1, >= 1.1.6)
-    sass (3.7.4)
-      sass-listen (~> 4.0.0)
-    sass-listen (4.0.0)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
+    sass (3.3.14)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
@@ -908,7 +904,7 @@ DEPENDENCIES
   rspec-json_expectations (~> 2.1.0)
   rspec-rails (~> 3.8.2)
   rspec_junit_formatter (~> 0.3.0)
-  sass
+  sass (~> 3.3.0)
   sass-rails
   saxerator (~> 0.9.9)
   searchgov_style (~> 0.1)
