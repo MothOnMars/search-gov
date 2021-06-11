@@ -39,7 +39,7 @@ gem 'newrelic_rpm', '~> 5.0.0'
 gem 'american_date', '~> 1.1.1'
 # https://sass-lang.com/blog/ruby-sass-is-unsupported
 gem 'sass', '~> 3.3.0'
-gem 'sass-rails'#, '~> 5.0.7'
+gem 'sass-rails', '~> 5.0.7'
 # Gem no longer being maintained. See https://cm-jira.usa.gov/browse/SRCH-694
 gem 'google_visualr',
     git: 'https://github.com/winston/google_visualr',
@@ -101,7 +101,7 @@ gem 'coffee-rails'#, '~> 4.2.2'
 gem 'uglifier'#, '~> 4.1.2'
 gem 'less-rails-bootstrap', git: 'https://github.com/GSA/less-rails-bootstrap.git',
                             branch: 'master'
-gem 'compass-rails'#, '~> 3.1.0'
+gem 'compass-rails', '~> 3.1.0'
 gem 'compass-blueprint'#, '~> 1.0.0'
 gem 'jquery-ui-rails'#, '~> 6.0.1'
 gem 'jquery-rails'#, '~> 4.4.0'
