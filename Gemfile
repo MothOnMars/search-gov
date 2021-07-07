@@ -103,7 +103,7 @@ gem 'uglifier', '~> 4.1.2'
 gem 'less-rails-bootstrap', git: 'https://github.com/GSA/less-rails-bootstrap.git',
                             branch: 'master'
 gem 'compass-rails', '~> 3.1.0'
-gem 'compass-blueprint', '~> 1.0.0'
+#gem 'compass-blueprint', '~> 1.0.0'
 gem 'jquery-ui-rails', '~> 6.0.1'
 gem 'jquery-rails', '~> 4.4.0'
 gem 'therubyracer', '~> 0.12.3'

@@ -232,8 +232,6 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       sass (>= 3.3.13, < 3.5)
-    compass-blueprint (1.0.0)
-      compass
     compass-core (1.0.3)
       multi_json (~> 1.0)
       sass (>= 3.3.0, < 3.5)
@@ -819,7 +817,6 @@ DEPENDENCIES
   cld3 (~> 3.2.3)
   coffee-rails (~> 4.2.2)
   colorize (~> 0.8.1)
-  compass-blueprint (~> 1.0.0)
   compass-rails (~> 3.1.0)
   counter_culture (~> 2.3.0)
   cucumber (~> 3.0)
