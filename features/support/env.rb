@@ -19,15 +19,16 @@ require 'capybara-screenshot/cucumber'
 Capybara.default_max_wait_time = 10
 Capybara::Screenshot.autosave_on_failure = false
 
-require 'capybara/poltergeist'
-Capybara.register_driver :poltergeist do |app|
-  Capybara::Poltergeist::Driver.new app,
+#require 'capybara/poltergeist'
+require 'capybara/apparition'
+Capybara.register_driver :apparition do |app|
+  Capybara::Apparition::Driver.new app,
                                     js_errors: false,
                                     port: 8888,
                                     timeout: 60,
                                     window_size: [1200,768]
 end
-Capybara.javascript_driver = :poltergeist
+Capybara.javascript_driver = :apparition
 
 # By default, any exception happening in your Rails application will bubble up
 # to Cucumber so that your scenario will fail. This is a different from how

@@ -142,7 +142,7 @@ group :development, :test do
   gem 'rspec-its', '~> 1.2.0'
   gem 'email_spec', '~> 2.1.1'
   gem 'database_cleaner', '~> 1.7.0'
-  gem 'capybara', '~> 2.18.0'
+  gem 'capybara'#, '~> 2.18.0'
   gem 'launchy', '~> 2.4.3'
   gem 'i18n-tasks', '~> 0.9.19'
   gem 'pry-byebug', '~> 3.5'
@@ -160,7 +160,8 @@ group :test do
   gem 'cucumber', '~> 3.0', require: false
   gem 'cucumber-rails', '~> 2.0', require: false
   gem 'resque_spec', '~> 0.17.0'
-  gem 'poltergeist', '~> 1.18.1'
+  #gem 'poltergeist', '~> 1.18.1'
+  gem 'apparition'
   gem 'shoulda-matchers', '~> 4.1.1'
   gem 'shoulda-kept-assign-to', '~> 1.1.0'
   gem 'vcr', '~> 4.0'
