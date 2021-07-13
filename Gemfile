@@ -37,7 +37,6 @@ gem 'active_scaffold_export', git: 'https://github.com/naaano/active_scaffold_ex
 gem "recaptcha", '~> 4.6.3', :require => "recaptcha/rails"
 gem 'newrelic_rpm', '~> 5.0.0'
 gem 'american_date', '~> 1.1.1'
-# https://sass-lang.com/blog/ruby-sass-is-unsupported
 gem 'sass', '~> 3.3.0'
 gem 'sass-rails', '~> 5.0.7'
 # Gem no longer being maintained. See https://cm-jira.usa.gov/browse/SRCH-694
