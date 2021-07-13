@@ -26,7 +26,6 @@ a
     background: transparent
   +blueprint-interaction
 
-
   ol, ul
     list-style: none
 
@@ -309,6 +308,7 @@ input.wide-text
       text-decoration: none
     a:hover
       color: #FF5A00
+
 #main_nav
   +clearfix
   float: left
@@ -339,6 +339,7 @@ input.wide-text
     float: right
     padding-right: 2px
 
+/*** Super Admin breadcrumbs ***/
 .breadcrumbs
   clear: both
   font-size: 0.9em
@@ -442,14 +443,6 @@ input.wide-text
     width: 1080px
   .content .container
     width: 790px
-
-.btn-submit
-  background: image-url('legacy/btn-submit.png') no-repeat 0 0
-  width: 91px
-  height: 30px
-  border: 0
-  &:hover
-    background-position: 0 -32px
 
 .affiliate-left-nav
   +border-radius
@@ -589,288 +582,6 @@ table.generic-table
     text-align: left
     font-size: 14px
     color: #333
-
-/*** affiliate center ***/
-.affiliate
-  .action-row
-    clear: both
-    float: left
-    width: 100%
-    a, input
-      float: left
-      margin-left: 8px
-  .staged-site-row
-    margin-top: 5px
-  .add-new-site-button
-    background: image-url('legacy/btn_add_new_site.png') no-repeat 0 0
-    float: right
-    height: 22px
-    width: 88px
-  .delete-site-button
-    background: image-url('legacy/btn_delete_site.png') no-repeat 0 0
-    height: 24px
-    width: 84px
-  .push-changes-button
-    background: image-url('legacy/btn_push_changes.png') no-repeat 0 0
-    height: 24px
-    width: 110px
-  .cancel-changes-button
-    background: image-url('legacy/btn_cancel_changes.png') no-repeat 0 0
-    height: 24px
-    width: 119px
-  col.site-name
-    width: 34%
-  col.actions
-    width: 64%
-  td.site-name
-    a
-      word-wrap: break-word
-  td.site-url
-    word-wrap: break-word
-
-.site-specific
-  p
-    margin: 0 0 8px
-    font-size: 14px
-  h2.sub-title
-    margin-top: 10px
-  .next-button
-    +border-radius
-    background-color: #12396A
-    +background-image(linear-gradient(#19539D, #12396A))
-    border: 0
-    color: white
-    font:
-      size: 1.15em
-      weight: bold
-    padding: 5px 20px 7px
-  .steps_header
-    margin: 0
-  textarea
-    border: 1px solid #BBB
-    clear: both
-    height: 191px
-    margin: 0
-    padding: 3px 5px
-    width: 640px
-  .site-info
-    .sliding_content
-      width: 90%
-    .sliding_trigger, .sliding_content
-      clear: both
-      float: left
-    .button-wrapper
-      clear: both
-      float: left
-      margin: 10px 0 0
-    h2
-      clear: both
-    label
-      margin: 0 0 5px 0
-      text-align: left
-      width: 100%
-      &.radio-label
-        float: none
-        width: auto
-    input.txt
-      background: image-url('legacy/long_text_box.png') no-repeat 0 0
-      clear: both
-      height: 25px
-      width: 640px
-    textarea
-      height: 191px
-      margin: 0
-      padding: 3px 5px
-      width: 640px
-    p.important
-      clear: both
-    .css-overrides
-      div
-        float: left
-        margin-right: 15px
-        width: auto
-        padding-top: 8px
-      label
-        float: left
-        margin: 0 5px 0 0
-        padding-top: 0
-        width: auto
-      select
-        margin: 0 5px 0 0
-      input
-        clear: left
-        float: left
-      input[type=text]
-        width: 100px
-      input[type=checkbox]
-        padding-top: 3px
-    .sublabel
-      color: #909090
-      clear: both
-      float: left
-      font-size: 13px
-      width: 100%
-    .form-submit-button
-      display: inline
-      margin: 0
-      &.save-for-preview-button
-        background: image-url('legacy/btn_save_for_preview.png') no-repeat 0 0
-        height: 38px
-        margin-right: 10px
-        width: 200px
-      &.make-live-button
-        background: image-url('legacy/btn_make_live.png') no-repeat 0 0
-        height: 38px
-        margin-right: 10px
-        width: 135px
-    a.cancel
-      float: left
-    .header-footer-fields h3
-      color: #5D5D5D
-      margin: 0 0 5px
-      padding: 8px 0 0
-    .header-footer-fields
-      label
-        margin-bottom: 0
-      textarea
-        display: block
-        margin-top: 5px
-    .page-background-image, .header-image
-      display: inline-block
-      img
-        float: left
-      label
-        margin: 0 0 0 5px
-        padding: 0
-        width: auto
-      .mark-image-for-deletion
-        clear: none
-        float: left
-        margin: 0 0 0 15px
-        padding: 0
-        width: auto
-    .page-background-image-file-field-wrapper, .header-image-file-field-wrapper
-      margin-top: 10px
-    .header-links, .footer-links, .sidebar-items, .govbox-items, .related-modules-items, .connections-items
-      @include clearfix
-      table
-        border: 1px solid #BDBDBD
-        margin: 0
-        table-layout: fixed
-      col.title
-        width: 40%
-      col.url
-        width: 55%
-      col.actions, col.source
-        width: 140px
-      col.remove
-        width: 30px
-      thead
-        th
-          background: #444
-        span
-          color: white
-          float: left
-          font-weight: bold
-      a.add-link
-        @include border-radius
-        background: image-url('legacy/backgrounds/bg_red_gradient.gif') repeat-x 0 0
-        color: white
-        float: right
-        font:
-          size: 12px
-          weight: bold
-        padding: 2px 8px
-        text-decoration: none
-        &.last
-          margin-right: 5px
-      th
-        background-color: #d3d3d3
-        border: 1px solid #A9A9A9
-        font-weight: bold
-        padding: 5px
-        text-align: center
-      td
-        border: 1px solid #A9A9A9
-        padding: 4px
-        text-align: center
-      .row-item
-        &.ondrag
-          background-color: #627BB3
-        td.title, td.draggable
-          background: image-url('legacy/vertical_arrow.png') no-repeat 3px 4px
-          padding-left: 18px
-        input
-          font-size: 11px
-          line-height: 16px
-          margin: 0 auto
-        td.name input
-          width: 96%
-        td.title input
-          width: 95%
-        td.url input
-          width: 97%
-    .govbox-items td.name, .related-modules-items td.name
-      text-align: left
-    .related-modules
-      margin-top: 15px
-    .checkbox-label
-      color: #5D5D5D
-      font-weight: normal
-    #add_another_link
-      float: right
-    .left-nav-label, .by-source, .by-time-period
-      +clearfix
-      margin-bottom: 10px
-    .by-time-period
-      width: 100%
-    .by-dublin-core
-      table
-        border: 1px solid #BDBDBD
-        margin: 0
-        width: auto
-      td,th
-        border: 1px solid #A9A9A9
-    img.side-note
-      float: right
-      margin-left: 10px
-    #save, #submit
-      +border-radius
-      background-color: #12396A
-      +background-image(linear-gradient(#19539D, #12396A))
-      border: 0
-      color: white
-      font:
-        size: 1.15em
-        weight: bold
-      margin-right: 10px
-      padding: 5px 20px 7px
-  .get-the-code
-    ul
-      margin: 0 8px 8px
-    li
-      margin-bottom: 10px
-
-/*** recaptcha ***/
-#dynamic_recaptcha
-  float: right
-  padding-right: 18px
-  font-family: Helvetica, sans-serif
-  color: black
-  font-size: 12px
-  .recaptchatable *
-    margin: 0
-    padding: 0
-    border: 0
-    font-family: helvetica,sans-serif
-    font-size: 8pt
-    color: black
-    position: static
-    top: auto
-    left: auto
-    right: auto
-    bottom: auto
-    text-align: left!important
 
 h3.api-item
   font-weight: bold
@@ -1021,45 +732,6 @@ h3.api-item
   border-top: 1px solid #DDDDDD
   padding: 10px 0
 
-.crawled-url-list, .uncrawled-url-list, .rss-url-list
-  tr.column-header
-    background-color: #D3D3D3
-  thead th
-    text-align: left
-    span
-      color: #FFF
-  tbody th
-    background: none
-    color: #333
-    font:
-      size: 14px
-      weight: normal
-    &.url
-      font-weight: bold
-  td a
-    float: left
-  td.url
-    padding: 4px
-    input
-      margin: 0
-      padding: 5px
-      width: 98%
-  td.remove
-    padding: 5px
-    text-align: right
-    a
-      float: none
-  a.header-link
-    float: right
-  col.last-crawled-at
-    width: 100px
-  col.source
-    width: 70px
-  col.last-crawl-status
-    width: 70px
-  col.remove
-    width: 30px
-
 .rss-feed-list td.url
   ul
     margin: 0
@@ -1077,11 +749,6 @@ h3.api-item
     a
       word-wrap: break-word
       width: auto
-  .crawled-url-list, .uncrawled-url-list
-    thead tr th
-      padding: 0 5px
-    @extend .crawled-url-list
-    @extend .uncrawled-url-list
 
 .add-featured-collection, .edit-featured-collection, .add-document-collection, .edit-document-collection, .add-boosted-content, .edit-boosted-content, .add-rss-feed, .edit-rss-feed, .add-excluded-url, .add-url, .add-new-entry, .edit-entry
   @include border-radius
@@ -1334,15 +1001,6 @@ h3.api-item
     clear: both
     margin: 1em 0
     text-align: center
-#admin_analytics
-  label
-    margin-left: 15px
-    &.query-term
-      margin-left: 5px
-  #search_query
-    width: 200px
-  #analytics_search_start_date, #analytics_search_end_date
-    width: 130px
 
 #top_urls
   padding: 0
@@ -1367,149 +1025,5 @@ h3.api-item
     margin: 0 0 1.5em 0
     padding: 0
 
-.url-error-message-dialog.ui-widget
-  font:
-    size: 14px
-  .ui-dialog-titlebar
-    padding: 0.3em 1em
-
-#sayt-suggestions #delete_all
-  th
-    text-align: right
-
-.themes
-  @include clearfix
-  .theme
-    float: left
-    margin: 0 15px 10px 1px
-    padding-top: 5px
-    width: 115px
-    &.hidden-custom-theme
-      display: none
-    &:hover
-      cursor: pointer
-    input
-      float: left
-      margin: 0
-      padding: 0
-      position: relative
-      top: 0
-      width: auto
-      &.customize-theme-button
-        width: 88%
-    label
-      float: left
-      font-size: 12px
-      font-weight: normal
-      line-height: 15px
-      margin: 0 0 0 5px
-      padding: 0
-      width: auto
-    img
-      margin-top: 5px
-  #default_theme
-    background: image-url('legacy/affiliates/themes/default.png') no-repeat 0 0
-  #elegant_theme
-    background: image-url('legacy/affiliates/themes/elegant.png') no-repeat 0 0
-  #fun_blue_theme
-    background: image-url('legacy/affiliates/themes/fun_blue.png') no-repeat 0 0
-  #gray_theme
-    background: image-url('legacy/affiliates/themes/gray.png') no-repeat 0 0
-  #natural_theme
-    background: image-url('legacy/affiliates/themes/natural.png') no-repeat 0 0
-
-.use-colors-from-theme
-  span
-    color: #5D5D5D
-    font-size: 15px
-
-#bulk_upload_urls
-  p
-    margin-bottom: 0.5em
-
 #urls
   +clearfix
-
-.site-domains .domain
-  input.txt
-    width: 580px
-
-.new_affiliate
-  ul
-    padding-left: 0
-  input.txt
-    display: block
-    margin-top: 0
-
-#add_domain
-  +hide-text
-  +inline-block
-  margin-left: 5px
-.add-icon
-  +border-radius(9px)
-  +hide-text
-  +inline-block
-  background: #5787c7 image-url('legacy/icons-white.png') no-repeat left center
-  height: 18px
-  width: 18px
-* html .add-icon
-  background: #5787c7 image-url('legacy/icons-white.png') no-repeat left top
-
-.remove-icon
-  +border-radius(9px)
-  +hide-text
-  +inline-block
-  background: #AA404A image-url('legacy/icons-white.png') no-repeat -36px center
-  height: 18px
-  width: 18px
-* html .remove-icon
-  background: #AA404A image-url('legacy/icons-white.png') no-repeat -36px top
-
-.edit_affiliate .rss-feeds
-  col.name
-    width: 30%
-  col.url
-    width: 70%
-  th.url
-    #add_rss_feed
-      float: right
-  table
-    border: 1px solid #A9A9A9
-    table-layout: fixed
-    width: 98%
-  th
-    background-color: #d3d3d3
-    border: 1px solid #A9A9A9
-    padding: 5px
-  td
-    border: 1px solid #A9A9A9
-    padding: 5px 7px 5px 5px
-    input
-      margin: 0 auto
-      padding-left: 0
-      padding-right: 0
-      width: 100%
-
-#add_connection
-  float: right
-
-#new_social_media
-  margin-top: 1em
-
-#social_media_profiles
-  col.service
-    width: 120px
-  col.actions
-    width: 180px
-  .actions
-    +clearfix
-    a, form
-      float: left
-    a
-      margin-right: 10px
-
-#new_social_media_profile
-  input
-    background: none
-    margin: 0 0 5px 0
-
