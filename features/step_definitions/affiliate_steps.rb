@@ -101,24 +101,6 @@ Then /^(.+) for site named "([^\"]*)"$/ do |step, site_display_name|
   %{#{step} within "tr#site_#{site.id}"}
 end
 
-Then /^I should see sorted sites in the site dropdown list$/ do
-  sites = @current_user.affiliates.sort{|x,y| x.display_name <=> y.display_name}
-  sites.each_with_index do |site, index|
-    page.should have_selector("#affiliate_id option:nth-child(#{index + 1})", :value => site.id)
-  end
-end
-
-Then /^I should see sorted sites in the site list$/ do
-  sites = @current_user.affiliates.sort{|x,y| x.display_name <=> y.display_name}
-  sites.each_with_index do |site, index|
-    page.should have_selector("table.generic-table tbody tr#site_#{site.id} td.site-name a", :text => site.display_name)
-  end
-end
-
-Then /^I should see "([^\"]*)" in the site wizards header$/ do |step|
-  page.should have_selector(".steps_header img[alt='#{step}']")
-end
-
 Then /^I should see the code for (English|Spanish) language sites$/ do |locale|
   locales = { 'English' => 'en', 'Spanish' => 'es' }
   page.should have_selector("#embed_code_textarea_#{locales[locale]}")
@@ -126,12 +108,6 @@ end
 
 Then /^I should see the affiliate custom css$/ do
   page.should have_selector("head style")
-end
-
-# legacy SERP
-Then /^I should see some (Bing|Azure) search results$/ do |engine|
-  page.should have_selector("#results > .searchresult")
-  step "I should see the Results by #{engine} logo"
 end
 
 Then /^the "([^"]*)" theme should be selected$/ do |theme|
