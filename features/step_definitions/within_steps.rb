@@ -11,7 +11,6 @@
   'in the connect section': '.connect',
   'in the footer': '.footer',
   'in the callout boxes': '.col-2',
-  'in the legacy search navigation': '#main_nav',
   'in the search navbar': '#search-nav',
   'in the homepage header': '.header',
   'in the homepage footer': '.footer.links',
