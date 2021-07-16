@@ -55,8 +55,6 @@ describe Affiliate do
     %w{data.gov ct-new some_aff 123 NewAff}.each do |value|
       it { is_expected.to allow_value(value).for(:name) }
     end
-    it { is_expected.to validate_attachment_size(:page_background_image).in(1..512.kilobytes) }
-    it { is_expected.to validate_attachment_size(:header_image).in(1..512.kilobytes) }
     it { is_expected.to validate_attachment_size(:mobile_logo).in(1..64.kilobytes) }
     it { is_expected.to validate_attachment_size(:header_tagline_logo).in(1..16.kilobytes) }
 
@@ -127,8 +125,6 @@ describe Affiliate do
     it { is_expected.to belong_to :agency }
     it { is_expected.to belong_to(:language).inverse_of(:affiliates) }
     it { is_expected.to belong_to :template }
-    it { is_expected.to validate_attachment_content_type(:page_background_image).allowing(%w{ image/gif image/jpeg image/pjpeg image/png image/x-png }).rejecting(nil) }
-    it { is_expected.to validate_attachment_content_type(:header_image).allowing(%w{ image/gif image/jpeg image/pjpeg image/png image/x-png }).rejecting(nil) }
     it { is_expected.to validate_attachment_content_type(:mobile_logo).allowing(%w{ image/gif image/jpeg image/pjpeg image/png image/x-png }).rejecting(nil) }
 
     it 'should create a new instance given valid attributes' do
@@ -1122,12 +1118,10 @@ describe Affiliate do
   describe 'image assets' do
     let(:image) { File.open(Rails.root.join('spec/fixtures/images/corgi.jpg')) }
     let(:image_attributes) do
-      %i{ page_background_image header_image mobile_logo header_tagline_logo }
+      %i{ mobile_logo header_tagline_logo }
     end
     let(:images) do
-      { page_background_image: image,
-        header_image:          image,
-        mobile_logo:           image,
+      { mobile_logo:           image,
         header_tagline_logo:   image }
     end
     let(:affiliate) do

@@ -266,7 +266,7 @@ class Affiliate < ApplicationRecord
   def self.do_not_dup_attributes
     @@do_not_dup_attributes ||= begin
       logo_attrs = column_names.select do |column_name|
-        column_name =~ /\A(header_tagline_logo|page_background_image|mobile_logo)/
+        column_name =~ /\A(header_tagline_logo|mobile_logo)/
       end
       %w[api_access_key name].push(*logo_attrs).freeze
     end
@@ -276,10 +276,8 @@ class Affiliate < ApplicationRecord
     @@human_attribute_name_hash ||= {
       display_name: 'Display name',
       name: 'Site Handle (visible to searchers in the URL)',
-      header_image_file_size: 'Legacy Logo file size',
       mobile_logo_file_size: 'Logo file size',
-      mobile_header_tagline_logo_file_size: 'Header Tagline Logo file size',
-      page_background_image_file_size: 'Page Background Image file size'
+      mobile_header_tagline_logo_file_size: 'Header Tagline Logo file size'
     }
   end
 
