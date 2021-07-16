@@ -102,9 +102,10 @@ class Affiliate < ApplicationRecord
     s3_region: Rails.application.secrets.aws_image_bucket[:s3_region]
   }.freeze
 
-  # The "mobile_" prefix in "mobile_logo", etc., is a remnant from the deprecated
-  # "legacy SERP". We are leaving the "mobile_" prefix as-is to avoid extensive renaming,
-  # so when you see "mobile_whatever", just think "whatever".
+  # The "mobile_" and "managed_" prefixes in "mobile_logo", "managed_header", etc.,
+  # are remnants from the days of the "legacy" SERP. We have left the prefixes as-is
+  # to avoid extensive renaming. So when you see "mobile_whatever", or "managed_whatever",
+  # just think "whatever".
   has_attached_file :mobile_logo,
                     AWS_IMAGE_SETTINGS.merge(path: "#{Rails.env}/site/:id/mobile_logo/:updated_at/:style/:filename")
   has_attached_file :header_tagline_logo,
