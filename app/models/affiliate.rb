@@ -102,12 +102,9 @@ class Affiliate < ApplicationRecord
     s3_region: Rails.application.secrets.aws_image_bucket[:s3_region]
   }.freeze
 
-  # deprecated - legacy SERP
-  has_attached_file :page_background_image,
-                    AWS_IMAGE_SETTINGS.merge(path: "#{Rails.env}/site/:id/page_background_image/:updated_at/:style/:filename")
-  # deprecated - legacy SERP
-  has_attached_file :header_image,
-                    AWS_IMAGE_SETTINGS.merge(path: "#{Rails.env}/site/:id/header_image/:updated_at/:style/:filename")
+  # The "mobile_" prefix in "mobile_logo", etc., is a remnant from the deprecated
+  # "legacy SERP". We are leaving the "mobile_" prefix as-is to avoid extensive renaming,
+  # so when you see "mobile_whatever", just think "whatever".
   has_attached_file :mobile_logo,
                     AWS_IMAGE_SETTINGS.merge(path: "#{Rails.env}/site/:id/mobile_logo/:updated_at/:style/:filename")
   has_attached_file :header_tagline_logo,
@@ -142,20 +139,6 @@ class Affiliate < ApplicationRecord
   validates_format_of :bing_v5_key, with: /\A[0-9a-f]{32}\z/i, allow_nil: true
   validates_inclusion_of :search_engine, in: SEARCH_ENGINES
   validates_url :header_tagline_url, allow_blank: true
-
-  validates_attachment_content_type :page_background_image,
-                                    content_type: VALID_IMAGE_CONTENT_TYPES,
-                                    message: INVALID_CONTENT_TYPE_MESSAGE
-  validates_attachment_size :page_background_image,
-                            in: (1..MAXIMUM_IMAGE_SIZE_IN_KB.kilobytes),
-                            message: INVALID_IMAGE_SIZE_MESSAGE
-
-  validates_attachment_content_type :header_image,
-                                    content_type: VALID_IMAGE_CONTENT_TYPES,
-                                    message: INVALID_CONTENT_TYPE_MESSAGE
-  validates_attachment_size :header_image,
-                            in: (1..MAXIMUM_IMAGE_SIZE_IN_KB.kilobytes),
-                            message: INVALID_IMAGE_SIZE_MESSAGE
 
   validates_attachment_content_type :mobile_logo,
                                     content_type: VALID_IMAGE_CONTENT_TYPES,

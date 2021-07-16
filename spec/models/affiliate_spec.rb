@@ -379,14 +379,6 @@ describe Affiliate do
       end
     end
 
-    it 'should validate color property in staged css property hash' do
-      css_property_hash = ActiveSupport::HashWithIndifferentAccess.new({'title_link_color' => 'invalid', 'visited_title_link_color' => '#DDDD'})
-      affiliate = described_class.new(valid_create_attributes.merge(css_property_hash: css_property_hash))
-      expect(affiliate.save).to be false
-      expect(affiliate.errors[:base]).to include('Title link color should consist of a # character followed by 3 or 6 hexadecimal digits')
-      expect(affiliate.errors[:base]).to include('Visited title link color should consist of a # character followed by 3 or 6 hexadecimal digits')
-    end
-
     it 'validates logo alignment' do
       expect(described_class.new(valid_create_attributes.merge(
                         css_property_hash: { 'logo_alignment' => 'invalid' }))).not_to be_valid
@@ -1016,10 +1008,6 @@ describe Affiliate do
                                      mobile_logo_file_size: 100,
                                      mobile_logo_updated_at: DateTime.current,
                                      name: 'original-site',
-                                     page_background_image_content_type: 'image/jpeg',
-                                     page_background_image_file_name: 'test.jpg',
-                                     page_background_image_file_size: 100,
-                                     page_background_image_updated_at: DateTime.current,
                                      theme: 'custom')
       described_class.find site.id
     end
@@ -1034,11 +1022,7 @@ describe Affiliate do
                         mobile_logo_file_name
                         mobile_logo_file_size
                         mobile_logo_updated_at
-                        name
-                        page_background_image_content_type
-                        page_background_image_file_name
-                        page_background_image_file_size
-                        page_background_image_updated_at]
+                        name]
 
     it 'sets @css_property_hash instance variable' do
       expect(subject.instance_variable_get(:@css_property_hash)).to include(:title_link_color, :visited_title_link_color)
